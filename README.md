@@ -984,6 +984,25 @@ Entre las relaciones principales se consideran:
 - Las atenciones realizadas forman parte del historial de servicio de cada equipo.
 
 El uso de claves foráneas permite mantener la relación entre las tablas y asegurar la consistencia de la información almacenada.
+#### Identity and Access Database
+
+![CompuCare Identity Database Diagram](assets/bd_identidad.svg)
+
+#### Companies and Equipment Database
+
+![CompuCare Company Database Diagram](assets/bd_empresa.svg)
+
+#### Subscriptions and Coverage Database
+
+![CompuCare Coverage Database Diagram](assets/bd_cobertura.svg)
+
+#### Service Requests Database
+
+![CompuCare Support Database Diagram](assets/bd_soporte.svg)
+
+#### Quotations and Payments Database
+
+![CompuCare Quotations Database Diagram](assets/bd_cotizaciones.svg)
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
