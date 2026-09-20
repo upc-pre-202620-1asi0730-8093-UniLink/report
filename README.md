@@ -360,11 +360,21 @@ Las pequeñas y medianas empresas enfrentan una baja productividad y costos impr
 
 #### 1.2.2.4. Lean UX Canvas
 
-
+![Lean UX Canvas](./assets/leanux.jpeg)
 
 ## 1.3. Segmentos objetivo
 
-[contenido]
+1. **Empresas Suscriptoras (Clientes - Rol Responsable/Administrador):**
+   * **Perfil:** Pequeñas y medianas empresas (estudios contables, agencias de marketing, consultoras, oficinas administrativas) que disponen de entre 5 y 50 computadoras o laptops y no poseen departamento de TI propio.
+   * **Necesidad:** Garantizar la operatividad de sus equipos con un costo mensual predecible y soporte técnico confiable, gestionando todo desde el panel web de su empresa.
+
+2. **Empleados de las Empresas (Usuarios Finales):**
+   * **Perfil:** Personal operativo de las empresas suscritas que utiliza diariamente un equipo informático para cumplir con sus funciones.
+   * **Necesidad:** Reportar fallas de hardware o software de manera rápida ingresando a la aplicación web de UniLink para retomar sus labores lo antes posible.
+
+3. **Técnicos de Soporte (Prestadores del Servicio):**
+   * **Perfil:** Técnicos informáticos seleccionados, capacitados y evaluados por UniLink para brindar atención presencial o remota.
+   * **Necesidad:** Disponer de una interfaz web organizada donde visualizar las solicitudes asignadas, registrar tiempos trabajados y enviar diagnósticos precisos.
 
 # Capítulo II: Requirements Elicitation & Analysis
 
