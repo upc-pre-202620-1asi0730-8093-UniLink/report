@@ -79,8 +79,7 @@ Proyecto
 | Versión | Fecha | Autor | Descripción de modificación |
 | :---: | :---: | :--- | :--- |
 | **1.0** | 20/09/2026 | Ramos, Aldair | Elaboración de la sección 1.2.1 (Antecedentes y problemática, 5W2H, Objetivos y Restricciones) enfocada exclusivamente en la aplicación web.  Desarrollo de la sección 1.2.2 (Lean UX Process: Problem Statements, Assumptions, Hypothesis y Canvas v2). Definición de la sección 1.3 (Segmentos objetivo) sintetizando los roles clave del proyecto. Elaboración de la matriz de evaluación del Student Outcome 5 de ABET para el Avance 1 (AV1).|
-| **1.0** | 20/09/2026 | Yauri, Antony | Elaboración y documentación de la sección 2.1 (Competidores), incluyendo el análisis competitivo y las estrategias y tácticas frente a competidores. Desarrollo de la sección 2.2 (Entrevistas), considerando el diseño, registro y análisis de entrevistas. Elaboración de la sección 2.3 (Needfinding), incluyendo User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping. |
-
+| **1.0** | 20/09/2026 | Condezo, Fernando | Elaboración del Capítulo 5 (Product Implementation, Validation & Deployment). Configuración de la Gestión de Configuración de Software (SCM), definición de repositorios en GitHub con GitFlow y Conventional Commits. Documentación técnica del Sprint 1, incluyendo Sprint Planning, configuración inicial del backend en ASP.NET Core mediante JetBrains Rider, y evidencias de despliegue y colaboración de equipo. |
 
 ---
 
@@ -212,8 +211,8 @@ ABET – EAC - Student Outcome 3.*
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 | :--- | :--- | :--- |
-| **Trabaja en equipo para proporcionar liderazgo en forma conjunta** | **Ramos, Aldair**<br>*AV1*<br>• Coordinó la definición del problema de TI en PYMEs y redactó el análisis 5W2H.<br>• Delimitó el alcance exclusivo para la aplicación web eliminando componentes móviles o pasarelas. <br><br> **Yauri, Antony** <br> *AV1*<br>• Participó en la definición y organización del análisis de competidores.<br>• Contribuyó en la elaboración de los apartados de entrevistas, needfinding y herramientas de análisis UX. <br>• Coordinó con el equipo la organización de la información y evidencias del Capítulo 2. | • El liderazgo compartido permitió acotar el proyecto a un MVP web enfocado y viable. |
-| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Ramos, Aldair**<br>*AV1*<br>• Planificó las entregas del Cap 1 y guiós la elaboración de los supuestos e hipótesis Lean UX.<br>• Consolidó el Lean UX Canvas v2 priorizando los 2 segmentos de usuario clave. <br><br> **Yauri, Antony**<br>*AV1*<br>• Organizó y desarrolló contenido correspondiente a competidores, entrevistas y needfinding.<br>• Elaboró herramientas de análisis como User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping.<br>• Coordinó la integración de los resultados obtenidos en las diferentes actividades del Capítulo 2. | • La gestión de tareas garantizó el cumplimiento total de los entregables del Avance 1. |
+| **Trabaja en equipo para proporcionar liderazgo en forma conjunta** | **Ramos, Aldair**<br>*AV1*<br>• Coordinó la definición del problema de TI en PYMEs y redactó el análisis 5W2H.<br>• Delimitó el alcance exclusivo para la aplicación web eliminando componentes móviles o pasarelas.<br><br>**Yauri, Antony**<br>*AV1*<br>• Participó en la definición y organización del análisis de competidores.<br>• Contribuyó en la elaboración de los apartados de entrevistas, needfinding y herramientas de análisis UX.<br>• Coordinó con el equipo la organización de la información y evidencias del Capítulo 2.<br><br>**Condezo, Fernando**<br>*AV1*<br>• Asumió el rol de Aspect Leader en la configuración de repositorios y automatización de despliegues del Sprint 1.<br>• Lideró la definición de convenciones de control de versiones y la estructura arquitectónica inicial del API en JetBrains Rider. | • El liderazgo compartido permitió acotar el proyecto a un MVP web enfocado y viable.<br><br>• La distribución de responsabilidades técnicas aseguró una base de integración continua sólida desde el primer Sprint. |
+| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Ramos, Aldair**<br>*AV1*<br>• Planificó las entregas del Cap 1 y guió la elaboración de los supuestos e hipótesis Lean UX.<br>• Consolidó el Lean UX Canvas v2 priorizando los 2 segmentos de usuario clave.<br><br>**Yauri, Antony**<br>*AV1*<br>• Organizó y desarrolló contenido correspondiente a competidores, entrevistas y needfinding.<br>• Elaboró herramientas de análisis como User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping.<br>• Coordinó la integración de los resultados obtenidos en las diferentes actividades del Capítulo 2.<br><br>**Condezo, Fernando**<br>*AV1*<br>• Estructuró y documentó las tareas del Sprint Backlog 1, organizando las evidencias de ejecución y colaboración.<br>• Facilitó el trabajo paralelo del equipo mediante la correcta implementación de GitFlow y la gestión de permisos en GitHub. | • La gestión de tareas garantizó el cumplimiento total de los entregables del Avance 1.<br><br>• La estandarización temprana de los entornos de desarrollo facilitó el cumplimiento de las metas técnicas sin conflictos de código. |
 
 ---
 
@@ -259,8 +258,16 @@ empresas.
 <br>
 
 <div align="left">
-  <img src="assets/profiles/Anthony David Yauri Barrios.jpg" alt="" width="200">
+  <img width="200" height="250" alt="20240525_100958" src="https://github.com/user-attachments/assets/4f5293b1-2eb6-4286-b019-34398a2bba54" />
 </div>
+
+**Condezo Pacheco, Fernando André**
+
+* **Código de estudiante:** U202411324
+* **Carrera:** Ingeniería de Software
+
+Estudiante de pregrado de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), que equilibra su formación académica con experiencia laboral a tiempo parcial, demostrando una alta capacidad de organización y compromiso. Posee sólidos conocimientos en el desarrollo de software y lenguajes como C++ y TypeScript, así como en el modelado de arquitecturas limpias basadas en Domain-Driven Design (DDD). Cuenta con experiencia práctica utilizando herramientas profesionales como JetBrains Rider, Visual Studio Code, Figma, PlantUML, Hackolade y MongoDB Compass para el diseño y construcción de productos digitales. Al igual que otros miembros del equipo, posee la credencial Scrum Fundamentals Certified otorgada por SCRUMstudy, lo que le permite colaborar eficientemente bajo marcos de trabajo ágiles. En el proyecto, aporta liderando la configuración del entorno de desarrollo y control de versiones (SCM, GitFlow), la automatización de despliegues y la construcción técnica del RESTful API backend.
+<br>
 
 **Yauri Barrios, Antony David**
 
