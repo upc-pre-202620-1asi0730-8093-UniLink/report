@@ -309,12 +309,6 @@ metodologías ágiles.
   <img src="../assets/" alt="" width="200">
 </div>
 
-**nombre**
-
-* **Código de estudiante:**
-* **Carrera:** Ingeniería de Software
-
-[contenido]
 
 ## 1.2. Solution Profile
 
