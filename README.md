@@ -446,66 +446,172 @@ Estudiante de pregrado de la carrera de Ingeniería de Software en la Universida
 
 # Capítulo IV: Product Design
 
-**En esta sección se detalla el planteamiento de la propuesta de Software Architecture & Design, incluyendo Domain-Driven Software Architecture, Object-Oriented Software Design, así como el diseño UX/UI para la experiencia web. Para ello, se ha tomado como base el conjunto de User Stories identificados y el Impact Map elaborados previamente para CompuCare.**
+En este capítulo se presenta el diseño del producto CompuCare, considerando los lineamientos visuales, la arquitectura de información, el diseño UX/UI de la Landing Page y la aplicación web, así como la arquitectura de software, diseño orientado a objetos y diseño de base de datos.
 
 ## 4.1. Style Guidelines
 
-**Con el fin de mantener una presentación consistente y enfocada a nuestro segmento corporativo (B2B), se establecen las bases para contar con un repositorio central y organizado de uso común para todo el equipo.**
+Los lineamientos de estilo de CompuCare permiten mantener una experiencia visual coherente entre la Landing Page y la aplicación web. Se busca transmitir confianza, claridad y profesionalismo, considerando que la solución está orientada principalmente a empresas que requieren gestionar el mantenimiento y soporte técnico de sus equipos.
 
 ### 4.1.1. General Style Guidelines
 
-**Las guías de estilo generales de CompuCare se fundamentan en transmitir confianza, transparencia y eficiencia técnica, valores indispensables para una plataforma que gestiona el mantenimiento operativo de las empresas.   Branding: El isotipo y logotipo de CompuCare combinan formas sólidas que representan estabilidad tecnológica e interconexión empresarial.
- Typography: Se adopta la familia tipográfica Inter (sans-serif) por su alta legibilidad en pantallas digitales e interfaces ricas en datos (como los dashboards de consumo de horas).
- Colors:
-  Corporate Navy Blue (#0F172A): Utilizado para barras de navegación, textos principales y elementos que transmiten seriedad corporativa.
-  Tech Blue (#2563EB): Color principal (Primary) para botones de acción (CTAs) como "Registrar Ticket" o "Aprobar Cotización".
-  Alert Status Colors: Verde (#16A34A) para mantenimientos completados, Amarillo/Naranja (#F59E0B) para horas de soporte por agotarse, y Rojo (#DC2626) para fallas críticas o quiebres de servicio.
- Spacing: Se adopta un sistema de espaciado basado en una cuadrícula de 4px y 8px para mantener consistencia y ritmo visual en las tarjetas de información y formularios.
- Tone of Communication: El tono de comunicación es Formal, Respetuoso y Resolutivo. Se evitan tecnicismos informáticos excesivos hacia los usuarios finales, comunicando las fallas y cotizaciones de manera clara y transparente.**
+**Branding**
+
+CompuCare es el producto desarrollado por UniLink para facilitar la gestión del mantenimiento y reparación de computadoras empresariales. Su identidad visual busca transmitir seguridad, organización y soporte tecnológico.
+
+**Colors**
+
+| Color | Código | Aplicación |
+|---|---|---|
+| Azul oscuro | `#112D35` | Encabezados, navegación y textos principales |
+| Verde petróleo | `#087F75` | Botones principales y llamadas a la acción |
+| Verde menta | `#C7F1C8` | Elementos secundarios y mensajes positivos |
+| Blanco | `#FFFFFF` | Fondos y tarjetas |
+| Gris claro | `#F6F8F7` | Fondos secundarios |
+| Rojo oscuro | `#B42318` | Alertas y mensajes de error |
+
+**Typography**
+
+Se utiliza una tipografía sans-serif debido a su legibilidad en interfaces digitales. Los títulos presentan mayor tamaño y peso visual mientras que los textos secundarios mantienen una jerarquía clara.
+
+| Elemento | Tamaño aproximado |
+|---|---|
+| Título principal | 48–56 px |
+| Título de sección | 28–32 px |
+| Subtítulo | 20–24 px |
+| Texto general | 16 px |
+| Texto secundario | 14 px |
+
+**Spacing**
+
+Se utiliza una escala de espaciado basada en múltiplos de 4 px y 8 px para mantener consistencia entre tarjetas, formularios, botones y secciones.
+
+**Tone of Communication**
+
+La comunicación de CompuCare es clara, profesional y directa. Se evita el uso innecesario de términos técnicos para que los usuarios puedan comprender fácilmente el estado de sus equipos y solicitudes.
 
 ### 4.1.2. Web Style Guidelines
 
-**Para las interfaces web de CompuCare, las directrices visuales se alinean al lenguaje de diseño Material Design, utilizando la biblioteca de componentes PrimeVue según las especificaciones tecnológicas del proyecto. Se prioriza el Responsive Web Design para garantizar que los empleados puedan reportar fallas desde sus smartphones y los administradores puedan aprobar cotizaciones desde sus escritorios. Se aplican principios de diseño inclusivo mediante contrastes adecuados y un tamaño mínimo de touch targets de 44x44px.**
+La interfaz web de CompuCare se desarrolla bajo un enfoque responsive, permitiendo su correcta visualización tanto en computadoras como en dispositivos móviles.
+
+Los principales criterios utilizados son:
+
+- Diseño adaptable a diferentes tamaños de pantalla.
+- Navegación simple y predecible.
+- Botones claramente identificables.
+- Formularios con etiquetas visibles.
+- Uso consistente de colores y tipografía.
+- Estados del sistema acompañados de texto y no únicamente de color.
+- Contraste adecuado entre fondo y contenido.
+- Retroalimentación visual después de realizar una acción.
+
+Los botones principales se utilizan para acciones como solicitar soporte, registrar información o confirmar una operación, mientras que las acciones secundarias utilizan estilos menos destacados.
 
 ## 4.2. Information Architecture
 
-**La arquitectura de la información dicta cómo se organizará el contenido en el Landing Page y la Web Application de CompuCare, asegurando que los visitantes y usuarios se adapten con facilidad y encuentren lo que necesitan sin esfuerzo.**
+La arquitectura de información de CompuCare organiza los contenidos y funcionalidades para que los usuarios puedan localizar rápidamente las acciones relacionadas con el soporte técnico, los equipos y las suscripciones.
 
 ### 4.2.1. Organization Systems
 
-**Para CompuCare se aplican principalmente dos esquemas de organización visual:   
-  Organización Jerárquica (Visual Hierarchy): Aplicada en el Dashboard del Responsable de la Empresa, priorizando la información más crítica en la parte superior: Saldo de horas disponibles y Mantenimientos preventivos restantes.   
-  Organización Secuencial (Step-by-step to accomplish): Aplicada para el registro de un Ticket de Soporte por parte del empleado (Paso 1: Seleccionar equipo, Paso 2: Describir problema, Paso 3: Indicar ubicación), y para el flujo de aprobación de cotizaciones adicionales.**
+CompuCare utiliza principalmente una organización jerárquica y funcional.
+
+En la Landing Page, la información se presenta de manera secuencial:
+
+1. Presentación de CompuCare.
+2. Propuesta de valor.
+3. Beneficios.
+4. Funcionamiento del servicio.
+5. Planes disponibles.
+6. Preguntas frecuentes.
+7. Llamada a la acción.
+
+En la aplicación web, el contenido se organiza mediante módulos como:
+
+- Dashboard.
+- Equipos.
+- Solicitudes de soporte.
+- Técnicos.
+- Cotizaciones.
+- Historial.
+- Suscripción.
+- Perfil.
 
 ### 4.2.2. Labeling Systems
 
-**Se han definido etiquetas precisas (con el mínimo número de palabras) para evitar confusión en los usuarios. Al estar en un contexto B2B, las etiquetas representan conceptos familiares:   
-  Planes y Suscripción
-  Mis Tickets de Soporte
-  Bolsa de Horas
-  Mantenimientos Preventivos
-  Cotizaciones Pendientes
-  Equipos / Activos**
+Las etiquetas utilizadas buscan ser breves y fáciles de comprender.
+
+Algunas de las etiquetas principales son:
+
+- Inicio.
+- Beneficios.
+- Cómo funciona.
+- Planes.
+- Contacto.
+- Mis equipos.
+- Solicitudes.
+- Técnicos.
+- Cotizaciones.
+- Historial.
+- Suscripción.
+- Perfil.
+
+Para representar el estado de una solicitud se utilizan etiquetas como:
+
+- Registrada.
+- Asignada.
+- En diagnóstico.
+- Esperando aprobación.
+- En atención.
+- Resuelta.
+- Cerrada.
+- Cancelada.
 
 ### 4.2.3. SEO Tags and Meta Tags
 
-**Para asegurar el correcto posicionamiento del Landing Page y la estructura base de la Web Application, se han definido los siguientes tags:   
-  Title: CompuCare | Tercerización de Soporte Técnico Informático para MYPES.
-  Meta Description: Centraliza el mantenimiento de computadoras de tu empresa con CompuCare. 
-  Planes de suscripción mensual con bolsa de horas y prevención de fallas.
-  Meta Keywords: soporte técnico, mantenimiento de computadoras, helpdesk para empresas, outsourcing TI, bolsa de horas soporte.
-  Author: CompuCare Development Team.**
+La Landing Page utiliza etiquetas HTML orientadas a mejorar su identificación en motores de búsqueda y dispositivos.
+
+Ejemplo:
+
+```html
+<title>CompuCare | Soporte técnico empresarial</title>
+
+<meta
+  name="description"
+  content="CompuCare permite gestionar el mantenimiento y soporte técnico de computadoras empresariales."
+>
+
+<meta
+  name="keywords"
+  content="soporte técnico, mantenimiento de computadoras, soporte empresarial, CompuCare, UniLink"
+>
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
   
 ### 4.2.4. Searching Systems
+El sistema de búsqueda permite localizar información dentro de módulos que contienen varios registros.
 
-**Para evitar que los usuarios se pierdan entre el volumen de información, la plataforma incluirá:   
-  Búsqueda de Tickets: Los empleados y administradores podrán buscar solicitudes por código de Ticket, estado (En diagnóstico, Resuelta, Pendiente de repuesto) o fecha de creación.   
-  Búsqueda de Equipos: Los responsables podrán buscar en el historial clínico de las computadoras mediante su número de serie o asignación de empleado.**
+Los principales criterios considerados son:
+
+- Código de solicitud.
+- Nombre o código del equipo.
+- Estado de la solicitud.
+- Técnico asignado.
+- Fecha.
+- Tipo de problema.
+
+Cuando no existen coincidencias, el sistema informa al usuario y permite modificar los criterios utilizados.
   
 ### 4.2.5. Navigation Systems
 
-**El sistema de navegación utilizará un Top Navigation Bar fijo para el Landing Page y un Sidebar Navigation colapsable para la Web Application. Se incluirán Breadcrumbs (migas de pan) para facilitar el retorno en flujos profundos (Ej. Inicio > Mis Tickets > Ticket #1042 > Cotización Adicional).**
+La Landing Page utiliza una barra de navegación superior mediante la cual el usuario puede desplazarse entre las principales secciones.
 
+La aplicación web utiliza una navegación lateral para acceder a los principales módulos.
+
+En dispositivos móviles, esta navegación se adapta a un menú compacto.
+
+También se utilizan botones de retorno y enlaces contextuales para facilitar el desplazamiento entre las diferentes pantallas.
 ## 4.3. Landing Page UI Design
 
 **La propuesta de interfaz para el Landing Page busca traducir las decisiones de negocio y arquitectura de información en un diseño persuasivo que incentive la conversión y adquisición de planes de suscripción.**  
