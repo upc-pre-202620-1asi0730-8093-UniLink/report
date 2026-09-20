@@ -270,7 +270,7 @@ mejorar constantemente.
 <br>
 
 <div align="left">
-  <img src="../assets/" alt="" width="200">
+  <img src="./assets/profiles/FotoAldair.jpeg" alt="Aldair Ramos" width="200">
 </div>
 
 **Aldair Joaquin Ramos Aguirre**
