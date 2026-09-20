@@ -21,11 +21,12 @@ Docente
 
 Equipo
 
-**[nombre]**
+### **UniLink**
 
 Proyecto
 
-**[nombre]**
+### **TechSustain**
+<br>
 
 #### **Integrantes**
 
@@ -240,7 +241,7 @@ UniLink se encargará de seleccionar, capacitar y coordinar a los técnicos resp
 <br>
 
 <div align="left">
-  <img src="./assets/profiles/Anthony.jpg" alt="" width="200">
+  <img src="assets/profiles/Anthony David Yauri Barrios.jpg" alt="" width="200">
 </div>
 
 **Yauri Barrios, Antony David**
