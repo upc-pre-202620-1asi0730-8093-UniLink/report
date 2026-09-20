@@ -614,38 +614,95 @@ En dispositivos móviles, esta navegación se adapta a un menú compacto.
 También se utilizan botones de retorno y enlaces contextuales para facilitar el desplazamiento entre las diferentes pantallas.
 ## 4.3. Landing Page UI Design
 
-**La propuesta de interfaz para el Landing Page busca traducir las decisiones de negocio y arquitectura de información en un diseño persuasivo que incentive la conversión y adquisición de planes de suscripción.**  
+La Landing Page de CompuCare tiene como objetivo presentar claramente la propuesta de valor del servicio y permitir que potenciales clientes conozcan sus principales características, beneficios y planes de suscripción.
 
+La estructura visual busca guiar al usuario desde la presentación inicial del producto hasta una llamada a la acción, manteniendo una navegación simple y una jerarquía clara de información.
 ### 4.3.1. Landing Page Wireframe
 
-**A continuación, se presentan los Wireframes para Desktop y Mobile elaborados en Figma. Se evidencia la aplicación de una estructura clásica B2B: Hero Section con propuesta de valor, beneficios, comparativa de planes (Básico, Empresarial, Integral) y Call to Action (CTA).**
+El wireframe define la estructura inicial de la Landing Page antes de aplicar colores, imágenes y elementos visuales finales.
 
+La estructura considera las siguientes secciones:
+
+- Header con navegación principal.
+- Hero Section con propuesta de valor.
+- Beneficios principales.
+- Explicación de cómo funciona el servicio.
+- Planes disponibles.
+- Preguntas frecuentes.
+- Call to Action.
+- Footer.
+
+A continuación, se presenta el wireframe de escritorio elaborado para CompuCare.
+
+![CompuCare Landing Page Wireframe](assets/CompuCare_Wireframe_Escritorio.svg)
 ### 4.3.2. Landing Page Mock-up
 
-**Los Mock-ups integran nuestro Design System y guías de estilo, mostrando el Landing Page en alta fidelidad.**
+El mock-up representa la versión de alta fidelidad de la Landing Page de CompuCare.
 
+En este diseño se aplican los colores, tipografía, botones, tarjetas y demás elementos visuales definidos en las Style Guidelines.
+
+El mock-up permite visualizar la apariencia final de la página antes de iniciar su implementación.
+
+![CompuCare Landing Page Mock-up](assets/CompuCare_Landing.svg)
 ## 4.4. Web Applications UX/UI Design
 
-**Esta sección presenta la propuesta visual y de interacción para la plataforma CompuCare, diferenciando las vistas según el acceso de los roles principales: Responsable de la empresa y Empleado.**   
+El diseño UX/UI de la aplicación web de CompuCare busca simplificar la gestión del soporte técnico y permitir que cada usuario encuentre rápidamente las funcionalidades relacionadas con su rol.
 
+La interfaz prioriza la claridad de la información, la visibilidad de las acciones principales y la comprensión del estado de cada solicitud de soporte.
 ### 4.4.1. Web Applications Wireframes
 
-**Se presentan los Wireframes de bajo nivel. Se destaca la vista del Dashboard Gerencial y el formulario de ingreso de incidentes para los empleados.**
+Los wireframes de la aplicación web representan las principales pantallas y permiten definir la distribución de los elementos antes de desarrollar la versión visual definitiva.
 
+Las principales vistas consideradas son:
+
+- Inicio de sesión.
+- Dashboard.
+- Registro de equipos.
+- Lista de equipos.
+- Registro de solicitud de soporte.
+- Seguimiento de solicitudes.
+- Información del técnico.
+- Cotizaciones.
+- Historial de atención.
+- Perfil del usuario.
+
+Estos wireframes permiten validar la disposición de botones, formularios, tarjetas y elementos de navegación antes de aplicar el diseño visual definitivo.
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-**Se han elaborado Wireflows para los User Goals principales.
-  Flujo 1: El empleado reporta un equipo con fallas, adjuntando detalles y ubicación.   
-  Flujo 2: El responsable revisa el panel, visualiza que sus horas de soporte se descontaron tras una atención validada, y aprueba una cotización extra por un repuesto.**  
+Los Wireflow Diagrams representan la relación entre las diferentes pantallas y las acciones que realiza el usuario para completar una tarea.
+
+Uno de los principales flujos corresponde al registro de una solicitud de soporte:
+
+**Dashboard → Mis equipos → Seleccionar equipo → Solicitar soporte → Describir problema → Confirmar solicitud → Seguimiento.**
+
+También se considera el flujo de revisión de una atención:
+
+**Solicitudes → Seleccionar solicitud → Revisar estado → Ver técnico asignado → Revisar diagnóstico → Finalizar atención.**
+
+Estos diagramas permiten identificar la secuencia de navegación y detectar posibles puntos de confusión antes de la implementación. 
 
 ### 4.4.3. Web Applications Mock-ups
 
-**Las pantallas en alta fidelidad aplican los componentes de Angular Material / PrimeVue, mostrando un diseño limpio, accesible y centrado en la usabilidad.**
+Los mock-ups muestran las pantallas de CompuCare en alta fidelidad e incorporan los elementos definidos en las Style Guidelines.
 
+Estos diseños permiten visualizar cómo será la experiencia final antes de iniciar la implementación de la aplicación web.
+
+Los mock-ups mantienen una estructura consistente en navegación, tipografía, botones, formularios, tarjetas y estados visuales.
 ### 4.4.4. Web Applications User Flow Diagrams
 
-**Los User Flows incorporan lógica condicional a los Wireflows. Por ejemplo, en el flujo de reparación: ¿La intervención supera el saldo de horas disponible? Si es SÍ -> Generar Cotización Adicional; Si es NO -> Descontar de la bolsa de horas y proceder con la atención.**   
+Los User Flow Diagrams representan las decisiones que debe realizar el usuario para completar diferentes objetivos dentro de la plataforma.
 
+Para solicitar soporte se considera el siguiente flujo:
+
+**Inicio → Seleccionar equipo → Registrar problema → Validar información → Enviar solicitud → Confirmación → Seguimiento.**
+
+Si la información ingresada es incorrecta o incompleta, el usuario permanece en el formulario hasta corregirla.
+
+Otro flujo importante corresponde a la revisión de una solicitud:
+
+**Inicio → Solicitudes → Seleccionar solicitud → Revisar estado → Revisar técnico asignado → Consultar diagnóstico → Finalizar proceso.**
+
+Estos flujos ayudan a definir la lógica de navegación y las posibles decisiones del usuario.
 ## 4.5. Web Applications Prototyping
 
 **Se ha desarrollado un prototipo interactivo para Desktop y Mobile que simula la navegación y el flujo de los User Flows diagramados. Se ha grabado una demostración en video para evidenciar las decisiones de arquitectura de información.**   
