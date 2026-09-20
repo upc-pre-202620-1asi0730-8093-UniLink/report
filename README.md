@@ -457,8 +457,13 @@ Estudiante de pregrado de la carrera de Ingeniería de Software en la Universida
 
 ## 3.2. Impact Mapping
 
+**Segmento 1: Empresas Suscriptoras**
 
-[Contenido]
+<img src="/report/assets/Impact Map Empresas Suscriptoras.png" width="580" />
+
+**Segmento 2: Empleados de las Empresas**
+
+<img src="/report/assets/Impact Map Empleado de empresas.png" width="580"/>
 
 ## 3.3. Product Backlog
 
