@@ -865,6 +865,9 @@ Los contenedores considerados son:
 La Web Application se comunica con el Backend mediante solicitudes HTTP. El Backend procesa la lógica de negocio y consulta o modifica la información almacenada en la base de datos.
 
 Esta separación facilita el mantenimiento, escalabilidad y evolución de la plataforma.
+The following container diagram shows the main software containers that compose the CompuCare solution and how they interact with each other.
+
+![CompuCare Container Diagram](assets/c4_contenedores.svg)
 
 ### 4.6.4. Software Architecture Components Diagrams
 
