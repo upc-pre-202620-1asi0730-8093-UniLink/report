@@ -825,6 +825,17 @@ A partir de los flujos principales de la plataforma se identificaron los siguien
 Por ejemplo, cuando un usuario registra una solicitud de soporte, el sistema genera el evento **Solicitud registrada**. Posteriormente, la asignación de un técnico genera el evento **Técnico asignado**.
 
 Este modelado permite comprender la secuencia de acciones del sistema y las responsabilidades asociadas a cada proceso.
+#### Company Registration Event Storming
+
+![CompuCare Company Registration Event Storming](assets/eventstorm_alta.svg)
+
+#### Support Attention Event Storming
+
+![CompuCare Support Attention Event Storming](assets/eventstorm_atencion.svg)
+
+#### Additional Service Event Storming
+
+![CompuCare Additional Service Event Storming](assets/eventstorm_adicional.svg)
 
 ### 4.6.2. Software Architecture Context Diagram
 El Software Architecture Context Diagram representa a CompuCare como el sistema central y muestra su interacción con los principales actores externos.
