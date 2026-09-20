@@ -289,57 +289,83 @@ Estudiante de pregrado de la carrera de Ingeniería de Software en la Universida
 
 ### 1.2.1. Antecedentes y problemática
 
-*   **Who? (¿Quién?):**
-*   **What? (¿Qué?):**
-*   **Where? (¿Dónde?):**
-*   **When? (¿Cuándo?):**
-*   **Why? (¿Por qué?):**
-*   **How? (¿Cómo?):**
-*   **How much? (¿Cuánto?):**
+#### Análisis 5W2H
+
+* **Who? (¿Quién?):** Pequeñas y medianas empresas en sectores administrativos, contables y de servicios que cuentan con entre 5 y 50 estaciones de trabajo informáticas  y que carecen de un departamento o personal interno dedicado a la gestión de infraestructura TI.
+* **What? (¿Qué?):** Interrupción prolongada de las operaciones empresariales derivada de fallas no planificadas de hardware y software, acompañada de una falta de trazabilidad sobre las intervenciones realizadas, opacidad en la facturación de servicios/repuestos e ineficiencia en el mantenimiento preventivo de los equipos.
+* **Where? (¿Dónde?):** En las sedes u oficinas operativas de las PYMEs donde se ubican los equipos físicos, gestionando todo el flujo de interacción de manera centralizada mediante una plataforma web.
+* **When? (¿Cuándo?):** Ocurre de forma reactiva ante incidencias críticas que paralizan las funciones de un empleado, y de forma programada al requerir mantenimientos preventivos periódicos para mitigar el deterioro del hardware.
+* **Why? (¿Por qué?):** Por la alta dependencia de servicios técnicos informales o eventuales, los cuales operan sin Acuerdos de Nivel de Servicio definidos, carecen de un registro histórico unificado por equipo y aplican esquemas de cobro no estandarizados ni auditables.
+* **How? (¿Cómo?):** La gestión actual se realiza mediante canales desestructurados hacia técnicos independientes, lo que imposibilita monitorear el estado de la atención, validar las horas de trabajo reales o fiscalizar la necesidad de reemplazo de componentes.
+* **How much? (¿Cuánto?):** Incurrimiento en sobrecostos directos por reparaciones no estandarizadas, gastos imprevistos en repuestos sin cotización previa y pérdidas económicas indirectas asociadas a las horas de inactividad laboral del personal afectado.
 
 <br>
 
 **Enunciado del problema:**
 
+Las pequeñas y medianas empresas (PYMEs) que dependen de infraestructura informática sufren pérdidas de productividad y sobrecostos debido a la ausencia de un sistema centralizado e integral para gestionar el soporte técnico y mantenimiento de sus computadoras. Actualmente, la falta de visibilidad sobre los estados de atención, la ausencia de un historial por equipo y la informalidad en la cotización de repuestos generan desconfianza e ineficiencia operativa.
+
 **Objetivo general:**
+
+Desarrollar e implementar una aplicación web multi-rol que permita a las PYMEs gestionar el mantenimiento preventivo y correctivo de sus computadoras bajo un modelo de suscripción mensual, garantizando el seguimiento en tiempo real de las solicitudes, la transparencia en el consumo de bolsa de horas y la validación de cotizaciones adicionales.
 
 **Restricciones de alcance:**
 
+* **Exclusividad del Canal Web:** La solución tecnológica del proyecto se limita de forma estricta al desarrollo de una aplicación web responsiva accesible desde navegadores modernos. Se excluye el desarrollo de aplicaciones móviles nativas (Android/iOS) o de escritorio.
+* **Atención en Horario Operativo:** No se ofrecerá soporte técnico ininterrumpido 24/7 en la versión inicial.
+* **Delimitación Geográfica:** El soporte presencial estará restringido a una zona urbana de cobertura predefinida por la startup.
+* **Procesamiento de Planillas:** La automatización de pagos salariales internos a los técnicos queda fuera del alcance funcional del software web.
+
+
 ### 1.2.2. Lean UX Process
-[contenido]
 #### 1.2.2.1. Lean UX Problem Statements
 
-[contenido] DEL LEAN UX PROBLEM STATEMENTS
+Las pequeñas y medianas empresas enfrentan una baja productividad y costos imprevistos debido a la falta de trazabilidad y organización en el soporte técnico de sus computadoras. Hemos observado que los administradores no cuentan con visibilidad sobre el estado de sus reparaciones ni sobre el consumo exacto del plan contratado.
 
 #### 1.2.2.2. Lean UX Assumptions
 
 ##### Business Assumptions
-[contenido]
+* Las PYMEs prefieren pagar una tarifa fija mensual por soporte técnico en lugar de asumir costos variables e imprevistos por emergencias.
+* El modelo de bolsa de horas y mantenimientos preventivos empaquetados operado mediante una aplicación web permite mantener la rentabilidad del negocio.
+* Las empresas están dispuestas a aprobar cotizaciones adicionales a través de la web si se les detalla con transparencia el diagnóstico y costo de componentes.
 
 ##### Business Outcome Assumptions
-[contenido]
+* Incrementar en un 25% la tasa de renovación mensual de suscripciones.
+* Reducir en un 40% el tiempo promedio entre la emisión de una cotización adicional y su aprobación o rechazo por parte del cliente a través del panel web.
 
 ##### User Assumptions
-[contenido]
+* Los administradores de las empresas necesitan conocer con exactitud desde un panel web cuántas horas de soporte e intervenciones preventivas les quedan en el mes.
+* Los empleados necesitan un portal web accesible y simple para reportar fallas en sus equipos indicando su ubicación y el problema observado.
+* Los técnicos de soporte requieren una interfaz web clara para revisar solicitudes asignadas, registrar tiempos de trabajo y emitir diagnósticos técnicos.
 
 ##### User Outcome and Benefit Assumptions
-[contenido]
+* Los administradores reducen el tiempo dedicado a coordinar reparaciones con técnicos independientes gracias al autocontrol que ofrece la plataforma web.
+* Los empleados minimizan el tiempo de inactividad de sus estaciones de trabajo al agilizar los reportes desde su navegador web.
 
 ##### Feature Assumptions
-[contenido]
+* **Landing Page y Panel de presentación:** Informa sobre los planes y permite el registro e inicio de sesión de las empresas.
+* **Panel de control de consumo (Web Dashboard):** Muestra dinámicamente en tiempo real las horas y mantenimientos disponibles del plan contratado.
+* **Módulo web de cotizaciones adicionales:** Permite revisar, aprobar o rechazar gastos de repuestos antes de ejecutar el trabajo.
+* **Historial por equipo en entorno web:** Permite consultar las intervenciones pasadas asociadas al código o serie de cada computadora.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-[contenido]
+* **Hipótesis 1:** Creemos que ofreciendo un panel web dinámico donde el administrador visualice en tiempo real la bolsa de horas consumidas y disponibles, lograremos un nivel de transparencia que aumente la retención de clientes. Sabremos que tuvimos éxito cuando el 80% de las empresas activas renueven su plan al finalizar el periodo mensual.
+* **Hipótesis 2:** Creemos que integrando un flujo digital en la aplicación web para la aprobación de cotizaciones con desglose de diagnóstico y repuestos, aceleraremos los tiempos de reparación. Sabremos que tuvimos éxito cuando el tiempo de espera en estado "Pendiente de aprobación" sea menor a 4 horas en promedio dentro del sistema web.
 
 #### 1.2.2.4. Lean UX Canvas
 
-
-[contenido]
+![Lean UX Canvas](./assets/leanux.jpeg)
 
 ## 1.3. Segmentos objetivo
 
-[contenido]
+1. **Empresas Suscriptoras (Clientes - Rol Responsable/Administrador):**
+   * **Perfil:** Pequeñas y medianas empresas (estudios contables, agencias de marketing, consultoras, oficinas administrativas) que disponen de entre 5 y 50 computadoras o laptops y no poseen departamento de TI propio.
+   * **Necesidad:** Garantizar la operatividad de sus equipos con un costo mensual predecible y soporte técnico confiable, gestionando todo desde el panel web de su empresa.
+
+2. **Empleados de las Empresas (Usuarios Finales):**
+   * **Perfil:** Personal operativo de las empresas suscritas que utiliza diariamente un equipo informático para cumplir con sus funciones.
+   * **Necesidad:** Reportar fallas de hardware o software de manera rápida ingresando a la aplicación web de UniLink para retomar sus labores lo antes posible.
 
 # Capítulo II: Requirements Elicitation & Analysis
 
