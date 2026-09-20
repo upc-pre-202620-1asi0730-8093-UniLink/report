@@ -564,21 +564,7 @@ Para representar el estado de una solicitud se utilizan etiquetas como:
 - Resuelta.
 - Cerrada.
 - Cancelada.
-- #### Responsible User Wireflow
 
-![CompuCare Responsible User Wireflow](assets/wireflow_responsable.svg)
-
-#### Employee Wireflow
-
-![CompuCare Employee Wireflow](assets/wireflow_empleado.svg)
-
-#### Technician Wireflow
-
-![CompuCare Technician Wireflow](assets/wireflow_tecnico.svg)
-
-#### Administrator Wireflow
-
-![CompuCare Administrator Wireflow](assets/wireflow_administrador.svg)
 
 ### 4.2.3. SEO Tags and Meta Tags
 
@@ -711,7 +697,22 @@ También se considera el flujo de revisión de una atención:
 
 **Solicitudes → Seleccionar solicitud → Revisar estado → Ver técnico asignado → Revisar diagnóstico → Finalizar atención.**
 
-Estos diagramas permiten identificar la secuencia de navegación y detectar posibles puntos de confusión antes de la implementación. 
+Estos diagramas permiten identificar la secuencia de navegación y detectar posibles puntos de confusión antes de la implementación.
+#### Responsible User Wireflow
+
+![CompuCare Responsible User Wireflow](assets/wireflow_responsable.svg)
+
+#### Employee Wireflow
+
+![CompuCare Employee Wireflow](assets/wireflow_empleado.svg)
+
+#### Technician Wireflow
+
+![CompuCare Technician Wireflow](assets/wireflow_tecnico.svg)
+
+#### Administrator Wireflow
+
+![CompuCare Administrator Wireflow](assets/wireflow_administrador.svg)
 
 ### 4.4.3. Web Applications Mock-ups
 
