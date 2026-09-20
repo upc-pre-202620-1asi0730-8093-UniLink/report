@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # UniLink — Aplicación web de soporte técnico empresarial
 
 Universidad: Universidad Peruana de Ciencias Aplicadas (UPC)  
@@ -274,3 +275,6 @@ las 24 horas ni servicios de otras especialidades.
 Este alcance corresponde a la solución propuesta para el proyecto.
 Las funcionalidades que se implementen en cada entrega se organizarán
 según el cronograma y los requisitos del curso.
+=======
+# report
+>>>>>>> ef8f1e35549245b79c0dfa7b28cabdcadad80e65
