@@ -403,10 +403,10 @@ nuestra startup UniLink (producto TechSustain) frente al mercado.
   </tr>
   <tr>
     <th colspan="2"></th>
-    <td align="center"><img width="100" height="100" style="object-fit: cover" src="assets/competitor%20logos/TechSustain.png" /></td>
-    <td align="center"><img width="100" height="100" style="object-fit: cover" src="assets/competitor%20logos/Zendesk.png" /></td>
-    <td align="center"><img width="100" height="100" style="object-fit: cover" src="assets/competitor%20logos/Agencias%20Tradicionales%20de%20Outsourcing%20TI.png" /></td>
-    <td align="center"><img width="100" height="100" style="object-fit: cover" src="assets/competitor%20logos/HelloTech.png" /></td>
+    <td align="center"><img width="100" height="100" style="object-fit: cover" src="assets/Capitulo%20II/competitor%20logos/TechSustain.png" /></td>
+    <td align="center"><img width="100" height="100" style="object-fit: cover" src="assets/Capitulo%20II/competitor%20logos/Zendesk.png" /></td>
+    <td align="center"><img width="100" height="100" style="object-fit: cover" src="assets/Capitulo%20II/competitor%20logos/Agencias%20Tradicionales%20de%20Outsourcing%20TI.png" /></td>
+    <td align="center"><img width="100" height="100" style="object-fit: cover" src="assets/Capitulo%20II/competitor%20logos/HelloTech.png" /></td>
   </tr>
  <tr>
     <th rowspan="2">Perfil</th>
