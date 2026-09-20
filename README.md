@@ -686,9 +686,9 @@ El objetivo del Sprint 2 se centró en la Web Application (Frontend en Vue) y el
 ##### 5.2.2.2. Aspect Leaders and Collaborators
 | Team Member (Last Name, First Name) | GitHub Username | Aspect: Vue Frontend Leader (L) / Collaborator (C) | Aspect: ASP.NET Core API Leader (L) / Collaborator (C) | Aspect: Database Design Leader (L) / Collaborator (C) |
 | :--- | :--- | :--- | :--- | :--- |
-| Ramos Aguirre, Aldair Joaquin | @AldairRamos13 | C | L | C |
+| Ramos Aguirre, Aldair Joaquin | @AldairRamos13 | L | C | C |
 | Condezo Pacheco, Fernando André | @LEFEROX | C | C | L |
-| Okuhama Diaz, Matthew Shinko | @okudiaz124 | L | C | C |
+| Okuhama Diaz, Matthew Shinko | @okudiaz124 | C | L | C |
 | Miranda Romero, Sergio Luis | @SergioM1r | C | C | C |
 | Yauri Barrios, Antony David | @AntonyYauri | C | C | C |
 
