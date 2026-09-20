@@ -587,7 +587,7 @@ A continuación, presentamos nuestros User Personas, el User Task Matrix, los Us
 
 ### 2.3.1. User Personas
 
-Con base en el análisis de las 6 entrevistas, hemos construido dos arquetipos (User Personas) que representan fielmente a nuestros dos segmentos objetivo. Hemos considerado características demográficas, personalidad, canales digitales, frustraciones y metas. Estos perfiles serán el centro de todas las decisiones de diseño y arquitectura de información de TechSustain.
+Con base en el análisis de las 6 entrevistas, hemos construido dos arquetipos (User Personas) que representan fielmente a nuestros dos segmentos objetivo. Hemos considerado características demográficas, personalidad, canales digitales, frustraciones y metas. Estos perfiles serán el centro de todas las decisiones de diseño y arquitectura de información de CompuCare.
 
 **User Persona 1: Martín Cárdenas - El "Administrador Sin Control" (Segmento 1: Responsables de Empresa)**
 * UXPressia:
@@ -648,7 +648,7 @@ Con base en el análisis de las 6 entrevistas, hemos construido dos arquetipos (
 
 ### 2.3.2. User Task Matrix
 
-A continuación, presentamos la matriz de tareas de los usuarios. Aquí evaluamos las tareas clave que nuestros User Personas (Martín y Camila) realizan actualmente cuando enfrentan problemas informáticos en su empresa, independientemente de la existencia de TechSustain.
+A continuación, presentamos la matriz de tareas de los usuarios. Aquí evaluamos las tareas clave que nuestros User Personas (Martín y Camila) realizan actualmente cuando enfrentan problemas informáticos en su empresa, independientemente de la existencia de CompuCare.
 
 <table>
   <tr>
@@ -708,7 +708,7 @@ A continuación, presentamos la matriz de tareas de los usuarios. Aquí evaluamo
 
 **Análisis del User Task Matrix:**
 
-Al analizar la matriz, resaltan diferencias marcadas que guiarán la arquitectura de TechSustain:
+Al analizar la matriz, resaltan diferencias marcadas que guiarán la arquitectura de CompuCare:
 * **Diferencias operativas:** La tarea más crítica y frecuente para Camila es "Reportar la falla" y "Preguntar por el estado de la reparación". Para Martín, estas tareas son de baja frecuencia; sin embargo, las tareas de "Buscar técnico", "Autorizar gastos" y "Revisar presupuestos" son de altísima importancia para él. Esto justifica interfaces radicalmente distintas: Camila necesita un formulario de tickets rápido e intuitivo, mientras que Martín requiere un Dashboard financiero donde vea su suscripción, sus horas y un panel de aprobación de cotizaciones.
 
 
@@ -717,7 +717,7 @@ Al analizar la matriz, resaltan diferencias marcadas que guiarán la arquitectur
 
 ### 2.3.3. User Journey Mapping
 
-En esta sección presentamos los User Journey Maps en su versión "As-Is" (situación actual) para nuestros dos User Personas. El objetivo de estos diagramas es ilustrar el viaje de extremo a extremo que experimentan actualmente al enfrentar un problema informático sin TechSustain.
+En esta sección presentamos los User Journey Maps en su versión "As-Is" (situación actual) para nuestros dos User Personas. El objetivo de estos diagramas es ilustrar el viaje de extremo a extremo que experimentan actualmente al enfrentar un problema informático sin CompuCare.
 
 **User Journey Map 1: Martín Cárdenas (El "Administrador Sin Control")**
 * **Escenario:** Una laptop importante de su equipo de contabilidad falla en pleno cierre de fin de mes.
