@@ -805,21 +805,76 @@ Por ejemplo, una solicitud para registrar un nuevo soporte es recibida por un Co
 
 Esta organización permite mantener separadas las responsabilidades del sistema y reducir el acoplamiento entre sus componentes.
 ## 4.7. Software Object-Oriented Design
+El diseño orientado a objetos de CompuCare representa las principales entidades del dominio y las relaciones existentes entre ellas.
 
-**En esta sección se presenta el modelado detallado a nivel de clases. El diseño orientado a objetos con C# encapsula la lógica de negocio, protegiendo las propiedades mediante el uso de constructores y propiedades privadas o de solo lectura. Se aplican herencia e interfaces para asegurar el bajo acoplamiento.**
+Este enfoque permite organizar la lógica del sistema mediante clases con responsabilidades claramente definidas, facilitando el mantenimiento, reutilización y extensión del software.
+
+Las principales entidades identificadas están relacionadas con usuarios, empresas, equipos, solicitudes de soporte, técnicos, suscripciones, planes, cotizaciones e historial de servicios.
 
 ### 4.7.1. Class Diagrams
 
-**Los diagramas de clases UML reflejan el diseño para cada Bounded Context. Por ejemplo, la entidad Ticket incluye propiedades como Status (Enum: Registrada, Asignada, En diagnóstico, Resuelta, etc.), AffectedEquipment y métodos como AddExtraQuote(). La clase SubscriptionPlan encapsula la lógica de ConsumeHours() y ConsumePreventiveMaintenance().**
+El Class Diagram representa la estructura principal del dominio de CompuCare.
 
+Entre las clases consideradas se encuentran:
+
+- **User:** representa a los usuarios registrados en la plataforma.
+- **Company:** representa a las empresas que utilizan el servicio.
+- **Equipment:** representa los equipos informáticos registrados por una empresa.
+- **SupportRequest:** representa una solicitud de soporte técnico.
+- **Technician:** representa al técnico encargado de una atención.
+- **Subscription:** representa la suscripción activa de una empresa.
+- **Plan:** representa los diferentes planes disponibles.
+- **Quote:** representa una cotización adicional relacionada con una atención.
+- **ServiceHistory:** almacena el historial de servicios realizados sobre un equipo.
+
+Algunas relaciones principales son:
+
+- Una empresa puede tener varios usuarios.
+- Una empresa puede registrar varios equipos.
+- Un equipo puede tener múltiples solicitudes de soporte.
+- Una solicitud puede estar asociada a un técnico.
+- Una empresa puede contar con una suscripción activa.
+- Una solicitud puede generar una cotización.
+- Cada atención finalizada puede formar parte del historial del equipo.
+
+El diagrama permite visualizar las relaciones y responsabilidades principales antes de implementar las clases del sistema.
 ## 4.8. Database Design
 
-**El diseño de la base de datos asegura la integridad relacional de la información procesada por la plataforma, utilizando Entity Framework Core bajo un enfoque Code-First.**   
+El diseño de la base de datos de CompuCare permite almacenar de forma estructurada la información necesaria para el funcionamiento de la plataforma.
 
+Se utiliza un modelo relacional en el que las entidades principales se representan mediante tablas vinculadas por claves primarias y claves foráneas.
+
+El diseño busca evitar duplicidad de información, mantener la integridad de los datos y facilitar las consultas relacionadas con empresas, equipos, solicitudes y servicios.
 ### 4.8.1. Database Diagrams
 
-**El diagrama de entidad-relación (ERD) detalla las tablas principales: Users, Companies, SubscriptionPlans, Equipments, SupportTickets y ExtraQuotes. Se evidencian las relaciones mediante llaves foráneas (PK/FK), como un Ticket perteneciendo a una Company y pudiendo tener múltiples ExtraQuotes asociadas.**   
----
+El Database Diagram representa las principales tablas y relaciones de la plataforma CompuCare.
+
+Las tablas principales consideradas son:
+
+- **Users**
+- **Companies**
+- **Equipments**
+- **SupportRequests**
+- **Technicians**
+- **Subscriptions**
+- **Plans**
+- **Quotes**
+- **ServiceHistories**
+
+Entre las relaciones principales se consideran:
+
+- Una empresa puede tener múltiples usuarios.
+- Una empresa puede registrar múltiples equipos.
+- Cada equipo pertenece a una empresa.
+- Un equipo puede tener múltiples solicitudes de soporte.
+- Cada solicitud pertenece a un equipo.
+- Una solicitud puede tener un técnico asignado.
+- Una empresa puede tener una suscripción.
+- Una suscripción se encuentra asociada a un plan.
+- Una solicitud puede generar una o más cotizaciones.
+- Las atenciones realizadas forman parte del historial de servicio de cada equipo.
+
+El uso de claves foráneas permite mantener la relación entre las tablas y asegurar la consistencia de la información almacenada.
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
