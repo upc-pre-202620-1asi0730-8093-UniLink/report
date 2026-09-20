@@ -1093,7 +1093,7 @@ El objetivo del Sprint 1 fue la construcción y despliegue del Landing Page para
 | **Date** | **2026-08-22** |
 | **Time** | **09:30 AM** |
 | **Location** | **Reunión Presencial UPC Monterrico** |
-| **Prepared By** | Ramos Aguirre, Aldair Joaquin (Team Leader) |
+| **Prepared By** | Miranda Romero, Sergio Luis (Team Leader) |
 | **Attendees (to planning meeting)** | Ramos Aguirre, Aldair / Condezo Pacheco, Fernando / Okuhama Diaz, Matthew / Miranda Romero, Sergio / Yauri Barrios, Antony |
 | **Sprint 0 Review Summary** | N/A (Primer sprint). Se definieron los lineamientos iniciales de arquitectura en JetBrains Rider y configuración de repositorios. |
 | **Sprint 0 Retrospective Summary** | N/A. Se establecieron acuerdos de comunicación interna y revisión de código (Pull Requests). |
@@ -1104,10 +1104,10 @@ El objetivo del Sprint 1 fue la construcción y despliegue del Landing Page para
 ##### 5.2.1.2. Aspect Leaders and Collaborators
 | Team Member (Last Name, First Name) | GitHub Username | Aspect: Landing Page UI/UX Leader (L) / Collaborator (C) | Aspect: Env & Repo Setup Leader (L) / Collaborator (C) | Aspect: API Setup Leader (L) / Collaborator (C) |
 | :--- | :--- | :--- | :--- | :--- |
-| Ramos Aguirre, Aldair Joaquin | @AldairRamos13 | L | C | C |
+| Miranda Romero, Sergio Luis | @SergioM1r | L | C | C |
 | Condezo Pacheco, Fernando André | @LEFEROX | C | L | C |
 | Okuhama Diaz, Matthew Shinko | @okudiaz124 | C | C | L |
-| Miranda Romero, Sergio Luis | @SergioM1r | C | C | C |
+| Ramos Aguirre, Aldair Joaquin | @AldairRamos13 | C | C | C |
 | Yauri Barrios, Antony David | @AntonyYauri | C | C | C |
 
 ##### 5.2.1.3. Sprint Backlog 1
@@ -1152,7 +1152,7 @@ El objetivo del Sprint 2 se centró en la Web Application (Frontend en Vue) y el
 | **Date** | **2026-09-05** |
 | **Time** | **09:30 AM** |
 | **Location** | **Reunión presencial Upc Monterrico** |
-| **Prepared By** | Ramos Aguirre, Aldair Joaquin (Team Leader) |
+| **Prepared By** | Miranda Romero, Sergio Luis (Team Leader) |
 | **Attendees** | Ramos Aguirre, Aldair / Condezo Pacheco, Fernando / Okuhama Diaz, Matthew / Miranda Romero, Sergio / Yauri Barrios, Antony |
 | **Sprint 1 Review Summary** | El Landing Page fue desplegado con éxito y validado comercialmente. El backend base está operativo en Rider. |
 | **Sprint 1 Retrospective Summary** | Se acordó realizar Code Reviews más estrictos antes de hacer merge a `develop`. |
@@ -1163,10 +1163,10 @@ El objetivo del Sprint 2 se centró en la Web Application (Frontend en Vue) y el
 ##### 5.2.2.2. Aspect Leaders and Collaborators
 | Team Member (Last Name, First Name) | GitHub Username | Aspect: Vue Frontend Leader (L) / Collaborator (C) | Aspect: ASP.NET Core API Leader (L) / Collaborator (C) | Aspect: Database Design Leader (L) / Collaborator (C) |
 | :--- | :--- | :--- | :--- | :--- |
-| Ramos Aguirre, Aldair Joaquin | @AldairRamos13 | L | C | C |
+| Miranda Romero, Sergio Luis | @SergioM1r | C | L | C |
 | Condezo Pacheco, Fernando André | @LEFEROX | C | C | L |
-| Okuhama Diaz, Matthew Shinko | @okudiaz124 | C | L | C |
-| Miranda Romero, Sergio Luis | @SergioM1r | C | C | C |
+| Okuhama Diaz, Matthew Shinko | @okudiaz124 | L | C | C |
+| Ramos Aguirre, Aldair Joaquin | @AldairRamos13 | C | C | C |
 | Yauri Barrios, Antony David | @AntonyYauri | C | C | C |
 
 ##### 5.2.2.3. Sprint Backlog 2
@@ -1175,7 +1175,7 @@ El objetivo del Sprint 2 se centró en la Web Application (Frontend en Vue) y el
 | **User Story Id** | **Story Title** | **Task Id** | **Task Title** | **Task Description** | **Estimation (Hours)** | **Assigned To** |
 | US02 | Registro de Solicitud | T02.1 | Implementar Formulario Vue | Crear componente de Ticket con PrimeVue. | 5 | Yauri Barrios, Antony |
 | US05 | Endpoint Creación Ticket | T05.1 | Crear TicketController C# | Lógica de inserción en Base de Datos. | 4 | Condezo Pacheco, Fernando |
-| US03 | Dashboard de Horas | T03.1 | Implementar Vista Admin | Mostrar consumo de bolsa de horas. | 5 | Ramos Aguirre, Aldair |
+| US03 | Dashboard de Horas | T03.1 | Implementar Vista Admin | Mostrar consumo de bolsa de horas. | 5 | Miranda Romero, Sergio |
 
 ##### 5.2.2.4. Development Evidence for Sprint Review
 *(Placeholder: Tabla de Commits de GitHub de la rama Frontend y Backend API)*.
