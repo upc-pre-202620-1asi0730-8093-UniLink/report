@@ -26,8 +26,7 @@ Equipo
 
 Proyecto
 
-### **TechSustain**
-
+### **CompuCare**
 <br>
 
 #### **Integrantes**
@@ -41,24 +40,24 @@ Proyecto
 <td align="left" style="border: none !important; padding: 0 !important; background: none !important;"><strong>Apellidos y Nombres</strong></td>
 </tr>
 <tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[codigo]</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[nombre]</td>
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[U202419311]</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[Matthew Shinko Okuhama Diaz]</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
 <td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U202214499</td>
 <td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Yauri Barrios, Antony David</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[codigo]</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">nombre</td>
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U202411324</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Condezo Pacheco, Fernando André</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
 <td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U20231B331</td>
 <td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Miranda Romero, Sergio Luis</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[codigo]</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">nombre</td>
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U20201F051</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Ramos Aguirre, Aldair Joaquin</td>
 </tr>
 </table>
 </div>
@@ -78,7 +77,9 @@ Proyecto
 # Registro de Versiones del Informe
 
 | Versión | Fecha | Autor | Descripción de modificación |
-|---------|-------|-------|-----------------------------|
+| :---: | :---: | :--- | :--- |
+| **1.0** | 20/09/2026 | Ramos, Aldair | Elaboración de la sección 1.2.1 (Antecedentes y problemática, 5W2H, Objetivos y Restricciones) enfocada exclusivamente en la aplicación web.  Desarrollo de la sección 1.2.2 (Lean UX Process: Problem Statements, Assumptions, Hypothesis y Canvas v2). Definición de la sección 1.3 (Segmentos objetivo) sintetizando los roles clave del proyecto. Elaboración de la matriz de evaluación del Student Outcome 5 de ABET para el Avance 1 (AV1).|
+| **1.0** | 20/09/2026 | Condezo, Fernando | Elaboración del Capítulo 5 (Product Implementation, Validation & Deployment). Configuración de la Gestión de Configuración de Software (SCM), definición de repositorios en GitHub con GitFlow y Conventional Commits. Documentación técnica del Sprint 1, incluyendo Sprint Planning, configuración inicial del backend en ASP.NET Core mediante JetBrains Rider, y evidencias de despliegue y colaboración de equipo. |
 
 ---
 
@@ -200,16 +201,14 @@ Proyecto
 
 El curso contribuye al cumplimiento del Student Outcome ABET:
 
-**ABET – EAC - Student Outcome 3**
+**ABET – EAC - Student Outcome 5**
 
-**Criterio:**
-
-*Capacidad de comunicarse efectivamente con un rango de audiencias. En el siguiente cuadro se describe las acciones
-realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del
-ABET – EAC - Student Outcome 3.*
+**Criterio:** La capacidad de funcionar efectivamente en un equipo cuyos miembros juntos proporcionan liderazgo, crean un entorno de colaboración e inclusivo, establecen objetivos, planifican tareas y cumplen objetivos. En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 5.
 
 | Criterio específico | Acciones realizadas | Conclusiones |
-|---------------------|---------------------|--------------|
+| :--- | :--- | :--- |
+| **Trabaja en equipo para proporcionar liderazgo en forma conjunta** | **Ramos, Aldair**<br>*AV1*<br>• Coordinó la definición del problema de TI en PYMEs y redactó el análisis 5W2H.<br>• Delimitó el alcance exclusivo para la aplicación web eliminando componentes móviles o pasarelas.<br><br>**Yauri, Antony**<br>*AV1*<br>• Participó en la definición y organización del análisis de competidores.<br>• Contribuyó en la elaboración de los apartados de entrevistas, needfinding y herramientas de análisis UX.<br>• Coordinó con el equipo la organización de la información y evidencias del Capítulo 2.<br><br>**Condezo, Fernando**<br>*AV1*<br>• Asumió el rol de Aspect Leader en la configuración de repositorios y automatización de despliegues del Sprint 1.<br>• Lideró la definición de convenciones de control de versiones y la estructura arquitectónica inicial del API en JetBrains Rider. | • El liderazgo compartido permitió acotar el proyecto a un MVP web enfocado y viable.<br><br>• La distribución de responsabilidades técnicas aseguró una base de integración continua sólida desde el primer Sprint. |
+| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Ramos, Aldair**<br>*AV1*<br>• Planificó las entregas del Cap 1 y guió la elaboración de los supuestos e hipótesis Lean UX.<br>• Consolidó el Lean UX Canvas v2 priorizando los 2 segmentos de usuario clave.<br><br>**Yauri, Antony**<br>*AV1*<br>• Organizó y desarrolló contenido correspondiente a competidores, entrevistas y needfinding.<br>• Elaboró herramientas de análisis como User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping.<br>• Coordinó la integración de los resultados obtenidos en las diferentes actividades del Capítulo 2.<br><br>**Condezo, Fernando**<br>*AV1*<br>• Estructuró y documentó las tareas del Sprint Backlog 1, organizando las evidencias de ejecución y colaboración.<br>• Facilitó el trabajo paralelo del equipo mediante la correcta implementación de GitFlow y la gestión de permisos en GitHub. | • La gestión de tareas garantizó el cumplimiento total de los entregables del Avance 1.<br><br>• La estandarización temprana de los entornos de desarrollo facilitó el cumplimiento de las metas técnicas sin conflictos de código. |
 
 ---
 
@@ -242,21 +241,29 @@ empresas.
 ### 1.1.2. Perfiles de integrantes del equipo
 
 <div align="left">
-  <img src="../assets/" alt="" width="200">
+  <img src="./assets/profiles/FotoMatthew.jpeg" alt="Matthew Shinko Okuhama Diaz" width="200">
 </div>
 
-**nombre**
+**Matthew Shinko Okuhama Diaz**
 
-* **Código de estudiante:** codigo
-* **Carrera:**
+* **Código de estudiante:** U202419311
+* **Carrera:** Ingeniería de Software
 
-[contenido]
+Estudiante de pregrado de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Posee conocimientos en programación con C++, desarrollo web, bases de datos y herramientas de diseño y documentación como Figma, GitHub y PlantUML. Cuenta con experiencia en atención al cliente y trabajo en equipos, además de manejo del idioma inglés. En el proyecto CompuCare, participa en el diseño UX/UI, elaboración de wireframes, mockups, diagramas de arquitectura y documentación técnica del producto.
 
 <br>
 
 <div align="left">
-  <img src="assets/profiles/Anthony David Yauri Barrios.jpg" alt="" width="200">
+  <img width="200" height="250" alt="20240525_100958" src="https://github.com/user-attachments/assets/4f5293b1-2eb6-4286-b019-34398a2bba54" />
 </div>
+
+**Condezo Pacheco, Fernando André**
+
+* **Código de estudiante:** U202411324
+* **Carrera:** Ingeniería de Software
+
+Estudiante de pregrado de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), que equilibra su formación académica con experiencia laboral a tiempo parcial, demostrando una alta capacidad de organización y compromiso. Posee sólidos conocimientos en el desarrollo de software y lenguajes como C++ y TypeScript, así como en el modelado de arquitecturas limpias basadas en Domain-Driven Design (DDD). Cuenta con experiencia práctica utilizando herramientas profesionales como JetBrains Rider, Visual Studio Code, Figma, PlantUML, Hackolade y MongoDB Compass para el diseño y construcción de productos digitales. Al igual que otros miembros del equipo, posee la credencial Scrum Fundamentals Certified otorgada por SCRUMstudy, lo que le permite colaborar eficientemente bajo marcos de trabajo ágiles. En el proyecto, aporta liderando la configuración del entorno de desarrollo y control de versiones (SCM, GitFlow), la automatización de despliegues y la construcción técnica del RESTful API backend.
+<br>
 
 **Yauri Barrios, Antony David**
 
@@ -269,15 +276,15 @@ mejorar constantemente.
 <br>
 
 <div align="left">
-  <img src="../assets/" alt="" width="200">
+  <img src="./assets/profiles/FotoAldair.jpeg" alt="Aldair Ramos" width="200">
 </div>
 
-**nombre**
-
-* **Código de estudiante:**
+**Aldair Joaquin Ramos Aguirre**
+* **Código de estudiante:U20201F051**
 * **Carrera:** Ingeniería de Software
 
-[contenido]
+Estudiante de pregrado de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), con formación complementaria en finanzas. Posee conocimientos en desarrollo de software utilizando lenguajes de programación como Java, Python, JavaScript y TypeScript, así como en el desarrollo de aplicaciones backend con Spring Boot y Spring Security (JWT) y de interfaces web con React, Angular y Vue. Maneja bases de datos relacionales mediante SQL, además de herramientas como Git, Docker y Jira para el control de versiones, la contenerización y la gestión de tareas del equipo. Aporta en el desarrollo de la solución, la construcción de APIs seguras y la organización del trabajo colaborativo, con interés en incorporarse como Junior Software Engineer en equipos remotos internacionales.
+
 <br>
 
 <div align="left">
@@ -580,7 +587,7 @@ A continuación, presentamos nuestros User Personas, el User Task Matrix, los Us
 
 ### 2.3.1. User Personas
 
-Con base en el análisis de las 6 entrevistas, hemos construido dos arquetipos (User Personas) que representan fielmente a nuestros dos segmentos objetivo. Hemos considerado características demográficas, personalidad, canales digitales, frustraciones y metas. Estos perfiles serán el centro de todas las decisiones de diseño y arquitectura de información de TechSustain.
+Con base en el análisis de las 6 entrevistas, hemos construido dos arquetipos (User Personas) que representan fielmente a nuestros dos segmentos objetivo. Hemos considerado características demográficas, personalidad, canales digitales, frustraciones y metas. Estos perfiles serán el centro de todas las decisiones de diseño y arquitectura de información de CompuCare.
 
 **User Persona 1: Martín Cárdenas - El "Administrador Sin Control" (Segmento 1: Responsables de Empresa)**
 * UXPressia:
@@ -641,7 +648,7 @@ Con base en el análisis de las 6 entrevistas, hemos construido dos arquetipos (
 
 ### 2.3.2. User Task Matrix
 
-A continuación, presentamos la matriz de tareas de los usuarios. Aquí evaluamos las tareas clave que nuestros User Personas (Martín y Camila) realizan actualmente cuando enfrentan problemas informáticos en su empresa, independientemente de la existencia de TechSustain.
+A continuación, presentamos la matriz de tareas de los usuarios. Aquí evaluamos las tareas clave que nuestros User Personas (Martín y Camila) realizan actualmente cuando enfrentan problemas informáticos en su empresa, independientemente de la existencia de CompuCare.
 
 <table>
   <tr>
@@ -701,7 +708,7 @@ A continuación, presentamos la matriz de tareas de los usuarios. Aquí evaluamo
 
 **Análisis del User Task Matrix:**
 
-Al analizar la matriz, resaltan diferencias marcadas que guiarán la arquitectura de TechSustain:
+Al analizar la matriz, resaltan diferencias marcadas que guiarán la arquitectura de CompuCare:
 * **Diferencias operativas:** La tarea más crítica y frecuente para Camila es "Reportar la falla" y "Preguntar por el estado de la reparación". Para Martín, estas tareas son de baja frecuencia; sin embargo, las tareas de "Buscar técnico", "Autorizar gastos" y "Revisar presupuestos" son de altísima importancia para él. Esto justifica interfaces radicalmente distintas: Camila necesita un formulario de tickets rápido e intuitivo, mientras que Martín requiere un Dashboard financiero donde vea su suscripción, sus horas y un panel de aprobación de cotizaciones.
 
 
@@ -710,7 +717,7 @@ Al analizar la matriz, resaltan diferencias marcadas que guiarán la arquitectur
 
 ### 2.3.3. User Journey Mapping
 
-En esta sección presentamos los User Journey Maps en su versión "As-Is" (situación actual) para nuestros dos User Personas. El objetivo de estos diagramas es ilustrar el viaje de extremo a extremo que experimentan actualmente al enfrentar un problema informático sin TechSustain.
+En esta sección presentamos los User Journey Maps en su versión "As-Is" (situación actual) para nuestros dos User Personas. El objetivo de estos diagramas es ilustrar el viaje de extremo a extremo que experimentan actualmente al enfrentar un problema informático sin CompuCare.
 
 **User Journey Map 1: Martín Cárdenas (El "Administrador Sin Control")**
 * **Escenario:** Una laptop importante de su equipo de contabilidad falla en pleno cierre de fin de mes.
