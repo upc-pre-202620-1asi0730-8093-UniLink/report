@@ -208,7 +208,9 @@ realizadas y enunciados de conclusiones por parte del grupo, que permiten susten
 ABET – EAC - Student Outcome 3.*
 
 | Criterio específico | Acciones realizadas | Conclusiones |
-|---------------------|---------------------|--------------|
+| :--- | :--- | :--- |
+| **Trabaja en equipo para proporcionar liderazgo en forma conjunta** | **Ramos, Aldair**<br>*AV1*<br>• Coordinó la definición del problema de TI en PYMEs y redactó el análisis 5W2H.<br>• Delimitó el alcance exclusivo para la aplicación web eliminando componentes móviles o pasarelas. | • El liderazgo compartido permitió acotar el proyecto a un MVP web enfocado y viable. |
+| **Crea un entorno colaborativo e inclusivo, establece metas, planifica tareas y cumple objetivos.** | **Ramos, Aldair**<br>*AV1*<br>• Planificó las entregas del Cap 1 y guiós la elaboración de los supuestos e hipótesis Lean UX.<br>• Consolidó el Lean UX Canvas v2 priorizando los 2 segmentos de usuario clave. | • La gestión de tareas garantizó el cumplimiento total de los entregables del Avance 1. |
 
 ---
 
