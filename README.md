@@ -1688,7 +1688,7 @@ El video **About-the-Product** es una presentación comercial dirigida a nuestro
 
 # Video About-the-Team
 
-[Contenido]
+(https://drive.google.com/file/d/1MWOB4ddN_1YGEaoI-MxCeEaaEbbHgngg/view?usp=sharing)
 
 # Bibliografía
 
