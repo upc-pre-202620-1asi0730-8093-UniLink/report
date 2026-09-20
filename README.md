@@ -750,6 +750,21 @@ Otro flujo importante corresponde a la revisión de una solicitud:
 **Inicio → Solicitudes → Seleccionar solicitud → Revisar estado → Revisar técnico asignado → Consultar diagnóstico → Finalizar proceso.**
 
 Estos flujos ayudan a definir la lógica de navegación y las posibles decisiones del usuario.
+#### Responsible User Flow
+
+![CompuCare Responsible User Flow](assets/userflow_responsable.svg)
+
+#### Employee User Flow
+
+![CompuCare Employee User Flow](assets/userflow_empleado.svg)
+
+#### Technician User Flow
+
+![CompuCare Technician User Flow](assets/userflow_tecnico.svg)
+
+#### Administrator User Flow
+
+![CompuCare Administrator User Flow](assets/userflow_administrador.svg)
 ## 4.5. Web Applications Prototyping
 
 El prototipo de CompuCare fue desarrollado a partir de los wireframes y mock-ups elaborados previamente.
