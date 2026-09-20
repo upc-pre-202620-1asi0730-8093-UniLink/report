@@ -340,7 +340,7 @@ Las pequeñas y medianas empresas enfrentan una baja productividad y costos impr
 
 ##### User Assumptions
 * Los administradores de las empresas necesitan conocer con exactitud desde un panel web cuántas horas de soporte e intervenciones preventivas les quedan en el mes.
-* Los empleados necesitan un portal web accesible y simple para reportar fallas en sus equipos indicando su ubicación y el problema observado[cite: 1].
+* Los empleados necesitan un portal web accesible y simple para reportar fallas en sus equipos indicando su ubicación y el problema observado.
 * Los técnicos de soporte requieren una interfaz web clara para revisar solicitudes asignadas, registrar tiempos de trabajo y emitir diagnósticos técnicos.
 
 ##### User Outcome and Benefit Assumptions
