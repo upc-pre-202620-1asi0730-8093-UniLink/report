@@ -432,7 +432,28 @@ Estudiante de pregrado de la carrera de Ingeniería de Software en la Universida
 ## 3.1. User Stories
 ---
 
-[contenido]
+# Capítulo III: Requirements Specification
+
+## 3.1. User Stories
+# Capítulo III: Requirements Specification
+
+## 3.1. User Stories
+
+# Capítulo III: Requirements Specification
+
+## 3.1. Product Backlog (Historias de Usuario Priorizadas)
+
+| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+| :--- | :--- | :--- | :--- | :--- |
+| **US-01** | Inicio de Sesión y Control de Acceso por Rol | **Como** Usuario registrado,<br>**Quiero** iniciar sesión con mi correo corporativo y contraseña,<br>**Para** ingresar al panel web correspondiente a mis permisos. | **Escenario 1:**<br>- **Dado** que ingresa como "Administrador",<br>- **Cuando** presiona "Iniciar Sesión",<br>- **Entonces** va al Dashboard.<br><br>**Escenario 2:**<br>- **Dado** que ingresa como "Empleado",<br>- **Cuando** presiona "Iniciar Sesión",<br>- **Entonces** va a Gestión de Tickets. | Epic 1 |
+| **US-02** | Registro de Empresa y Selección de Plan | **Como** Administrador de MYPE,<br>**Quiero** registrar mi empresa y elegir un plan mensual,<br>**Para** acceder a los servicios de soporte de UniLink. | **Escenario 1:**<br>- **Dado** que hace clic en "Registrar",<br>- **Cuando** llena el formulario y elige plan,<br>- **Entonces** se crea la cuenta.<br><br>**Escenario 2:**<br>- **Dado** que ingresa un RUC existente,<br>- **Cuando** envía el formulario,<br>- **Entonces** muestra error de duplicidad. | Epic 1 |
+| **US-03** | Registro y Mapeo de Equipos de la Oficina | **Como** Administrador de MYPE,<br>**Quiero** registrar los equipos (número de serie y ubicación),<br>**Para** tener un inventario unificado de hardware. | **Escenario 1:**<br>- **Dado** que ingresa al Inventario,<br>- **Cuando** completa los datos del equipo,<br>- **Entonces** se genera un ID único.<br><br>**Escenario 2:**<br>- **Dado** que intenta guardar,<br>- **Cuando** deja el número de serie vacío,<br>- **Entonces** el sistema impide el guardado. | Epic 2 |
+| **US-04** | Ficha Clínica e Historial Técnico por Equipo | **Como** Administrador de MYPE,<br>**Quiero** consultar la ficha técnica e historial de cada PC,<br>**Para** evaluar si un equipo requiere reemplazo. | **Escenario 1:**<br>- **Dado** que selecciona un equipo,<br>- **Cuando** va a "Historial de Servicio",<br>- **Entonces** ve la cronología de tickets, mantenimientos y repuestos. | Epic 2 |
+| **US-05** | Creación Directa de Tickets de Soporte | **Como** Empleada de Oficina,<br>**Quiero** reportar la falla de mi equipo seleccionando la categoría,<br>**Para** solicitar atención técnica rápida. | **Escenario 1:**<br>- **Dado** que accede a "Reportar Problema",<br>- **Cuando** selecciona su equipo, categoría y describe la falla,<br>- **Entonces** se crea un ticket "Pendiente". | Epic 3 |
+| **US-06** | Seguimiento del Estado del Ticket | **Como** Empleada de Oficina,<br>**Quiero** visualizar el avance de mi ticket,<br>**Para** saber cuándo seré atendida sin hacer llamadas. | **Escenario 1:**<br>- **Dado** que tiene un ticket activo,<br>- **Cuando** consulta "Mis Solicitudes",<br>- **Entonces** ve la línea de tiempo (Asignado, En Reparación, etc.). | Epic 3 |
+| **US-07** | Panel de Control de Bolsa de Horas | **Como** Administrador de MYPE,<br>**Quiero** visualizar en un Dashboard las horas consumidas/disponibles,<br>**Para** mantener el control de los costos. | **Escenario 1:**<br>- **Dado** que un técnico cierra un ticket con 2 horas,<br>- **Cuando** el administrador va al Dashboard,<br>- **Entonces** el gráfico descuenta las horas del saldo mensual. | Epic 4 |
+| **US-08** | Agendamiento de Mantenimientos Preventivos | **Como** Administrador de MYPE,<br>**Quiero** programar las visitas preventivas de mi suscripción,<br>**Para** prevenir fallas en los equipos. | **Escenario 1:**<br>- **Dado** que hay cupos preventivos,<br>- **Cuando** selecciona equipos y fecha en el calendario,<br>- **Entonces** se agenda la visita y se descuenta el cupo. | Epic 4 |
+| **US-09** | Aprobación/Rechazo Digital de Cotizaciones | **Como** Administrador de MYPE,<br>**Quiero** autorizar digitalmente cotizaciones de repuestos,<br>**Para** validar sobrecostos antes de la compra. | **Escenario 1:**<br>- **Dado** que hay una cotización,<br>- **Cuando** hace clic en "Aprobar",<br>- **Entonces** se autoriza la compra.<br><br>**Escenario 2:**<br>- **Dado** que revisa la cotización,<br>- **Cuando** presiona "Rechazar",<br>- **Entonces** se pausa la orden. | Epic 5 |
 
 ## 3.2. Impact Mapping
 
