@@ -644,6 +644,8 @@ En este diseño se aplican los colores, tipografía, botones, tarjetas y demás 
 El mock-up permite visualizar la apariencia final de la página antes de iniciar su implementación.
 
 ![CompuCare Landing Page Mock-up](assets/CompuCare_Landing.svg)
+**Landing Page desplegada:**  
+https://upc-pre-202620-1asi0730-8093-unilink.github.io/landing/
 ## 4.4. Web Applications UX/UI Design
 
 El diseño UX/UI de la aplicación web de CompuCare busca simplificar la gestión del soporte técnico y permitir que cada usuario encuentre rápidamente las funcionalidades relacionadas con su rol.
@@ -721,6 +723,8 @@ El prototipo permite validar aspectos como:
 Entre los principales flujos representados se encuentran el registro de equipos, creación de solicitudes de soporte, seguimiento de atenciones, revisión de técnicos asignados y consulta de cotizaciones.
 
 La validación del prototipo permite detectar problemas de navegación o usabilidad antes de iniciar el desarrollo de la aplicación web.
+**Prototipo desplegado:**  
+https://upc-pre-202620-1asi0730-8093-unilink.github.io/landing/
 
 ## 4.6. Domain-Driven Software Architecture
 La arquitectura de CompuCare se organiza tomando como referencia los principios de Domain-Driven Design (DDD).
