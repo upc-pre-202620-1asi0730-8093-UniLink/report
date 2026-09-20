@@ -42,8 +42,8 @@ Proyecto
 <td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[nombre]</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[codigo]</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[nombre]</td>
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U202214499</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Yauri Barrios, Antony David</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
 <td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[codigo]</td>
@@ -240,15 +240,15 @@ UniLink se encargará de seleccionar, capacitar y coordinar a los técnicos resp
 <br>
 
 <div align="left">
-  <img src="../assets/" alt="" width="200">
+  <img src="./assets/profiles/Anthony.jpg" alt="" width="200">
 </div>
 
-**nombre**
-* **Código de estudiante:**
+**Antony David Yauri Barrios**
+* **Código de estudiante:** U202214499
 * **Carrera:** Ingeniería de Software
 
 
-[contenido]
+Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas(UPC), Tiene 22 años y trabaja con los stacks MERN y PERN.Le gusta trabajar en equipo, compartir conocimientos y seguir aprendiendo de sus compañeros para mejorar constantemente.
 <br>
 
 <div align="left">
