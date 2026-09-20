@@ -289,21 +289,30 @@ Estudiante de pregrado de la carrera de Ingeniería de Software en la Universida
 
 ### 1.2.1. Antecedentes y problemática
 
-*   **Who? (¿Quién?):**
-*   **What? (¿Qué?):**
-*   **Where? (¿Dónde?):**
-*   **When? (¿Cuándo?):**
-*   **Why? (¿Por qué?):**
-*   **How? (¿Cómo?):**
-*   **How much? (¿Cuánto?):**
+#### Análisis 5W2H
+* **Who? (¿Quién?):** Pequeñas y medianas empresas (PYMEs) como oficinas administrativas, estudios contables y agencias que dependen de equipos informáticos pero no cuentan con un área interna de soporte técnico TI.
+* **What? (¿Qué?):** Ineficiencia en la gestión del mantenimiento informático, tiempos prolongados de inactividad por fallas, falta de trazabilidad en los trabajos realizados y costos imprevistos o no transparentes en reparaciones y repuestos.
+* **Where? (¿Dónde?):** En las instalaciones de las PYMEs atención presencial dentro de la zona de cobertura y de forma remota, siendo gestionado todo el ciclo de atención mediante la aplicación web.
+* **When? (¿Cuándo?):** Cada vez que ocurre una incidencia técnica de hardware/software o cuando corresponde realizar el mantenimiento preventivo periódico de las estaciones de trabajo.
+* **Why? (¿Por qué?):** Porque la contratación informal o eventual de técnicos independientes genera incertidumbre en los tiempos de respuesta, carece de un historial centralizado de incidencias y no garantiza transparencia en los cobros ni en el diagnóstico.
+* **How? (¿Cómo?):** Las empresas intentan resolver incidencias mediante llamadas no estructuradas o mensajes informales a técnicos externos, provocando desorganización en el seguimiento y pérdida de control sobre los gastos de mantenimiento.
+* **How much? (¿Cuánto?):** Las empresas sufren pérdidas económicas por horas operativas inactivas y sobrecostos por reparaciones no estandarizadas o repuestos presupuestados sin un control centralizado.
 
 <br>
 
 **Enunciado del problema:**
 
+Las pequeñas y medianas empresas (PYMEs) que dependen de infraestructura informática sufren pérdidas de productividad y sobrecostos debido a la ausencia de un sistema centralizado e integral para gestionar el soporte técnico y mantenimiento de sus computadoras[cite: 1]. Actualmente, la falta de visibilidad sobre los estados de atención, la ausencia de un historial por equipo y la informalidad en la cotización de repuestos generan desconfianza e ineficiencia operativa.
+
 **Objetivo general:**
 
+Desarrollar e implementar una aplicación web multi-rol que permita a las PYMEs gestionar el mantenimiento preventivo y correctivo de sus computadoras bajo un modelo de suscripción mensual, garantizando el seguimiento en tiempo real de las solicitudes, la transparencia en el consumo de bolsa de horas y la validación de cotizaciones adicionales.
+
 **Restricciones de alcance:**
+
+* **Exclusividad del Canal Web:** La solución tecnológica del proyecto se limita de forma estricta al desarrollo de una **aplicación web responsiva** accesible desde navegadores modernos. 
+* **Atención en Horario Operativo:** No se ofrecerá soporte técnico ininterrumpido 24/7 en la versión inicial.
+
 
 ### 1.2.2. Lean UX Process
 [contenido]
