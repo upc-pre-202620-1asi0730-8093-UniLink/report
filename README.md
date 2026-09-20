@@ -40,8 +40,8 @@ Proyecto
 <td align="left" style="border: none !important; padding: 0 !important; background: none !important;"><strong>Apellidos y Nombres</strong></td>
 </tr>
 <tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[codigo]</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[nombre]</td>
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[U202419311]</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[Matthew Shinko Okuhama Diaz]</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
 <td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U202214499</td>
@@ -241,15 +241,15 @@ empresas.
 ### 1.1.2. Perfiles de integrantes del equipo
 
 <div align="left">
-  <img src="../assets/" alt="" width="200">
+  <img src="./assets/profiles/FotoMatthew.jpeg" alt="Matthew Shinko Okuhama Diaz" width="200">
 </div>
 
-**nombre**
+**Matthew Shinko Okuhama Diaz**
 
-* **Código de estudiante:** codigo
-* **Carrera:**
+* **Código de estudiante:** U202419311
+* **Carrera:** Ingeniería de Software
 
-[contenido]
+Estudiante de pregrado de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Posee conocimientos en programación con C++, desarrollo web, bases de datos y herramientas de diseño y documentación como Figma, GitHub y PlantUML. Cuenta con experiencia en atención al cliente y trabajo en equipos, además de manejo del idioma inglés. En el proyecto CompuCare, participa en el diseño UX/UI, elaboración de wireframes, mockups, diagramas de arquitectura y documentación técnica del producto.
 
 <br>
 
