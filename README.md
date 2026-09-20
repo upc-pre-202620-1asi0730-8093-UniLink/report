@@ -288,7 +288,7 @@ Estudiante de pregrado de la carrera de Ingeniería de Software en la Universida
 <br>
 
 <div align="left">
-  <img src="report/assets/profiles/Sergio Luis Miranda Romero.jpeg" alt="Sergio Luis Miranda Romero" width="200">
+  <img src="/assets/profiles/Sergio Luis Miranda Romero.jpeg" alt="Sergio Luis Miranda Romero" width="200">
 </div>
 
 **Miranda Romero, Sergio Luis**
