@@ -322,7 +322,6 @@ Desarrollar e implementar una aplicación web multi-rol que permita a las PYMEs 
 
 
 ### 1.2.2. Lean UX Process
-[contenido]
 #### 1.2.2.1. Lean UX Problem Statements
 
 Las pequeñas y medianas empresas enfrentan una baja productividad y costos imprevistos debido a la falta de trazabilidad y organización en el soporte técnico de sus computadoras. Hemos observado que los administradores no cuentan con visibilidad sobre el estado de sus reparaciones ni sobre el consumo exacto del plan contratado.
