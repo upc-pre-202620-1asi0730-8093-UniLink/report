@@ -27,7 +27,6 @@ Equipo
 Proyecto
 
 ### **TechSustain**
-
 <br>
 
 #### **Integrantes**
