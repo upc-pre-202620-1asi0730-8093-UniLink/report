@@ -705,36 +705,105 @@ Otro flujo importante corresponde a la revisión de una solicitud:
 Estos flujos ayudan a definir la lógica de navegación y las posibles decisiones del usuario.
 ## 4.5. Web Applications Prototyping
 
-**Se ha desarrollado un prototipo interactivo para Desktop y Mobile que simula la navegación y el flujo de los User Flows diagramados. Se ha grabado una demostración en video para evidenciar las decisiones de arquitectura de información.**   
+El prototipo de CompuCare fue desarrollado a partir de los wireframes y mock-ups elaborados previamente.
+
+Su objetivo es representar de manera interactiva la navegación entre las principales pantallas de la aplicación antes de iniciar su implementación funcional.
+
+El prototipo permite validar aspectos como:
+
+- Comprensión de la navegación.
+- Distribución de la información.
+- Visibilidad de las acciones principales.
+- Secuencia de los formularios.
+- Comprensión de los estados de las solicitudes.
+- Acceso a las funcionalidades principales según el rol del usuario.
+
+Entre los principales flujos representados se encuentran el registro de equipos, creación de solicitudes de soporte, seguimiento de atenciones, revisión de técnicos asignados y consulta de cotizaciones.
+
+La validación del prototipo permite detectar problemas de navegación o usabilidad antes de iniciar el desarrollo de la aplicación web.
 
 ## 4.6. Domain-Driven Software Architecture
+La arquitectura de CompuCare se organiza tomando como referencia los principios de Domain-Driven Design (DDD).
 
-**A partir del Big Picture EventStorming, hemos aplicado los principios de Domain-Driven Design (DDD) para identificar nuestros Bounded Contexts, Aggregates, comandos y eventos, logrando una arquitectura orientada a servicios altamente cohesiva.**
+Este enfoque permite separar las responsabilidades del sistema según los principales procesos de negocio y facilita la organización de las funcionalidades de la plataforma.
 
+Los principales dominios identificados son:
+
+- Gestión de usuarios.
+- Gestión de empresas.
+- Gestión de equipos.
+- Gestión de solicitudes de soporte.
+- Gestión de técnicos.
+- Gestión de suscripciones.
+- Gestión de cotizaciones.
+- Gestión del historial de atenciones.
+
+Cada dominio agrupa las entidades, reglas y operaciones relacionadas con una responsabilidad específica del sistema.
 ### 4.6.1. Design-Level Event Storming
 
-**A través del Design-Level EventStorming, modelamos el comportamiento interno del sistema. Identificamos Bounded Contexts clave como: IdentityAndAccess (Roles de usuario), SubscriptionManagement (Manejo de planes y saldo de horas) y SupportOperations (Ciclo de vida de tickets y cotizaciones).   
-  Matriz de Comandos y Eventos:
-    Comando: CreateSupportTicket -> Evento: SupportTicketCreated (Desencadena asignación de técnico).
-    Comando: LogTechnicalWork -> Evento: HoursBalanceUpdated (Disminuye la bolsa de horas del cliente).   
-    Comando: ApproveExtraQuote -> Evento: QuoteApproved (Autoriza compra de repuestos).**  
+El Design-Level Event Storming permite representar los principales eventos, comandos y actores que intervienen en los procesos de CompuCare.
+
+A partir de los flujos principales de la plataforma se identificaron los siguientes comandos y eventos:
+
+| Comando | Evento |
+|---|---|
+| Registrar empresa | Empresa registrada |
+| Registrar usuario | Usuario registrado |
+| Registrar equipo | Equipo registrado |
+| Crear solicitud | Solicitud registrada |
+| Asignar técnico | Técnico asignado |
+| Registrar diagnóstico | Diagnóstico registrado |
+| Generar cotización | Cotización generada |
+| Aprobar cotización | Cotización aprobada |
+| Actualizar estado | Estado de solicitud actualizado |
+| Finalizar atención | Atención finalizada |
+
+Por ejemplo, cuando un usuario registra una solicitud de soporte, el sistema genera el evento **Solicitud registrada**. Posteriormente, la asignación de un técnico genera el evento **Técnico asignado**.
+
+Este modelado permite comprender la secuencia de acciones del sistema y las responsabilidades asociadas a cada proceso.
 
 ### 4.6.2. Software Architecture Context Diagram
+El Software Architecture Context Diagram representa a CompuCare como el sistema central y muestra su interacción con los principales actores externos.
 
-**Aplicando el Nivel 1 del Modelo C4, el diagrama de contexto sitúa al sistema de software de CompuCare en el centro. Interactúa directamente con los Empleados (reportan problemas), los Responsables de Empresa (aprueban y revisan horas), los Técnicos y los Administradores de la Startup. A nivel externo, se comunica con una Pasarela de Pagos (para cobro de suscripciones y cotizaciones extra) y un Servicio de E-mail (notificaciones).**
+Los actores identificados son:
 
+- **Cliente empresarial:** administra la información de su empresa y consulta los servicios contratados.
+- **Empleado:** registra solicitudes de soporte relacionadas con los equipos que utiliza.
+- **Técnico:** revisa solicitudes asignadas, registra diagnósticos y actualiza el estado de las atenciones.
+- **Administrador de CompuCare:** gestiona usuarios, técnicos, empresas, planes y operaciones generales del sistema.
+
+Todos estos actores interactúan con la plataforma web de CompuCare para realizar las operaciones correspondientes a su rol.
 ### 4.6.3. Software Architecture Container Diagrams
 
-**El Nivel 2 del Modelo C4 describe cómo se distribuyen las responsabilidades tecnológicas. La solución consta de:   
-  Landing Page (Static Web App): HTML5, CSS3, JavaScript.
-  Single-Page Application (Frontend Web App): Vue.js para interactividad ágil en el lado del cliente.   
-  RESTful API Application (Backend): Lógica de negocio lado servidor desarrollada con ASP.NET Core y C#.   
-  Relational Database: Almacenamiento persistente en MySQL Server o PostgreSQL.**
+El Container Diagram divide la solución CompuCare en sus principales componentes tecnológicos.
+
+Los contenedores considerados son:
+
+- **Landing Page:** presenta la propuesta de valor, beneficios, funcionamiento y planes de CompuCare.
+- **Web Application:** interfaz principal utilizada por clientes, empleados, técnicos y administradores.
+- **Backend / REST API:** procesa las reglas de negocio y las solicitudes enviadas desde la aplicación web.
+- **Database:** almacena la información persistente relacionada con usuarios, empresas, equipos, solicitudes, técnicos y suscripciones.
+
+La Web Application se comunica con el Backend mediante solicitudes HTTP. El Backend procesa la lógica de negocio y consulta o modifica la información almacenada en la base de datos.
+
+Esta separación facilita el mantenimiento, escalabilidad y evolución de la plataforma.
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-**El Nivel 3 del Modelo C4 detalla el interior de nuestro contenedor RESTful API. Muestra cómo los componentes (Controladores, Servicios de Dominio, Repositorios) interactúan entre sí. Por ejemplo, el TicketController se comunica con el SupportOperationsService y el SubscriptionService para validar que la empresa tenga saldo de horas activo antes de proceder.**
+El Components Diagram representa con mayor detalle la organización interna del Backend de CompuCare.
 
+Entre los principales componentes se consideran:
+
+- **Controllers:** reciben las solicitudes provenientes de la aplicación web.
+- **Application Services:** coordinan los casos de uso del sistema.
+- **Domain Services:** contienen reglas relacionadas con el negocio.
+- **Repositories:** gestionan el acceso a la información almacenada.
+- **Entities:** representan los principales objetos del dominio.
+- **Persistence:** permite almacenar y recuperar información de la base de datos.
+
+Por ejemplo, una solicitud para registrar un nuevo soporte es recibida por un Controller, procesada por el servicio correspondiente y almacenada mediante un Repository.
+
+Esta organización permite mantener separadas las responsabilidades del sistema y reducir el acoplamiento entre sus componentes.
 ## 4.7. Software Object-Oriented Design
 
 **En esta sección se presenta el modelado detallado a nivel de clases. El diseño orientado a objetos con C# encapsula la lógica de negocio, protegiendo las propiedades mediante el uso de constructores y propiedades privadas o de solo lectura. Se aplican herencia e interfaces para asegurar el bajo acoplamiento.**
