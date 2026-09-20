@@ -325,33 +325,42 @@ Desarrollar e implementar una aplicación web multi-rol que permita a las PYMEs 
 [contenido]
 #### 1.2.2.1. Lean UX Problem Statements
 
-[contenido] DEL LEAN UX PROBLEM STATEMENTS
+Las pequeñas y medianas empresas enfrentan una baja productividad y costos imprevistos debido a la falta de trazabilidad y organización en el soporte técnico de sus computadoras. Hemos observado que los administradores no cuentan con visibilidad sobre el estado de sus reparaciones ni sobre el consumo exacto del plan contratado.
 
 #### 1.2.2.2. Lean UX Assumptions
 
 ##### Business Assumptions
-[contenido]
+* Las PYMEs prefieren pagar una tarifa fija mensual por soporte técnico en lugar de asumir costos variables e imprevistos por emergencias.
+* El modelo de bolsa de horas y mantenimientos preventivos empaquetados operado mediante una aplicación web permite mantener la rentabilidad del negocio.
+* Las empresas están dispuestas a aprobar cotizaciones adicionales a través de la web si se les detalla con transparencia el diagnóstico y costo de componentes.
 
 ##### Business Outcome Assumptions
-[contenido]
+* Incrementar en un 25% la tasa de renovación mensual de suscripciones.
+* Reducir en un 40% el tiempo promedio entre la emisión de una cotización adicional y su aprobación o rechazo por parte del cliente a través del panel web.
 
 ##### User Assumptions
-[contenido]
+* Los administradores de las empresas necesitan conocer con exactitud desde un panel web cuántas horas de soporte e intervenciones preventivas les quedan en el mes.
+* Los empleados necesitan un portal web accesible y simple para reportar fallas en sus equipos indicando su ubicación y el problema observado[cite: 1].
+* Los técnicos de soporte requieren una interfaz web clara para revisar solicitudes asignadas, registrar tiempos de trabajo y emitir diagnósticos técnicos.
 
 ##### User Outcome and Benefit Assumptions
-[contenido]
+* Los administradores reducen el tiempo dedicado a coordinar reparaciones con técnicos independientes gracias al autocontrol que ofrece la plataforma web.
+* Los empleados minimizan el tiempo de inactividad de sus estaciones de trabajo al agilizar los reportes desde su navegador web.
 
 ##### Feature Assumptions
-[contenido]
+* **Landing Page y Panel de presentación:** Informa sobre los planes y permite el registro e inicio de sesión de las empresas.
+* **Panel de control de consumo (Web Dashboard):** Muestra dinámicamente en tiempo real las horas y mantenimientos disponibles del plan contratado.
+* **Módulo web de cotizaciones adicionales:** Permite revisar, aprobar o rechazar gastos de repuestos antes de ejecutar el trabajo.
+* **Historial por equipo en entorno web:** Permite consultar las intervenciones pasadas asociadas al código o serie de cada computadora.
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-[contenido]
+* **Hipótesis 1:** Creemos que ofreciendo un panel web dinámico donde el administrador visualice en tiempo real la bolsa de horas consumidas y disponibles, lograremos un nivel de transparencia que aumente la retención de clientes. Sabremos que tuvimos éxito cuando el 80% de las empresas activas renueven su plan al finalizar el periodo mensual.
+* **Hipótesis 2:** Creemos que integrando un flujo digital en la aplicación web para la aprobación de cotizaciones con desglose de diagnóstico y repuestos, aceleraremos los tiempos de reparación. Sabremos que tuvimos éxito cuando el tiempo de espera en estado "Pendiente de aprobación" sea menor a 4 horas en promedio dentro del sistema web.
 
 #### 1.2.2.4. Lean UX Canvas
 
 
-[contenido]
 
 ## 1.3. Segmentos objetivo
 
