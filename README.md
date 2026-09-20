@@ -496,7 +496,11 @@ nuestra startup UniLink (producto TechSustain) frente al mercado.
 
 Frente a la competencia actual en el sector de soporte y mantenimiento informático, TechSustain implementará las siguientes estrategias para capitalizar las debilidades del mercado:
 1. Frente al software puro (Zendesk) - Estrategia de Servicio Integral: Mientras que las plataformas SaaS tradicionales solo otorgan la herramienta digital, obligando a la MYPE a contratar a sus propios ingenieros, TechSustain ofrecerá la solución completa. Nuestra táctica será promocionarnos como un "Departamento de TI as a Service", donde la plataforma web ya viene integrada con nuestra red de técnicos listos para ser asignados, ahorrándole a la empresa el costo de planillas de personal tecnológico.
+
+
 2. Frente a las Agencias Tradicionales - Estrategia de Transparencia Absoluta: El mayor dolor al contratar una agencia de outsourcing tradicional es la falta de visibilidad ("¿Cuántas horas de soporte me quedan?" o "¿Por qué me facturan este repuesto?"). Nuestra táctica será convertir esta debilidad en nuestra mayor fortaleza: el panel del administrador en nuestra aplicación web mostrará el consumo de la bolsa de horas en tiempo real y bloqueará cualquier reparación extra hasta que el cliente apruebe explícitamente la cotización del repuesto en la plataforma.
+
+
 3. Frente al mercado on-demand e informal - Estrategia de Prevención e Historial: A diferencia de contratar a un técnico informal solo cuando la computadora "ya no prende", TechSustain fomenta una cultura preventiva. Nuestra táctica será ofrecer mantenimientos preventivos fijos mensuales incluidos en los planes de suscripción (ej. Plan Empresarial incluye 2 equipos al mes). Además, la plataforma registrará el historial de intervenciones de cada máquina, agregando un valor corporativo a largo plazo que las apps on-demand no ofrecen.
 
 
@@ -522,12 +526,12 @@ Para asegurar la recolección de información cualitativa de alto valor que nos 
 5. Contexto: Descríbeme brevemente cómo es un día normal de trabajo para ti y qué tan indispensable es tu computadora para lograr tus metas.
 
 **Preguntas de Problema y Competencia (Core del Negocio): Estas preguntas buscan validar la necesidad de soporte técnico centralizado.**
+
+
 6. Dolor: Actualmente, cuando una computadora o equipo falla en la oficina, ¿cuál es el proceso exacto que siguen para repararlo?
 
 
 7. Dolor: ¿Cuál es el mayor dolor de cabeza o problema que enfrentan al tratar con técnicos informáticos independientes o al no tener un área de TI?
-
-
 
 
 8. Competencia: ¿Alguna vez han contratado pólizas de soporte mensuales o plataformas de tickets? Si es así, ¿qué les funcionó y qué no?
@@ -541,6 +545,8 @@ Para asegurar la recolección de información cualitativa de alto valor que nos 
 **Preguntas Específicas por Segmento (Enfoque en Roles):**
 
 **Para el Segmento 1 (Responsables de la Empresa: Dueños, Administradores, Gerentes):**
+
+
 11. (Finanzas y Control): ¿Te ha pasado que apruebas la reparación de un equipo y al final te cobran repuestos o sobrecostos que no esperabas?
 
 
