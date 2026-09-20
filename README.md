@@ -882,15 +882,52 @@ Para profundizar en la psique de nuestros usuarios, realizamos una sesión de an
 ## 3.1. User Stories
 ---
 
-[contenido]
+# Capítulo III: Requirements Specification
+
+## 3.1. User Stories
+# Capítulo III: Requirements Specification
+
+## 3.1. User Stories
+
+# Capítulo III: Requirements Specification
+
+## 3.1. Product Backlog (Historias de Usuario Priorizadas)
+
+| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+| :--- | :--- | :--- | :--- | :--- |
+| **US-01** | Inicio de Sesión y Control de Acceso por Rol | **Como** Usuario registrado,<br>**Quiero** iniciar sesión con mi correo corporativo y contraseña,<br>**Para** ingresar al panel web correspondiente a mis permisos. | **Escenario 1:**<br>- **Dado** que ingresa como "Administrador",<br>- **Cuando** presiona "Iniciar Sesión",<br>- **Entonces** va al Dashboard.<br><br>**Escenario 2:**<br>- **Dado** que ingresa como "Empleado",<br>- **Cuando** presiona "Iniciar Sesión",<br>- **Entonces** va a Gestión de Tickets. | Epic 1 |
+| **US-02** | Registro de Empresa y Selección de Plan | **Como** Administrador de MYPE,<br>**Quiero** registrar mi empresa y elegir un plan mensual,<br>**Para** acceder a los servicios de soporte de UniLink. | **Escenario 1:**<br>- **Dado** que hace clic en "Registrar",<br>- **Cuando** llena el formulario y elige plan,<br>- **Entonces** se crea la cuenta.<br><br>**Escenario 2:**<br>- **Dado** que ingresa un RUC existente,<br>- **Cuando** envía el formulario,<br>- **Entonces** muestra error de duplicidad. | Epic 1 |
+| **US-03** | Registro y Mapeo de Equipos de la Oficina | **Como** Administrador de MYPE,<br>**Quiero** registrar los equipos (número de serie y ubicación),<br>**Para** tener un inventario unificado de hardware. | **Escenario 1:**<br>- **Dado** que ingresa al Inventario,<br>- **Cuando** completa los datos del equipo,<br>- **Entonces** se genera un ID único.<br><br>**Escenario 2:**<br>- **Dado** que intenta guardar,<br>- **Cuando** deja el número de serie vacío,<br>- **Entonces** el sistema impide el guardado. | Epic 2 |
+| **US-04** | Ficha Clínica e Historial Técnico por Equipo | **Como** Administrador de MYPE,<br>**Quiero** consultar la ficha técnica e historial de cada PC,<br>**Para** evaluar si un equipo requiere reemplazo. | **Escenario 1:**<br>- **Dado** que selecciona un equipo,<br>- **Cuando** va a "Historial de Servicio",<br>- **Entonces** ve la cronología de tickets, mantenimientos y repuestos. | Epic 2 |
+| **US-05** | Creación Directa de Tickets de Soporte | **Como** Empleada de Oficina,<br>**Quiero** reportar la falla de mi equipo seleccionando la categoría,<br>**Para** solicitar atención técnica rápida. | **Escenario 1:**<br>- **Dado** que accede a "Reportar Problema",<br>- **Cuando** selecciona su equipo, categoría y describe la falla,<br>- **Entonces** se crea un ticket "Pendiente". | Epic 3 |
+| **US-06** | Seguimiento del Estado del Ticket | **Como** Empleada de Oficina,<br>**Quiero** visualizar el avance de mi ticket,<br>**Para** saber cuándo seré atendida sin hacer llamadas. | **Escenario 1:**<br>- **Dado** que tiene un ticket activo,<br>- **Cuando** consulta "Mis Solicitudes",<br>- **Entonces** ve la línea de tiempo (Asignado, En Reparación, etc.). | Epic 3 |
+| **US-07** | Panel de Control de Bolsa de Horas | **Como** Administrador de MYPE,<br>**Quiero** visualizar en un Dashboard las horas consumidas/disponibles,<br>**Para** mantener el control de los costos. | **Escenario 1:**<br>- **Dado** que un técnico cierra un ticket con 2 horas,<br>- **Cuando** el administrador va al Dashboard,<br>- **Entonces** el gráfico descuenta las horas del saldo mensual. | Epic 4 |
+| **US-08** | Agendamiento de Mantenimientos Preventivos | **Como** Administrador de MYPE,<br>**Quiero** programar las visitas preventivas de mi suscripción,<br>**Para** prevenir fallas en los equipos. | **Escenario 1:**<br>- **Dado** que hay cupos preventivos,<br>- **Cuando** selecciona equipos y fecha en el calendario,<br>- **Entonces** se agenda la visita y se descuenta el cupo. | Epic 4 |
+| **US-09** | Aprobación/Rechazo Digital de Cotizaciones | **Como** Administrador de MYPE,<br>**Quiero** autorizar digitalmente cotizaciones de repuestos,<br>**Para** validar sobrecostos antes de la compra. | **Escenario 1:**<br>- **Dado** que hay una cotización,<br>- **Cuando** hace clic en "Aprobar",<br>- **Entonces** se autoriza la compra.<br><br>**Escenario 2:**<br>- **Dado** que revisa la cotización,<br>- **Cuando** presiona "Rechazar",<br>- **Entonces** se pausa la orden. | Epic 5 |
 
 ## 3.2. Impact Mapping
 
-[Contenido]
+**Segmento 1: Empresas Suscriptoras**
+
+<img src="/assets/Impact-Map-Empresas-Suscriptoras.png" width="580" />
+
+**Segmento 2: Empleados de las Empresas**
+
+<img src="/assets/Impact-Map-Empleado-de-empresas.png" width="580"/>
 
 ## 3.3. Product Backlog
 
-[Contenido]
+| # Orden | User Story Id | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | US01 | Inicio de Sesión y Control de Acceso por Rol | Como Usuario registrado, quiero iniciar sesión con mi correo corporativo y contraseña, para ingresar al panel web correspondiente a mis permisos. | 3 |
+| 2 | US03 | Registro y Mapeo de Equipos de la Oficina | Como Administrador de MYPE, quiero registrar los equipos indicando su número de serie y ubicación, para mantener un inventario unificado de hardware bajo cobertura. | 3 |
+| 3 | US05 | Creación Directa de Tickets de Soporte | Como Empleada de Oficina, quiero reportar la falla de mi equipo seleccionando la categoría del problema, para solicitar atención técnica rápida sin intermediarios. | 5 |
+| 4 | US07 | Panel de Control de Bolsa de Horas | Como Administrador de MYPE, quiero visualizar en un Dashboard las horas consumidas y disponibles, para mantener el control de los costos de soporte del mes. | 5 |
+| 5 | US09 | Aprobación/Rechazo Digital de Cotizaciones | Como Administrador de MYPE, quiero revisar y autorizar digitalmente las cotizaciones de repuestos, para validar los sobrecostos antes de cualquier compra. | 3 |
+| 6 | US02 | Registro de Empresa y Selección de Plan | Como Administrador de MYPE, quiero registrar mi empresa y elegir un plan mensual, para acceder a los servicios de soporte de UniLink. | 5 |
+| 7 | US06 | Seguimiento del Estado del Ticket | Como Empleada de Oficina, quiero visualizar el avance de mi ticket, para saber cuándo seré atendida sin hacer llamadas. | 3 |
+| 8 | US08 | Agendamiento de Mantenimientos Preventivos | Como Administrador de MYPE, quiero programar las visitas preventivas de mi suscripción, para prevenir fallas en los equipos antes de que afecten la operación. | 8 |
+| 9 | US04 | Ficha Clínica e Historial Técnico por Equipo | Como Administrador de MYPE, quiero consultar la ficha técnica e historial de cada PC, para evaluar si un equipo requiere reemplazo por fallas recurrentes. | 3 |
 
 # Capítulo IV: Product Design
 
