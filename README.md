@@ -928,6 +928,25 @@ Algunas relaciones principales son:
 - Cada atención finalizada puede formar parte del historial del equipo.
 
 El diagrama permite visualizar las relaciones y responsabilidades principales antes de implementar las clases del sistema.
+#### Identity and Access
+
+![CompuCare Identity and Access Class Diagram](assets/clases_identidad.svg)
+
+#### Companies and Equipment
+
+![CompuCare Companies and Equipment Class Diagram](assets/clases_empresa.svg)
+
+#### Subscriptions and Coverage
+
+![CompuCare Subscriptions and Coverage Class Diagram](assets/clases_cobertura.svg)
+
+#### Service Requests
+
+![CompuCare Service Requests Class Diagram](assets/clases_soporte.svg)
+
+#### Quotations and Payments
+
+![CompuCare Quotations and Payments Class Diagram](assets/clases_cotizaciones.svg)
 ## 4.8. Database Design
 
 El diseño de la base de datos de CompuCare permite almacenar de forma estructurada la información necesaria para el funcionamiento de la plataforma.
