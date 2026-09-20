@@ -589,6 +589,7 @@ Ejemplo:
   name="viewport"
   content="width=device-width, initial-scale=1.0"
 >
+```
   
 ### 4.2.4. Searching Systems
 El sistema de búsqueda permite localizar información dentro de módulos que contienen varios registros.
