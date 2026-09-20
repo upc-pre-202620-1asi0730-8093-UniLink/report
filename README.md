@@ -472,115 +472,565 @@ Las pequeñas y medianas empresas enfrentan una baja productividad y costos impr
 
 # Capítulo IV: Product Design
 
+En este capítulo se presenta el diseño del producto CompuCare, considerando los lineamientos visuales, la arquitectura de información, el diseño UX/UI de la Landing Page y la aplicación web, así como la arquitectura de software, diseño orientado a objetos y diseño de base de datos.
+
 ## 4.1. Style Guidelines
 
-[Contenido]
+Los lineamientos de estilo de CompuCare permiten mantener una experiencia visual coherente entre la Landing Page y la aplicación web. Se busca transmitir confianza, claridad y profesionalismo, considerando que la solución está orientada principalmente a empresas que requieren gestionar el mantenimiento y soporte técnico de sus equipos.
 
 ### 4.1.1. General Style Guidelines
 
-[Contenido]
+**Branding**
+
+CompuCare es el producto desarrollado por UniLink para facilitar la gestión del mantenimiento y reparación de computadoras empresariales. Su identidad visual busca transmitir seguridad, organización y soporte tecnológico.
+
+**Colors**
+
+| Color | Código | Aplicación |
+|---|---|---|
+| Azul oscuro | `#112D35` | Encabezados, navegación y textos principales |
+| Verde petróleo | `#087F75` | Botones principales y llamadas a la acción |
+| Verde menta | `#C7F1C8` | Elementos secundarios y mensajes positivos |
+| Blanco | `#FFFFFF` | Fondos y tarjetas |
+| Gris claro | `#F6F8F7` | Fondos secundarios |
+| Rojo oscuro | `#B42318` | Alertas y mensajes de error |
+
+**Typography**
+
+Se utiliza una tipografía sans-serif debido a su legibilidad en interfaces digitales. Los títulos presentan mayor tamaño y peso visual mientras que los textos secundarios mantienen una jerarquía clara.
+
+| Elemento | Tamaño aproximado |
+|---|---|
+| Título principal | 48–56 px |
+| Título de sección | 28–32 px |
+| Subtítulo | 20–24 px |
+| Texto general | 16 px |
+| Texto secundario | 14 px |
+
+**Spacing**
+
+Se utiliza una escala de espaciado basada en múltiplos de 4 px y 8 px para mantener consistencia entre tarjetas, formularios, botones y secciones.
+
+**Tone of Communication**
+
+La comunicación de CompuCare es clara, profesional y directa. Se evita el uso innecesario de términos técnicos para que los usuarios puedan comprender fácilmente el estado de sus equipos y solicitudes.
 
 ### 4.1.2. Web Style Guidelines
 
-[Contenido]
+La interfaz web de CompuCare se desarrolla bajo un enfoque responsive, permitiendo su correcta visualización tanto en computadoras como en dispositivos móviles.
+
+Los principales criterios utilizados son:
+
+- Diseño adaptable a diferentes tamaños de pantalla.
+- Navegación simple y predecible.
+- Botones claramente identificables.
+- Formularios con etiquetas visibles.
+- Uso consistente de colores y tipografía.
+- Estados del sistema acompañados de texto y no únicamente de color.
+- Contraste adecuado entre fondo y contenido.
+- Retroalimentación visual después de realizar una acción.
+
+Los botones principales se utilizan para acciones como solicitar soporte, registrar información o confirmar una operación, mientras que las acciones secundarias utilizan estilos menos destacados.
 
 ## 4.2. Information Architecture
 
-[Contenido]
+La arquitectura de información de CompuCare organiza los contenidos y funcionalidades para que los usuarios puedan localizar rápidamente las acciones relacionadas con el soporte técnico, los equipos y las suscripciones.
 
 ### 4.2.1. Organization Systems
 
-[Contenido]
+CompuCare utiliza principalmente una organización jerárquica y funcional.
+
+En la Landing Page, la información se presenta de manera secuencial:
+
+1. Presentación de CompuCare.
+2. Propuesta de valor.
+3. Beneficios.
+4. Funcionamiento del servicio.
+5. Planes disponibles.
+6. Preguntas frecuentes.
+7. Llamada a la acción.
+
+En la aplicación web, el contenido se organiza mediante módulos como:
+
+- Dashboard.
+- Equipos.
+- Solicitudes de soporte.
+- Técnicos.
+- Cotizaciones.
+- Historial.
+- Suscripción.
+- Perfil.
 
 ### 4.2.2. Labeling Systems
 
-[Contenido]
+Las etiquetas utilizadas buscan ser breves y fáciles de comprender.
+
+Algunas de las etiquetas principales son:
+
+- Inicio.
+- Beneficios.
+- Cómo funciona.
+- Planes.
+- Contacto.
+- Mis equipos.
+- Solicitudes.
+- Técnicos.
+- Cotizaciones.
+- Historial.
+- Suscripción.
+- Perfil.
+
+Para representar el estado de una solicitud se utilizan etiquetas como:
+
+- Registrada.
+- Asignada.
+- En diagnóstico.
+- Esperando aprobación.
+- En atención.
+- Resuelta.
+- Cerrada.
+- Cancelada.
+
 
 ### 4.2.3. SEO Tags and Meta Tags
 
-[Contenido]
+La Landing Page utiliza etiquetas HTML orientadas a mejorar su identificación en motores de búsqueda y dispositivos.
 
+Ejemplo:
+
+```html
+<title>CompuCare | Soporte técnico empresarial</title>
+
+<meta
+  name="description"
+  content="CompuCare permite gestionar el mantenimiento y soporte técnico de computadoras empresariales."
+>
+
+<meta
+  name="keywords"
+  content="soporte técnico, mantenimiento de computadoras, soporte empresarial, CompuCare, UniLink"
+>
+
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1.0"
+>
+```
+  
 ### 4.2.4. Searching Systems
+El sistema de búsqueda permite localizar información dentro de módulos que contienen varios registros.
 
-[Contenido]
+Los principales criterios considerados son:
 
+- Código de solicitud.
+- Nombre o código del equipo.
+- Estado de la solicitud.
+- Técnico asignado.
+- Fecha.
+- Tipo de problema.
+
+Cuando no existen coincidencias, el sistema informa al usuario y permite modificar los criterios utilizados.
+  
 ### 4.2.5. Navigation Systems
 
-[Contenido]
+La Landing Page utiliza una barra de navegación superior mediante la cual el usuario puede desplazarse entre las principales secciones.
 
+La aplicación web utiliza una navegación lateral para acceder a los principales módulos.
+
+En dispositivos móviles, esta navegación se adapta a un menú compacto.
+
+También se utilizan botones de retorno y enlaces contextuales para facilitar el desplazamiento entre las diferentes pantallas.
 ## 4.3. Landing Page UI Design
 
-[Contenido]
+La Landing Page de CompuCare tiene como objetivo presentar claramente la propuesta de valor del servicio y permitir que potenciales clientes conozcan sus principales características, beneficios y planes de suscripción.
 
+La estructura visual busca guiar al usuario desde la presentación inicial del producto hasta una llamada a la acción, manteniendo una navegación simple y una jerarquía clara de información.
 ### 4.3.1. Landing Page Wireframe
 
-[Contenido]
+El wireframe define la estructura inicial de la Landing Page antes de aplicar colores, imágenes y elementos visuales finales.
 
+La estructura considera las siguientes secciones:
+
+- Header con navegación principal.
+- Hero Section con propuesta de valor.
+- Beneficios principales.
+- Explicación de cómo funciona el servicio.
+- Planes disponibles.
+- Preguntas frecuentes.
+- Call to Action.
+- Footer.
+
+A continuación, se presenta el wireframe de escritorio elaborado para CompuCare.
+
+![CompuCare Landing Page Wireframe](assets/CompuCare_Wireframe_Escritorio.svg)
 ### 4.3.2. Landing Page Mock-up
 
-[Contenido]
+El mock-up representa la versión de alta fidelidad de la Landing Page de CompuCare.
 
+En este diseño se aplican los colores, tipografía, botones, tarjetas y demás elementos visuales definidos en las Style Guidelines.
+
+El mock-up permite visualizar la apariencia final de la página antes de iniciar su implementación.
+
+![CompuCare Landing Page Mock-up](assets/CompuCare_Landing.svg)
+**Landing Page desplegada:**  
+https://upc-pre-202620-1asi0730-8093-unilink.github.io/landing/
 ## 4.4. Web Applications UX/UI Design
 
-[Contenido]
+El diseño UX/UI de la aplicación web de CompuCare busca simplificar la gestión del soporte técnico y permitir que cada usuario encuentre rápidamente las funcionalidades relacionadas con su rol.
 
+La interfaz prioriza la claridad de la información, la visibilidad de las acciones principales y la comprensión del estado de cada solicitud de soporte.
 ### 4.4.1. Web Applications Wireframes
 
-[Contenido]
+Los wireframes de la aplicación web representan las principales pantallas y permiten definir la distribución de los elementos antes de desarrollar la versión visual definitiva.
 
+Las principales vistas consideradas son:
+
+- Inicio de sesión.
+- Dashboard.
+- Registro de equipos.
+- Lista de equipos.
+- Registro de solicitud de soporte.
+- Seguimiento de solicitudes.
+- Información del técnico.
+- Cotizaciones.
+- Historial de atención.
+- Perfil del usuario.
+
+Estos wireframes permiten validar la disposición de botones, formularios, tarjetas y elementos de navegación antes de aplicar el diseño visual definitivo.
+### Dashboard Wireframe
+
+![CompuCare Dashboard Wireframe](assets/04_panel_wireframe.svg)
+
+### Support Requests Wireframe
+
+![CompuCare Support Requests Wireframe](assets/05_solicitudes_wireframe.svg)
+
+### New Support Request Wireframe
+
+![CompuCare New Support Request Wireframe](assets/06_nueva_wireframe.svg)
+
+### Support Request Detail Wireframe
+
+![CompuCare Support Request Detail Wireframe](assets/07_detalle_wireframe.svg)
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-[Contenido]
+Los Wireflow Diagrams representan la relación entre las diferentes pantallas y las acciones que realiza el usuario para completar una tarea.
+
+Uno de los principales flujos corresponde al registro de una solicitud de soporte:
+
+**Dashboard → Mis equipos → Seleccionar equipo → Solicitar soporte → Describir problema → Confirmar solicitud → Seguimiento.**
+
+También se considera el flujo de revisión de una atención:
+
+**Solicitudes → Seleccionar solicitud → Revisar estado → Ver técnico asignado → Revisar diagnóstico → Finalizar atención.**
+
+Estos diagramas permiten identificar la secuencia de navegación y detectar posibles puntos de confusión antes de la implementación.
+#### Responsible User Wireflow
+
+![CompuCare Responsible User Wireflow](assets/wireflow_responsable.svg)
+
+#### Employee Wireflow
+
+![CompuCare Employee Wireflow](assets/wireflow_empleado.svg)
+
+#### Technician Wireflow
+
+![CompuCare Technician Wireflow](assets/wireflow_tecnico.svg)
+
+#### Administrator Wireflow
+
+![CompuCare Administrator Wireflow](assets/wireflow_administrador.svg)
 
 ### 4.4.3. Web Applications Mock-ups
 
-[Contenido]
+Los mock-ups muestran las pantallas de CompuCare en alta fidelidad e incorporan los elementos definidos en las Style Guidelines.
 
+Estos diseños permiten visualizar cómo será la experiencia final antes de iniciar la implementación de la aplicación web.
+
+Los mock-ups mantienen una estructura consistente en navegación, tipografía, botones, formularios, tarjetas y estados visuales.
+#### Dashboard Mock-up
+
+![CompuCare Dashboard Mock-up](assets/04_panel_mockup.svg)
+
+#### Support Requests Mock-up
+
+![CompuCare Support Requests Mock-up](assets/05_solicitudes_mockup.svg)
+
+#### New Support Request Mock-up
+
+![CompuCare New Support Request Mock-up](assets/06_nueva_mockup.svg)
+
+#### Support Request Detail Mock-up
+
+![CompuCare Support Request Detail Mock-up](assets/07_detalle_mockup.svg)
 ### 4.4.4. Web Applications User Flow Diagrams
 
-[Contenido]
+Los User Flow Diagrams representan las decisiones que debe realizar el usuario para completar diferentes objetivos dentro de la plataforma.
 
+Para solicitar soporte se considera el siguiente flujo:
+
+**Inicio → Seleccionar equipo → Registrar problema → Validar información → Enviar solicitud → Confirmación → Seguimiento.**
+
+Si la información ingresada es incorrecta o incompleta, el usuario permanece en el formulario hasta corregirla.
+
+Otro flujo importante corresponde a la revisión de una solicitud:
+
+**Inicio → Solicitudes → Seleccionar solicitud → Revisar estado → Revisar técnico asignado → Consultar diagnóstico → Finalizar proceso.**
+
+Estos flujos ayudan a definir la lógica de navegación y las posibles decisiones del usuario.
+#### Responsible User Flow
+
+![CompuCare Responsible User Flow](assets/userflow_responsable.svg)
+
+#### Employee User Flow
+
+![CompuCare Employee User Flow](assets/userflow_empleado.svg)
+
+#### Technician User Flow
+
+![CompuCare Technician User Flow](assets/userflow_tecnico.svg)
+
+#### Administrator User Flow
+
+![CompuCare Administrator User Flow](assets/userflow_administrador.svg)
 ## 4.5. Web Applications Prototyping
 
-[Contenido]
+El prototipo de CompuCare fue desarrollado a partir de los wireframes y mock-ups elaborados previamente.
+
+Su objetivo es representar de manera interactiva la navegación entre las principales pantallas de la aplicación antes de iniciar su implementación funcional.
+
+El prototipo permite validar aspectos como:
+
+- Comprensión de la navegación.
+- Distribución de la información.
+- Visibilidad de las acciones principales.
+- Secuencia de los formularios.
+- Comprensión de los estados de las solicitudes.
+- Acceso a las funcionalidades principales según el rol del usuario.
+
+Entre los principales flujos representados se encuentran el registro de equipos, creación de solicitudes de soporte, seguimiento de atenciones, revisión de técnicos asignados y consulta de cotizaciones.
+
+La validación del prototipo permite detectar problemas de navegación o usabilidad antes de iniciar el desarrollo de la aplicación web.
+**Prototipo desplegado:**  
+https://upc-pre-202620-1asi0730-8093-unilink.github.io/landing/
 
 ## 4.6. Domain-Driven Software Architecture
+La arquitectura de CompuCare se organiza tomando como referencia los principios de Domain-Driven Design (DDD).
 
-[Contenido]
+Este enfoque permite separar las responsabilidades del sistema según los principales procesos de negocio y facilita la organización de las funcionalidades de la plataforma.
 
+Los principales dominios identificados son:
+
+- Gestión de usuarios.
+- Gestión de empresas.
+- Gestión de equipos.
+- Gestión de solicitudes de soporte.
+- Gestión de técnicos.
+- Gestión de suscripciones.
+- Gestión de cotizaciones.
+- Gestión del historial de atenciones.
+
+Cada dominio agrupa las entidades, reglas y operaciones relacionadas con una responsabilidad específica del sistema.
 ### 4.6.1. Design-Level Event Storming
 
-[Contenido]
+El Design-Level Event Storming permite representar los principales eventos, comandos y actores que intervienen en los procesos de CompuCare.
+
+A partir de los flujos principales de la plataforma se identificaron los siguientes comandos y eventos:
+
+| Comando | Evento |
+|---|---|
+| Registrar empresa | Empresa registrada |
+| Registrar usuario | Usuario registrado |
+| Registrar equipo | Equipo registrado |
+| Crear solicitud | Solicitud registrada |
+| Asignar técnico | Técnico asignado |
+| Registrar diagnóstico | Diagnóstico registrado |
+| Generar cotización | Cotización generada |
+| Aprobar cotización | Cotización aprobada |
+| Actualizar estado | Estado de solicitud actualizado |
+| Finalizar atención | Atención finalizada |
+
+Por ejemplo, cuando un usuario registra una solicitud de soporte, el sistema genera el evento **Solicitud registrada**. Posteriormente, la asignación de un técnico genera el evento **Técnico asignado**.
+
+Este modelado permite comprender la secuencia de acciones del sistema y las responsabilidades asociadas a cada proceso.
+#### Company Registration Event Storming
+
+![CompuCare Company Registration Event Storming](assets/eventstorm_alta.svg)
+
+#### Support Attention Event Storming
+
+![CompuCare Support Attention Event Storming](assets/eventstorm_atencion.svg)
+
+#### Additional Service Event Storming
+
+![CompuCare Additional Service Event Storming](assets/eventstorm_adicional.svg)
 
 ### 4.6.2. Software Architecture Context Diagram
+El Software Architecture Context Diagram representa a CompuCare como el sistema central y muestra su interacción con los principales actores externos.
 
-[Contenido]
+Los actores identificados son:
 
+- **Cliente empresarial:** administra la información de su empresa y consulta los servicios contratados.
+- **Empleado:** registra solicitudes de soporte relacionadas con los equipos que utiliza.
+- **Técnico:** revisa solicitudes asignadas, registra diagnósticos y actualiza el estado de las atenciones.
+- **Administrador de CompuCare:** gestiona usuarios, técnicos, empresas, planes y operaciones generales del sistema.
+
+Todos estos actores interactúan con la plataforma web de CompuCare para realizar las operaciones correspondientes a su rol.
+The following context diagram represents the main external actors and systems that interact with CompuCare.
+
+![CompuCare System Context Diagram](assets/c4_contexto.svg)
 ### 4.6.3. Software Architecture Container Diagrams
 
-[Contenido]
+El Container Diagram divide la solución CompuCare en sus principales componentes tecnológicos.
+
+Los contenedores considerados son:
+
+- **Landing Page:** presenta la propuesta de valor, beneficios, funcionamiento y planes de CompuCare.
+- **Web Application:** interfaz principal utilizada por clientes, empleados, técnicos y administradores.
+- **Backend / REST API:** procesa las reglas de negocio y las solicitudes enviadas desde la aplicación web.
+- **Database:** almacena la información persistente relacionada con usuarios, empresas, equipos, solicitudes, técnicos y suscripciones.
+
+La Web Application se comunica con el Backend mediante solicitudes HTTP. El Backend procesa la lógica de negocio y consulta o modifica la información almacenada en la base de datos.
+
+Esta separación facilita el mantenimiento, escalabilidad y evolución de la plataforma.
+The following container diagram shows the main software containers that compose the CompuCare solution and how they interact with each other.
+
+![CompuCare Container Diagram](assets/c4_contenedores.svg)
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-[Contenido]
+El Components Diagram representa con mayor detalle la organización interna del Backend de CompuCare.
 
+Entre los principales componentes se consideran:
+
+- **Controllers:** reciben las solicitudes provenientes de la aplicación web.
+- **Application Services:** coordinan los casos de uso del sistema.
+- **Domain Services:** contienen reglas relacionadas con el negocio.
+- **Repositories:** gestionan el acceso a la información almacenada.
+- **Entities:** representan los principales objetos del dominio.
+- **Persistence:** permite almacenar y recuperar información de la base de datos.
+
+Por ejemplo, una solicitud para registrar un nuevo soporte es recibida por un Controller, procesada por el servicio correspondiente y almacenada mediante un Repository.
+
+Esta organización permite mantener separadas las responsabilidades del sistema y reducir el acoplamiento entre sus componentes.
+The following component diagrams show the internal organization of the main CompuCare application components.
+
+#### Operations Components
+
+![CompuCare Operations Components Diagram](assets/c4_componentes_operacion.svg)
+
+#### Subscription Components
+
+![CompuCare Subscription Components Diagram](assets/c4_componentes_suscripcion.svg)
 ## 4.7. Software Object-Oriented Design
+El diseño orientado a objetos de CompuCare representa las principales entidades del dominio y las relaciones existentes entre ellas.
 
-[Contenido]
+Este enfoque permite organizar la lógica del sistema mediante clases con responsabilidades claramente definidas, facilitando el mantenimiento, reutilización y extensión del software.
+
+Las principales entidades identificadas están relacionadas con usuarios, empresas, equipos, solicitudes de soporte, técnicos, suscripciones, planes, cotizaciones e historial de servicios.
 
 ### 4.7.1. Class Diagrams
 
-[Contenido]
+El Class Diagram representa la estructura principal del dominio de CompuCare.
 
+Entre las clases consideradas se encuentran:
+
+- **User:** representa a los usuarios registrados en la plataforma.
+- **Company:** representa a las empresas que utilizan el servicio.
+- **Equipment:** representa los equipos informáticos registrados por una empresa.
+- **SupportRequest:** representa una solicitud de soporte técnico.
+- **Technician:** representa al técnico encargado de una atención.
+- **Subscription:** representa la suscripción activa de una empresa.
+- **Plan:** representa los diferentes planes disponibles.
+- **Quote:** representa una cotización adicional relacionada con una atención.
+- **ServiceHistory:** almacena el historial de servicios realizados sobre un equipo.
+
+Algunas relaciones principales son:
+
+- Una empresa puede tener varios usuarios.
+- Una empresa puede registrar varios equipos.
+- Un equipo puede tener múltiples solicitudes de soporte.
+- Una solicitud puede estar asociada a un técnico.
+- Una empresa puede contar con una suscripción activa.
+- Una solicitud puede generar una cotización.
+- Cada atención finalizada puede formar parte del historial del equipo.
+
+El diagrama permite visualizar las relaciones y responsabilidades principales antes de implementar las clases del sistema.
+#### Identity and Access
+
+![CompuCare Identity and Access Class Diagram](assets/clases_identidad.svg)
+
+#### Companies and Equipment
+
+![CompuCare Companies and Equipment Class Diagram](assets/clases_empresa.svg)
+
+#### Subscriptions and Coverage
+
+![CompuCare Subscriptions and Coverage Class Diagram](assets/clases_cobertura.svg)
+
+#### Service Requests
+
+![CompuCare Service Requests Class Diagram](assets/clases_soporte.svg)
+
+#### Quotations and Payments
+
+![CompuCare Quotations and Payments Class Diagram](assets/clases_cotizaciones.svg)
 ## 4.8. Database Design
 
-[Contenido]
+El diseño de la base de datos de CompuCare permite almacenar de forma estructurada la información necesaria para el funcionamiento de la plataforma.
 
+Se utiliza un modelo relacional en el que las entidades principales se representan mediante tablas vinculadas por claves primarias y claves foráneas.
+
+El diseño busca evitar duplicidad de información, mantener la integridad de los datos y facilitar las consultas relacionadas con empresas, equipos, solicitudes y servicios.
 ### 4.8.1. Database Diagrams
 
-[Contenido]
+El Database Diagram representa las principales tablas y relaciones de la plataforma CompuCare.
 
----
+Las tablas principales consideradas son:
+
+- **Users**
+- **Companies**
+- **Equipments**
+- **SupportRequests**
+- **Technicians**
+- **Subscriptions**
+- **Plans**
+- **Quotes**
+- **ServiceHistories**
+
+Entre las relaciones principales se consideran:
+
+- Una empresa puede tener múltiples usuarios.
+- Una empresa puede registrar múltiples equipos.
+- Cada equipo pertenece a una empresa.
+- Un equipo puede tener múltiples solicitudes de soporte.
+- Cada solicitud pertenece a un equipo.
+- Una solicitud puede tener un técnico asignado.
+- Una empresa puede tener una suscripción.
+- Una suscripción se encuentra asociada a un plan.
+- Una solicitud puede generar una o más cotizaciones.
+- Las atenciones realizadas forman parte del historial de servicio de cada equipo.
+
+El uso de claves foráneas permite mantener la relación entre las tablas y asegurar la consistencia de la información almacenada.
+#### Identity and Access Database
+
+![CompuCare Identity Database Diagram](assets/bd_identidad.svg)
+
+#### Companies and Equipment Database
+
+![CompuCare Company Database Diagram](assets/bd_empresa.svg)
+
+#### Subscriptions and Coverage Database
+
+![CompuCare Coverage Database Diagram](assets/bd_cobertura.svg)
+
+#### Service Requests Database
+
+![CompuCare Support Database Diagram](assets/bd_soporte.svg)
+
+#### Quotations and Payments Database
+
+![CompuCare Quotations Database Diagram](assets/bd_cotizaciones.svg)
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
