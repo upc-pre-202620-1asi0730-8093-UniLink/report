@@ -720,6 +720,21 @@ Los mock-ups muestran las pantallas de CompuCare en alta fidelidad e incorporan 
 Estos diseños permiten visualizar cómo será la experiencia final antes de iniciar la implementación de la aplicación web.
 
 Los mock-ups mantienen una estructura consistente en navegación, tipografía, botones, formularios, tarjetas y estados visuales.
+#### Dashboard Mock-up
+
+![CompuCare Dashboard Mock-up](assets/04_panel_mockup.svg)
+
+#### Support Requests Mock-up
+
+![CompuCare Support Requests Mock-up](assets/05_solicitudes_mockup.svg)
+
+#### New Support Request Mock-up
+
+![CompuCare New Support Request Mock-up](assets/06_nueva_mockup.svg)
+
+#### Support Request Detail Mock-up
+
+![CompuCare Support Request Detail Mock-up](assets/07_detalle_mockup.svg)
 ### 4.4.4. Web Applications User Flow Diagrams
 
 Los User Flow Diagrams representan las decisiones que debe realizar el usuario para completar diferentes objetivos dentro de la plataforma.
