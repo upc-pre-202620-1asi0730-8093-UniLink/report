@@ -873,18 +873,6 @@ Para profundizar en la psique de nuestros usuarios, realizamos una sesión de an
 
 # Capítulo III: Requirements Specification
 
-## 3.1. User Stories
----
-
-# Capítulo III: Requirements Specification
-
-## 3.1. User Stories
-# Capítulo III: Requirements Specification
-
-## 3.1. User Stories
-
-# Capítulo III: Requirements Specification
-
 ## 3.1. Product Backlog (Historias de Usuario Priorizadas)
 
 | Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
