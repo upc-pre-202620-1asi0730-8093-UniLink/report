@@ -291,10 +291,6 @@ Estudiante de pregrado de la carrera de Ingeniería de Software en la Universida
 
 #### Análisis 5W2H
 
-### 1.2.1. Antecedentes y problemática
-
-#### Análisis 5W2H
-
 * **Who? (¿Quién?):** Pequeñas y medianas empresas en sectores administrativos, contables y de servicios que cuentan con entre 5 y 50 estaciones de trabajo informáticas  y que carecen de un departamento o personal interno dedicado a la gestión de infraestructura TI.
 * **What? (¿Qué?):** Interrupción prolongada de las operaciones empresariales derivada de fallas no planificadas de hardware y software, acompañada de una falta de trazabilidad sobre las intervenciones realizadas, opacidad en la facturación de servicios/repuestos e ineficiencia en el mantenimiento preventivo de los equipos.
 * **Where? (¿Dónde?):** En las sedes u oficinas operativas de las PYMEs donde se ubican los equipos físicos, gestionando todo el flujo de interacción de manera centralizada mediante una plataforma web.
@@ -370,10 +366,6 @@ Las pequeñas y medianas empresas enfrentan una baja productividad y costos impr
 2. **Empleados de las Empresas (Usuarios Finales):**
    * **Perfil:** Personal operativo de las empresas suscritas que utiliza diariamente un equipo informático para cumplir con sus funciones.
    * **Necesidad:** Reportar fallas de hardware o software de manera rápida ingresando a la aplicación web de UniLink para retomar sus labores lo antes posible.
-
-3. **Técnicos de Soporte (Prestadores del Servicio):**
-   * **Perfil:** Técnicos informáticos seleccionados, capacitados y evaluados por UniLink para brindar atención presencial o remota.
-   * **Necesidad:** Disponer de una interfaz web organizada donde visualizar las solicitudes asignadas, registrar tiempos trabajados y enviar diagnósticos precisos.
 
 # Capítulo II: Requirements Elicitation & Analysis
 
