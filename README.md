@@ -205,6 +205,7 @@ El curso contribuye al cumplimiento del Student Outcome ABET:
 
 | Criterio específico | Acciones realizadas | Conclusiones |
 |---------------------|----------------------|--------------|
+| Comunicación efectiva mediante documentación técnica y visual del producto. | Se elaboró y documentó el diseño del producto CompuCare mediante Style Guidelines, arquitectura de información, wireframes, mockups, Wireflows, User Flows, Event Storming, diagramas C4, diagramas de clases y diagramas de base de datos. Además, se organizó la información en GitHub y se publicó la Landing Page para facilitar la comprensión de la propuesta por parte de usuarios y miembros del equipo. | Las actividades realizadas permitieron comunicar de manera clara la estructura, funcionamiento y diseño de CompuCare a diferentes audiencias, utilizando recursos visuales y documentación técnica que facilitan la comprensión del producto y la colaboración entre los integrantes del equipo. |
 
 ---
 
