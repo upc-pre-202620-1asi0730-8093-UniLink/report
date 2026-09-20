@@ -885,6 +885,15 @@ Entre los principales componentes se consideran:
 Por ejemplo, una solicitud para registrar un nuevo soporte es recibida por un Controller, procesada por el servicio correspondiente y almacenada mediante un Repository.
 
 Esta organización permite mantener separadas las responsabilidades del sistema y reducir el acoplamiento entre sus componentes.
+The following component diagrams show the internal organization of the main CompuCare application components.
+
+#### Operations Components
+
+![CompuCare Operations Components Diagram](assets/c4_componentes_operacion.svg)
+
+#### Subscription Components
+
+![CompuCare Subscription Components Diagram](assets/c4_componentes_suscripcion.svg)
 ## 4.7. Software Object-Oriented Design
 El diseño orientado a objetos de CompuCare representa las principales entidades del dominio y las relaciones existentes entre ellas.
 
