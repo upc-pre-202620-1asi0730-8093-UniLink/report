@@ -1,278 +1,697 @@
-# UniLink — Aplicación web de soporte técnico empresarial
+<div align="center">
 
-Universidad: Universidad Peruana de Ciencias Aplicadas (UPC)  
-Curso: Aplicaciones Web  
-Profesor: Efraín Ricardo Bautista Ubillus  
-Sección: 1ASI0730
-Grupo: 3
-Startup: UniLink  
-Nombre del producto: CompuCare 
+<img src="/assets/upc-logo.png" alt="UPC Logo" width="150"/>
 
-## Integrantes
+Universidad Peruana de Ciencias Aplicadas
 
-| Nombre completo | Código de estudiante |
-|---|---|
-|Matthew Shinko Okuhama Diaz|u202419311|
-|Fernando André Condezo Pacheco|u202411324|
-|Sergio Luis Miranda Romero| u20231b331|
-|Antony David Yauri Barrios| u202214499|
+Carrera de Ingeniería de Software
+
+### **1ASI0730**
+### **Aplicaciones Web**
+
+NRC
+
+**1ASI0730**
+
+### **Informe del Trabajo Final**
+
+Docente
+
+**Bautista Ubillús, Efrain Ricardo**
+
+Equipo
+
+**[nombre]**
+
+Proyecto
+
+**[nombre]**
+
+#### **Integrantes**
+
+</div>
+
+<div align="center">
+<table align="center" style="all: unset;">
+<tr style="background: none !important; border: none !important;">
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;"><strong>Código</strong></td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;"><strong>Apellidos y Nombres</strong></td>
+</tr>
+<tr style="background: none !important; border: none !important;">
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[codigo]</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[nombre]</td>
+</tr>
+<tr style="background: none !important; border: none !important;">
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[codigo]</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[nombre]</td>
+</tr>
+<tr style="background: none !important; border: none !important;">
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[codigo]</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">nombre</td>
+</tr>
+<tr style="background: none !important; border: none !important;">
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U20231B331</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Miranda Romero, Sergio Luis</td>
+</tr>
+<tr style="background: none !important; border: none !important;">
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[codigo]</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">nombre</td>
+</tr>
+</table>
+</div>
+
+<div align="center">
+
+<br>
+
+**Período 202620**
+
+**Septiembre 2026**
+
+</div>
+
+---
+
+# Registro de Versiones del Informe
+
+| Versión | Fecha      | Autor                           | Descripción de modificación |
+|---------|------------|---------------------------------|-----------------------------|
+
+---
+
+# Project Report Collaboration Insights
+
+[Contenido correspondiente a Project Report Collaboration Insights]
+
+---
+
+# Contenido
+
+## Tabla de Contenidos
+
+- [Student Outcome](#student-outcome)
+
+- [Capítulo I: Introducción](#capítulo-i-introducción)
+    - [1.1. Startup Profile](#11-startup-profile)
+        - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
+        - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+    - [1.2. Solution Profile](#12-solution-profile)
+        - [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)
+        - [1.2.2. Lean UX Process](#122-lean-ux-process)
+            - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
+            - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
+            - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
+            - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
+    - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
+
+- [Capítulo II: Requirements Elicitation & Analysis](#capítulo-ii-requirements-elicitation--analysis)
+    - [2.1. Competidores](#21-competidores)
+        - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+        - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
+    - [2.2. Entrevistas](#22-entrevistas)
+        - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
+        - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
+        - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
+    - [2.3. Needfinding](#23-needfinding)
+        - [2.3.1. User Personas](#231-user-personas)
+        - [2.3.2. User Task Matrix](#232-user-task-matrix)
+        - [2.3.3. User Journey Mapping](#233-user-journey-mapping)
+        - [2.3.4. Empathy Mapping](#234-empathy-mapping)
+    - [2.4. Big Picture Event Storming](#24-big-picture-event-storming)
+    - [2.5. Ubiquitous Language](#25-ubiquitous-language)
+
+- [Capítulo III: Requirements Specification](#capítulo-iii-requirements-specification)
+    - [3.1. User Stories](#31-user-stories)
+    - [3.2. Impact Mapping](#32-impact-mapping)
+    - [3.3. Product Backlog](#33-product-backlog)
+
+- [Capítulo IV: Product Design](#capítulo-iv-product-design)
+    - [4.1. Style Guidelines](#41-style-guidelines)
+        - [4.1.1. General Style Guidelines](#411-general-style-guidelines)
+        - [4.1.2. Web Style Guidelines](#412-web-style-guidelines)
+    - [4.2. Information Architecture](#42-information-architecture)
+        - [4.2.1. Organization Systems](#421-organization-systems)
+        - [4.2.2. Labeling Systems](#422-labeling-systems)
+        - [4.2.3. SEO Tags and Meta Tags](#423-seo-tags-and-meta-tags)
+        - [4.2.4. Searching Systems](#424-searching-systems)
+        - [4.2.5. Navigation Systems](#425-navigation-systems)
+    - [4.3. Landing Page UI Design](#43-landing-page-ui-design)
+        - [4.3.1. Landing Page Wireframe](#431-landing-page-wireframe)
+        - [4.3.2. Landing Page Mock-up](#432-landing-page-mock-up)
+    - [4.4. Web Applications UX/UI Design](#44-web-applications-uxui-design)
+        - [4.4.1. Web Applications Wireframes](#441-web-applications-wireframes)
+        - [4.4.2. Web Applications Wireflow Diagrams](#442-web-applications-wireflow-diagrams)
+        - [4.4.3. Web Applications Mock-ups](#443-web-applications-mock-ups)
+        - [4.4.4. Web Applications User Flow Diagrams](#444-web-applications-user-flow-diagrams)
+    - [4.5. Web Applications Prototyping](#45-web-applications-prototyping)
+    - [4.6. Domain-Driven Software Architecture](#46-domain-driven-software-architecture)
+        - [4.6.1. Design-Level Event Storming](#461-design-level-event-storming)
+        - [4.6.2. Software Architecture Context Diagram](#462-software-architecture-context-diagram)
+        - [4.6.3. Software Architecture Container Diagrams](#463-software-architecture-container-diagrams)
+        - [4.6.4. Software Architecture Components Diagrams](#464-software-architecture-components-diagrams)
+    - [4.7. Software Object-Oriented Design](#47-software-object-oriented-design)
+        - [4.7.1. Class Diagrams](#471-class-diagrams)
+    - [4.8. Database Design](#48-database-design)
+        - [4.8.1. Database Diagrams](#481-database-diagrams)
+
+- [Capítulo V: Product Implementation, Validation & Deployment](#capítulo-v-product-implementation-validation--deployment)
+    - [5.1. Software Configuration Management](#51-software-configuration-management)
+        - [5.1.1. Software Development Environment Configuration](#511-software-development-environment-configuration)
+        - [5.1.2. Source Code Management](#512-source-code-management)
+        - [5.1.3. Source Code Style Guide & Conventions](#513-source-code-style-guide--conventions)
+        - [5.1.4. Software Deployment Configuration](#514-software-deployment-configuration)
+    - [5.2. Landing Page, Services & Applications Implementation](#52-landing-page-services--applications-implementation)
+        - [5.2.1. Sprint 1](#521-sprint-1)
+            - [5.2.1.1. Sprint Planning 1](#5211-sprint-planning-1)
+            - [5.2.1.2. Aspect Leaders and Collaborators](#5212-aspect-leaders-and-collaborators)
+            - [5.2.1.3. Sprint Backlog 1](#5213-sprint-backlog-1)
+            - [5.2.1.4. Development Evidence for Sprint Review](#5214-development-evidence-for-sprint-review)
+            - [5.2.1.5. Execution Evidence for Sprint Review](#5215-execution-evidence-for-sprint-review)
+            - [5.2.1.6. Services Documentation Evidence for Sprint Review](#5216-services-documentation-evidence-for-sprint-review)
+            - [5.2.1.7. Software Deployment Evidence for Sprint Review](#5217-software-deployment-evidence-for-sprint-review)
+            - [5.2.1.8. Team Collaboration Insights during Sprint](#5218-team-collaboration-insights-during-sprint)
+        - [5.2.2. Sprint 2](#522-sprint-2)
+            - [5.2.2.1. Sprint Planning 2](#5221-sprint-planning-2)
+            - [5.2.2.2. Aspect Leaders and Collaborators](#5222-aspect-leaders-and-collaborators)
+            - [5.2.2.3. Sprint Backlog 2](#5223-sprint-backlog-2)
+            - [5.2.2.4. Development Evidence for Sprint Review](#5224-development-evidence-for-sprint-review)
+            - [5.2.2.5. Execution Evidence for Sprint Review](#5225-execution-evidence-for-sprint-review)
+            - [5.2.2.6. Services Documentation Evidence for Sprint Review](#5226-services-documentation-evidence-for-sprint-review)
+            - [5.2.2.7. Software Deployment Evidence for Sprint Review](#5227-software-deployment-evidence-for-sprint-review)
+            - [5.2.2.8. Team Collaboration Insights during Sprint](#5228-team-collaboration-insights-during-sprint)
+    - [5.3. Validation Interviews](#53-validation-interviews)
+        - [5.3.1. Diseño de Entrevistas](#531-diseño-de-entrevistas)
+        - [5.3.2. Registro de Entrevistas](#532-registro-de-entrevistas)
+        - [5.3.3. Evaluaciones según heurísticas](#533-evaluaciones-según-heurísticas)
+    - [5.4. Video About-the-Product](#54-video-about-the-product)
+
+- [Conclusiones](#conclusiones)
+- [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+- [Video About-the-Team](#video-about-the-team)
+- [Bibliografía](#bibliografía)
+- [Anexos](#anexos)
+
+---
+
+# Student Outcome
+
+El curso contribuye al cumplimiento del Student Outcome ABET:
+
+**ABET – EAC - Student Outcome 3**
+
+**Criterio:**
+
+*Capacidad de comunicarse efectivamente con un rango de audiencias. En el siguiente cuadro se describe las acciones realizadas y enunciados de conclusiones por parte del grupo, que permiten sustentar el haber alcanzado el logro del ABET – EAC - Student Outcome 3.*
+
+| Criterio específico | Acciones realizadas | Conclusiones |
+|---------------------|----------------------|--------------|
+
+---
 
 # Capítulo I: Introducción
 
-## 1.1. Presentación de la startup
+## 1.1. Startup Profile
 
-UniLink es una startup académica orientada al desarrollo de soluciones
-digitales que faciliten la gestión de servicios para empresas. Su propuesta
-actual se enfoca en el mantenimiento y reparación de computadoras mediante
-un modelo de suscripción mensual.
+### 1.1.1. Descripción de la Startup
 
-La startup propone centralizar la contratación y organización del soporte
-técnico a través de una aplicación web. Desde esta plataforma, las empresas
-podrán registrar solicitudes, consultar al técnico asignado, conocer el
-estado de las atenciones y acceder al historial de sus equipos.
+UniLink es una startup académica orientada al desarrollo de soluciones digitales que faciliten la gestión de servicios para empresas. Su propuesta actual se enfoca en el mantenimiento y reparación de computadoras mediante un modelo de suscripción mensual.
 
-UniLink se encargará de seleccionar, capacitar y coordinar a los técnicos
-responsables de brindar el servicio. Asimismo, gestionará su pago mediante
-los ingresos provenientes de las suscripciones y los servicios adicionales
-aprobados por las empresas.
+La startup propone centralizar la contratación y organización del soporte técnico a través de una aplicación web. Desde esta plataforma, las empresas podrán registrar solicitudes, consultar al técnico asignado, conocer el estado de las atenciones y acceder al historial de sus equipos.
 
-### 1.1.1. Misión
+UniLink se encargará de seleccionar, capacitar y coordinar a los técnicos responsables de brindar el servicio. Asimismo, gestionará su pago mediante los ingresos provenientes de las suscripciones y los servicios adicionales aprobados por las empresas.
 
-Brindar a las empresas una forma organizada y accesible de gestionar el
-mantenimiento y reparación de sus computadoras, mediante una plataforma
-web que permita solicitar soporte técnico, dar seguimiento a las
-atenciones y conocer la cobertura de su suscripción.
+*   **Misión:** Brindar a las empresas una forma organizada y accesible de gestionar el mantenimiento y reparación de sus computadoras, mediante una plataforma web que permita solicitar soporte técnico, dar seguimiento a las atenciones y conocer la cobertura de su suscripción.
 
-### 1.1.2. Visión
-
-Consolidarnos como una alternativa de soporte técnico empresarial que
-destaque por la transparencia de sus planes, la organización de sus
-atenciones y el seguimiento del estado de los equipos informáticos.
 
-### 1.1.3. Presentación del equipo
+*   **Visión:** Consolidarnos como una alternativa de soporte técnico empresarial que destaque por la transparencia de sus planes, la organización de sus atenciones y el seguimiento del estado de los equipos informáticos.
 
-El equipo está integrado por estudiantes de la Universidad Peruana de
-Ciencias Aplicadas que colaboran en el análisis, diseño y desarrollo de
-una aplicación web para la gestión de soporte técnico empresarial.
+### 1.1.2. Perfiles de integrantes del equipo
 
-Cada integrante contribuye con sus conocimientos y habilidades en las
-actividades del proyecto. El trabajo se organiza mediante la distribución
-de responsabilidades y el uso de un repositorio compartido en GitHub.
+<div align="left">
+  <img src="../assets/" alt="" width="200">
+</div>
 
-| Integrante | Presentación y contribución |
-|---|---|
-| [Nombre completo] | [Breve presentación, habilidades y responsabilidad en el proyecto] |
-| Yauri Barrios, Antony David | Soy estudiante de Ingeniería de Software, tengo 22 años y trabajo con los stacks MERN y PERN. Me gusta trabajar en equipo, compartir conocimientos y seguir aprendiendo de mis compañeros para mejorar constantemente. |
-| [Nombre completo] | [Breve presentación, habilidades y responsabilidad en el proyecto] |
-| [Nombre completo] | [Breve presentación, habilidades y responsabilidad en el proyecto] |
+**nombre**
+* **Código de estudiante:** codigo
+* **Carrera:**
 
-## 1.2. Descripción de la problemática
+[contenido]
 
-Las computadoras son herramientas necesarias para las actividades
-cotidianas de muchas empresas. Su funcionamiento permite realizar tareas
-administrativas, gestionar información y mantener la comunicación con
-clientes y colaboradores.
+<br>
 
-Cuando un equipo presenta una falla, el trabajador puede tener dificultades
-para continuar sus actividades. En las empresas que no cuentan con personal
-propio de soporte técnico, atender estos problemas requiere buscar un
-especialista externo y coordinar su disponibilidad.
+<div align="left">
+  <img src="../assets/" alt="" width="200">
+</div>
 
-La problemática que se propone investigar es la dificultad para organizar
-estas atenciones cuando las solicitudes, coordinaciones y antecedentes de
-los equipos se encuentran dispersos en llamadas, mensajes u otros medios.
+**nombre**
+* **Código de estudiante:**
+* **Carrera:** Ingeniería de Software
 
-Esta situación puede dificultar la identificación del responsable de cada
-atención, el seguimiento del trabajo realizado y la consulta de
-reparaciones anteriores. Asimismo, la empresa puede tener poca claridad
-sobre los servicios que tiene contratados y los costos adicionales que
-podría asumir.
 
-Estas necesidades constituyen el punto de partida del proyecto y deberán
-validarse mediante la investigación con representantes y trabajadores de
-las empresas del segmento objetivo.
+[contenido]
+<br>
 
-### 1.2.1. Formulación del problema
+<div align="left">
+  <img src="../assets/" alt="" width="200">
+</div>
 
-¿Cómo facilitar la gestión del mantenimiento y reparación de computadoras
-en empresas que no cuentan con un área propia de soporte técnico,
-permitiendo organizar solicitudes, dar seguimiento a las atenciones y
-conocer la cobertura y el consumo de los servicios contratados?
+**nombre**
+* **Código de estudiante:**
+* **Carrera:** Ingeniería de Software
 
-## 1.3. Descripción de la solución propuesta
+[contenido]
+<br>
 
-Se propone desarrollar una aplicación web que permita a las empresas
-contratar servicios de mantenimiento y reparación de computadoras mediante
-una suscripción mensual.
+<div align="left">
+  <img src="../assets/Sergio Luis Miranda Romero.jpeg" alt="Sergio Luis Miranda Romero" width="200">
+</div>
 
-La plataforma permitirá que los empleados registren solicitudes indicando
-el equipo afectado, su ubicación y una descripción del problema. El
-administrador de UniLink revisará la solicitud y asignará un técnico
-responsable de atenderla.
+**Miranda Romero, Sergio Luis**
+* **Código de estudiante:** U20231B331
+* **Carrera:** Ingeniería de Software
 
-Durante la atención, el técnico podrá registrar el diagnóstico, actualizar
-el estado de la solicitud e indicar las actividades realizadas. La empresa
-podrá consultar esta información y conservar un historial de las
-intervenciones de cada equipo.
+Estudiante de pregrado de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC). Posee conocimientos en desarrollo de software utilizando lenguajes de programación como C++, C# y JavaScript, así como en la gestión de bases de datos relacionales y no relacionales mediante MySQL y MongoDB. Cuenta con la certificación Scrum Fundamentals Certified, lo que le permite aplicar marcos de trabajo ágiles y gestionar el flujo de tareas del equipo. Aporta en el desarrollo de la solución, la estructuración de la base de datos y la organización del trabajo bajo metodologías ágiles.
 
-Las atenciones podrán ser remotas o presenciales, según las características
-del problema y la cobertura contratada.
+<br>
 
-### 1.3.1. Modelo de suscripción
+<div align="left">
+  <img src="../assets/" alt="" width="200">
+</div>
 
-La empresa pagará una mensualidad que incluirá una cantidad determinada
-de horas de soporte correctivo y mantenimientos preventivos, según el
-plan contratado.
+**nombre**
+* **Código de estudiante:**
+* **Carrera:** Ingeniería de Software
 
-Como propuesta inicial para el proyecto académico, se consideran los
-siguientes planes:
 
-| Plan | Horas de soporte correctivo por mes | Mantenimientos preventivos por mes |
-|---|---:|---:|
-| Básico | 4 horas | 1 equipo |
-| Empresarial | 8 horas | 2 equipos |
-| Integral | 16 horas | 4 equipos |
+[contenido]
 
-Todos los planes incluirán el registro y seguimiento de solicitudes, la
-consulta del consumo de beneficios y el historial de atención por equipo.
+## 1.2. Solution Profile
 
-Las cantidades presentadas son referenciales y deberán validarse durante
-el desarrollo del proyecto. Los precios se establecerán considerando los
-costos de personal técnico, traslados, herramientas y operación de la
-plataforma.
+### 1.2.1. Antecedentes y problemática
 
-El registro de solicitudes no implicará soporte ilimitado. El tiempo
-utilizado en las intervenciones correctivas se descontará de las horas
-disponibles en el plan. Los mantenimientos preventivos se descontarán de
-su cupo correspondiente y no consumirán horas de soporte correctivo.
+*   **Who? (¿Quién?):**
+*   **What? (¿Qué?):**
+*   **Where? (¿Dónde?):**
+*   **When? (¿Cuándo?):**
+*   **Why? (¿Por qué?):**
+*   **How? (¿Cómo?):**
+*   **How much? (¿Cuánto?):**
 
-### 1.3.2. Servicios adicionales
+<br>
 
-Cuando la empresa agote las horas de soporte o los mantenimientos
-incluidos, podrá solicitar servicios adicionales mediante una cotización.
+**Enunciado del problema:**
 
-Los repuestos y componentes necesarios para una reparación tampoco
-estarán incluidos en la mensualidad. Su costo será informado por separado.
+**Objetivo general:**
 
-El responsable de la empresa deberá aprobar la cotización antes de que
-se realice el trabajo que genere un cobro adicional. De esta manera,
-podrá conocer y autorizar los gastos que excedan su suscripción.
+**Restricciones de alcance:**
 
-### 1.3.3. Usuarios de la plataforma
+### 1.2.2. Lean UX Process
+[contenido]
+#### 1.2.2.1. Lean UX Problem Statements
 
-La aplicación contará con los siguientes usuarios y responsabilidades:
+[contenido] DEL LEAN UX PROBLEM STATEMENTS
 
-| Usuario | Funciones principales |
-|---|---|
-| Responsable de la empresa | Consultar el plan y su consumo, gestionar empleados y equipos, revisar solicitudes y aprobar cotizaciones adicionales. |
-| Empleado | Registrar problemas en los equipos y consultar el estado de sus solicitudes. |
-| Técnico | Consultar las solicitudes asignadas, registrar diagnósticos, actualizar avances y documentar el tiempo y trabajo realizado. |
-| Administrador de UniLink | Gestionar empresas, planes y técnicos; asignar solicitudes; validar consumos y supervisar las atenciones. |
+#### 1.2.2.2. Lean UX Assumptions
 
-Cada empresa accederá únicamente a su propia información. Los técnicos
-podrán consultar la información necesaria para atender las solicitudes
-que les hayan sido asignadas.
+##### Business Assumptions
+[contenido]
 
-## 1.4. Segmentos objetivo
+##### Business Outcome Assumptions
+[contenido]
 
-### 1.4.1. Segmento principal: pequeñas y medianas empresas
+##### User Assumptions
+[contenido]
 
-La solución estará dirigida a pequeñas y medianas empresas que utilizan
-computadoras en sus actividades y no cuentan con un área propia de
-soporte técnico.
+##### User Outcome and Benefit Assumptions
+[contenido]
 
-Entre los posibles clientes se encuentran oficinas administrativas,
-estudios contables, agencias y otros negocios que requieren mantener
-operativos sus equipos informáticos.
+##### Feature Assumptions
+[contenido]
 
-Estas empresas contratarán y pagarán la suscripción para que sus
-trabajadores puedan solicitar atención dentro de la cobertura del plan.
+#### 1.2.2.3. Lean UX Hypothesis Statements
 
-### 1.4.2. Usuarios dentro de la empresa
+[contenido]
 
-Los responsables administrativos o encargados de los equipos necesitarán
-consultar las solicitudes de su organización, supervisar las atenciones,
-revisar el consumo de la suscripción y aprobar gastos adicionales.
+#### 1.2.2.4. Lean UX Canvas
 
-Los empleados utilizarán la plataforma para reportar fallas y conocer
-el avance de sus solicitudes sin tener que coordinar directamente la
-contratación de un técnico externo.
 
-### 1.4.3. Usuarios operativos del servicio
+[contenido]
 
-Los técnicos y el administrador de UniLink utilizarán la plataforma para
-organizar y ejecutar las atenciones.
+## 1.3. Segmentos objetivo
 
-Los técnicos registrarán el diagnóstico y los trabajos realizados,
-mientras que el administrador coordinará la asignación de solicitudes y
-verificará su correspondencia con los beneficios contratados.
+[contenido]
 
-## 1.5. Objetivos del proyecto
+# Capítulo II: Requirements Elicitation & Analysis
 
-### 1.5.1. Objetivo general
+## 2.1. Competidores
 
-Desarrollar una aplicación web que permita gestionar servicios de
-mantenimiento y reparación de computadoras para empresas mediante
-suscripciones mensuales, centralizando las solicitudes, la asignación
-de técnicos, el seguimiento de las atenciones y el control de los
-beneficios contratados.
+[contenido]
 
-### 1.5.2. Objetivos específicos
 
-- Permitir que los empleados registren solicitudes de soporte indicando
-  el problema, el equipo afectado y su ubicación.
+### 2.1.1. Análisis competitivo
 
-- Facilitar la asignación de técnicos y la actualización del estado de
-  cada solicitud.
+[contenido]
 
-- Permitir a las empresas consultar las horas de soporte y los
-  mantenimientos disponibles en su suscripción.
+#### Competitive Analysis Landscape
 
-- Gestionar cotizaciones adicionales por excedentes de servicio o
-  repuestos, sujetas a la aprobación de la empresa.
 
-- Conservar un historial de diagnósticos e intervenciones por equipo.
+[contenido]
 
-- Proporcionar accesos y permisos según las responsabilidades de cada
-  usuario.
+### 2.1.2. Estrategias y tácticas frente a competidores
 
-## 1.6. Propuesta de valor
+[contenido]
 
-La propuesta de valor de UniLink consiste en ofrecer soporte técnico
-empresarial con una cobertura mensual definida y un proceso de atención
-que pueda ser consultado desde una misma plataforma.
 
-La empresa podrá conocer qué incluye su suscripción, cuánto ha utilizado,
-quién atiende cada solicitud y qué trabajos se realizaron en sus equipos.
+## 2.2. Entrevistas
+### 2.2.1. Diseño de entrevistas
 
-La combinación de seguimiento de solicitudes, historial por equipo y
-aprobación de cobros adicionales busca brindar mayor organización y
-transparencia en la gestión del soporte técnico.
+[contenido]
 
-## 1.7. Alcance inicial de la solución
+### 2.2.2. Registro de entrevistas
 
-La primera versión de la solución contemplará:
+[contenido]
 
-- Una landing page para presentar el servicio, los planes y la startup.
-- Registro e inicio de sesión con permisos según el rol.
-- Gestión de empresas, empleados y equipos.
-- Consulta de planes y registro de suscripciones.
-- Creación y seguimiento de solicitudes.
-- Asignación de técnicos.
-- Registro del tiempo de atención y consumo de beneficios.
-- Elaboración y aprobación de cotizaciones adicionales.
-- Consulta del historial de atención por equipo.
 
-Para la demostración académica se propone simular los pagos de
-suscripciones y servicios adicionales. La incorporación de una pasarela
-de pagos real dependerá del alcance establecido para el curso.
 
-No se contemplan inicialmente una aplicación móvil nativa,
-geolocalización de técnicos en tiempo real, atención permanente durante
-las 24 horas ni servicios de otras especialidades.
 
-Este alcance corresponde a la solución propuesta para el proyecto.
-Las funcionalidades que se implementen en cada entrega se organizarán
-según el cronograma y los requisitos del curso.
 
+### 2.2.3. Análisis de entrevistas
 
+[contenido]
+
+## 2.3. Needfinding
+
+[contenido]
+
+### 2.3.1. User Personas
+
+[contenido]
+
+### 2.3.2. User Task Matrix
+
+[contenido]
+### 2.3.3. User Journey Mapping
+
+[contenido]
+
+### 2.3.4. Empathy Mapping
+
+
+[contenido]
+
+
+## 2.4. Big Picture Event Storming
+
+[contenido]
+### 2.4.1. Fase 1: Generación Abierta de Eventos (Open Space)
+
+[contenido]
+
+
+### 2.4.2. Fase 2: Exploración y Línea de Tiempo (Explore)
+
+[contenido]
+
+
+### 2.4.3. Fase 3: Consolidación y Definición de Triggers (Close Space)
+
+
+[contenido]
+
+### 2.4.4. Fase 4: Modelo Final del Dominio (Final Landscape)
+
+
+[contenido]
+
+### 2.5. Ubiquitous Language
+
+[contenido]
+
+# Capítulo III: Requirements Specification
+
+## 3.1. User Stories
+---
+
+[contenido]
+
+## 3.2. Impact Mapping
+
+
+[Contenido]
+
+## 3.3. Product Backlog
+
+[Contenido]
+
+
+# Capítulo IV: Product Design
+
+## 4.1. Style Guidelines
+
+[Contenido]
+
+### 4.1.1. General Style Guidelines
+
+[Contenido]
+
+### 4.1.2. Web Style Guidelines
+
+[Contenido]
+
+## 4.2. Information Architecture
+
+[Contenido]
+
+### 4.2.1. Organization Systems
+
+[Contenido]
+
+### 4.2.2. Labeling Systems
+
+[Contenido]
+
+### 4.2.3. SEO Tags and Meta Tags
+
+[Contenido]
+
+### 4.2.4. Searching Systems
+
+[Contenido]
+
+### 4.2.5. Navigation Systems
+
+[Contenido]
+
+## 4.3. Landing Page UI Design
+
+[Contenido]
+
+### 4.3.1. Landing Page Wireframe
+
+[Contenido]
+
+### 4.3.2. Landing Page Mock-up
+
+[Contenido]
+
+## 4.4. Web Applications UX/UI Design
+
+[Contenido]
+
+### 4.4.1. Web Applications Wireframes
+
+[Contenido]
+
+### 4.4.2. Web Applications Wireflow Diagrams
+
+[Contenido]
+
+### 4.4.3. Web Applications Mock-ups
+
+[Contenido]
+
+### 4.4.4. Web Applications User Flow Diagrams
+
+[Contenido]
+
+## 4.5. Web Applications Prototyping
+
+[Contenido]
+
+## 4.6. Domain-Driven Software Architecture
+
+[Contenido]
+
+### 4.6.1. Design-Level Event Storming
+
+[Contenido]
+
+### 4.6.2. Software Architecture Context Diagram
+
+[Contenido]
+
+### 4.6.3. Software Architecture Container Diagrams
+
+[Contenido]
+
+### 4.6.4. Software Architecture Components Diagrams
+
+[Contenido]
+
+## 4.7. Software Object-Oriented Design
+
+[Contenido]
+
+### 4.7.1. Class Diagrams
+
+[Contenido]
+
+## 4.8. Database Design
+
+[Contenido]
+
+### 4.8.1. Database Diagrams
+
+[Contenido]
+
+---
+
+# Capítulo V: Product Implementation, Validation & Deployment
+
+## 5.1. Software Configuration Management
+
+[Contenido]
+
+### 5.1.1. Software Development Environment Configuration
+
+[Contenido]
+
+### 5.1.2. Source Code Management
+
+[Contenido]
+
+### 5.1.3. Source Code Style Guide & Conventions
+
+[Contenido]
+
+### 5.1.4. Software Deployment Configuration
+
+[Contenido]
+
+## 5.2. Landing Page, Services & Applications Implementation
+
+[Contenido]
+
+### 5.2.1. Sprint 1
+
+[Contenido]
+
+#### 5.2.1.1. Sprint Planning 1
+
+[Contenido]
+
+#### 5.2.1.2. Aspect Leaders and Collaborators
+
+[Contenido]
+
+#### 5.2.1.3. Sprint Backlog 1
+
+[Contenido]
+
+#### 5.2.1.4. Development Evidence for Sprint Review
+
+[Contenido]
+
+#### 5.2.1.5. Execution Evidence for Sprint Review
+
+[Contenido]
+
+#### 5.2.1.6. Services Documentation Evidence for Sprint Review
+
+[Contenido]
+
+#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+
+[Contenido]
+
+#### 5.2.1.8. Team Collaboration Insights during Sprint
+
+[Contenido]
+
+### 5.2.2. Sprint 2
+
+[Contenido]
+
+#### 5.2.2.1. Sprint Planning 2
+
+[Contenido]
+
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+[Contenido]
+
+#### 5.2.2.3. Sprint Backlog 2
+
+[Contenido]
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+[Contenido]
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+[Contenido]
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+[Contenido]
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+[Contenido]
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+[Contenido]
+
+## 5.3. Validation Interviews
+
+[Contenido]
+
+### 5.3.1. Diseño de Entrevistas
+
+[Contenido]
+
+### 5.3.2. Registro de Entrevistas
+
+[Contenido]
+
+### 5.3.3. Evaluaciones según heurísticas
+
+[Contenido]
+
+## 5.4. Video About-the-Product
+
+[Contenido]
+
+---
+
+# Conclusiones
+
+[Contenido]
+
+# Conclusiones y recomendaciones
+
+[Contenido]
+
+# Video About-the-Team
+
+[Contenido]
+
+# Bibliografía
+
+[Contenido]
+
+# Anexos
+
+[Contenido]
