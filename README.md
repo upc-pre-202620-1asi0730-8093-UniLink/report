@@ -26,7 +26,7 @@ Equipo
 
 Proyecto
 
-### **TechSustain**
+### **CompuCare**
 <br>
 
 #### **Integrantes**
