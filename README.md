@@ -243,12 +243,12 @@ UniLink se encargará de seleccionar, capacitar y coordinar a los técnicos resp
   <img src="./assets/profiles/Anthony.jpg" alt="" width="200">
 </div>
 
-**Antony David Yauri Barrios**
+**Yauri Barrios, Antony David**
 * **Código de estudiante:** U202214499
 * **Carrera:** Ingeniería de Software
 
 
-Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas(UPC), Tiene 22 años y trabaja con los stacks MERN y PERN.Le gusta trabajar en equipo, compartir conocimientos y seguir aprendiendo de sus compañeros para mejorar constantemente.
+Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas(UPC), Tiene 22 años y trabaja con los stacks MERN y PERN. Le gusta trabajar en equipo, compartir conocimientos y seguir aprendiendo de sus compañeros para mejorar constantemente.
 <br>
 
 <div align="left">
