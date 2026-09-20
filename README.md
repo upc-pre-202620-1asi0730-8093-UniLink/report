@@ -256,11 +256,12 @@ Estudiante de Ingeniería de Software en la Universidad Peruana de Ciencias Apli
   <img src="../assets/" alt="" width="200">
 </div>
 
-**nombre**
-* **Código de estudiante:**
+**Aldair Joaquin Ramos Aguirre**
+* **Código de estudiante:U20201F051**
 * **Carrera:** Ingeniería de Software
 
-[contenido]
+Estudiante de pregrado de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), con formación complementaria en finanzas. Posee conocimientos en desarrollo de software utilizando lenguajes de programación como Java, Python, JavaScript y TypeScript, así como en el desarrollo de aplicaciones backend con Spring Boot y Spring Security (JWT) y de interfaces web con React, Angular y Vue. Maneja bases de datos relacionales mediante SQL, además de herramientas como Git, Docker y Jira para el control de versiones, la contenerización y la gestión de tareas del equipo. Aporta en el desarrollo de la solución, la construcción de APIs seguras y la organización del trabajo colaborativo, con interés en incorporarse como Junior Software Engineer en equipos remotos internacionales.
+
 <br>
 
 <div align="left">
