@@ -46,7 +46,7 @@ Proyecto
 <td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[nombre]</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[U202411324]</td>
+<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U202411324</td>
 <td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Condezo Pacheco, Fernando André</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
