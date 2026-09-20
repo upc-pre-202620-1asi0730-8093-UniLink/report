@@ -848,6 +848,9 @@ Los actores identificados son:
 - **Administrador de CompuCare:** gestiona usuarios, técnicos, empresas, planes y operaciones generales del sistema.
 
 Todos estos actores interactúan con la plataforma web de CompuCare para realizar las operaciones correspondientes a su rol.
+The following context diagram represents the main external actors and systems that interact with CompuCare.
+
+![CompuCare System Context Diagram](assets/c4_contexto.svg)
 ### 4.6.3. Software Architecture Container Diagrams
 
 El Container Diagram divide la solución CompuCare en sus principales componentes tecnológicos.
