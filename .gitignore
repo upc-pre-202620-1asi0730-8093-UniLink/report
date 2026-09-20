@@ -1,0 +1,17 @@
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+
+/shelf/
+/workspace.xml
+/httpRequests/
+/queries/
+/dataSources/
+/dataSources.local.xml
+
+.DS_Store
+Thumbs.db
+*.tmp
+*.log
