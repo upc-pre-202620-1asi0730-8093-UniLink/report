@@ -669,6 +669,21 @@ Las principales vistas consideradas son:
 - Perfil del usuario.
 
 Estos wireframes permiten validar la disposición de botones, formularios, tarjetas y elementos de navegación antes de aplicar el diseño visual definitivo.
+### Dashboard Wireframe
+
+![CompuCare Dashboard Wireframe](assets/04_panel_wireframe.svg)
+
+### Support Requests Wireframe
+
+![CompuCare Support Requests Wireframe](assets/05_solicitudes_wireframe.svg)
+
+### New Support Request Wireframe
+
+![CompuCare New Support Request Wireframe](assets/06_nueva_wireframe.svg)
+
+### Support Request Detail Wireframe
+
+![CompuCare Support Request Detail Wireframe](assets/07_detalle_wireframe.svg)
 ### 4.4.2. Web Applications Wireflow Diagrams
 
 Los Wireflow Diagrams representan la relación entre las diferentes pantallas y las acciones que realiza el usuario para completar una tarea.
