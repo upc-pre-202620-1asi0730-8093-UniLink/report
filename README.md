@@ -446,114 +446,147 @@ Estudiante de pregrado de la carrera de Ingeniería de Software en la Universida
 
 # Capítulo IV: Product Design
 
+**En esta sección se detalla el planteamiento de la propuesta de Software Architecture & Design, incluyendo Domain-Driven Software Architecture, Object-Oriented Software Design, así como el diseño UX/UI para la experiencia web. Para ello, se ha tomado como base el conjunto de User Stories identificados y el Impact Map elaborados previamente para CompuCare.**
+
 ## 4.1. Style Guidelines
 
-[Contenido]
+**Con el fin de mantener una presentación consistente y enfocada a nuestro segmento corporativo (B2B), se establecen las bases para contar con un repositorio central y organizado de uso común para todo el equipo.**
 
 ### 4.1.1. General Style Guidelines
 
-[Contenido]
+**Las guías de estilo generales de CompuCare se fundamentan en transmitir confianza, transparencia y eficiencia técnica, valores indispensables para una plataforma que gestiona el mantenimiento operativo de las empresas.   Branding: El isotipo y logotipo de CompuCare combinan formas sólidas que representan estabilidad tecnológica e interconexión empresarial.
+ Typography: Se adopta la familia tipográfica Inter (sans-serif) por su alta legibilidad en pantallas digitales e interfaces ricas en datos (como los dashboards de consumo de horas).
+ Colors:
+  Corporate Navy Blue (#0F172A): Utilizado para barras de navegación, textos principales y elementos que transmiten seriedad corporativa.
+  Tech Blue (#2563EB): Color principal (Primary) para botones de acción (CTAs) como "Registrar Ticket" o "Aprobar Cotización".
+  Alert Status Colors: Verde (#16A34A) para mantenimientos completados, Amarillo/Naranja (#F59E0B) para horas de soporte por agotarse, y Rojo (#DC2626) para fallas críticas o quiebres de servicio.
+ Spacing: Se adopta un sistema de espaciado basado en una cuadrícula de 4px y 8px para mantener consistencia y ritmo visual en las tarjetas de información y formularios.
+ Tone of Communication: El tono de comunicación es Formal, Respetuoso y Resolutivo. Se evitan tecnicismos informáticos excesivos hacia los usuarios finales, comunicando las fallas y cotizaciones de manera clara y transparente.**
 
 ### 4.1.2. Web Style Guidelines
 
-[Contenido]
+**Para las interfaces web de CompuCare, las directrices visuales se alinean al lenguaje de diseño Material Design, utilizando la biblioteca de componentes PrimeVue según las especificaciones tecnológicas del proyecto. Se prioriza el Responsive Web Design para garantizar que los empleados puedan reportar fallas desde sus smartphones y los administradores puedan aprobar cotizaciones desde sus escritorios. Se aplican principios de diseño inclusivo mediante contrastes adecuados y un tamaño mínimo de touch targets de 44x44px.**
 
 ## 4.2. Information Architecture
 
-[Contenido]
+**La arquitectura de la información dicta cómo se organizará el contenido en el Landing Page y la Web Application de CompuCare, asegurando que los visitantes y usuarios se adapten con facilidad y encuentren lo que necesitan sin esfuerzo.**
 
 ### 4.2.1. Organization Systems
 
-[Contenido]
+**Para CompuCare se aplican principalmente dos esquemas de organización visual:   
+  Organización Jerárquica (Visual Hierarchy): Aplicada en el Dashboard del Responsable de la Empresa, priorizando la información más crítica en la parte superior: Saldo de horas disponibles y Mantenimientos preventivos restantes.   
+  Organización Secuencial (Step-by-step to accomplish): Aplicada para el registro de un Ticket de Soporte por parte del empleado (Paso 1: Seleccionar equipo, Paso 2: Describir problema, Paso 3: Indicar ubicación), y para el flujo de aprobación de cotizaciones adicionales.**
 
 ### 4.2.2. Labeling Systems
 
-[Contenido]
+**Se han definido etiquetas precisas (con el mínimo número de palabras) para evitar confusión en los usuarios. Al estar en un contexto B2B, las etiquetas representan conceptos familiares:   
+  Planes y Suscripción
+  Mis Tickets de Soporte
+  Bolsa de Horas
+  Mantenimientos Preventivos
+  Cotizaciones Pendientes
+  Equipos / Activos**
 
 ### 4.2.3. SEO Tags and Meta Tags
 
-[Contenido]
-
+**Para asegurar el correcto posicionamiento del Landing Page y la estructura base de la Web Application, se han definido los siguientes tags:   
+  Title: CompuCare | Tercerización de Soporte Técnico Informático para MYPES.
+  Meta Description: Centraliza el mantenimiento de computadoras de tu empresa con CompuCare. 
+  Planes de suscripción mensual con bolsa de horas y prevención de fallas.
+  Meta Keywords: soporte técnico, mantenimiento de computadoras, helpdesk para empresas, outsourcing TI, bolsa de horas soporte.
+  Author: CompuCare Development Team.**
+  
 ### 4.2.4. Searching Systems
 
-[Contenido]
-
+**Para evitar que los usuarios se pierdan entre el volumen de información, la plataforma incluirá:   
+  Búsqueda de Tickets: Los empleados y administradores podrán buscar solicitudes por código de Ticket, estado (En diagnóstico, Resuelta, Pendiente de repuesto) o fecha de creación.   
+  Búsqueda de Equipos: Los responsables podrán buscar en el historial clínico de las computadoras mediante su número de serie o asignación de empleado.**
+  
 ### 4.2.5. Navigation Systems
 
-[Contenido]
+**El sistema de navegación utilizará un Top Navigation Bar fijo para el Landing Page y un Sidebar Navigation colapsable para la Web Application. Se incluirán Breadcrumbs (migas de pan) para facilitar el retorno en flujos profundos (Ej. Inicio > Mis Tickets > Ticket #1042 > Cotización Adicional).**
 
 ## 4.3. Landing Page UI Design
 
-[Contenido]
+**La propuesta de interfaz para el Landing Page busca traducir las decisiones de negocio y arquitectura de información en un diseño persuasivo que incentive la conversión y adquisición de planes de suscripción.**  
 
 ### 4.3.1. Landing Page Wireframe
 
-[Contenido]
+**A continuación, se presentan los Wireframes para Desktop y Mobile elaborados en Figma. Se evidencia la aplicación de una estructura clásica B2B: Hero Section con propuesta de valor, beneficios, comparativa de planes (Básico, Empresarial, Integral) y Call to Action (CTA).**
 
 ### 4.3.2. Landing Page Mock-up
 
-[Contenido]
+**Los Mock-ups integran nuestro Design System y guías de estilo, mostrando el Landing Page en alta fidelidad.**
 
 ## 4.4. Web Applications UX/UI Design
 
-[Contenido]
+**Esta sección presenta la propuesta visual y de interacción para la plataforma CompuCare, diferenciando las vistas según el acceso de los roles principales: Responsable de la empresa y Empleado.**   
 
 ### 4.4.1. Web Applications Wireframes
 
-[Contenido]
+**Se presentan los Wireframes de bajo nivel. Se destaca la vista del Dashboard Gerencial y el formulario de ingreso de incidentes para los empleados.**
 
 ### 4.4.2. Web Applications Wireflow Diagrams
 
-[Contenido]
+**Se han elaborado Wireflows para los User Goals principales.
+  Flujo 1: El empleado reporta un equipo con fallas, adjuntando detalles y ubicación.   
+  Flujo 2: El responsable revisa el panel, visualiza que sus horas de soporte se descontaron tras una atención validada, y aprueba una cotización extra por un repuesto.**  
 
 ### 4.4.3. Web Applications Mock-ups
 
-[Contenido]
+**Las pantallas en alta fidelidad aplican los componentes de Angular Material / PrimeVue, mostrando un diseño limpio, accesible y centrado en la usabilidad.**
 
 ### 4.4.4. Web Applications User Flow Diagrams
 
-[Contenido]
+**Los User Flows incorporan lógica condicional a los Wireflows. Por ejemplo, en el flujo de reparación: ¿La intervención supera el saldo de horas disponible? Si es SÍ -> Generar Cotización Adicional; Si es NO -> Descontar de la bolsa de horas y proceder con la atención.**   
 
 ## 4.5. Web Applications Prototyping
 
-[Contenido]
+**Se ha desarrollado un prototipo interactivo para Desktop y Mobile que simula la navegación y el flujo de los User Flows diagramados. Se ha grabado una demostración en video para evidenciar las decisiones de arquitectura de información.**   
 
 ## 4.6. Domain-Driven Software Architecture
 
-[Contenido]
+**A partir del Big Picture EventStorming, hemos aplicado los principios de Domain-Driven Design (DDD) para identificar nuestros Bounded Contexts, Aggregates, comandos y eventos, logrando una arquitectura orientada a servicios altamente cohesiva.**
 
 ### 4.6.1. Design-Level Event Storming
 
-[Contenido]
+**A través del Design-Level EventStorming, modelamos el comportamiento interno del sistema. Identificamos Bounded Contexts clave como: IdentityAndAccess (Roles de usuario), SubscriptionManagement (Manejo de planes y saldo de horas) y SupportOperations (Ciclo de vida de tickets y cotizaciones).   
+  Matriz de Comandos y Eventos:
+    Comando: CreateSupportTicket -> Evento: SupportTicketCreated (Desencadena asignación de técnico).
+    Comando: LogTechnicalWork -> Evento: HoursBalanceUpdated (Disminuye la bolsa de horas del cliente).   
+    Comando: ApproveExtraQuote -> Evento: QuoteApproved (Autoriza compra de repuestos).**  
 
 ### 4.6.2. Software Architecture Context Diagram
 
-[Contenido]
+**Aplicando el Nivel 1 del Modelo C4, el diagrama de contexto sitúa al sistema de software de CompuCare en el centro. Interactúa directamente con los Empleados (reportan problemas), los Responsables de Empresa (aprueban y revisan horas), los Técnicos y los Administradores de la Startup. A nivel externo, se comunica con una Pasarela de Pagos (para cobro de suscripciones y cotizaciones extra) y un Servicio de E-mail (notificaciones).**
 
 ### 4.6.3. Software Architecture Container Diagrams
 
-[Contenido]
+**El Nivel 2 del Modelo C4 describe cómo se distribuyen las responsabilidades tecnológicas. La solución consta de:   
+  Landing Page (Static Web App): HTML5, CSS3, JavaScript.
+  Single-Page Application (Frontend Web App): Vue.js para interactividad ágil en el lado del cliente.   
+  RESTful API Application (Backend): Lógica de negocio lado servidor desarrollada con ASP.NET Core y C#.   
+  Relational Database: Almacenamiento persistente en MySQL Server o PostgreSQL.**
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-[Contenido]
+**El Nivel 3 del Modelo C4 detalla el interior de nuestro contenedor RESTful API. Muestra cómo los componentes (Controladores, Servicios de Dominio, Repositorios) interactúan entre sí. Por ejemplo, el TicketController se comunica con el SupportOperationsService y el SubscriptionService para validar que la empresa tenga saldo de horas activo antes de proceder.**
 
 ## 4.7. Software Object-Oriented Design
 
-[Contenido]
+**En esta sección se presenta el modelado detallado a nivel de clases. El diseño orientado a objetos con C# encapsula la lógica de negocio, protegiendo las propiedades mediante el uso de constructores y propiedades privadas o de solo lectura. Se aplican herencia e interfaces para asegurar el bajo acoplamiento.**
 
 ### 4.7.1. Class Diagrams
 
-[Contenido]
+**Los diagramas de clases UML reflejan el diseño para cada Bounded Context. Por ejemplo, la entidad Ticket incluye propiedades como Status (Enum: Registrada, Asignada, En diagnóstico, Resuelta, etc.), AffectedEquipment y métodos como AddExtraQuote(). La clase SubscriptionPlan encapsula la lógica de ConsumeHours() y ConsumePreventiveMaintenance().**
 
 ## 4.8. Database Design
 
-[Contenido]
+**El diseño de la base de datos asegura la integridad relacional de la información procesada por la plataforma, utilizando Entity Framework Core bajo un enfoque Code-First.**   
 
 ### 4.8.1. Database Diagrams
 
-[Contenido]
-
+**El diagrama de entidad-relación (ERD) detalla las tablas principales: Users, Companies, SubscriptionPlans, Equipments, SupportTickets y ExtraQuotes. Se evidencian las relaciones mediante llaves foráneas (PK/FK), como un Ticket perteneciendo a una Company y pudiendo tener múltiples ExtraQuotes asociadas.**   
 ---
 
 # Capítulo V: Product Implementation, Validation & Deployment
