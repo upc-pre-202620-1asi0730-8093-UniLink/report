@@ -77,7 +77,10 @@ Proyecto
 # Registro de Versiones del Informe
 
 | Versión | Fecha | Autor | Descripción de modificación |
-|---------|-------|-------|-----------------------------|
+| :---: | :---: | :--- | :--- |
+| **1.0** | 20/09/2026 | Ramos, Aldair | Elaboración de la sección 1.2.1 (Antecedentes y problemática, 5W2H, Objetivos y Restricciones) enfocada exclusivamente en la aplicación web.  Desarrollo de la sección 1.2.2 (Lean UX Process: Problem Statements, Assumptions, Hypothesis y Canvas v2). Definición de la sección 1.3 (Segmentos objetivo) sintetizando los roles clave del proyecto. Elaboración de la matriz de evaluación del Student Outcome 5 de ABET para el Avance 1 (AV1).|
+| **1.0** | 20/09/2026 | Nombre | |
+
 
 ---
 
