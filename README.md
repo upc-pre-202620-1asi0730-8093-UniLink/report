@@ -578,7 +578,7 @@ Para el desarrollo de la solución se establecieron las siguientes herramientas 
 
 #### 5.1.2. Source Code Management
 El equipo utiliza **GitHub** como plataforma de control de versiones. El proyecto mantiene repositorios independientes para los componentes principales:
-*   **Landing Page:** `*(Placeholder: [URL del repositorio])*`
+*   **Landing Page:** (https://github.com/upc-pre-202620-1asi0730-8093-UniLink/landing)
 *   **Web Application (Frontend):** `*(Placeholder: [URL del repositorio])*`
 *   **RESTful API (Backend):** `*(Placeholder: [URL del repositorio])*`
 
