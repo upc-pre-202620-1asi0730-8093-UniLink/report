@@ -729,12 +729,28 @@ El objetivo fue que los usuarios interactuaran con el Landing Page y la Web Appl
 *   **Tarea para Empleados:** Ingresar a la plataforma y reportar un problema con su computadora indicando la ubicación de su escritorio.
 
 #### 5.3.2. Registro de Entrevistas
-1.  **Entrevista 1 (Administrador):** `*(Placeholder: Nombre)*` - `*(Placeholder: [URL Video Stream])*` - *Resumen:* Pudo visualizar el saldo de horas fácilmente, pero sugirió que el botón de aprobar cotización fuera más grande.
-2.  **Entrevista 2 (Empleado):** `*(Placeholder: Nombre)*` - `*(Placeholder: [URL Video Stream])*` - *Resumen:* Logró crear el ticket de soporte en 30 segundos sin fricción.
 
+1. **Entrevista 1 (Técnica de Soporte - Hikari):** (https://drive.google.com/file/d/168aU_BrOYqF49c9xDDXBlJQ7F55Ue7dY/view?usp=drive_link)
+   * **Resumen de Validación:** La usuaria validó positivamente la necesidad de CompuCare. Afirmó que una plataforma donde los clientes reporten la falla exacta y donde ella pueda registrar el diagnóstico, el tiempo trabajado y los repuestos, le ahorraría mucho tiempo. Destacó como crucial que la plataforma permita al cliente (Responsable de la empresa) aprobar las cotizaciones adicionales de manera formal, evitando malentendidos sobre los precios y agilizando la compra de componentes.
+     
 #### 5.3.3. Evaluaciones según heurísticas
-*(Placeholder: Copiar aquí la tabla exigida en el "Anexo D. Formato para Evaluación de User Experience según Heurísticas" de la rúbrica. Identificar si hubo violaciones a heurísticas de Nielsen, ej. "Falta botón de cancelar al crear ticket" -> Nivel de Severidad 2)*.
 
+Para evaluar la usabilidad de la plataforma Web de CompuCare durante las entrevistas de validación, hemos aplicado las 10 Heurísticas de Jakob Nielsen. Los problemas encontrados fueron clasificados según la siguiente escala de severidad:
+* **0:** No es un problema de usabilidad.
+* **1:** Problema cosmético (se soluciona si hay tiempo).
+* **2:** Problema menor (baja prioridad).
+* **3:** Problema mayor (alta prioridad, debe solucionarse).
+* **4:** Catástrofe de usabilidad (imperativo solucionarlo antes del lanzamiento).
+
+**Tabla de Evaluación de User Experience según Heurísticas (Anexo D):**
+
+| ID | Problema de Usabilidad Encontrado (Fricción) | Heurística Violada | Nivel de Severidad (0-4) | Solución Propuesta (Acción a tomar) |
+| :---: | :--- | :--- | :---: | :--- |
+| **01** | Tras registrar un nuevo ticket de soporte, la pantalla se recargaba sin mostrar un mensaje claro de éxito, dejando al empleado con la duda de si se envió. | #1: Visibilidad del estado del sistema. | **3** | Implementar un componente *Toast* o *Snackbar* (Notificación flotante) de color verde que confirme: "Ticket #1042 creado con éxito". |
+| **02** | Al momento de crear un ticket, si el empleado se equivocaba de equipo, no tenía un botón visible para "Cancelar" o retroceder sin perder todo el texto redactado. | #3: Control y libertad del usuario. | **3** | Agregar un botón secundario de "Cancelar" o "Descartar cambios" junto al botón principal de "Enviar Ticket". |
+| **03** | En el dashboard del Administrador, el botón para "Aprobar" o "Rechazar" una cotización adicional era muy pequeño y del mismo color que el texto normal. | #8: Diseño estético y minimalista. | **2** | Cambiar el diseño de las acciones de cotización usando botones primarios (Verde para Aprobar, Rojo para Rechazar) según el *Style Guide*. |
+| **04** | Algunos mensajes de error del formulario de tickets mostraban códigos técnicos (ej. "Error 400: Bad Request") en lugar de lenguaje claro. | #2: Relación entre el sistema y el mundo real. | **2** | Mapear las respuestas del API para mostrar alertas amigables al usuario final, como: "Por favor, completa la ubicación del equipo". |
+| **05** | Los administradores tenían que recordar el número de serie exacto de la computadora para buscar su historial, lo cual era difícil de memorizar. | #6: Reconocimiento antes que recuerdo. | **2** | Implementar un menú desplegable con los nombres asignados a los equipos (ej. "Laptop de Camila - Diseño") además del número de serie. |
 ---
 
 ### 5.4. Video About-the-Product
