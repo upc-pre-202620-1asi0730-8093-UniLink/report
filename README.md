@@ -558,122 +558,191 @@ Estudiante de pregrado de la carrera de Ingeniería de Software en la Universida
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
-## 5.1. Software Configuration Management
+### 5.1. Software Configuration Management
+La Gestión de Configuración de Software (SCM) comprende las prácticas utilizadas para identificar, controlar, versionar y mantener los diferentes componentes de software de **CompuCare** durante el ciclo de vida del proyecto. 
 
-[Contenido]
+#### 5.1.1. Software Development Environment Configuration
+Para el desarrollo de la solución se establecieron las siguientes herramientas orientadas a las actividades de gestión, diseño, desarrollo y despliegue:
 
-### 5.1.1. Software Development Environment Configuration
+| Herramienta / Producto | Propósito en el Proyecto |
+| :--- | :--- |
+| **UXPressia** | *Requirements Management & UX:* Elaboración de User Personas, Empathy Maps, Journey Maps e Impact Maps. |
+| **Figma** | *Product UX/UI Design:* Creación de Wireframes, Mock-ups, Design Systems y prototipado interactivo. |
+| **LucidChart / PlantUML** | *Software Architecture:* Elaboración de diagramas UML, C4 Model y Entity-Relationship Diagrams. |
+| **YouTrack / Trello** | *Project Management:* Gestión del Product Backlog, Sprint Backlog y control de tareas (Kanban). |
+| **GitHub** | *Source Code Management:* Alojamiento en la nube y control de versiones colaborativo. |
+| **JetBrains Rider** | *Software Development:* IDE principal obligatorio del curso para el desarrollo de Backend y Frontend. |
+| **ASP.NET Core & C#** | *Backend Development:* Framework y lenguaje de programación para el desarrollo del RESTful API. |
+| **Vue.js & TypeScript** | *Frontend Development:* Framework utilizado para la Web Application (SPA) con PrimeVue. |
+| **Swagger UI (OpenAPI)** | *Software Documentation:* Herramienta integrada en ASP.NET Core para la documentación automatizada de Endpoints. |
 
-[Contenido]
+#### 5.1.2. Source Code Management
+El equipo utiliza **GitHub** como plataforma de control de versiones. El proyecto mantiene repositorios independientes para los componentes principales:
+*   **Landing Page:** `*(Placeholder: [URL del repositorio])*`
+*   **Web Application (Frontend):** `*(Placeholder: [URL del repositorio])*`
+*   **RESTful API (Backend):** `*(Placeholder: [URL del repositorio])*`
 
-### 5.1.2. Source Code Management
+**GitFlow Workflow:** Para gestionar la evolución del código sin interrupciones, aplicamos GitFlow:
+*   `main`: Rama base que refleja el estado de producción.
+*   `develop`: Rama de integración de los cambios durante el desarrollo.
+*   `feature/*`: Ramas temporales para desarrollar funcionalidades aisladas (ej. `feature/ticket-registration`).
 
-[Contenido]
+**Conventional Commits & Semantic Versioning:** Todo el equipo utiliza *Conventional Commits* (`feat:`, `fix:`, `docs:`, `style:`) en los mensajes de subida. Los lanzamientos en `main` se etiquetan bajo *Semantic Versioning*.
 
-### 5.1.3. Source Code Style Guide & Conventions
+#### 5.1.3. Source Code Style Guide & Conventions
+Para mantener un código legible y mantenible, aplicamos convenciones estrictas:
+*   **C# & ASP.NET Core:** Se siguen las *C# Coding Conventions* y *Microsoft ASP.NET Core Coding Guidelines*[cite: 6]. Uso de PascalCase para clases y métodos, camelCase para variables locales.
+*   **Vue.js & JavaScript/TypeScript:** Se sigue la *Vue Style Guide* y *Google JavaScript Style Guide*.
+*   **HTML & CSS:** Se aplican los estándares de W3C, nombres de clases descriptivos y semántica web enfocada en accesibilidad (*a11y*).
 
-[Contenido]
+#### 5.1.4. Software Deployment Configuration
+El despliegue de CompuCare está automatizado de la siguiente manera:
+1.  **Landing Page & Frontend Web App:** Desplegados en **Vercel** o **Netlify**. Conectado directamente a la rama `main` de GitHub para habilitar Integración Continua (CI/CD).
+2.  **RESTful API & Base de Datos:** Backend publicado en **Azure** (o Render) utilizando contenedores. La base de datos relacional (MySQL/PostgreSQL) está alojada en la nube y conectada mediante variables de entorno seguras.
 
-### 5.1.4. Software Deployment Configuration
+---
 
-[Contenido]
+### 5.2. Landing Page, Services & Applications Implementation
+Esta sección evidencia el trabajo iterativo e incremental del equipo organizado mediante la metodología Scrum.
 
-## 5.2. Landing Page, Services & Applications Implementation
+#### 5.2.1. Sprint 1
+El objetivo del Sprint 1 fue la construcción y despliegue del Landing Page para iniciar la validación comercial del modelo de suscripción, así como la configuración inicial de la arquitectura del Backend.
 
-[Contenido]
+##### 5.2.1.1. Sprint Planning 1
 
-### 5.2.1. Sprint 1
+| Sprint # | Sprint 1 |
+| :--- | :--- |
+| **Sprint Planning Background** | Durante esta reunión, el equipo revisó el Product Backlog y priorizó las historias de usuario relacionadas a la propuesta de valor y planes de suscripción. |
+| **Date** | **2026-08-22** |
+| **Time** | **09:30 AM** |
+| **Location** | **Reunión Presencial UPC Monterrico** |
+| **Prepared By** | Ramos Aguirre, Aldair Joaquin (Team Leader) |
+| **Attendees (to planning meeting)** | Ramos Aguirre, Aldair / Condezo Pacheco, Fernando / Okuhama Diaz, Matthew / Miranda Romero, Sergio / Yauri Barrios, Antony |
+| **Sprint 0 Review Summary** | N/A (Primer sprint). Se definieron los lineamientos iniciales de arquitectura en JetBrains Rider y configuración de repositorios. |
+| **Sprint 0 Retrospective Summary** | N/A. Se establecieron acuerdos de comunicación interna y revisión de código (Pull Requests). |
+| **Sprint 1 Goal** | **Our focus is on** launching the CompuCare Landing Page. <br>**We believe it delivers** a clear understanding of our B2B value proposition to SME administrators.<br>**This will be confirmed when** visitors can see our subscription plans and interact with the contact forms. |
+| **Sprint 1 Velocity** | 15 Story Points |
+| **Sum of Story Points** | 12 Story Points |
 
-[Contenido]
+##### 5.2.1.2. Aspect Leaders and Collaborators
+| Team Member (Last Name, First Name) | GitHub Username | Aspect: Landing Page UI/UX Leader (L) / Collaborator (C) | Aspect: Env & Repo Setup Leader (L) / Collaborator (C) | Aspect: API Setup Leader (L) / Collaborator (C) |
+| :--- | :--- | :--- | :--- | :--- |
+| Ramos Aguirre, Aldair Joaquin | @AldairRamos13 | L | C | C |
+| Condezo Pacheco, Fernando André | @LEFEROX | C | L | C |
+| Okuhama Diaz, Matthew Shinko | @okudiaz124 | C | C | L |
+| Miranda Romero, Sergio Luis | @SergioM1r | C | C | C |
+| Yauri Barrios, Antony David | @AntonyYauri | C | C | C |
 
-#### 5.2.1.1. Sprint Planning 1
+##### 5.2.1.3. Sprint Backlog 1
+| Sprint # | Sprint 1 | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **User Story Id** | **Story Title** | **Task Id** | **Task Title** | **Task Description** | **Estimation (Hours)** | **Assigned To** |
+| US01 | Visualización de Planes | T01.1 | Maquetar HTML5/CSS3 | Estructurar Hero Section y Tabla de Planes. | 4 | Okuhama Diaz, Matthew |
+| US01 | Visualización de Planes | T01.2 | Implementar Responsividad | Adaptar vistas a Mobile y Tablets. | 3 | Miranda Romero, Sergio |
+| TSK01 | Configuración Backend | T00.1 | Init ASP.NET Core Project | Configurar arquitectura DDD en Rider. | 3 | Condezo Pacheco, Fernando |
 
-[Contenido]
+##### 5.2.1.4. Development Evidence for Sprint Review
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Commited on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| compucare-landing | feature/hero-section | 1a2b3c4 | feat: add hero section and plans | Estructura inicial del Landing y planes. | 2026-09-20 |
+| compucare-api | chore/init-project | 5d6e7f8 | chore: init asp.net core web api | Estructura DDD creada en JetBrains Rider. | 2026-09-20 |
 
-#### 5.2.1.2. Aspect Leaders and Collaborators
+##### 5.2.1.5. Execution Evidence for Sprint Review
+En este Sprint se logró una versión funcional y desplegada del Landing Page.
+*   **Video del Landing Page:** `*(Placeholder: [Enlace a Microsoft Stream])*`.
+*   *(Placeholder: [Insertar Capturas de pantalla del Landing Page funcionando en el navegador])*
 
-[Contenido]
+##### 5.2.1.6. Services Documentation Evidence for Sprint Review
+Se configuró **Swagger/OpenAPI** en el proyecto ASP.NET Core. El endpoint de estado de salud está documentado.
+*   *(Placeholder: [Insertar Captura de pantalla de Swagger UI localhost])*
 
-#### 5.2.1.3. Sprint Backlog 1
+##### 5.2.1.7. Software Deployment Evidence for Sprint Review
+El Landing Page se configuró para integración continua utilizando Vercel.
+*   *(Placeholder: [Insertar Captura de Vercel mostrando el status "Ready" y el dominio en verde])*
 
-[Contenido]
+##### 5.2.1.8. Team Collaboration Insights during Sprint
+*(Placeholder: Insertar captura de los "Insights / Contributors" de GitHub mostrando el gráfico de commits del equipo)*.
 
-#### 5.2.1.4. Development Evidence for Sprint Review
+---
 
-[Contenido]
+#### 5.2.2. Sprint 2
+El objetivo del Sprint 2 se centró en la Web Application (Frontend en Vue) y el desarrollo de endpoints críticos en ASP.NET Core, específicamente el registro de Tickets de soporte por parte del empleado y el Dashboard de saldo de horas para el administrador.
 
-#### 5.2.1.5. Execution Evidence for Sprint Review
+##### 5.2.2.1. Sprint Planning 2
+| Sprint # | Sprint 2 |
+| :--- | :--- |
+| **Sprint Planning Background** | El equipo priorizó las historias de usuario orientadas al Core Domain de la aplicación: el registro de solicitudes y la gestión de horas. |
+| **Date** | **2026-09-05** |
+| **Time** | **09:30 AM** |
+| **Location** | **Reunión presencial Upc Monterrico** |
+| **Prepared By** | Ramos Aguirre, Aldair Joaquin (Team Leader) |
+| **Attendees** | Ramos Aguirre, Aldair / Condezo Pacheco, Fernando / Okuhama Diaz, Matthew / Miranda Romero, Sergio / Yauri Barrios, Antony |
+| **Sprint 1 Review Summary** | El Landing Page fue desplegado con éxito y validado comercialmente. El backend base está operativo en Rider. |
+| **Sprint 1 Retrospective Summary** | Se acordó realizar Code Reviews más estrictos antes de hacer merge a `develop`. |
+| **Sprint 2 Goal** | **Our focus is on** delivering the core ticketing and dashboard modules.<br>**We believe it delivers** autonomy for employees to report issues and control for administrators over their subscription balance.<br>**This will be confirmed when** an employee can create a ticket via the Vue App and the API stores it in the database. |
+| **Sprint 2 Velocity** | 18 Story Points |
+| **Sum of Story Points** | 16 Story Points |
 
-[Contenido]
+##### 5.2.2.2. Aspect Leaders and Collaborators
+| Team Member (Last Name, First Name) | GitHub Username | Aspect: Vue Frontend Leader (L) / Collaborator (C) | Aspect: ASP.NET Core API Leader (L) / Collaborator (C) | Aspect: Database Design Leader (L) / Collaborator (C) |
+| :--- | :--- | :--- | :--- | :--- |
+| Ramos Aguirre, Aldair Joaquin | @AldairRamos13 | C | L | C |
+| Condezo Pacheco, Fernando André | @LEFEROX | C | C | L |
+| Okuhama Diaz, Matthew Shinko | @okudiaz124 | L | C | C |
+| Miranda Romero, Sergio Luis | @SergioM1r | C | C | C |
+| Yauri Barrios, Antony David | @AntonyYauri | C | C | C |
 
-#### 5.2.1.6. Services Documentation Evidence for Sprint Review
+##### 5.2.2.3. Sprint Backlog 2
+| Sprint # | Sprint 2 | | | | | |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| **User Story Id** | **Story Title** | **Task Id** | **Task Title** | **Task Description** | **Estimation (Hours)** | **Assigned To** |
+| US02 | Registro de Solicitud | T02.1 | Implementar Formulario Vue | Crear componente de Ticket con PrimeVue. | 5 | Yauri Barrios, Antony |
+| US05 | Endpoint Creación Ticket | T05.1 | Crear TicketController C# | Lógica de inserción en Base de Datos. | 4 | Condezo Pacheco, Fernando |
+| US03 | Dashboard de Horas | T03.1 | Implementar Vista Admin | Mostrar consumo de bolsa de horas. | 5 | Ramos Aguirre, Aldair |
 
-[Contenido]
+##### 5.2.2.4. Development Evidence for Sprint Review
+*(Placeholder: Tabla de Commits de GitHub de la rama Frontend y Backend API)*.
 
-#### 5.2.1.7. Software Deployment Evidence for Sprint Review
+##### 5.2.2.5. Execution Evidence for Sprint Review
+*   **Video de la Aplicación Web (Tickets y Dashboard):** `*(Placeholder: [Enlace a Microsoft Stream])*`.
+*   *(Placeholder: [Insertar Capturas de la Web App en Vue mostrando el Dashboard y Formulario de Tickets])*
 
-[Contenido]
+##### 5.2.2.6. Services Documentation Evidence for Sprint Review
+Se documentaron los endpoints de Tickets utilizando **OpenAPI (Swagger)**.
+*   *(Placeholder: [Insertar Captura de Swagger UI mostrando el método POST `/api/v1/tickets` con su request body y response])*
 
-#### 5.2.1.8. Team Collaboration Insights during Sprint
+##### 5.2.2.7. Software Deployment Evidence for Sprint Review
+La Web App se desplegó en la nube y el Backend ASP.NET Core fue configurado para producción.
+*   *(Placeholder: [Captura del panel de control de Azure/Render/Vercel de la App y el API])*
 
-[Contenido]
+##### 5.2.2.8. Team Collaboration Insights during Sprint
+*(Placeholder: Captura de pantalla de GitHub "Insights / Network" o "Contributors" del Sprint 2)*.
 
-### 5.2.2. Sprint 2
+---
 
-[Contenido]
+### 5.3. Validation Interviews
+En esta sección se documenta el proceso de validación final con usuarios reales de nuestros dos segmentos objetivos: Responsables de la empresa y Empleados.
 
-#### 5.2.2.1. Sprint Planning 2
+#### 5.3.1. Diseño de Entrevistas
+El objetivo fue que los usuarios interactuaran con el Landing Page y la Web Application para identificar fricciones operativas.
+*   **Tarea para Administradores:** Ingresar al sistema, revisar su bolsa de horas actual, ver una cotización pendiente de un repuesto y aprobarla.
+*   **Tarea para Empleados:** Ingresar a la plataforma y reportar un problema con su computadora indicando la ubicación de su escritorio.
 
-[Contenido]
+#### 5.3.2. Registro de Entrevistas
+1.  **Entrevista 1 (Administrador):** `*(Placeholder: Nombre)*` - `*(Placeholder: [URL Video Stream])*` - *Resumen:* Pudo visualizar el saldo de horas fácilmente, pero sugirió que el botón de aprobar cotización fuera más grande.
+2.  **Entrevista 2 (Empleado):** `*(Placeholder: Nombre)*` - `*(Placeholder: [URL Video Stream])*` - *Resumen:* Logró crear el ticket de soporte en 30 segundos sin fricción.
 
-#### 5.2.2.2. Aspect Leaders and Collaborators
+#### 5.3.3. Evaluaciones según heurísticas
+*(Placeholder: Copiar aquí la tabla exigida en el "Anexo D. Formato para Evaluación de User Experience según Heurísticas" de la rúbrica. Identificar si hubo violaciones a heurísticas de Nielsen, ej. "Falta botón de cancelar al crear ticket" -> Nivel de Severidad 2)*.
 
-[Contenido]
+---
 
-#### 5.2.2.3. Sprint Backlog 2
+### 5.4. Video About-the-Product
+El video **About-the-Product** es una presentación comercial dirigida a nuestros clientes objetivo. Explicamos de manera dinámica la propuesta de valor de CompuCare, mostrando escenarios reales donde las computadoras fallan y cómo nuestra plataforma soluciona el problema.
 
-[Contenido]
-
-#### 5.2.2.4. Development Evidence for Sprint Review
-
-[Contenido]
-
-#### 5.2.2.5. Execution Evidence for Sprint Review
-
-[Contenido]
-
-#### 5.2.2.6. Services Documentation Evidence for Sprint Review
-
-[Contenido]
-
-#### 5.2.2.7. Software Deployment Evidence for Sprint Review
-
-[Contenido]
-
-#### 5.2.2.8. Team Collaboration Insights during Sprint
-
-[Contenido]
-
-## 5.3. Validation Interviews
-
-[Contenido]
-
-### 5.3.1. Diseño de Entrevistas
-
-[Contenido]
-
-### 5.3.2. Registro de Entrevistas
-
-[Contenido]
-
-### 5.3.3. Evaluaciones según heurísticas
-
-[Contenido]
-
-## 5.4. Video About-the-Product
-
-[Contenido]
-
+*   **Enlace YouTube/Stream:** `*(Placeholder: [Insertar URL del video promocional final])*`.
+*   **Duración:** `*(Placeholder: 02:00 min)*`
+*   *(Placeholder: [Insertar 1 o 2 capturas/screenshots representativas de su video promocional])*
 ---
 
 # Conclusiones
