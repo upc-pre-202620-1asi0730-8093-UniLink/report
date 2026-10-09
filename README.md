@@ -41,7 +41,7 @@ Proyecto
 </tr>
 <tr style="background: none !important; border: none !important;">
 <td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[U202419311]</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[Matthew Shinko Okuhama Diaz]</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Matthew Shinko Okuhama Diaz</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
 <td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U202214499</td>
@@ -80,6 +80,7 @@ Proyecto
 | :---: | :---: | :--- | :--- |
 | **1.0** | 20/09/2026 | Ramos, Aldair | Elaboración de la sección 1.2.1 (Antecedentes y problemática, 5W2H, Objetivos y Restricciones) enfocada exclusivamente en la aplicación web.  Desarrollo de la sección 1.2.2 (Lean UX Process: Problem Statements, Assumptions, Hypothesis y Canvas v2). Definición de la sección 1.3 (Segmentos objetivo) sintetizando los roles clave del proyecto. Elaboración de la matriz de evaluación del Student Outcome 5 de ABET para el Avance 1 (AV1).|
 | **1.0** | 20/09/2026 | Condezo, Fernando | Elaboración del Capítulo 5 (Product Implementation, Validation & Deployment). Configuración de la Gestión de Configuración de Software (SCM), definición de repositorios en GitHub con GitFlow y Conventional Commits. Documentación técnica del Sprint 1, incluyendo Sprint Planning, configuración inicial del backend en ASP.NET Core mediante JetBrains Rider, y evidencias de despliegue y colaboración de equipo. |
+| **1.0**     | 09/10/2026 | Yauri, Antony | Elaboración del Capítulo II (Requirements Elicitation & Analysis), incluyendo la sección 2.1 (Competidores), con el análisis competitivo y la definición de estrategias y tácticas frente a competidores. Desarrollo de la sección 2.2 (Entrevistas), abarcando el diseño, registro y análisis de entrevistas a los segmentos objetivo. Asimismo, desarrollo de la sección 2.3 (Needfinding), incluyendo User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping. |
 
 ---
 
