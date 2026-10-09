@@ -880,7 +880,7 @@ La Web Application se comunica con el Backend mediante solicitudes HTTP. El Back
 Esta separación facilita el mantenimiento, escalabilidad y evolución de la plataforma.
 The following container diagram shows the main software containers that compose the CompuCare solution and how they interact with each other.
 
-![CompuCare Container Diagram](assets/c4_contenedores.svg)
+<img width="755" height="728" alt="Diagrama de Contenedores" src="https://github.com/user-attachments/assets/b25b869e-e274-47f4-a7f6-2f8160a36f06" />
 
 ### 4.6.4. Software Architecture Components Diagrams
 
