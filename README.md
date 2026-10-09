@@ -809,6 +809,17 @@ Cada dominio agrupa las entidades, reglas y operaciones relacionadas con una res
 
 El Design-Level Event Storming permite representar los principales eventos, comandos y actores que intervienen en los procesos de CompuCare.
 
+**Design-Level Event Storming: Companies and Equipment (BC02)**
+
+A continuación, se detalla el flujo de eventos de este contexto, incluyendo las políticas de negocio aplicadas:
+
+| Actor | Command (Azul) | Event (Naranja) | Policy (Morado / Lila) |
+| :--- | :--- | :--- | :--- |
+| Administrador MYPE | `RegisterCompany` | `CompanyRegistered` | **Política de Notificación de Bienvenida:** Siempre que una empresa es registrada, el sistema debe disparar un correo de bienvenida. |
+| Administrador MYPE | `RegisterEquipment` | `EquipmentRegistered` | **Política de Límite de Inventario:** Siempre que se intente registrar un equipo, el sistema debe verificar que la cantidad actual no exceda el límite permitido por la suscripción activa. |
+| Administrador MYPE | `UpdateEquipmentLocation` | `EquipmentLocationUpdated` | *(Sin política reactiva requerida)* |
+| Empleado / Admin | `AddEmployee` | `EmployeeAdded` | **Política de Asignación Automática:** Si la empresa tiene dominio verificado, asociar automáticamente al empleado al *Tenant* de la *Company*. |
+
 A partir de los flujos principales de la plataforma se identificaron los siguientes comandos y eventos:
 
 | Comando | Evento |
