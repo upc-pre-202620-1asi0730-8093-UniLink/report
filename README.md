@@ -41,7 +41,7 @@ Proyecto
 </tr>
 <tr style="background: none !important; border: none !important;">
 <td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[U202419311]</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[Matthew Shinko Okuhama Diaz]</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Matthew Shinko Okuhama Diaz</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
 <td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U202214499</td>
@@ -80,6 +80,7 @@ Proyecto
 | :---: | :---: | :--- | :--- |
 | **1.0** | 20/09/2026 | Ramos, Aldair | Elaboración de la sección 1.2.1 (Antecedentes y problemática, 5W2H, Objetivos y Restricciones) enfocada exclusivamente en la aplicación web.  Desarrollo de la sección 1.2.2 (Lean UX Process: Problem Statements, Assumptions, Hypothesis y Canvas v2). Definición de la sección 1.3 (Segmentos objetivo) sintetizando los roles clave del proyecto. Elaboración de la matriz de evaluación del Student Outcome 5 de ABET para el Avance 1 (AV1).|
 | **1.0** | 20/09/2026 | Condezo, Fernando | Elaboración del Capítulo 5 (Product Implementation, Validation & Deployment). Configuración de la Gestión de Configuración de Software (SCM), definición de repositorios en GitHub con GitFlow y Conventional Commits. Documentación técnica del Sprint 1, incluyendo Sprint Planning, configuración inicial del backend en ASP.NET Core mediante JetBrains Rider, y evidencias de despliegue y colaboración de equipo. |
+| **1.0**     | 09/10/2026 | Yauri, Antony | Elaboración del Capítulo II (Requirements Elicitation & Analysis), incluyendo la sección 2.1 (Competidores), con el análisis competitivo y la definición de estrategias y tácticas frente a competidores. Desarrollo de la sección 2.2 (Entrevistas), abarcando el diseño, registro y análisis de entrevistas a los segmentos objetivo. Asimismo, desarrollo de la sección 2.3 (Needfinding), incluyendo User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping. |
 
 ---
 
@@ -264,6 +265,9 @@ Estudiante de pregrado de la carrera de Ingeniería de Software en la Universida
 
 Estudiante de pregrado de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), que equilibra su formación académica con experiencia laboral a tiempo parcial, demostrando una alta capacidad de organización y compromiso. Posee sólidos conocimientos en el desarrollo de software y lenguajes como C++ y TypeScript, así como en el modelado de arquitecturas limpias basadas en Domain-Driven Design (DDD). Cuenta con experiencia práctica utilizando herramientas profesionales como JetBrains Rider, Visual Studio Code, Figma, PlantUML, Hackolade y MongoDB Compass para el diseño y construcción de productos digitales. Al igual que otros miembros del equipo, posee la credencial Scrum Fundamentals Certified otorgada por SCRUMstudy, lo que le permite colaborar eficientemente bajo marcos de trabajo ágiles. En el proyecto, aporta liderando la configuración del entorno de desarrollo y control de versiones (SCM, GitFlow), la automatización de despliegues y la construcción técnica del RESTful API backend.
 <br>
+<div align="left">
+  <img src="./assets/profiles/Anthony David Yauri Barrios.jpg" alt="Antony Yauri" width="200">
+</div>
 
 **Yauri Barrios, Antony David**
 
@@ -408,6 +412,11 @@ Las pequeñas y medianas empresas enfrentan una baja productividad y costos impr
 2. **Empleados de las Empresas (Usuarios Finales):**
    * **Perfil:** Personal operativo de las empresas suscritas que utiliza diariamente un equipo informático para cumplir con sus funciones.
    * **Necesidad:** Reportar fallas de hardware o software de manera rápida ingresando a la aplicación web de UniLink para retomar sus labores lo antes posible.
+
+3. **Técnicos de soporte independientes:**
+    * **Perfil:** Técnicos informáticos que ofrecen servicios de mantenimiento y reparación de computadoras por cuenta propia o que trabajan en pequeñas organizaciones que no cuentan con una empresa especializada ni con una aplicación para gestionar las solicitudes de soporte técnico.
+    * **Necesidad:** Organizar y gestionar sus solicitudes de servicio, registrar las atenciones realizadas, hacer seguimiento al estado de cada soporte y mantener un historial de los equipos atendidos desde una plataforma web centralizada.
+
 
 # Capítulo II: Requirements Elicitation & Analysis
 
@@ -600,27 +609,162 @@ Para asegurar la recolección de información cualitativa de alto valor que nos 
 
 15. (Trazabilidad): ¿Sientes que cuando el técnico finalmente llega, tienes que volver a explicarle todo el problema desde cero porque la información se perdió en el camino?
 
+**Para el Segmento 3 (Técnicos de Soporte Independientes)**
+
+16. (Experiencia y especialización): ¿Qué tipo de equipos informáticos sueles reparar y qué tipos de fallas atiendes con mayor frecuencia?
+
+17. (Organización de atenciones): Cuando una empresa te contacta para reportar una falla en uno de sus equipos, ¿cómo organizas la atención y haces seguimiento hasta resolver el problema?
+
+18. (Dificultades operativas): ¿Cuál es la principal dificultad que encuentras al atender solicitudes de soporte técnico de empresas?
+
+19. (Repuestos y costos): Cuando una reparación requiere un repuesto o accesorio adicional, ¿cómo coordinas su aprobación con el cliente y registras el costo?
+
+20. (Registro e historial): ¿Cómo registras actualmente las reparaciones que realizas y la información de los equipos atendidos? ¿Puedes consultar fácilmente el historial de reparaciones anteriores?
+
+21. (Necesidades tecnológicas): Si tuvieras una plataforma web para gestionar tus servicios de soporte técnico, ¿qué funcionalidades necesitarías para organizar tus atenciones y facilitar tu trabajo?
 
 #### 2.2.2. Registro de entrevistas
 
-**Entrevista 1: Hikari (Técnica de Soporte de Computadoras)**
-* **Segmento objetivo:** Proveedor de Servicios / Técnico de Soporte.
-* **Enlace de la entrevista:** (https://drive.google.com/file/d/168aU_BrOYqF49c9xDDXBlJQ7F55Ue7dY/view?usp=drive_link)
-* **Resumen descriptivo:** Hikari se dedica al mantenimiento y reparación de laptops y computadoras de escritorio para pequeñas empresas (realiza diagnósticos de lentitud, fallas de sistema, cambios de componentes y mantenimientos preventivos). 
-* **Principales Dolores (Pain Points) Identificados:**
-    * **Canales de comunicación ineficientes:** Los clientes suelen contactarla por WhatsApp, pero la comunicación es desordenada y, a menudo, no saben explicar bien el problema ("solo me dicen que la computadora no funciona").
-    * **Pérdida de tiempo por intermediarios:** Frecuentemente la contacta un intermediario de la empresa y luego la derivan al usuario final, obligándola a recopilar la información de la falla desde cero varias veces.
-    * **Proceso de cotización manual:** Tiene que realizar el diagnóstico, enviar la cotización de manera informal y esperar la aprobación del responsable antes de poder realizar el trabajo o comprar los repuestos.
-    * **Falta de historial clínico:** Guarda sus registros en anotaciones personales y chats de WhatsApp, pero no están organizados por equipo, lo que dificulta identificar problemas recurrentes en una misma computadora.
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">URL global de las entrevistas</th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202214499_upc_edu_pe/IQB_PpBP_KTJT6zFJaaVAW6ZAXopCF5K6xOX1tb9g9idoN4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=3cxzUN" target="_blank">Link de entrevista</a>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th colspan="2">Entrevista N.° 1 - Segmento 3</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>Hikari</td>
+        </tr>
+        <tr>
+            <th>Apellido</th>
+            <td>Yamaguchi</td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td>21 años</td>
+        </tr>
+        <tr>
+            <th>Distrito</th>
+            <td>La Molina</td>
+        </tr>
+        <tr>
+            <th>Screenshot del cuadro de video</th>
+            <td><img src="./assets/Capitulo%20II/entrevistas/entrevista1.png" alt="Screenshot de la entrevista 1" width="300"></td>
+        </tr>
+        <tr>
+            <th>Inicio de la entrevista</th>
+            <td>00:22</td>
+        </tr>
+        <tr>
+            <th>Fin de la entrevista</th>
+            <td>03:05</td>
+        </tr>
+        <tr>
+            <th>Resumen de la entrevista</th>
+            <td>Hikari, de 21 años, reside en el distrito de La Molina y se dedica al mantenimiento y reparación de laptops y computadoras de escritorio. Atiende problemas de lentitud, fallas del sistema y cambios de componentes. Generalmente, recibe solicitudes por WhatsApp, donde consulta sobre las fallas y realiza un diagnóstico. Sin embargo, algunos clientes describen los problemas de manera poco clara o se comunican mediante terceros, lo que dificulta la comprensión y coordinación del servicio. Después, explica el diagnóstico, envía una cotización y espera la aprobación del responsable, pero no cuenta con una herramienta para generar cotizaciones ni organizar sus servicios. Por ello, necesita una plataforma sencilla y accesible desde el celular que le permita registrar los problemas reportados, la ubicación del equipo, los datos de contacto, el diagnóstico, el tiempo trabajado y los repuestos necesarios, además de gestionar las cotizaciones y aprobaciones.</td>
+        </tr>
+        <tr>
+            <th colspan="2">Entrevista N.° 2 - Segmento 2</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>Camila</td>
+        </tr>
+        <tr>
+            <th>Apellido</th>
+            <td>Torres</td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td>28 años</td>
+        </tr>
+        <tr>
+            <th>Distrito</th>
+            <td>Surquillo</td>
+        </tr>
+        <tr>
+            <th>Screenshot del cuadro de video</th>
+            <td><img src="./assets/Capitulo%20II/entrevistas/entrevista2.png" alt="Screenshot de la entrevista 2" width="300"></td>
+        </tr>
+        <tr>
+            <th>Inicio de la entrevista</th>
+            <td>03:22</td>
+        </tr>
+        <tr>
+            <th>Fin de la entrevista</th>
+            <td>09:50</td>
+        </tr>
+        <tr>
+            <th>Resumen de la entrevista</th>
+            <td>Camila Torres, de 28 años, reside en Surquillo y trabaja como diseñadora gráfica en una agencia de publicidad desde hace dos años. Estudió Diseño con especialización en Artes Digitales y utiliza una computadora de escritorio Mac como herramienta principal, además de WhatsApp, Instagram y Google. Admira a Apple por su ecosistema y las herramientas que facilitan su productividad. Su trabajo consiste en diseñar piezas gráficas para clientes y participar en reuniones de seguimiento; por ello, depende completamente de su computadora para cumplir con sus entregas. Cuando presenta fallas, intenta solucionarlas por su cuenta y, si no puede, informa al administrador para que contacte al área de soporte o a un técnico freelance. El principal problema es la lentitud del proceso, la pérdida de información durante la comunicación y la falta de seguimiento, llegando a pasar hasta tres días sin respuesta y recibiendo técnicos que desconocen el historial de la falla. Actualmente, su empresa no cuenta con una suscripción mensual de soporte ni un sistema formal para gestionar solicitudes. Por ello, considera ideal una plataforma web intuitiva y rápida que permita reportar fallas fácilmente, consultar el estado de las solicitudes y mantener organizada la información del soporte técnico. Además, está dispuesta a probar una suscripción si ofrece las funcionalidades que necesita.</td>
+        </tr>
+        <tr>
+            <th colspan="2">Entrevista N.° 3 - Segmento 2</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>Erick</td>
+        </tr>
+        <tr>
+            <th>Apellido</th>
+            <td>Huallullo</td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td>24 años</td>
+        </tr>
+        <tr>
+            <th>Distrito</th>
+            <td>San Isidro</td>
+        </tr>
+        <tr>
+            <th>Screenshot del cuadro de video</th>
+            <td><img src="./assets/Capitulo%20II/entrevistas/entrevista3.png" alt="Screenshot de la entrevista 3" width="300"></td>
+        </tr>
+        <tr>
+            <th>Inicio de la entrevista</th>
+            <td>10:07</td>
+        </tr>
+        <tr>
+            <th>Fin de la entrevista</th>
+            <td>13:15</td>
+        </tr>
+        <tr>
+            <th>Resumen de la entrevista</th>
+            <td>Erick Huallulo, de 24 años, reside en San Isidro y trabaja como QA en una empresa de software desde hace poco más de dos años. Es bachiller en Ingeniería de Software y utiliza principalmente su laptop y celular para trabajar, comunicándose mediante Teams, WhatsApp y correo electrónico. Valora marcas como Apple, Microsoft y Lenovo por su confiabilidad y calidad de soporte técnico. En su día a día, revisa tareas, realiza pruebas de software e identifica errores para reportarlos al equipo de desarrollo, por lo que su laptop es indispensable para cumplir sus funciones. Cuando presenta fallas que no puede resolver por su cuenta, debe comunicar el problema y esperar a que alguien gestione la asistencia técnica, lo que retrasa sus actividades. Además, en ocasiones debe explicar nuevamente la falla al técnico, aunque ya la haya reportado por otros canales. Por ello, considera importante contar con una plataforma que centralice los reportes y registre el historial de cada incidencia, permitiendo al técnico revisar la información previamente y agilizar la atención.</td>
+        </tr>
+    </tbody>
+</table>
 
 #### 2.2.3. Análisis de entrevistas
 
-A partir de la entrevista realizada con nuestro segmento de Técnicos de Soporte, hemos podido validar que la informalidad del soporte técnico actual no solo afecta a las empresas, sino que también genera graves cuellos de botella para quienes proveen el servicio.
+A partir de las entrevistas realizadas a técnicos de soporte y usuarios que dependen de sus equipos informáticos para desarrollar sus actividades laborales, se identificaron dificultades recurrentes en la gestión de incidencias, la comunicación entre las partes involucradas y el seguimiento de las solicitudes de soporte. Los testimonios evidencian que los procesos actuales, basados principalmente en herramientas de comunicación informales y coordinaciones manuales, pueden ocasionar pérdida de información, demoras en la atención y dificultades para organizar los servicios técnicos.
 
 **Hallazgos principales:**
-1. **El uso de WhatsApp no es escalable:** Gestionar incidencias a través de chats genera pérdida de información y retrasos. Esto valida la necesidad principal de **CompuCare**: un sistema de *ticketing* centralizado donde el usuario final describa el problema exacto y el técnico lo reciba sin intermediarios.
-2. **Necesidad de formalizar cotizaciones:** El técnico pierde mucho tiempo esperando aprobaciones informales para comprar repuestos. Esto confirma que el módulo de "Aprobación de Cotizaciones Adicionales" en nuestra plataforma será una función clave para agilizar el trabajo.
-3. **Historial de equipos (Inventario):** La falta de registro de mantenimientos previos complica los diagnósticos. La plataforma aportará gran valor al crear un "historial clínico" automático por cada computadora registrada en el sistema.
+
+1. **Centralización de las solicitudes de soporte:** Los entrevistados señalaron que las incidencias suelen reportarse mediante WhatsApp, correo electrónico o a través de intermediarios, lo que dificulta la comunicación y puede ocasionar que la información se pierda o deba explicarse nuevamente. Frente a esta problemática, CompuCare propone un sistema de gestión de tickets que permita registrar cada incidencia con su descripción, datos de contacto y demás información relevante, facilitando la comunicación directa y organizada entre los usuarios y el personal de soporte.
+
+2. **Gestión y aprobación de cotizaciones:** Desde la perspectiva del técnico de soporte, la elaboración y comunicación de cotizaciones, así como la espera de aprobación para realizar reparaciones o adquirir repuestos, representan dificultades para organizar y completar los servicios. Por ello, CompuCare busca incorporar funcionalidades para generar cotizaciones adicionales y gestionar su aprobación, permitiendo mantener un registro de los costos propuestos y de las decisiones tomadas por los responsables.
+
+3. **Registro del historial de equipos e incidencias:** La ausencia de un registro centralizado dificulta consultar los problemas anteriores, los diagnósticos realizados y las acciones ejecutadas en cada equipo. Esta situación puede obligar a los técnicos a solicitar nuevamente información que ya había sido comunicada. Como respuesta, CompuCare permitirá mantener un historial de incidencias y servicios por equipo, facilitando el acceso a los antecedentes técnicos y contribuyendo a una atención más informada.
+
+4. **Seguimiento y trazabilidad de las solicitudes:** Los usuarios entrevistados manifestaron dificultades para conocer el estado de sus solicitudes y los avances de la atención técnica. La dependencia de coordinaciones manuales con administradores o responsables retrasa la comunicación y genera incertidumbre durante la resolución de las incidencias. En consecuencia, CompuCare contempla el seguimiento del estado de los tickets para que los usuarios puedan consultar el progreso de sus solicitudes y los responsables tengan mayor visibilidad de los servicios pendientes.
+
+5. **Reducción del tiempo improductivo:** Las fallas informáticas afectan directamente las actividades laborales de los usuarios, especialmente cuando dependen de sus computadoras para cumplir tareas y entregas. Las demoras en la coordinación y atención técnica pueden interrumpir su productividad durante periodos prolongados. Por ello, CompuCare busca organizar el flujo de atención desde el registro de la incidencia hasta su resolución, facilitando la coordinación entre usuarios, responsables y técnicos.
+
+6. **Usabilidad y accesibilidad de la plataforma:** Los entrevistados destacaron la importancia de contar con herramientas fáciles de utilizar y accesibles desde sus dispositivos habituales. En particular, el técnico entrevistado manifestó la necesidad de una solución sencilla desde el celular, mientras que los usuarios valoraron la posibilidad de reportar problemas y consultar su estado sin depender de comunicaciones constantes con terceros. Esto respalda la necesidad de diseñar una plataforma web intuitiva, que simplifique el registro de incidencias y el acceso a la información.
+
+En conclusión, las entrevistas permitieron identificar oportunidades de mejora en la gestión del soporte técnico, tanto desde la perspectiva de quienes brindan el servicio como de quienes dependen de los equipos informáticos para trabajar. Los principales problemas identificados se relacionan con la dispersión de la información, la falta de trazabilidad, las demoras en las aprobaciones y la dificultad para conocer el estado de las solicitudes. En respuesta, CompuCare propone centralizar la gestión de incidencias, facilitar el seguimiento de los servicios, registrar el historial de los equipos y organizar las cotizaciones y sus aprobaciones. Estas funcionalidades buscan mejorar la coordinación entre los involucrados y proporcionar una gestión del soporte técnico más ordenada y transparente.
+
 
 ## 2.3. Needfinding
 
@@ -1719,60 +1863,163 @@ El Landing Page se configuró para integración continua utilizando Vercel.
 
 ---
 
-#### 5.2.2. Sprint 2
-El objetivo del Sprint 2 se centró en la Web Application (Frontend en Vue) y el desarrollo de endpoints críticos en ASP.NET Core, específicamente el registro de Tickets de soporte por parte del empleado y el Dashboard de saldo de horas para el administrador.
+### 5.2.2. Sprint 2
 
-##### 5.2.2.1. Sprint Planning 2
-| Sprint # | Sprint 2 |
+El Sprint 2 de **CompuCare**, proyecto de la startup **UniLink**, se enfocó en el desarrollo e integración de las funcionalidades principales de la aplicación web. El frontend se implementó con **Vue 3, Vite, JavaScript, Pinia, PrimeVue y Axios**, organizado por *Bounded Contexts*. Durante el periodo se incorporaron mecanismos de autenticación y autorización, vistas para distintos roles, gestión de solicitudes de soporte, asignación de técnicos, registro de intervenciones y conexión con cotizaciones.
+
+El equipo utilizó GitHub para trabajar mediante ramas de funcionalidades, commits y *Pull Requests*, con integración de avances a `dev` y posteriormente a `main`. Las pruebas ejecutadas con una API de demostración permitieron verificar los principales flujos de solicitudes, así como detectar asuntos pendientes de integración y despliegue.
+
+#### 5.2.2.1. Sprint Planning 2
+
+| Campo | Descripción |
 | :--- | :--- |
-| **Sprint Planning Background** | El equipo priorizó las historias de usuario orientadas al Core Domain de la aplicación: el registro de solicitudes y la gestión de horas. |
-| **Date** | **2026-09-05** |
-| **Time** | **09:30 AM** |
-| **Location** | **Reunión presencial Upc Monterrico** |
-| **Prepared By** | Miranda Romero, Sergio Luis (Team Leader) |
-| **Attendees** | Ramos Aguirre, Aldair / Condezo Pacheco, Fernando / Okuhama Diaz, Matthew / Miranda Romero, Sergio / Yauri Barrios, Antony |
-| **Sprint 1 Review Summary** | El Landing Page fue desplegado con éxito y validado comercialmente. El backend base está operativo en Rider. |
-| **Sprint 1 Retrospective Summary** | Se acordó realizar Code Reviews más estrictos antes de hacer merge a `develop`. |
-| **Sprint 2 Goal** | **Our focus is on** delivering the core ticketing and dashboard modules.<br>**We believe it delivers** autonomy for employees to report issues and control for administrators over their subscription balance.<br>**This will be confirmed when** an employee can create a ticket via the Vue App and the API stores it in the database. |
-| **Sprint 2 Velocity** | 18 Story Points |
-| **Sum of Story Points** | 16 Story Points |
+| **Sprint #** | Sprint 2 |
+| **Sprint Planning Background** | Priorización de las historias de usuario para la aplicación web: autenticación, solicitudes de soporte, gestión de horas y coordinación de atenciones. |
+| **Date** | 05/09/2026 (dato consignado en la planificación previa del informe; verificar con el equipo) |
+| **Time** | 09:30 AM (según planificación previa) |
+| **Location** | UPC Monterrico (según planificación previa) |
+| **Prepared By** | Miranda Romero, Sergio Luis |
+| **Attendees** | Ramos Aguirre, Aldair; Condezo Pacheco, Fernando; Okuhama Diaz, Matthew; Miranda Romero, Sergio; Yauri Barrios, Antony |
+| **Sprint 1 Review Summary** | Revisión de la Landing Page, configuración inicial de los repositorios y bases de la arquitectura de la plataforma. |
+| **Sprint 1 Retrospective Summary** | Necesidad de fortalecer las revisiones de código y la coordinación antes de integrar cambios compartidos. |
+| **Sprint 2 Goal** | **Our focus is on** delivering the core ticketing, access control and company dashboard modules. **We believe it delivers** autonomy for employees to report issues and visibility for administrators over support operations. **This will be confirmed when** users can authenticate, submit tickets, assign technicians and register technical interventions. |
+| **Sprint 2 Velocity** | 18 Story Points (planificación inicial, pendiente de conciliación) |
+| **Sum of Story Points** | 16 Story Points (planificación inicial, pendiente de conciliación) |
 
-##### 5.2.2.2. Aspect Leaders and Collaborators
-| Team Member (Last Name, First Name) | GitHub Username | Aspect: Vue Frontend Leader (L) / Collaborator (C) | Aspect: ASP.NET Core API Leader (L) / Collaborator (C) | Aspect: Database Design Leader (L) / Collaborator (C) |
-| :--- | :--- | :--- | :--- | :--- |
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+La asignación de responsabilidades por aspectos de desarrollo, según la matriz de planificación incluida originalmente en el informe, fue la siguiente:
+
+| Team Member (Last Name, First Name) | GitHub Username | Vue Frontend | API / Backend | Database Design |
+| :--- | :--- | :---: | :---: | :---: |
 | Miranda Romero, Sergio Luis | @SergioM1r | C | L | C |
 | Condezo Pacheco, Fernando André | @LEFEROX | C | C | L |
 | Okuhama Diaz, Matthew Shinko | @okudiaz124 | L | C | C |
 | Ramos Aguirre, Aldair Joaquin | @AldairRamos13 | C | C | C |
 | Yauri Barrios, Antony David | @AntonyYauri | C | C | C |
 
-##### 5.2.2.3. Sprint Backlog 2
-| Sprint # | Sprint 2 | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **User Story Id** | **Story Title** | **Task Id** | **Task Title** | **Task Description** | **Estimation (Hours)** | **Assigned To** |
-| US02 | Registro de Solicitud | T02.1 | Implementar Formulario Vue | Crear componente de Ticket con PrimeVue. | 5 | Yauri Barrios, Antony |
-| US05 | Endpoint Creación Ticket | T05.1 | Crear TicketController C# | Lógica de inserción en Base de Datos. | 4 | Condezo Pacheco, Fernando |
-| US03 | Dashboard de Horas | T03.1 | Implementar Vista Admin | Mostrar consumo de bolsa de horas. | 5 | Miranda Romero, Sergio |
+**Leyenda:** L = Leader; C = Collaborator.
 
-##### 5.2.2.4. Development Evidence for Sprint Review
-*(Placeholder: Tabla de Commits de GitHub de la rama Frontend y Backend API)*.
+Como aporte de desarrollo verificable, Matthew Okuhama integró **BC01 — Identity and Access** y **BC04 — Service Requests**, comprendiendo interfaces para diferentes roles, manejo de rutas protegidas, registro de tickets, asignación de técnicos e intervenciones técnicas. Los módulos se integraron mediante Pull Requests al repositorio compartido.
 
-##### 5.2.2.5. Execution Evidence for Sprint Review
-*   **Video de la Aplicación Web (Tickets y Dashboard):** `*(Placeholder: [Enlace a Microsoft Stream])*`.
-*   *(Placeholder: [Insertar Capturas de la Web App en Vue mostrando el Dashboard y Formulario de Tickets])*
+#### 5.2.2.3. Sprint Backlog 2
 
-##### 5.2.2.6. Services Documentation Evidence for Sprint Review
-Se documentaron los endpoints de Tickets utilizando **OpenAPI (Swagger)**.
-*   *(Placeholder: [Insertar Captura de Swagger UI mostrando el método POST `/api/v1/tickets` con su request body y response])*
+Se presenta el backlog inicial documentado y las tareas técnicas adicionales necesarias para registrar los avances implementados. Las estimaciones iniciales se mantienen como constan en el informe; las tareas adicionales no tienen una estimación validada en horas.
 
-##### 5.2.2.7. Software Deployment Evidence for Sprint Review
-La Web App se desplegó en la nube y el Backend ASP.NET Core fue configurado para producción.
-*   *(Placeholder: [Captura del panel de control de Azure/Render/Vercel de la App y el API])*
+| User Story ID / Área | Task ID | Task Title | Task Description | Estimation (Hours) | Evidencia / Estado |
+| :--- | :--- | :--- | :--- | :---: | :--- |
+| US02 | T02.1 | Formulario Vue de solicitud | Formulario de creación de tickets para empleados con componentes de interfaz. | 5 | Implementado y probado |
+| US05 | T05.1 | Endpoint de creación de ticket | Integración de solicitud de creación con la API. La referencia inicial a `TicketController` de C# debe verificarse contra el backend final. | 4 | Probado con API de demostración |
+| US03 | T03.1 | Dashboard de horas | Vista de administración y visualización de información de suscripciones. | 5 | Vista incorporada; validar flujo completo |
+| BC01 | T-IAM-01 | Autenticación y acceso | Registro, inicio de sesión, recuperación de acceso y gestión de empleados. | Por confirmar | Integrado |
+| BC01 | T-IAM-02 | Control de rutas por roles | Restricción de rutas y navegación según rol de usuario. | Por confirmar | Integrado |
+| BC04 | T-SR-01 | Solicitudes de soporte | Creación, consulta y seguimiento de tickets. | Por confirmar | Implementado y probado |
+| BC04 | T-SR-02 | Asignación de técnicos | Gestión de tickets y asignación por administrador de UniLink. | Por confirmar | Implementado y probado |
+| BC04 | T-SR-03 | Intervenciones | Inicio de diagnóstico, informe técnico y registro de horas. | Por confirmar | Implementado y probado |
+| Integración BC04/BC05 | T-SR-04 | Cotizaciones | Creación de cotizaciones desde la vista técnica y visualización del estado. | Por confirmar | Envío probado; validación de aprobación pendiente |
+| Internacionalización | T-I18N-01 | Selector ES/EN | Configuración de Vue I18n y cambio de idioma persistente. | Por confirmar | Selector y traducciones iniciales integrados; traducción total pendiente |
 
-##### 5.2.2.8. Team Collaboration Insights during Sprint
-*(Placeholder: Captura de pantalla de GitHub "Insights / Network" o "Contributors" del Sprint 2)*.
+*Nota:* Las claves T-IAM, T-SR y T-I18N son identificadores de documentación; deben alinearse con el tablero oficial si este maneja otra nomenclatura.
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+El control de versiones se realizó en GitHub mediante ramas de trabajo, commits descriptivos y solicitudes de incorporación de cambios a las ramas de integración.
+
+| Repository | Branch / Pull Request | Commit ID | Commit Message / Evidence | Estado |
+| :--- | :--- | :--- | :--- | :--- |
+| `compucare-web-app` | Integración BC01 a `dev` | `9dbfca2` | Integración de Identity and Access | Integrado |
+| `compucare-web-app` | `feature/bc01-route-guards` | `7dab54c` | Protección de rutas por roles | Integrado |
+| `compucare-web-app` | `feature/bc04-service-requests` | `4fec95f` | `feat(bc04): implement service requests and ticket management` | Integrado |
+| `compucare-web-app` | PR #3 hacia `dev` | `5ce54b2` | Integración de BC04 al equipo | Fusionado |
+| `compucare-web-app` | PR #5 hacia `main` | `fce459d` | `feat(i18n): add Spanish and English language switcher` | Fusionado |
+
+**Enlaces de evidencia:**
+
+- Repositorio: https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app
+- PR #3 (Service Requests): https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/3
+- PR #5 (internacionalización): https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/5
+
+Se integraron archivos de módulos como `src/iam/`, `src/service-requests/`, `src/equipment/`, `src/quotations/`, `src/router/index.js`, `src/App.vue` y `src/i18n/`.
+
+**Evidencia pendiente:** insertar capturas del historial de commits, PR #3, PR #5 y sus archivos modificados.
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+Las pruebas funcionales del incremento se realizaron en un entorno local con usuarios de demostración y la API bajo `/api/v1`.
+
+| Prueba | Procedimiento | Resultado observado |
+| :--- | :--- | :--- |
+| Autenticación y navegación | Iniciar sesión con distintos roles | Visualización de opciones de navegación según el usuario |
+| Creación de solicitud | Registrar incidencia de **PC Contabilidad** desde una cuenta de empleado | Ticket **#1** creado, inicialmente pendiente de asignación |
+| Asignación técnica | Ingresar como administrador de UniLink y seleccionar un técnico | Asignación realizada correctamente |
+| Gestión del técnico | Acceder a **Mis asignaciones** | Ticket asignado visible en la pantalla técnica |
+| Cotización | Enviar cotización asociada al ticket | Estado **`PENDING`** visible |
+| Informe técnico | Registrar intervención desde el perfil técnico | Ticket mostrado en estado **`Atendido`** |
+| Compilación | Ejecutar `npm run build` | Compilación Vite exitosa |
+| Idiomas | Alternar selector ES/EN | Selector operativo y preferencia conservada; traducciones de vistas aún incompletas |
+
+**Incidencia detectada:** se observó que el ticket podía permanecer en estado `Atendido` a pesar de tener una cotización `PENDING`. Se requiere validar esta regla entre BC04 y BC05 antes de considerar cerrado el flujo de reparación con repuestos.
+
+**Evidencias visuales por insertar:**
+
+1. Captura del inicio de sesión y navegación por roles.
+2. Captura de **Mis solicitudes** con ticket #1.
+3. Captura de **Gestión de tickets** con asignación.
+4. Captura de **Mis asignaciones** y cotización `PENDING`.
+5. Captura del resultado de `npm run build`.
+6. URL del video de ejecución de la aplicación, cuando el equipo lo proporcione.
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+El frontend utiliza **Axios** y clases de infraestructura para comunicarse con una API REST. La lógica de consulta y actualización se encapsula en servicios y stores de **Pinia**.
+
+Los siguientes endpoints se emplearon en las pruebas del módulo BC04:
+
+| Method | Endpoint | Function |
+| :---: | :--- | :--- |
+| GET | `/api/v1/tickets` | Consultar tickets |
+| POST | `/api/v1/tickets` | Registrar ticket |
+| PUT | `/api/v1/tickets/:id/cancel` | Cancelar ticket |
+| PUT | `/api/v1/tickets/:id/assign` | Asignar técnico |
+| PUT | `/api/v1/tickets/:id/start` | Iniciar diagnóstico |
+| PUT | `/api/v1/tickets/:id/diagnosis` | Registrar informe técnico y atención |
+
+Estos endpoints fueron revisados en `src/service-requests/infrastructure/ticket-api.js` y probados con el servidor de demostración. El informe original menciona **ASP.NET Core y OpenAPI/Swagger**; debe confirmarse la disponibilidad de ese backend definitivo antes de afirmar que esos mismos servicios están publicados o documentados en Swagger.
+
+**Evidencia pendiente:** capturas del contrato de servicios, ejemplos de request/response y Swagger UI si el equipo lo tiene implementado.
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+El frontend de CompuCare se construye con **Vue 3 y Vite**, utilizando el comando `npm run build` y generando los archivos de producción en la carpeta `dist`. La publicación prevista parte del código integrado en `main`.
+
+| Deployment Item | Value |
+| :--- | :--- |
+| Framework | Vue 3 |
+| Build tool | Vite |
+| Build command | `npm run build` |
+| Publish directory | `dist` |
+| Source branch | `main` |
+| Frontend hosting revisado | Netlify |
+| Estado del deploy | **Pendiente de validación de URL pública operativa** |
+
+GitHub mostró comentarios automatizados de Netlify relativos a vistas previas de despliegue; no obstante, al abrir uno de esos enlaces apareció **`Site not found`**, de modo que no constituye evidencia de publicación funcional. Igualmente, es necesario verificar la disponibilidad del backend en internet, su dirección pública y la correcta configuración de variables de entorno.
+
+**Evidencia pendiente:** URL definitiva, captura del panel de Netlify con estado publicado, pantalla de CompuCare accesible y pruebas de autenticación y tickets desde el dominio público.
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+El Sprint 2 evidenció la utilidad del trabajo colaborativo mediante **GitHub Flow / ramas de funcionalidad y Pull Requests**. La integración de los Bounded Contexts exigió coordinar servicios, rutas, dependencias e interfaces compartidas, particularmente entre identidad, equipos, solicitudes y cotizaciones.
+
+La revisión e integración de BC01 y BC04 permitieron consolidar una aplicación con navegación condicionada por roles y con procesos fundamentales de soporte técnico. Los avances fueron incorporados mediante Pull Requests y posteriormente compartidos en la rama principal para facilitar el trabajo del resto del equipo.
+
+También se identificó una dificultad de integración derivada de repositorios y ramas con historiales no relacionados. El equipo de desarrollo evitó forzar la fusión: se creó una rama nueva desde el `main` actualizado y se recuperaron los archivos de internacionalización desde un respaldo de Git, sin sobrescribir el código de los compañeros.
+
+Esta experiencia reforzó buenas prácticas de colaboración: mantener ramas actualizadas, preservar respaldos locales, hacer revisiones antes de fusionar, ejecutar pruebas de compilación y separar los cambios de desarrollo de las configuraciones y datos de demostración.
+
+**Evidencia pendiente:** capturas del historial de Pull Requests, contribuciones por integrante y comentarios de revisión.
 
 ---
+
 
 ### 5.3. Validation Interviews
 En esta sección se documenta el proceso de validación final con usuarios reales de nuestros dos segmentos objetivos: Responsables de la empresa y Empleados.
@@ -1815,22 +2062,47 @@ El video **About-the-Product** es una presentación comercial dirigida a nuestro
 *   *(Placeholder: [Insertar 1 o 2 capturas/screenshots representativas de su video promocional])*
 ---
 
-# Conclusiones
+# Avance de Conclusiones
 
-[Contenido]
+El Sprint 2 permitió integrar las funcionalidades fundamentales de CompuCare para la gestión de soporte técnico empresarial. Las pruebas locales demostraron la viabilidad de registrar solicitudes, asignar técnicos y documentar intervenciones desde vistas adecuadas a cada rol de usuario.
 
-# Conclusiones y recomendaciones
+La arquitectura por Bounded Contexts y el uso de GitHub facilitaron el desarrollo paralelo, aunque también hicieron evidente la necesidad de coordinar las dependencias compartidas y los contratos de API para evitar problemas al integrar módulos.
 
-[Contenido]
+El proceso de validación funcional permitió detectar aspectos aún pendientes, en particular la relación entre cotizaciones sin aprobar y el cierre de tickets. Estas reglas deberán revisarse entre BC04 y BC05 para asegurar la consistencia de la información y de las operaciones.
 
-# Video About-the-Team
+La configuración inicial de internacionalización representa un avance en accesibilidad lingüística, al ofrecer la selección ES/EN. Para finalizarla será necesario conectar los textos de cada vista y verificar el comportamiento completo en ambas versiones.
 
-[Contenido]
+Finalmente, aunque el frontend compila exitosamente, la entrega técnica requiere comprobar una URL pública funcional y la disponibilidad del backend para ejecutar las operaciones desde internet.
 
-# Bibliografía
+# Avance de Bibliografía
 
-[Contenido]
+- GitHub. (s. f.). *GitHub Docs*. https://docs.github.com/
+- Netlify. (s. f.). *Netlify Documentation*. https://docs.netlify.com/
+- Pinia. (s. f.). *Pinia Documentation*. https://pinia.vuejs.org/
+- PrimeVue. (s. f.). *PrimeVue Documentation*. https://primevue.org/
+- Vite. (s. f.). *Vite Documentation*. https://vite.dev/
+- Vue.js. (s. f.). *Vue.js Guide*. https://vuejs.org/
+- Vue I18n. (s. f.). *Vue I18n Documentation*. https://vue-i18n.intlify.dev/
+- Vue Router. (s. f.). *Vue Router Documentation*. https://router.vuejs.org/
+- UniLink. (2026). *CompuCare Web Application* [Repositorio de software]. GitHub. https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app
+- UniLink. (2026). *CompuCare Project Report* [Repositorio de documentación]. GitHub. https://github.com/upc-pre-202620-1asi0730-8093-UniLink/report
 
-# Anexos
+# Avance de Anexos
 
-[Contenido]
+**Anexo A. Repositorio de código**  
+https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app
+
+**Anexo B. Pull Request de Service Requests (BC04)**  
+https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/3
+
+**Anexo C. Pull Request de internacionalización ES/EN**  
+https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/5
+
+**Anexo D. Pruebas funcionales**  
+[Insertar capturas: creación de tickets, asignación, intervención, cotización y compilación]
+
+**Anexo E. Despliegue**  
+[Insertar URL pública verificada y capturas de Netlify y backend operativo]
+
+**Anexo F. Colaboración**  
+[Insertar capturas de commits, Pull Requests y actividad del equipo]
