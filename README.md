@@ -1760,32 +1760,34 @@ El uso de claves foráneas permite mantener la relación entre las tablas y aseg
 La Gestión de Configuración de Software (SCM) comprende las prácticas utilizadas para identificar, controlar, versionar y mantener los diferentes componentes de software de **CompuCare** durante el ciclo de vida del proyecto. 
 
 #### 5.1.1. Software Development Environment Configuration
-Para el desarrollo de la solución se establecieron las siguientes herramientas orientadas a las actividades de gestión, diseño, desarrollo y despliegue:
+Para cubrir el ciclo de vida completo del proyecto (ideación, diseño, desarrollo, pruebas y despliegue), el equipo ha estandarizado el siguiente entorno de desarrollo:
 
-| Herramienta / Producto | Propósito en el Proyecto |
+| Herramienta / Producto | Propósito en el Ciclo de Vida del Proyecto |
 | :--- | :--- |
-| **UXPressia** | *Requirements Management & UX:* Elaboración de User Personas, Empathy Maps, Journey Maps e Impact Maps. |
-| **Figma** | *Product UX/UI Design:* Creación de Wireframes, Mock-ups, Design Systems y prototipado interactivo. |
-| **LucidChart / PlantUML** | *Software Architecture:* Elaboración de diagramas UML, C4 Model y Entity-Relationship Diagrams. |
-| **YouTrack / Trello** | *Project Management:* Gestión del Product Backlog, Sprint Backlog y control de tareas (Kanban). |
-| **GitHub** | *Source Code Management:* Alojamiento en la nube y control de versiones colaborativo. |
-| **JetBrains Rider** | *Software Development:* IDE principal obligatorio del curso para el desarrollo de Backend y Frontend. |
-| **ASP.NET Core & C#** | *Backend Development:* Framework y lenguaje de programación para el desarrollo del RESTful API. |
-| **Vue.js & TypeScript** | *Frontend Development:* Framework utilizado para la Web Application (SPA) con PrimeVue. |
-| **Swagger UI (OpenAPI)** | *Software Documentation:* Herramienta integrada en ASP.NET Core para la documentación automatizada de Endpoints. |
+| **UXPressia & Figma** | *UX/UI & Prototyping:* Elaboración de User Personas, Journey Maps, Wireframes y maquetas interactivas en alta fidelidad. |
+| **LucidChart / PlantUML** | *Software Architecture:* Modelado visual de diagramas C4, diagramas de clases y arquitectura de base de datos. |
+| **Trello / GitHub Projects** | *Agile Project Management:* Tablero Kanban para gestionar el Product Backlog, Sprints y asignación de tareas diarias. |
+| **GitHub** | *Source Code Management & CI/CD:* Alojamiento de repositorios, control de versiones distribuido y automatización mediante GitHub Actions. |
+| **JetBrains Rider** | *Backend Development IDE:* Entorno principal para el desarrollo del RESTful API en C#, elegido por su fuerte integración con arquitecturas limpias y DDD. |
+| **Visual Studio Code** | *Frontend Development IDE:* Editor principal para la Single Page Application (SPA) con Vue.js, Vite y PrimeVue. |
+| **ASP.NET Core 8 & Entity Framework** | *Backend Stack:* Framework robusto para la construcción del API y ORM para la persistencia de datos. |
+| **Vue 3 (Composition API)** | *Frontend Stack:* Framework progresivo para el desarrollo de la interfaz web responsiva. |
+| **Swagger UI (OpenAPI)** | *API Documentation:* Documentación automatizada e interactiva de los endpoints del backend. |
 
 #### 5.1.2. Source Code Management
-El equipo utiliza **GitHub** como plataforma de control de versiones. El proyecto mantiene repositorios independientes para los componentes principales:
-*   **Landing Page:** (https://github.com/upc-pre-202620-1asi0730-8093-UniLink/landing)
-*   **Web Application (Frontend):** `*(Placeholder: [URL del repositorio])*`
-*   **RESTful API (Backend):** `*(Placeholder: [URL del repositorio])*`
+El equipo utiliza **GitHub** como plataforma central de control de versiones. El proyecto se ha modularizado en repositorios independientes para mantener bajo acoplamiento:
+*   **Landing Page:** [https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-landing](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/landing)
+*   **Web Application (Frontend):** [https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-webapp](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-webapp)
+*   **RESTful API (Backend):** [https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-api](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-api)
 
-**GitFlow Workflow:** Para gestionar la evolución del código sin interrupciones, aplicamos GitFlow:
-*   `main`: Rama base que refleja el estado de producción.
-*   `develop`: Rama de integración de los cambios durante el desarrollo.
-*   `feature/*`: Ramas temporales para desarrollar funcionalidades aisladas (ej. `feature/ticket-registration`).
+**GitFlow como Workflow de Colaboración:**
+Para gestionar el código colaborativo sin sobreescribir el trabajo de otros, el equipo aplica estrictamente **GitFlow**. El repositorio está estructurado en las siguientes ramas:
+*   `main`: Rama principal que contiene únicamente código estable y validado en producción. Todo merge hacia aquí genera una nueva versión (ej. v1.0.0).
+*   `develop`: Rama de integración principal. Contiene el código en desarrollo para el próximo release.
+*   `feature/*` (ej. `feature/ticket-registration`): Ramas creadas a partir de `develop` para desarrollar una única Historia de Usuario. Al terminar, se integran de vuelta a `develop`.
+*   `hotfix/*`: Ramas creadas desde `main` para corregir errores críticos en producción.
 
-**Conventional Commits & Semantic Versioning:** Todo el equipo utiliza *Conventional Commits* (`feat:`, `fix:`, `docs:`, `style:`) en los mensajes de subida. Los lanzamientos en `main` se etiquetan bajo *Semantic Versioning*.
+**Estrategia de Integración:** Todo código desarrollado en una rama `feature` se integra a `develop` exclusivamente a través de **Pull Requests (PRs)**. Cada PR requiere obligatoriamente un *Code Review* de al menos un miembro distinto del equipo para asegurar que el código compila y cumple las convenciones antes de realizar el merge.
 
 #### 5.1.3. Source Code Style Guide & Conventions
 Para mantener un código legible y mantenible, aplicamos convenciones estrictas:
@@ -1846,17 +1848,17 @@ El objetivo del Sprint 1 fue la construcción y despliegue del Landing Page para
 | compucare-api | chore/init-project | 5d6e7f8 | chore: init asp.net core web api | Estructura DDD creada en JetBrains Rider. | 2026-09-20 |
 
 ##### 5.2.1.5. Execution Evidence for Sprint Review
-En este Sprint se logró una versión funcional y desplegada del Landing Page.
-*   **Video del Landing Page:** `*(Placeholder: [Enlace a Microsoft Stream])*`.
-*   *(Placeholder: [Insertar Capturas de pantalla del Landing Page funcionando en el navegador])*
+Durante este Sprint se alcanzó el objetivo de desplegar la versión inicial del Landing Page y establecer la base arquitectónica del API. 
+*   **Enlace de video de demostración:** [Enlace a Microsoft Stream del Sprint 1]
+*   *(Adjuntar aquí: Captura de pantalla del Landing Page renderizado en un navegador)*
 
 ##### 5.2.1.6. Services Documentation Evidence for Sprint Review
-Se configuró **Swagger/OpenAPI** en el proyecto ASP.NET Core. El endpoint de estado de salud está documentado.
-*   *(Placeholder: [Insertar Captura de pantalla de Swagger UI localhost])*
+Se integró Swagger (OpenAPI) en el entorno de desarrollo de ASP.NET Core mediante JetBrains Rider. Esto nos permitió documentar los schemas de nuestra capa de dominio y exponer los primeros endpoints de validación (Health Checks).
+*   *(Adjuntar aquí: Captura de pantalla de la interfaz de Swagger UI en fondo oscuro)*
 
 ##### 5.2.1.7. Software Deployment Evidence for Sprint Review
-El Landing Page se configuró para integración continua utilizando Vercel.
-*   *(Placeholder: [Insertar Captura de Vercel mostrando el status "Ready" y el dominio en verde])*
+El repositorio del Landing Page fue conectado exitosamente a la plataforma Vercel. Se configuró un pipeline de CI/CD básico que detecta los commits en la rama `main` y realiza el despliegue automático del sitio estático.
+*   *(Adjuntar aquí: Captura de pantalla del dashboard de Vercel mostrando el proyecto "compucare-landing" en estado "Ready")*
 
 ##### 5.2.1.8. Team Collaboration Insights during Sprint
 *(Placeholder: Insertar captura de los "Insights / Contributors" de GitHub mostrando el gráfico de commits del equipo)*.
