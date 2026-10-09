@@ -880,30 +880,87 @@ Para profundizar en la psique de nuestros usuarios, realizamos una sesión de an
 # Capítulo III: Requirements Specification
 
 ## 3.1. User Stories
----
 
-# Capítulo III: Requirements Specification
+### 3.1. Epics del Proyecto (9 Epics)
 
-## 3.1. User Stories
-# Capítulo III: Requirements Specification
+| Epic ID | Título del Epic | Descripción (Business Value) | Bounded Context Relacionado |
+| :---: | :--- | :--- | :--- |
+| **EP-01** | **Gestión de Identidad y Accesos** | Autenticación, autorización y seguridad para Administradores, Empleados y Técnicos. | Identity and Access |
+| **EP-02** | **Gestión de Suscripciones y Planes** | Selección de planes, control de periodos de facturación y límites mensuales. | Subscriptions and Coverage |
+| **EP-03** | **Gestión de Empresas y Empleados** | Registro de clientes (PYMEs) y configuración de las cuentas de su personal. | Companies and Equipment |
+| **EP-04** | **Inventario y Mapeo de Equipos** | Registro del hardware de la empresa, ubicaciones y trazabilidad de los dispositivos. | Companies and Equipment |
+| **EP-05** | **Mesa de Ayuda y Tickets de Soporte** | Flujo completo de reporte de fallas por parte de los empleados y seguimiento. | Service Requests |
+| **EP-06** | **Operaciones de Técnicos y Diagnósticos** | Recepción de tickets, registro de horas trabajadas y emisión de diagnósticos. | Service Requests |
+| **EP-07** | **Mantenimiento Preventivo** | Agendamiento y consumo de visitas preventivas de la suscripción. | Subscriptions and Coverage |
+| **EP-08** | **Cotizaciones y Pagos Adicionales** | Flujo de aprobación de repuestos no cubiertos y simulación de pagos. | Quotations and Payments |
+| **EP-09** | **Dashboards y Analíticas** | Visualización de consumo de horas, historial y métricas clave para el cliente. | Transversal |
 
-## 3.1. User Stories
+### 3.2. User Stories - Product Backlog (30 US)
 
-# Capítulo III: Requirements Specification
+| ID | Epic | Título de la Historia | Descripción | SP |
+| :---: | :---: | :--- | :--- | :---: |
+| **US-01** | EP-01 | Registro de Admin MYPE | **Como** Admin MYPE, **quiero** registrarme con mi correo corporativo, **para** crear la cuenta de mi empresa. | 3 |
+| **US-02** | EP-01 | Inicio de Sesión | **Como** Usuario, **quiero** iniciar sesión con credenciales, **para** acceder a mi panel según mi rol. | 3 |
+| **US-03** | EP-01 | Recuperación de Password | **Como** Usuario, **quiero** restablecer mi contraseña con un token al correo, **para** recuperar mi acceso. | 5 |
+| **US-04** | EP-02 | Visualizar Planes | **Como** Visitante, **quiero** ver los planes en el Landing Page, **para** evaluar costos y coberturas. | 2 |
+| **US-05** | EP-02 | Contratar Plan Mensual | **Como** Admin MYPE, **quiero** suscribirme a un plan, **para** iniciar la cobertura de mis equipos. | 5 |
+| **US-06** | EP-02 | Cancelar Suscripción | **Como** Admin MYPE, **quiero** cancelar la renovación automática, **para** dar de baja el servicio. | 3 |
+| **US-07** | EP-03 | Completar Perfil Empresa | **Como** Admin MYPE, **quiero** registrar el RUC y dirección, **para** formalizar los datos de facturación. | 2 |
+| **US-08** | EP-03 | Invitar Empleados | **Como** Admin MYPE, **quiero** enviar invitaciones a mis empleados, **para** que puedan crear sus propios tickets. | 5 |
+| **US-09** | EP-03 | Desactivar Empleado | **Como** Admin MYPE, **quiero** desactivar el acceso de un empleado, **para** mantener la seguridad si es despedido. | 3 |
+| **US-10** | EP-04 | Registrar Equipo (PC/Laptop) | **Como** Admin MYPE, **quiero** registrar el número de serie de una PC, **para** agregarla a la cobertura. | 3 |
+| **US-11** | EP-04 | Asignar Ubicación de Equipo | **Como** Admin MYPE, **quiero** indicar en qué escritorio está cada PC, **para** que el técnico la encuentre rápido. | 2 |
+| **US-12** | EP-04 | Ver Historial Clínico de PC | **Como** Admin MYPE, **quiero** ver las reparaciones pasadas de un equipo, **para** decidir si debo comprar uno nuevo. | 5 |
+| **US-13** | EP-05 | Crear Ticket de Soporte | **Como** Empleado, **quiero** reportar una falla describiendo el problema, **para** solicitar a un técnico. | 5 |
+| **US-14** | EP-05 | Ver Estado del Ticket | **Como** Empleado, **quiero** ver si mi ticket está "Pendiente" o "En curso", **para** saber cuándo seré atendido. | 3 |
+| **US-15** | EP-05 | Cancelar Ticket Propio | **Como** Empleado, **quiero** cancelar un ticket no asignado, **para** evitar la visita si solucioné el problema. | 2 |
+| **US-16** | EP-05 | Filtrar Tickets Anteriores | **Como** Empleado, **quiero** ver el historial de mis solicitudes, **para** tener constancia de mis reportes. | 3 |
+| **US-17** | EP-06 | Ver Tickets Asignados | **Como** Técnico, **quiero** ver mi lista de visitas programadas, **para** organizar mi ruta del día. | 5 |
+| **US-18** | EP-06 | Iniciar Diagnóstico | **Como** Técnico, **quiero** cambiar el estado del ticket a "En diagnóstico", **para** informar que inicié el trabajo. | 2 |
+| **US-19** | EP-06 | Registrar Falla Encontrada | **Como** Técnico, **quiero** escribir el diagnóstico técnico en el sistema, **para** dejar constancia del problema real. | 3 |
+| **US-20** | EP-06 | Cerrar Ticket y Registrar Horas | **Como** Técnico, **quiero** finalizar el ticket ingresando las horas invertidas, **para** que se descuenten de la bolsa del cliente. | 5 |
+| **US-21** | EP-07 | Agendar Mantenimiento Preventivo | **Como** Admin MYPE, **quiero** seleccionar una fecha en el calendario, **para** programar la limpieza de los equipos. | 8 |
+| **US-22** | EP-07 | Finalizar Mantenimiento | **Como** Técnico, **quiero** marcar el mantenimiento como realizado, **para** consumir las unidades preventivas del plan. | 3 |
+| **US-23** | EP-08 | Generar Cotización de Repuesto | **Como** Técnico, **quiero** enviar un costo extra por cambio de piezas, **para** solicitar la aprobación de la empresa. | 5 |
+| **US-24** | EP-08 | Ver Cotización Pendiente | **Como** Admin MYPE, **quiero** recibir una alerta de cotización, **para** revisar el detalle del repuesto necesario. | 3 |
+| **US-25** | EP-08 | Aprobar Cotización | **Como** Admin MYPE, **quiero** hacer clic en "Aprobar", **para** autorizar el gasto y que el técnico proceda. | 3 |
+| **US-26** | EP-08 | Rechazar Cotización | **Como** Admin MYPE, **quiero** rechazar el presupuesto, **para** detener la reparación si excede mis fondos. | 2 |
+| **US-27** | EP-08 | Pagar Cotización | **Como** Admin MYPE, **quiero** simular el pago del repuesto aprobado, **para** liquidar la deuda en la plataforma. | 8 |
+| **US-28** | EP-09 | Dashboard: Saldo de Horas | **Como** Admin MYPE, **quiero** ver un gráfico con mis horas consumidas y restantes, **para** controlar el uso de mi plan. | 5 |
+| **US-29** | EP-09 | Ver Top Problemas Frecuentes | **Como** Admin MYPE, **quiero** ver qué tipo de fallas ocurren más, **para** tomar acciones correctivas con el personal. | 5 |
+| **US-30** | EP-09 | Calificar Servicio | **Como** Empleado, **quiero** calificar del 1 al 5 al técnico, **para** brindar feedback sobre la atención recibida. | 3 |
 
-## 3.1. Product Backlog (Historias de Usuario Priorizadas)
+### 3.3. Technical Stories - Engineering Backlog (27 TS)
 
-| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
-| :--- | :--- | :--- | :--- | :--- |
-| **US-01** | Inicio de Sesión y Control de Acceso por Rol | **Como** Usuario registrado,<br>**Quiero** iniciar sesión con mi correo corporativo y contraseña,<br>**Para** ingresar al panel web correspondiente a mis permisos. | **Escenario 1:**<br>- **Dado** que ingresa como "Administrador",<br>- **Cuando** presiona "Iniciar Sesión",<br>- **Entonces** va al Dashboard.<br><br>**Escenario 2:**<br>- **Dado** que ingresa como "Empleado",<br>- **Cuando** presiona "Iniciar Sesión",<br>- **Entonces** va a Gestión de Tickets. | Epic 1 |
-| **US-02** | Registro de Empresa y Selección de Plan | **Como** Administrador de MYPE,<br>**Quiero** registrar mi empresa y elegir un plan mensual,<br>**Para** acceder a los servicios de soporte de UniLink. | **Escenario 1:**<br>- **Dado** que hace clic en "Registrar",<br>- **Cuando** llena el formulario y elige plan,<br>- **Entonces** se crea la cuenta.<br><br>**Escenario 2:**<br>- **Dado** que ingresa un RUC existente,<br>- **Cuando** envía el formulario,<br>- **Entonces** muestra error de duplicidad. | Epic 1 |
-| **US-03** | Registro y Mapeo de Equipos de la Oficina | **Como** Administrador de MYPE,<br>**Quiero** registrar los equipos (número de serie y ubicación),<br>**Para** tener un inventario unificado de hardware. | **Escenario 1:**<br>- **Dado** que ingresa al Inventario,<br>- **Cuando** completa los datos del equipo,<br>- **Entonces** se genera un ID único.<br><br>**Escenario 2:**<br>- **Dado** que intenta guardar,<br>- **Cuando** deja el número de serie vacío,<br>- **Entonces** el sistema impide el guardado. | Epic 2 |
-| **US-04** | Ficha Clínica e Historial Técnico por Equipo | **Como** Administrador de MYPE,<br>**Quiero** consultar la ficha técnica e historial de cada PC,<br>**Para** evaluar si un equipo requiere reemplazo. | **Escenario 1:**<br>- **Dado** que selecciona un equipo,<br>- **Cuando** va a "Historial de Servicio",<br>- **Entonces** ve la cronología de tickets, mantenimientos y repuestos. | Epic 2 |
-| **US-05** | Creación Directa de Tickets de Soporte | **Como** Empleada de Oficina,<br>**Quiero** reportar la falla de mi equipo seleccionando la categoría,<br>**Para** solicitar atención técnica rápida. | **Escenario 1:**<br>- **Dado** que accede a "Reportar Problema",<br>- **Cuando** selecciona su equipo, categoría y describe la falla,<br>- **Entonces** se crea un ticket "Pendiente". | Epic 3 |
-| **US-06** | Seguimiento del Estado del Ticket | **Como** Empleada de Oficina,<br>**Quiero** visualizar el avance de mi ticket,<br>**Para** saber cuándo seré atendida sin hacer llamadas. | **Escenario 1:**<br>- **Dado** que tiene un ticket activo,<br>- **Cuando** consulta "Mis Solicitudes",<br>- **Entonces** ve la línea de tiempo (Asignado, En Reparación, etc.). | Epic 3 |
-| **US-07** | Panel de Control de Bolsa de Horas | **Como** Administrador de MYPE,<br>**Quiero** visualizar en un Dashboard las horas consumidas/disponibles,<br>**Para** mantener el control de los costos. | **Escenario 1:**<br>- **Dado** que un técnico cierra un ticket con 2 horas,<br>- **Cuando** el administrador va al Dashboard,<br>- **Entonces** el gráfico descuenta las horas del saldo mensual. | Epic 4 |
-| **US-08** | Agendamiento de Mantenimientos Preventivos | **Como** Administrador de MYPE,<br>**Quiero** programar las visitas preventivas de mi suscripción,<br>**Para** prevenir fallas en los equipos. | **Escenario 1:**<br>- **Dado** que hay cupos preventivos,<br>- **Cuando** selecciona equipos y fecha en el calendario,<br>- **Entonces** se agenda la visita y se descuenta el cupo. | Epic 4 |
-| **US-09** | Aprobación/Rechazo Digital de Cotizaciones | **Como** Administrador de MYPE,<br>**Quiero** autorizar digitalmente cotizaciones de repuestos,<br>**Para** validar sobrecostos antes de la compra. | **Escenario 1:**<br>- **Dado** que hay una cotización,<br>- **Cuando** hace clic en "Aprobar",<br>- **Entonces** se autoriza la compra.<br><br>**Escenario 2:**<br>- **Dado** que revisa la cotización,<br>- **Cuando** presiona "Rechazar",<br>- **Entonces** se pausa la orden. | Epic 5 |
+| ID | Epic | Título de la Tarea Técnica | Descripción | SP |
+| :---: | :---: | :--- | :--- | :---: |
+| **TSK-01** | Todos | Setup de Repositorios y GitFlow | Configurar repositorios en GitHub para Frontend y Backend, estableciendo ramas `main`, `develop` y políticas de protección de ramas. | 3 |
+| **TSK-02** | Todos | Configurar CI/CD Pipeline | Integrar GitHub Actions para automatizar el despliegue del API en Azure/Render y la Web App en Vercel. | 5 |
+| **TSK-03** | Todos | Init ASP.NET Core Project | Inicializar solución Backend aplicando arquitectura en 4 capas (API, Application, Domain, Infrastructure). | 5 |
+| **TSK-04** | Todos | Init Vue 3 Project | Crear andamiaje del Frontend con Vite, Vue 3, Composition API y PrimeVue. | 3 |
+| **TSK-05** | Todos | Configuración Base de Datos | Crear la instancia de Azure SQL / PostgreSQL y enlazarla mediante connection strings seguros (Environment Variables). | 3 |
+| **TSK-06** | Todos | Setup Entity Framework Core | Configurar el ORM, DbContext y generar la primera migración de esquema hacia la base de datos. | 5 |
+| **TSK-07** | EP-01 | Configurar JWT Bearer | Implementar la generación y validación de JSON Web Tokens en el pipeline de ASP.NET Core. | 5 |
+| **TSK-08** | EP-01 | Implementar RBAC Authorization | Configurar políticas de autorización basadas en roles (Admin, Employee, Tech) en los controladores. | 3 |
+| **TSK-09** | EP-01 | Encriptación de Contraseñas | Implementar BCrypt.Net para el hasheo seguro de contraseñas antes de almacenarlas en DB. | 2 |
+| **TSK-10** | Todos | Configurar Swagger / OpenAPI | Configurar la interfaz de documentación interactiva para los endpoints del RESTful API. | 2 |
+| **TSK-11** | Todos | Global Exception Handling | Desarrollar un Middleware en C# para atrapar errores no controlados y estandarizar las respuestas HTTP (RFC 7807). | 3 |
+| **TSK-12** | Todos | Implementar Logging | Integrar Serilog para escribir logs estructurados en consola y archivo durante la ejecución del API. | 2 |
+| **TSK-13** | EP-01 | Domain BC: Identity & Access | Mapear las entidades `User`, `Session` y Value Objects en código de C# según el diagrama de clases. | 5 |
+| **TSK-14** | EP-03 | Domain BC: Companies & Equipment | Mapear entidades `Company`, `Equipment`, `Employee` en la capa de Domain. | 5 |
+| **TSK-15** | EP-05 | Domain BC: Service Requests | Mapear el Aggregate Root `Ticket` y la lógica de transición de estados (`TicketStatus`). | 8 |
+| **TSK-16** | EP-02 | Domain BC: Subscriptions | Mapear entidades `Subscription`, `Plan`, `Period` y lógica de deducción de horas. | 5 |
+| **TSK-17** | EP-08 | Domain BC: Quotations | Mapear entidades `Quotation`, `Payment` y estados de facturación. | 5 |
+| **TSK-18** | Todos | Implementar Repository Pattern | Programar las interfaces genéricas y sus implementaciones concretas en Entity Framework. | 5 |
+| **TSK-19** | EP-08 | Mock Integración de Pagos | Crear un servicio adaptador simulado (Mock) para procesar pagos con tarjeta sin tocar una pasarela real. | 5 |
+| **TSK-20** | EP-05 | Configurar Pinia Store | Instalar y estructurar stores globales en Vue 3 para manejar el estado de autenticación y carga de tickets. | 3 |
+| **TSK-21** | Todos | Configurar Vue Router Guards | Restringir el acceso a rutas del frontend verificando la existencia y validez del token JWT almacenado. | 3 |
+| **TSK-22** | Todos | Implementar Interceptores Axios | Configurar Axios para inyectar automáticamente el header `Authorization: Bearer <token>` en cada petición. | 2 |
+| **TSK-23** | Todos | Setup i18n (Internacionalización) | Configurar `vue-i18n` para soportar cambio de idioma en tiempo real (Español / Inglés) en la Web App. | 5 |
+| **TSK-24** | Todos | Layout Base del Sistema | Construir los componentes estructurales reutilizables de Vue (Sidebar dinámico, Header, Footer). | 5 |
+| **TSK-25** | Todos | Configurar CORS | Habilitar políticas de Cross-Origin Resource Sharing en el Backend para aceptar peticiones desde el dominio de Vercel. | 2 |
+| **TSK-26** | Todos | Unit Testing de Dominio | Escribir pruebas unitarias (xUnit/NUnit) para verificar las validaciones del Aggregate Root de Tickets. | 8 |
+| **TSK-27** | EP-09 | Optimización de Consultas LINQ | Aplicar `AsNoTracking()` y proyecciones explícitas en Entity Framework para agilizar la carga del Dashboard. | 3 |
 
 ## 3.2. Impact Mapping
 
@@ -917,17 +974,69 @@ Para profundizar en la psique de nuestros usuarios, realizamos una sesión de an
 
 ## 3.3. Product Backlog
 
-| # Orden | User Story Id | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | US01 | Inicio de Sesión y Control de Acceso por Rol | Como Usuario registrado, quiero iniciar sesión con mi correo corporativo y contraseña, para ingresar al panel web correspondiente a mis permisos. | 3 |
-| 2 | US03 | Registro y Mapeo de Equipos de la Oficina | Como Administrador de MYPE, quiero registrar los equipos indicando su número de serie y ubicación, para mantener un inventario unificado de hardware bajo cobertura. | 3 |
-| 3 | US05 | Creación Directa de Tickets de Soporte | Como Empleada de Oficina, quiero reportar la falla de mi equipo seleccionando la categoría del problema, para solicitar atención técnica rápida sin intermediarios. | 5 |
-| 4 | US07 | Panel de Control de Bolsa de Horas | Como Administrador de MYPE, quiero visualizar en un Dashboard las horas consumidas y disponibles, para mantener el control de los costos de soporte del mes. | 5 |
-| 5 | US09 | Aprobación/Rechazo Digital de Cotizaciones | Como Administrador de MYPE, quiero revisar y autorizar digitalmente las cotizaciones de repuestos, para validar los sobrecostos antes de cualquier compra. | 3 |
-| 6 | US02 | Registro de Empresa y Selección de Plan | Como Administrador de MYPE, quiero registrar mi empresa y elegir un plan mensual, para acceder a los servicios de soporte de UniLink. | 5 |
-| 7 | US06 | Seguimiento del Estado del Ticket | Como Empleada de Oficina, quiero visualizar el avance de mi ticket, para saber cuándo seré atendida sin hacer llamadas. | 3 |
-| 8 | US08 | Agendamiento de Mantenimientos Preventivos | Como Administrador de MYPE, quiero programar las visitas preventivas de mi suscripción, para prevenir fallas en los equipos antes de que afecten la operación. | 8 |
-| 9 | US04 | Ficha Clínica e Historial Técnico por Equipo | Como Administrador de MYPE, quiero consultar la ficha técnica e historial de cada PC, para evaluar si un equipo requiere reemplazo por fallas recurrentes. | 3 |
+### 3.3. Product Backlog
+
+La siguiente tabla consolida el Product Backlog del proyecto CompuCare, priorizado según el valor de negocio y las dependencias técnicas. Las historias técnicas (TSK) se ubican en los primeros niveles de prioridad para asegurar la base arquitectónica y la infraestructura antes de desarrollar las historias de usuario (US).
+
+| # Orden | ID (US/TSK) | Título | Descripción | Story Points |
+| :---: | :---: | :--- | :--- | :---: |
+| 1 | **TSK-01** | Setup de Repositorios y GitFlow | Configurar repositorios en GitHub para Frontend y Backend, estableciendo ramas `main`, `develop` y políticas de protección de ramas. | 3 |
+| 2 | **TSK-02** | Configurar CI/CD Pipeline | Integrar GitHub Actions para automatizar el despliegue del API en Azure/Render y la Web App en Vercel. | 5 |
+| 3 | **TSK-03** | Init ASP.NET Core Project | Inicializar solución Backend aplicando arquitectura en 4 capas (API, Application, Domain, Infrastructure). | 5 |
+| 4 | **TSK-04** | Init Vue 3 Project | Crear andamiaje del Frontend con Vite, Vue 3, Composition API y PrimeVue. | 3 |
+| 5 | **TSK-05** | Configuración Base de Datos | Crear la instancia de Azure SQL / PostgreSQL y enlazarla mediante connection strings seguros (Environment Variables). | 3 |
+| 6 | **TSK-06** | Setup Entity Framework Core | Configurar el ORM, DbContext y generar la primera migración de esquema hacia la base de datos. | 5 |
+| 7 | **TSK-10** | Configurar Swagger / OpenAPI | Configurar la interfaz de documentación interactiva para los endpoints del RESTful API. | 2 |
+| 8 | **TSK-24** | Layout Base del Sistema | Construir los componentes estructurales reutilizables de Vue (Sidebar dinámico, Header, Footer). | 5 |
+| 9 | **US-04** | Visualizar Planes | Como Visitante, quiero ver los planes en el Landing Page, para evaluar costos y coberturas. | 2 |
+| 10 | **US-05** | Contratar Plan Mensual | Como Admin MYPE, quiero suscribirme a un plan, para iniciar la cobertura de mis equipos. | 5 |
+| 11 | **TSK-07** | Configurar JWT Bearer | Implementar la generación y validación de JSON Web Tokens en el pipeline de ASP.NET Core. | 5 |
+| 12 | **TSK-08** | Implementar RBAC Authorization | Configurar políticas de autorización basadas en roles (Admin, Employee, Tech) en los controladores. | 3 |
+| 13 | **TSK-09** | Encriptación de Contraseñas | Implementar BCrypt.Net para el hasheo seguro de contraseñas antes de almacenarlas en DB. | 2 |
+| 14 | **TSK-13** | Domain BC: Identity & Access | Mapear las entidades `User`, `Session` y Value Objects en código de C# según el diagrama de clases. | 5 |
+| 15 | **US-01** | Registro de Admin MYPE | Como Admin MYPE, quiero registrarme con mi correo corporativo, para crear la cuenta de mi empresa. | 3 |
+| 16 | **US-02** | Inicio de Sesión | Como Usuario, quiero iniciar sesión con credenciales, para acceder a mi panel según mi rol. | 3 |
+| 17 | **US-03** | Recuperación de Password | Como Usuario, quiero restablecer mi contraseña con un token al correo, para recuperar mi acceso. | 5 |
+| 18 | **TSK-14** | Domain BC: Companies & Equipment | Mapear entidades `Company`, `Equipment`, `Employee` en la capa de Domain. | 5 |
+| 19 | **US-07** | Completar Perfil Empresa | Como Admin MYPE, quiero registrar el RUC y dirección, para formalizar los datos de facturación. | 2 |
+| 20 | **US-08** | Invitar Empleados | Como Admin MYPE, quiero enviar invitaciones a mis empleados, para que puedan crear sus propios tickets. | 5 |
+| 21 | **US-09** | Desactivar Empleado | Como Admin MYPE, quiero desactivar el acceso de un empleado, para mantener la seguridad si es despedido. | 3 |
+| 22 | **US-10** | Registrar Equipo (PC/Laptop) | Como Admin MYPE, quiero registrar el número de serie de una PC, para agregarla a la cobertura. | 3 |
+| 23 | **US-11** | Asignar Ubicación de Equipo | Como Admin MYPE, quiero indicar en qué escritorio está cada PC, para que el técnico la encuentre rápido. | 2 |
+| 24 | **US-12** | Ver Historial Clínico de PC | Como Admin MYPE, quiero ver las reparaciones pasadas de un equipo, para decidir si debo comprar uno nuevo. | 5 |
+| 25 | **TSK-15** | Domain BC: Service Requests | Mapear el Aggregate Root `Ticket` y la lógica de transición de estados (`TicketStatus`). | 8 |
+| 26 | **TSK-20** | Configurar Pinia Store | Instalar y estructurar stores globales en Vue 3 para manejar el estado de autenticación y carga de tickets. | 3 |
+| 27 | **US-13** | Crear Ticket de Soporte | Como Empleado, quiero reportar una falla describiendo el problema, para solicitar a un técnico. | 5 |
+| 28 | **US-14** | Ver Estado del Ticket | Como Empleado, quiero ver si mi ticket está "Pendiente" o "En curso", para saber cuándo seré atendido. | 3 |
+| 29 | **US-15** | Cancelar Ticket Propio | Como Empleado, quiero cancelar un ticket no asignado, para evitar la visita si solucioné el problema. | 2 |
+| 30 | **US-16** | Filtrar Tickets Anteriores | Como Empleado, quiero ver el historial de mis solicitudes, para tener constancia de mis reportes. | 3 |
+| 31 | **US-17** | Ver Tickets Asignados | Como Técnico, quiero ver mi lista de visitas programadas, para organizar mi ruta del día. | 5 |
+| 32 | **US-18** | Iniciar Diagnóstico | Como Técnico, quiero cambiar el estado del ticket a "En diagnóstico", para informar que inicié el trabajo. | 2 |
+| 33 | **US-19** | Registrar Falla Encontrada | Como Técnico, quiero escribir el diagnóstico técnico en el sistema, para dejar constancia del problema real. | 3 |
+| 34 | **US-20** | Cerrar Ticket y Registrar Horas | Como Técnico, quiero finalizar el ticket ingresando las horas invertidas, para que se descuenten de la bolsa del cliente. | 5 |
+| 35 | **TSK-16** | Domain BC: Subscriptions | Mapear entidades `Subscription`, `Plan`, `Period` y lógica de deducción de horas. | 5 |
+| 36 | **US-06** | Cancelar Suscripción | Como Admin MYPE, quiero cancelar la renovación automática, para dar de baja el servicio. | 3 |
+| 37 | **US-21** | Agendar Mantenimiento Preventivo | Como Admin MYPE, quiero seleccionar una fecha en el calendario, para programar la limpieza de los equipos. | 8 |
+| 38 | **US-22** | Finalizar Mantenimiento | Como Técnico, quiero marcar el mantenimiento como realizado, para consumir las unidades preventivas del plan. | 3 |
+| 39 | **TSK-17** | Domain BC: Quotations | Mapear entidades `Quotation`, `Payment` y estados de facturación. | 5 |
+| 40 | **US-23** | Generar Cotización de Repuesto | Como Técnico, quiero enviar un costo extra por cambio de piezas, para solicitar la aprobación de la empresa. | 5 |
+| 41 | **US-24** | Ver Cotización Pendiente | Como Admin MYPE, quiero recibir una alerta de cotización, para revisar el detalle del repuesto necesario. | 3 |
+| 42 | **US-25** | Aprobar Cotización | Como Admin MYPE, quiero hacer clic en "Aprobar", para autorizar el gasto y que el técnico proceda. | 3 |
+| 43 | **US-26** | Rechazar Cotización | Como Admin MYPE, quiero rechazar el presupuesto, para detener la reparación si excede mis fondos. | 2 |
+| 44 | **TSK-19** | Mock Integración de Pagos | Crear un servicio adaptador simulado (Mock) para procesar pagos con tarjeta sin tocar una pasarela real. | 5 |
+| 45 | **US-27** | Pagar Cotización | Como Admin MYPE, quiero simular el pago del repuesto aprobado, para liquidar la deuda en la plataforma. | 8 |
+| 46 | **TSK-27** | Optimización de Consultas LINQ | Aplicar `AsNoTracking()` y proyecciones explícitas en Entity Framework para agilizar la carga del Dashboard. | 3 |
+| 47 | **US-28** | Dashboard: Saldo de Horas | Como Admin MYPE, quiero ver un gráfico con mis horas consumidas y restantes, para controlar el uso de mi plan. | 5 |
+| 48 | **US-29** | Ver Top Problemas Frecuentes | Como Admin MYPE, quiero ver qué tipo de fallas ocurren más, para tomar acciones correctivas con el personal. | 5 |
+| 49 | **US-30** | Calificar Servicio | Como Empleado, quiero calificar del 1 al 5 al técnico, para brindar feedback sobre la atención recibida. | 3 |
+| 50 | **TSK-11** | Global Exception Handling | Desarrollar un Middleware en C# para atrapar errores no controlados y estandarizar las respuestas HTTP (RFC 7807). | 3 |
+| 51 | **TSK-12** | Implementar Logging | Integrar Serilog para escribir logs estructurados en consola y archivo durante la ejecución del API. | 2 |
+| 52 | **TSK-18** | Implementar Repository Pattern | Programar las interfaces genéricas y sus implementaciones concretas en Entity Framework. | 5 |
+| 53 | **TSK-21** | Configurar Vue Router Guards | Restringir el acceso a rutas del frontend verificando la existencia y validez del token JWT almacenado. | 3 |
+| 54 | **TSK-22** | Implementar Interceptores Axios | Configurar Axios para inyectar automáticamente el header `Authorization: Bearer <token>` en cada petición. | 2 |
+| 55 | **TSK-23** | Setup i18n (Internacionalización) | Configurar `vue-i18n` para soportar cambio de idioma en tiempo real (Español / Inglés) en la Web App. | 5 |
+| 56 | **TSK-25** | Configurar CORS | Habilitar políticas de Cross-Origin Resource Sharing en el Backend para aceptar peticiones desde el dominio de Vercel. | 2 |
+| 57 | **TSK-26** | Unit Testing de Dominio | Escribir pruebas unitarias (xUnit/NUnit) para verificar las validaciones del Aggregate Root de Tickets. | 8 |
 
 # Capítulo IV: Product Design
 
