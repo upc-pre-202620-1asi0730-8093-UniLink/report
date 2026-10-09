@@ -911,11 +911,12 @@ La arquitectura interna del backend para este Bounded Context se ha alineado est
 
 #### Operations Components
 
-![CompuCare Operations Components Diagram](assets/c4_componentes_operacion.svg)
+<img width="601" height="592" alt="Operations Components" src="https://github.com/user-attachments/assets/8752ec3b-f5c3-4246-9deb-e5f65fecd79f" />
 
 #### Subscription Components
 
-![CompuCare Subscription Components Diagram](assets/c4_componentes_suscripcion.svg)
+<img width="1274" height="408" alt="Subscription Components" src="https://github.com/user-attachments/assets/efe95b2c-e173-4dc1-a7bc-bf1d0bdeadf6" />
+
 ## 4.7. Software Object-Oriented Design
 El diseño orientado a objetos de CompuCare representa las principales entidades del dominio y las relaciones existentes entre ellas.
 
