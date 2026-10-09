@@ -41,7 +41,7 @@ Proyecto
 </tr>
 <tr style="background: none !important; border: none !important;">
 <td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[U202419311]</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">[Matthew Shinko Okuhama Diaz]</td>
+<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Matthew Shinko Okuhama Diaz</td>
 </tr>
 <tr style="background: none !important; border: none !important;">
 <td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U202214499</td>
@@ -80,6 +80,7 @@ Proyecto
 | :---: | :---: | :--- | :--- |
 | **1.0** | 20/09/2026 | Ramos, Aldair | Elaboración de la sección 1.2.1 (Antecedentes y problemática, 5W2H, Objetivos y Restricciones) enfocada exclusivamente en la aplicación web.  Desarrollo de la sección 1.2.2 (Lean UX Process: Problem Statements, Assumptions, Hypothesis y Canvas v2). Definición de la sección 1.3 (Segmentos objetivo) sintetizando los roles clave del proyecto. Elaboración de la matriz de evaluación del Student Outcome 5 de ABET para el Avance 1 (AV1).|
 | **1.0** | 20/09/2026 | Condezo, Fernando | Elaboración del Capítulo 5 (Product Implementation, Validation & Deployment). Configuración de la Gestión de Configuración de Software (SCM), definición de repositorios en GitHub con GitFlow y Conventional Commits. Documentación técnica del Sprint 1, incluyendo Sprint Planning, configuración inicial del backend en ASP.NET Core mediante JetBrains Rider, y evidencias de despliegue y colaboración de equipo. |
+| **1.0**     | 09/10/2026 | Yauri, Antony | Elaboración del Capítulo II (Requirements Elicitation & Analysis), incluyendo la sección 2.1 (Competidores), con el análisis competitivo y la definición de estrategias y tácticas frente a competidores. Desarrollo de la sección 2.2 (Entrevistas), abarcando el diseño, registro y análisis de entrevistas a los segmentos objetivo. Asimismo, desarrollo de la sección 2.3 (Needfinding), incluyendo User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping. |
 
 ---
 
@@ -264,6 +265,9 @@ Estudiante de pregrado de la carrera de Ingeniería de Software en la Universida
 
 Estudiante de pregrado de la carrera de Ingeniería de Software en la Universidad Peruana de Ciencias Aplicadas (UPC), que equilibra su formación académica con experiencia laboral a tiempo parcial, demostrando una alta capacidad de organización y compromiso. Posee sólidos conocimientos en el desarrollo de software y lenguajes como C++ y TypeScript, así como en el modelado de arquitecturas limpias basadas en Domain-Driven Design (DDD). Cuenta con experiencia práctica utilizando herramientas profesionales como JetBrains Rider, Visual Studio Code, Figma, PlantUML, Hackolade y MongoDB Compass para el diseño y construcción de productos digitales. Al igual que otros miembros del equipo, posee la credencial Scrum Fundamentals Certified otorgada por SCRUMstudy, lo que le permite colaborar eficientemente bajo marcos de trabajo ágiles. En el proyecto, aporta liderando la configuración del entorno de desarrollo y control de versiones (SCM, GitFlow), la automatización de despliegues y la construcción técnica del RESTful API backend.
 <br>
+<div align="left">
+  <img src="./assets/profiles/Anthony David Yauri Barrios.jpg" alt="Antony Yauri" width="200">
+</div>
 
 **Yauri Barrios, Antony David**
 
@@ -408,6 +412,11 @@ Las pequeñas y medianas empresas enfrentan una baja productividad y costos impr
 2. **Empleados de las Empresas (Usuarios Finales):**
    * **Perfil:** Personal operativo de las empresas suscritas que utiliza diariamente un equipo informático para cumplir con sus funciones.
    * **Necesidad:** Reportar fallas de hardware o software de manera rápida ingresando a la aplicación web de UniLink para retomar sus labores lo antes posible.
+
+3. **Técnicos de soporte independientes:**
+    * **Perfil:** Técnicos informáticos que ofrecen servicios de mantenimiento y reparación de computadoras por cuenta propia o que trabajan en pequeñas organizaciones que no cuentan con una empresa especializada ni con una aplicación para gestionar las solicitudes de soporte técnico.
+    * **Necesidad:** Organizar y gestionar sus solicitudes de servicio, registrar las atenciones realizadas, hacer seguimiento al estado de cada soporte y mantener un historial de los equipos atendidos desde una plataforma web centralizada.
+
 
 # Capítulo II: Requirements Elicitation & Analysis
 
@@ -600,27 +609,162 @@ Para asegurar la recolección de información cualitativa de alto valor que nos 
 
 15. (Trazabilidad): ¿Sientes que cuando el técnico finalmente llega, tienes que volver a explicarle todo el problema desde cero porque la información se perdió en el camino?
 
+**Para el Segmento 3 (Técnicos de Soporte Independientes)**
+
+16. (Experiencia y especialización): ¿Qué tipo de equipos informáticos sueles reparar y qué tipos de fallas atiendes con mayor frecuencia?
+
+17. (Organización de atenciones): Cuando una empresa te contacta para reportar una falla en uno de sus equipos, ¿cómo organizas la atención y haces seguimiento hasta resolver el problema?
+
+18. (Dificultades operativas): ¿Cuál es la principal dificultad que encuentras al atender solicitudes de soporte técnico de empresas?
+
+19. (Repuestos y costos): Cuando una reparación requiere un repuesto o accesorio adicional, ¿cómo coordinas su aprobación con el cliente y registras el costo?
+
+20. (Registro e historial): ¿Cómo registras actualmente las reparaciones que realizas y la información de los equipos atendidos? ¿Puedes consultar fácilmente el historial de reparaciones anteriores?
+
+21. (Necesidades tecnológicas): Si tuvieras una plataforma web para gestionar tus servicios de soporte técnico, ¿qué funcionalidades necesitarías para organizar tus atenciones y facilitar tu trabajo?
 
 #### 2.2.2. Registro de entrevistas
 
-**Entrevista 1: Hikari (Técnica de Soporte de Computadoras)**
-* **Segmento objetivo:** Proveedor de Servicios / Técnico de Soporte.
-* **Enlace de la entrevista:** (https://drive.google.com/file/d/168aU_BrOYqF49c9xDDXBlJQ7F55Ue7dY/view?usp=drive_link)
-* **Resumen descriptivo:** Hikari se dedica al mantenimiento y reparación de laptops y computadoras de escritorio para pequeñas empresas (realiza diagnósticos de lentitud, fallas de sistema, cambios de componentes y mantenimientos preventivos). 
-* **Principales Dolores (Pain Points) Identificados:**
-    * **Canales de comunicación ineficientes:** Los clientes suelen contactarla por WhatsApp, pero la comunicación es desordenada y, a menudo, no saben explicar bien el problema ("solo me dicen que la computadora no funciona").
-    * **Pérdida de tiempo por intermediarios:** Frecuentemente la contacta un intermediario de la empresa y luego la derivan al usuario final, obligándola a recopilar la información de la falla desde cero varias veces.
-    * **Proceso de cotización manual:** Tiene que realizar el diagnóstico, enviar la cotización de manera informal y esperar la aprobación del responsable antes de poder realizar el trabajo o comprar los repuestos.
-    * **Falta de historial clínico:** Guarda sus registros en anotaciones personales y chats de WhatsApp, pero no están organizados por equipo, lo que dificulta identificar problemas recurrentes en una misma computadora.
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">URL global de las entrevistas</th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202214499_upc_edu_pe/IQB_PpBP_KTJT6zFJaaVAW6ZAXopCF5K6xOX1tb9g9idoN4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=3cxzUN" target="_blank">Link de entrevista</a>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th colspan="2">Entrevista N.° 1 - Segmento 3</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>Hikari</td>
+        </tr>
+        <tr>
+            <th>Apellido</th>
+            <td>Yamaguchi</td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td>21 años</td>
+        </tr>
+        <tr>
+            <th>Distrito</th>
+            <td>La Molina</td>
+        </tr>
+        <tr>
+            <th>Screenshot del cuadro de video</th>
+            <td><img src="./assets/Capitulo%20II/entrevistas/entrevista1.png" alt="Screenshot de la entrevista 1" width="300"></td>
+        </tr>
+        <tr>
+            <th>Inicio de la entrevista</th>
+            <td>00:22</td>
+        </tr>
+        <tr>
+            <th>Fin de la entrevista</th>
+            <td>03:05</td>
+        </tr>
+        <tr>
+            <th>Resumen de la entrevista</th>
+            <td>Hikari, de 21 años, reside en el distrito de La Molina y se dedica al mantenimiento y reparación de laptops y computadoras de escritorio. Atiende problemas de lentitud, fallas del sistema y cambios de componentes. Generalmente, recibe solicitudes por WhatsApp, donde consulta sobre las fallas y realiza un diagnóstico. Sin embargo, algunos clientes describen los problemas de manera poco clara o se comunican mediante terceros, lo que dificulta la comprensión y coordinación del servicio. Después, explica el diagnóstico, envía una cotización y espera la aprobación del responsable, pero no cuenta con una herramienta para generar cotizaciones ni organizar sus servicios. Por ello, necesita una plataforma sencilla y accesible desde el celular que le permita registrar los problemas reportados, la ubicación del equipo, los datos de contacto, el diagnóstico, el tiempo trabajado y los repuestos necesarios, además de gestionar las cotizaciones y aprobaciones.</td>
+        </tr>
+        <tr>
+            <th colspan="2">Entrevista N.° 2 - Segmento 2</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>Camila</td>
+        </tr>
+        <tr>
+            <th>Apellido</th>
+            <td>Torres</td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td>28 años</td>
+        </tr>
+        <tr>
+            <th>Distrito</th>
+            <td>Surquillo</td>
+        </tr>
+        <tr>
+            <th>Screenshot del cuadro de video</th>
+            <td><img src="./assets/Capitulo%20II/entrevistas/entrevista2.png" alt="Screenshot de la entrevista 2" width="300"></td>
+        </tr>
+        <tr>
+            <th>Inicio de la entrevista</th>
+            <td>03:22</td>
+        </tr>
+        <tr>
+            <th>Fin de la entrevista</th>
+            <td>09:50</td>
+        </tr>
+        <tr>
+            <th>Resumen de la entrevista</th>
+            <td>Camila Torres, de 28 años, reside en Surquillo y trabaja como diseñadora gráfica en una agencia de publicidad desde hace dos años. Estudió Diseño con especialización en Artes Digitales y utiliza una computadora de escritorio Mac como herramienta principal, además de WhatsApp, Instagram y Google. Admira a Apple por su ecosistema y las herramientas que facilitan su productividad. Su trabajo consiste en diseñar piezas gráficas para clientes y participar en reuniones de seguimiento; por ello, depende completamente de su computadora para cumplir con sus entregas. Cuando presenta fallas, intenta solucionarlas por su cuenta y, si no puede, informa al administrador para que contacte al área de soporte o a un técnico freelance. El principal problema es la lentitud del proceso, la pérdida de información durante la comunicación y la falta de seguimiento, llegando a pasar hasta tres días sin respuesta y recibiendo técnicos que desconocen el historial de la falla. Actualmente, su empresa no cuenta con una suscripción mensual de soporte ni un sistema formal para gestionar solicitudes. Por ello, considera ideal una plataforma web intuitiva y rápida que permita reportar fallas fácilmente, consultar el estado de las solicitudes y mantener organizada la información del soporte técnico. Además, está dispuesta a probar una suscripción si ofrece las funcionalidades que necesita.</td>
+        </tr>
+        <tr>
+            <th colspan="2">Entrevista N.° 3 - Segmento 2</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>Erick</td>
+        </tr>
+        <tr>
+            <th>Apellido</th>
+            <td>Huallullo</td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td>24 años</td>
+        </tr>
+        <tr>
+            <th>Distrito</th>
+            <td>San Isidro</td>
+        </tr>
+        <tr>
+            <th>Screenshot del cuadro de video</th>
+            <td><img src="./assets/Capitulo%20II/entrevistas/entrevista3.png" alt="Screenshot de la entrevista 3" width="300"></td>
+        </tr>
+        <tr>
+            <th>Inicio de la entrevista</th>
+            <td>10:07</td>
+        </tr>
+        <tr>
+            <th>Fin de la entrevista</th>
+            <td>13:15</td>
+        </tr>
+        <tr>
+            <th>Resumen de la entrevista</th>
+            <td>Erick Huallulo, de 24 años, reside en San Isidro y trabaja como QA en una empresa de software desde hace poco más de dos años. Es bachiller en Ingeniería de Software y utiliza principalmente su laptop y celular para trabajar, comunicándose mediante Teams, WhatsApp y correo electrónico. Valora marcas como Apple, Microsoft y Lenovo por su confiabilidad y calidad de soporte técnico. En su día a día, revisa tareas, realiza pruebas de software e identifica errores para reportarlos al equipo de desarrollo, por lo que su laptop es indispensable para cumplir sus funciones. Cuando presenta fallas que no puede resolver por su cuenta, debe comunicar el problema y esperar a que alguien gestione la asistencia técnica, lo que retrasa sus actividades. Además, en ocasiones debe explicar nuevamente la falla al técnico, aunque ya la haya reportado por otros canales. Por ello, considera importante contar con una plataforma que centralice los reportes y registre el historial de cada incidencia, permitiendo al técnico revisar la información previamente y agilizar la atención.</td>
+        </tr>
+    </tbody>
+</table>
 
 #### 2.2.3. Análisis de entrevistas
 
-A partir de la entrevista realizada con nuestro segmento de Técnicos de Soporte, hemos podido validar que la informalidad del soporte técnico actual no solo afecta a las empresas, sino que también genera graves cuellos de botella para quienes proveen el servicio.
+A partir de las entrevistas realizadas a técnicos de soporte y usuarios que dependen de sus equipos informáticos para desarrollar sus actividades laborales, se identificaron dificultades recurrentes en la gestión de incidencias, la comunicación entre las partes involucradas y el seguimiento de las solicitudes de soporte. Los testimonios evidencian que los procesos actuales, basados principalmente en herramientas de comunicación informales y coordinaciones manuales, pueden ocasionar pérdida de información, demoras en la atención y dificultades para organizar los servicios técnicos.
 
 **Hallazgos principales:**
-1. **El uso de WhatsApp no es escalable:** Gestionar incidencias a través de chats genera pérdida de información y retrasos. Esto valida la necesidad principal de **CompuCare**: un sistema de *ticketing* centralizado donde el usuario final describa el problema exacto y el técnico lo reciba sin intermediarios.
-2. **Necesidad de formalizar cotizaciones:** El técnico pierde mucho tiempo esperando aprobaciones informales para comprar repuestos. Esto confirma que el módulo de "Aprobación de Cotizaciones Adicionales" en nuestra plataforma será una función clave para agilizar el trabajo.
-3. **Historial de equipos (Inventario):** La falta de registro de mantenimientos previos complica los diagnósticos. La plataforma aportará gran valor al crear un "historial clínico" automático por cada computadora registrada en el sistema.
+
+1. **Centralización de las solicitudes de soporte:** Los entrevistados señalaron que las incidencias suelen reportarse mediante WhatsApp, correo electrónico o a través de intermediarios, lo que dificulta la comunicación y puede ocasionar que la información se pierda o deba explicarse nuevamente. Frente a esta problemática, CompuCare propone un sistema de gestión de tickets que permita registrar cada incidencia con su descripción, datos de contacto y demás información relevante, facilitando la comunicación directa y organizada entre los usuarios y el personal de soporte.
+
+2. **Gestión y aprobación de cotizaciones:** Desde la perspectiva del técnico de soporte, la elaboración y comunicación de cotizaciones, así como la espera de aprobación para realizar reparaciones o adquirir repuestos, representan dificultades para organizar y completar los servicios. Por ello, CompuCare busca incorporar funcionalidades para generar cotizaciones adicionales y gestionar su aprobación, permitiendo mantener un registro de los costos propuestos y de las decisiones tomadas por los responsables.
+
+3. **Registro del historial de equipos e incidencias:** La ausencia de un registro centralizado dificulta consultar los problemas anteriores, los diagnósticos realizados y las acciones ejecutadas en cada equipo. Esta situación puede obligar a los técnicos a solicitar nuevamente información que ya había sido comunicada. Como respuesta, CompuCare permitirá mantener un historial de incidencias y servicios por equipo, facilitando el acceso a los antecedentes técnicos y contribuyendo a una atención más informada.
+
+4. **Seguimiento y trazabilidad de las solicitudes:** Los usuarios entrevistados manifestaron dificultades para conocer el estado de sus solicitudes y los avances de la atención técnica. La dependencia de coordinaciones manuales con administradores o responsables retrasa la comunicación y genera incertidumbre durante la resolución de las incidencias. En consecuencia, CompuCare contempla el seguimiento del estado de los tickets para que los usuarios puedan consultar el progreso de sus solicitudes y los responsables tengan mayor visibilidad de los servicios pendientes.
+
+5. **Reducción del tiempo improductivo:** Las fallas informáticas afectan directamente las actividades laborales de los usuarios, especialmente cuando dependen de sus computadoras para cumplir tareas y entregas. Las demoras en la coordinación y atención técnica pueden interrumpir su productividad durante periodos prolongados. Por ello, CompuCare busca organizar el flujo de atención desde el registro de la incidencia hasta su resolución, facilitando la coordinación entre usuarios, responsables y técnicos.
+
+6. **Usabilidad y accesibilidad de la plataforma:** Los entrevistados destacaron la importancia de contar con herramientas fáciles de utilizar y accesibles desde sus dispositivos habituales. En particular, el técnico entrevistado manifestó la necesidad de una solución sencilla desde el celular, mientras que los usuarios valoraron la posibilidad de reportar problemas y consultar su estado sin depender de comunicaciones constantes con terceros. Esto respalda la necesidad de diseñar una plataforma web intuitiva, que simplifique el registro de incidencias y el acceso a la información.
+
+En conclusión, las entrevistas permitieron identificar oportunidades de mejora en la gestión del soporte técnico, tanto desde la perspectiva de quienes brindan el servicio como de quienes dependen de los equipos informáticos para trabajar. Los principales problemas identificados se relacionan con la dispersión de la información, la falta de trazabilidad, las demoras en las aprobaciones y la dificultad para conocer el estado de las solicitudes. En respuesta, CompuCare propone centralizar la gestión de incidencias, facilitar el seguimiento de los servicios, registrar el historial de los equipos y organizar las cotizaciones y sus aprobaciones. Estas funcionalidades buscan mejorar la coordinación entre los involucrados y proporcionar una gestión del soporte técnico más ordenada y transparente.
+
 
 ## 2.3. Needfinding
 
@@ -890,49 +1034,89 @@ Para profundizar en la psique de nuestros usuarios, realizamos una sesión de an
 
 # Capítulo III: Requirements Specification
 
-## 3.1. Product Backlog (Historias de Usuario Priorizadas)
+## 3.1. User Stories
 
-| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con (Epic ID) |
+### Epics del Proyecto (9 Epics)
+
+| Epic ID | Título del Epic | Descripción (Business Value) | Bounded Context Relacionado |
+| :---: | :--- | :--- | :--- |
+| **EP-01** | **Gestión de Identidad y Accesos** | Autenticación, autorización y seguridad para Administradores, Empleados y Técnicos. | Identity and Access |
+| **EP-02** | **Gestión de Suscripciones y Planes** | Selección de planes, control de periodos de facturación y límites mensuales. | Subscriptions and Coverage |
+| **EP-03** | **Gestión de Empresas y Empleados** | Registro de clientes (PYMEs) y configuración de las cuentas de su personal. | Companies and Equipment |
+| **EP-04** | **Inventario y Mapeo de Equipos** | Registro del hardware de la empresa, ubicaciones y trazabilidad de los dispositivos. | Companies and Equipment |
+| **EP-05** | **Mesa de Ayuda y Tickets de Soporte** | Flujo completo de reporte de fallas por parte de los empleados y seguimiento. | Service Requests |
+| **EP-06** | **Operaciones de Técnicos y Diagnósticos** | Recepción de tickets, registro de horas trabajadas y emisión de diagnósticos. | Service Requests |
+| **EP-07** | **Mantenimiento Preventivo** | Agendamiento y consumo de visitas preventivas de la suscripción. | Subscriptions and Coverage |
+| **EP-08** | **Cotizaciones y Pagos Adicionales** | Flujo de aprobación de repuestos no cubiertos y simulación de pagos. | Quotations and Payments |
+| **EP-09** | **Dashboards y Analíticas** | Visualización de consumo de horas, historial y métricas clave para el cliente. | Transversal |
+
+### User Stories - Product Backlog (30 US)
+
+| Epic / Story ID | Título | Descripción | Criterios de Aceptación | Relacionado con |
 | :--- | :--- | :--- | :--- | :--- |
-| **EP01** | Identity and Access Management | Epic para la gestión de usuarios, autenticación, roles, sesiones y recuperación de credenciales. | N/A | N/A |
-| **US-01** | Inicio de Sesión y Control de Acceso por Rol | **Como** Usuario registrado,<br>**Quiero** iniciar sesión con mi correo corporativo y contraseña,<br>**Para** ingresar al panel web correspondiente a mis permisos. | **Escenario 1: Inicio de sesión exitoso como Administrador**<br>- **Dado** que el usuario ingresa sus credenciales válidas de Administrador,<br>- **Cuando** presiona "Iniciar Sesión",<br>- **Entonces** el sistema lo redirige al Dashboard de Administrador.<br><br>**Escenario 2: Inicio de sesión exitoso como Empleado**<br>- **Dado** que el usuario ingresa sus credenciales válidas de Empleado,<br>- **Cuando** presiona "Iniciar Sesión",<br>- **Entonces** el sistema lo redirige a la vista de Mis Tickets. | EP01 |
-| **US-02** | Registro de Administrador y Empresa | **Como** Administrador de MYPE,<br>**Quiero** crear mi cuenta y registrar mi empresa,<br>**Para** gestionar la suscripción y los servicios de soporte. | **Escenario 1: Registro exitoso**<br>- **Dado** que el usuario completa el formulario de registro con un RUC válido,<br>- **Cuando** presiona "Registrar Empresa",<br>- **Entonces** se crea la cuenta de empresa y se envía un correo de confirmación.<br><br>**Escenario 2: RUC duplicado**<br>- **Dado** que el usuario ingresa un RUC previamente registrado,<br>- **Cuando** envía el formulario,<br>- **Entonces** el sistema muestra un mensaje de error indicando la duplicidad. | EP01 |
-| **US-03** | Recuperación de Contraseña | **Como** Usuario registrado,<br>**Quiero** solicitar el restablecimiento de mi contraseña,<br>**Para** recuperar el acceso a mi cuenta si la he olvidado. | **Escenario 1: Envío de enlace de recuperación**<br>- **Dado** que el usuario ingresa su correo registrado en el formulario de recuperación,<br>- **Cuando** presiona "Enviar enlace",<br>- **Entonces** el sistema envía un correo con un token temporal válido por 24 horas.<br><br>**Escenario 2: Correo no registrado**<br>- **Dado** que el usuario ingresa un correo inexistente,<br>- **Cuando** presiona "Enviar enlace",<br>- **Entonces** el sistema muestra un mensaje indicando que no se encontró la cuenta. | EP01 |
-| **US-04** | Registro de Empleados por Administrador | **Como** Administrador de MYPE,<br>**Quiero** registrar a los empleados de mi empresa en la plataforma,<br>**Para** habilitarles el acceso al reporte de incidencias. | **Escenario 1: Creación de usuario empleado**<br>- **Dado** que el Administrador completa el nombre, correo y cargo del empleado,<br>- **Cuando** guarda el registro,<br>- **Entonces** el sistema crea la cuenta con rol "Empleado" y le envía una invitación por correo.<br><br>**Escenario 2: Correo institucional duplicado**<br>- **Dado** que el Administrador intenta registrar un correo ya existente,<br>- **Cuando** guarda el registro,<br>- **Entonces** el sistema bloquea la acción notificando que el correo ya está registrado. | EP01 |
-| **US-05** | Gestión de Perfil de Usuario | **Como** Usuario registrado,<br>**Quiero** actualizar mis datos personales y contraseña,<br>**Para** mantener mi información de contacto actualizada. | **Escenario 1: Actualización exitosa**<br>- **Dado** que el usuario modifica su teléfono o nombre en el perfil,<br>- **Cuando** presiona "Guardar Cambios",<br>- **Entonces** el sistema actualiza la información y muestra una notificación de éxito.<br><br>**Escenario 2: Cambio de contraseña con clave actual incorrecta**<br>- **Dado** que el usuario ingresa una contraseña actual errónea,<br>- **Cuando** intenta actualizar su clave,<br>- **Entonces** el sistema deniega el cambio indicando que la clave actual no coincide. | EP01 |
-| **US-06** | Endpoint para Autenticación JWT (API) | **Como** Developer,<br>**Quiero** implementar el endpoint `/api/v1/auth/login`,<br>**Para** emitir tokens JSON Web Tokens (JWT) seguros. | **Escenario 1: Emisión exitosa de JWT**<br>- **Dado** una petición POST con credenciales válidas en formato JSON,<br>- **Cuando** el API procesa la autenticación,<br>- **Entonces** responde con un código 200 OK y el token Bearer JWT con los claims de rol.<br><br>**Escenario 2: Credenciales inválidas**<br>- **Dado** una petición POST con contraseña incorrecta,<br>- **Cuando** el API procesa la autenticación,<br>- **Entonces** responde con un código 401 Unauthorized. | EP01 |
-| **EP02** | Companies and Equipment Management | Epic para la gestión del inventario de equipos, ubicaciones de sede y fichas clínicas de hardware. | N/A | N/A |
-| **US-07** | Registro de Equipos de la Oficina | **Como** Administrador de MYPE,<br>**Quiero** registrar los equipos indicando número de serie, tipo y ubicación,<br>**Para** mantener un inventario unificado de hardware bajo cobertura. | **Escenario 1: Registro exitoso de equipo**<br>- **Dado** que el Administrador completa la ficha del equipo con número de serie único,<br>- **Cuando** guarda el registro,<br>- **Entonces** el sistema asigna un código interno único y lo añade al inventario.<br><br>**Escenario 2: Validación de serie obligatorio**<br>- **Dado** que el usuario intenta guardar un equipo sin número de serie,<br>- **Cuando** envía el formulario,<br>- **Entonces** el sistema impide el guardado mostrando un mensaje de campo obligatorio. | EP02 |
-| **US-08** | Asignación de Equipos a Empleados | **Como** Administrador de MYPE,<br>**Quiero** vincular un equipo registrado a un empleado específico,<br>**Para** que el colaborador reporte incidentes directamente sobre su estación de trabajo. | **Escenario 1: Vinculación exitosa**<br>- **Dado** que el Administrador selecciona un equipo del inventario y lo asigna a un empleado,<br>- **Cuando** confirma la operación,<br>- **Entonces** el equipo aparece precargado en la vista del empleado.<br><br>**Escenario 2: Reasignación de equipo**<br>- **Dado** que un equipo cambia de usuario responsable,<br>- **Cuando** el Administrador actualiza el empleado asignado,<br>- **Entonces** el sistema registra el cambio en el historial de asignaciones del equipo. | EP02 |
-| **US-09** | Ficha Clínica e Historial Técnico por Equipo | **Como** Administrador de MYPE,<br>**Quiero** consultar la ficha técnica e historial de cada PC,<br>**Para** evaluar si un equipo requiere reemplazo por fallas recurrentes. | **Escenario 1: Consulta de historial completo**<br>- **Dado** que el Administrador selecciona un equipo en el inventario,<br>- **Cuando** accede a "Historial de Servicio",<br>- **Entonces** el sistema despliega la cronología con tickets pasados, mantenimientos y repuestos cambiados. | EP02 |
-| **US-10** | Mapeo de Sedes y Ubicaciones de Escritorio | **Como** Administrador de MYPE,<br>**Quiero** registrar las sedes y puestos de trabajo de la oficina,<br>**Para** facilitar la localización de los equipos por parte de los técnicos. | **Escenario 1: Creación de nueva ubicación**<br>- **Dado** que el Administrador ingresa el nombre de la sede y el número de escritorio,<br>- **Cuando** guarda la ubicación,<br>- **Entonces** la ubicación queda disponible en las opciones de registro de equipos.<br><br>**Escenario 2: Desactivación de sede**<br>- **Dado** que una sede deja de operar,<br>- **Cuando** el Administrador la marca como inactiva,<br>- **Entonces** el sistema impide asociar nuevos equipos a dicha sede. | EP02 |
-| **US-11** | Búsqueda y Filtrado de Inventario de Equipos | **Como** Administrador de MYPE,<br>**Quiero** filtrar la lista de equipos por estado, sede o tipo de máquina,<br>**Para** agilizar la localización de componentes en la oficina. | **Escenario 1: Filtrado por estado del equipo**<br>- **Dado** que el usuario selecciona el filtro "En Reparación",<br>- **Cuando** aplica el filtro,<br>- **Entonces** la tabla despliega únicamente los equipos con tickets abiertos.<br><br>**Escenario 2: Búsqueda por texto libre**<br>- **Dado** que el usuario ingresa la serie o nombre del equipo en el buscador,<br>- **Cuando** presiona enter,<br>- **Entonces** el sistema lista los registros coincidentes. | EP02 |
-| **US-12** | Endpoint de Gestión de Inventario (API) | **Como** Developer,<br>**Quiero** implementar la ruta `/api/v1/equipments`,<br>**Para** permitir operaciones CRUD sobre los equipos de una empresa. | **Escenario 1: Obtención de inventario**<br>- **Dado** una petición GET autenticada con el ID de empresa,<br>- **Cuando** el API procesa la consulta,<br>- **Entonces** retorna un código 200 OK con el array JSON de equipos.<br><br>**Escenario 2: Creación de equipo inválida**<br>- **Dado** una petición POST con payload incompleto,<br>- **Cuando** el API valida la entidad,<br>- **Entonces** responde con un código 400 Bad Request y los detalles del error. | EP02 |
-| **EP03** | Subscriptions and Coverage Management | Epic para la gestión de planes, suscripciones activas, bolsa de horas y agendamiento preventivo. | N/A | N/A |
-| **US-13** | Selección y Contratación de Plan Mensual | **Como** Administrador de MYPE,<br>**Quiero** elegir un plan de suscripción mensual (Básico, Empresarial, Integral),<br>**Para** afiliar a mi empresa a los servicios de soporte de UniLink. | **Escenario 1: Selección de plan exitosa**<br>- **Dado** que el Administrador selecciona un plan e ingresa los datos de facturación,<br>- **Cuando** confirma la suscripción,<br>- **Entonces** la cuenta activa la bolsa de horas y cupos de mantenimiento del mes. | EP03 |
-| **US-14** | Panel de Control de Bolsa de Horas | **Como** Administrador de MYPE,<br>**Quiero** visualizar en un Dashboard las horas consumidas y disponibles del mes,<br>**Para** mantener el control del presupuesto y uso del servicio. | **Escenario 1: Descuento dinámico de horas**<br>- **Dado** que un técnico cierra un ticket registrando 2 horas de trabajo,<br>- **Cuando** el Administrador consulta el Dashboard,<br>- **Entonces** el gráfico de saldo muestra automáticamente el descuento de las 2 horas. | EP03 |
-| **US-15** | Agendamiento de Mantenimientos Preventivos | **Como** Administrador de MYPE,<br>**Quiero** programar las visitas preventivas incluidas en mi plan,<br>**Para** prevenir fallas operativas en las estaciones de trabajo. | **Escenario 1: Reserva de fecha en calendario**<br>- **Dado** que la empresa cuenta con cupos preventivos del mes,<br>- **Cuando** el Administrador selecciona fecha, hora y equipos en el calendario,<br>- **Entonces** la visita queda agendada y se descuenta un cupo preventivo del saldo. | EP03 |
-| **US-16** | Renovación Automática de Suscripción | **Como** Administrador de MYPE,<br>**Quiero** gestionar la renovación periódica de mi plan,<br>**Para** garantizar la continuidad del soporte técnico sin interrupciones. | **Escenario 1: Reinicio mensual de horas**<br>- **Dado** que se cumple el ciclo de facturación de la suscripción,<br>- **Cuando** el sistema procesa el nuevo periodo,<br>- **Entonces** restablece el saldo de horas y cupos preventivos según el plan contratado. | EP03 |
-| **US-17** | Alertas de Consumo Próximo al Límite | **Como** Administrador de MYPE,<br>**Quiero** recibir notificaciones al consumir el 80% de mi bolsa de horas,<br>**Para** evaluar la compra de un paquete adicional o upgrade de plan. | **Escenario 1: Disparo de alerta por consumo alto**<br>- **Dado** que la bolsa de horas alcanza el 80% de uso del saldo mensual,<br>- **Cuando** se registra el último ticket,<br>- **Entonces** el sistema envía un correo y muestra un aviso de alerta en el Dashboard. | EP03 |
-| **US-18** | Endpoint de Saldos y Cobertura (API) | **Como** Developer,<br>**Quiero** implementar la ruta `/api/v1/subscriptions/balance`,<br>**Para** proveer los datos consumidos de la bolsa de horas a la aplicación web. | **Escenario 1: Consulta de saldo actual**<br>- **Dado** un token JWT válido de Administrador,<br>- **Cuando** solicita el balance de suscripción,<br>- **Entonces** responde 200 OK con el total de horas, horas usadas y cupos preventivos restantes. | EP03 |
-| **EP04** | Service Requests Management | Epic para la creación de solicitudes de soporte, asignación de técnicos, diagnóstico y ciclo de vida del ticket. | N/A | N/A |
-| **US-19** | Creación Directa de Tickets de Soporte | **Como** Empleada de Oficina,<br>**Quiero** reportar la falla de mi equipo seleccionando la categoría y problema,<br>**Para** solicitar atención técnica rápida sin intermediarios. | **Escenario 1: Registro exitoso de ticket**<br>- **Dado** que la empleada selecciona su equipo asignado y detalla la falla,<br>- **Cuando** presiona "Enviar Ticket",<br>- **Entonces** se genera la solicitud en estado "Pendiente de Asignación". | EP04 |
-| **US-20** | Asignación de Técnico a Solicitud | **Como** Administrador del Sistema,<br>**Quiero** asignar un técnico disponible a una nueva solicitud de soporte,<br>**Para** dar inicio al diagnóstico y reparación de la computadora. | **Escenario 1: Asignación de técnico**<br>- **Dado** un ticket en estado "Pendiente de Asignación",<br>- **Cuando** el Administrador asigna a un técnico especialista,<br>- **Entonces** el ticket cambia a estado "Asignado" y se le notifica al técnico. | EP04 |
-| **US-21** | Seguimiento del Estado del Ticket | **Como** Empleada de Oficina,<br>**Quiero** visualizar la línea de tiempo del avance de mi solicitud,<br>**Para** conocer cuándo seré atendida sin tener que hacer llamadas. | **Escenario 1: Visualización del estado actual**<br>- **Dado** que la empleada consulta la sección "Mis Solicitudes",<br>- **Cuando** selecciona un ticket activo,<br>- **Entonces** ve la línea de tiempo actualizada (Registrada, Asignada, En Diagnóstico, Resuelta). | EP04 |
-| **US-22** | Registro de Diagnóstico e Intervención | **Como** Técnico de Soporte,<br>**Quiero** ingresar el diagnóstico, trabajo realizado y horas empleadas,<br>**Para** actualizar la ficha del servicio y descontar el tiempo de la bolsa de horas. | **Escenario 1: Cierre de ticket por el técnico**<br>- **Dado** que el técnico concluye la atención presencial o remota,<br>- **Cuando** registra el informe técnico y las horas de trabajo,<br>- **Entonces** el ticket pasa a estado "Atendido" y se descuentan las horas del plan. | EP04 |
-| **US-23** | Cancelación o Descarte de Ticket | **Como** Empleada de Oficina,<br>**Quiero** cancelar una solicitud de soporte creada por error,<br>**Para** no generar visitas o consumo innecesario de horas. | **Escenario 1: Cancelación previa a asignación**<br>- **Dado** un ticket en estado "Pendiente",<br>- **Cuando** el usuario hace clic en "Cancelar Solicitud",<br>- **Entonces** el ticket cambia a estado "Cancelado" y no se consume saldo. | EP04 |
-| **US-24** | Endpoint de Flujo de Tickets (API) | **Como** Developer,<br>**Quiero** desarrollar el endpoint POST `/api/v1/tickets`,<br>**Para** procesar el registro de incidencias desde la aplicación cliente. | **Escenario 1: Creación de ticket en API**<br>- **Dado** un payload válido con `equipmentId`, `category` y `description`,<br>- **Cuando** el API ejecuta el comando de creación,<br>- **Entonces** persiste la entidad y responde con status 201 Created y el ID del ticket. | EP04 |
-| **EP05** | Quotations and Payments Management | Epic para la cotización de repuestos adicionales, aprobación por la empresa y simulación de pagos. | N/A | N/A |
-| **US-25** | Generación de Cotización de Repuestos | **Como** Técnico de Soporte,<br>**Quiero** emitir una cotización detallada de componentes o repuestos extras,<br>**Para** solicitar la autorización de compra a la empresa antes de reparar. | **Escenario 1: Emisión de cotización adicional**<br>- **Dado** que la reparación requiere cambiar una pieza no cubierta por el plan,<br>- **Cuando** el técnico adjunta el detalle de la pieza y costo,<br>- **Entonces** la cotización pasa a estado "Pendiente de Aprobación". | EP05 |
-| **US-26** | Aprobación/Rechazo Digital de Cotizaciones | **Como** Administrador de MYPE,<br>**Quiero** autorizar o rechazar digitalmente las cotizaciones de repuestos,<br>**Para** validar los sobrecostos antes de cualquier adquisición. | **Escenario 1: Aprobación de cotización**<br>- **Dado** que hay una cotización pendiente,<br>- **Cuando** el Administrador presiona "Aprobar",<br>- **Entonces** el sistema autoriza la compra y notifica al técnico para proceder.<br><br>**Escenario 2: Rechazo de cotización**<br>- **Dado** que la cotización supera el presupuesto,<br>- **Cuando** el Administrador presiona "Rechazar",<br>- **Entonces** la cotización se cancela y la orden queda pausada. | EP05 |
-| **US-27** | Visualización de Desglose de Gastos Adicionales | **Como** Administrador de MYPE,<br>**Quiero** consultar un reporte detallado de cotizaciones aprobadas del mes,<br>**Para** auditar la facturación por repuestos y componentes extra. | **Escenario 1: Generación de resumen de gastos**<br>- **Dado** que el Administrador accede al módulo de Finanzas,<br>- **Cuando** selecciona el mes actual,<br>- **Entonces** ve el listado consolidado de repuestos aprobados con sus montos. | EP05 |
-| **US-28** | Simulación de Pago de Servicios Adicionales | **Como** Administrador de MYPE,<br>**Quiero** registrar el pago simulado de una cotización aprobada,<br>**Para** cerrar el ciclo financiero del servicio adicional. | **Escenario 1: Confirmación de pago simulado**<br>- **Dado** que una cotización está autorizada,<br>- **Cuando** el usuario ingresa datos de tarjeta de prueba y confirma,<br>- **Entonces** el sistema emite el comprobante y cambia el estado a "Pagado". | EP05 |
-| **US-29** | Pasarela de Pago para Landing Page (Suscripción) | **Como** Visitante / Administrador,<br>**Quiero** ingresar los datos de pago al seleccionar un plan en el Landing Page,<br>**Para** completar la afiliación inicial del servicio de forma digital. | **Escenario 1: Registro y pago inicial**<br>- **Dado** que el visitante selecciona el "Plan Empresarial" en la web,<br>- **Cuando** llena el formulario y procesa el pago simulado,<br>- **Entonces** la suscripción queda activa inmediatamente. | EP05 |
-| **US-30** | Endpoint de Aprobación de Cotización (API) | **Como** Developer,<br>**Quiero** exponer el endpoint PUT `/api/v1/quotes/{id}/status`,<br>**Para** actualizar el estado de las cotizaciones desde el panel web de la empresa. | **Escenario 1: Actualización de estado en API**<br>- **Dado** una petición PUT con status `APPROVED` o `REJECTED`,<br>- **Cuando** se valida que el usuario pertenece a la empresa de la orden,<br>- **Entonces** el API actualiza la cotización y responde 200 OK. | EP05 |
-| **EP06** | System Infrastructure & Technical Enablers | Epic técnico para la configuración de arquitectura base, despliegues (CI/CD), base de datos y documentación de API. | N/A | N/A |
-| **TS-01** | Configuración de CI/CD Pipeline | **Como** Developer,<br>**Quiero** configurar un pipeline de CI/CD utilizando GitHub Actions,<br>**Para** automatizar las pruebas, compilación y despliegue del RESTful API. | **Escenario 1: Despliegue automático exitoso**<br>- **Dado** que se realiza un push a la rama `main` o `develop`,<br>- **Cuando** el pipeline de GitHub Actions se dispara,<br>- **Entonces** el código se compila sin errores, pasa las pruebas unitarias y se despliega en el servidor en la nube. | EP06 |
-| **TS-02** | Configuración de Entity Framework Core | **Como** Developer,<br>**Quiero** implementar DbContext y gestionar las migraciones con Entity Framework Core,<br>**Para** mantener el esquema de la base de datos relacional (MySQL/PostgreSQL) versionado. | **Escenario 1: Generación de migración inicial**<br>- **Dado** que se han modelado las entidades principales del dominio en C#,<br>- **Cuando** se ejecuta el comando de creación de migración (`Add-Migration`),<br>- **Entonces** se genera el archivo de migración reflejando las tablas y relaciones correctas. | EP06 |
-| **TS-03** | Documentación Automática con Swagger | **Como** Developer,<br>**Quiero** integrar Swagger (OpenAPI) en el proyecto ASP.NET Core,<br>**Para** generar y mantener actualizada la documentación interactiva de los endpoints. | **Escenario 1: Visualización de Swagger UI**<br>- **Dado** que el backend se encuentra en ejecución,<br>- **Cuando** el desarrollador navega a la ruta `/swagger`,<br>- **Entonces** se visualiza la interfaz gráfica con el listado de todos los controladores, esquemas y la opción para probar las peticiones. | EP06 |
+| **US-01** | Registro de Admin MYPE | **Como** Admin MYPE,<br>**quiero** registrarme con mi correo corporativo,<br>**para** crear la cuenta de mi empresa. | **Escenario 1 (Éxito):**<br>- **Dado** un formulario válido,<br>- **Cuando** el usuario envía los datos,<br>- **Entonces** se crea la cuenta y recibe un correo de confirmación.<br><br>**Escenario 2 (Fallo):**<br>- **Dado** un correo ya registrado,<br>- **Cuando** intenta registrarse,<br>- **Entonces** el sistema muestra el error "El correo ya está en uso". | EP-01 |
+| **US-02** | Inicio de Sesión | **Como** Usuario,<br>**quiero** iniciar sesión con credenciales,<br>**para** acceder a mi panel según mi rol. | **Escenario 1 (Éxito):**<br>- **Dado** credenciales correctas,<br>- **Cuando** presiona "Ingresar",<br>- **Entonces** es redirigido al dashboard correspondiente a su rol.<br><br>**Escenario 2 (Fallo):**<br>- **Dado** una contraseña incorrecta,<br>- **Cuando** intenta ingresar,<br>- **Entonces** ve el mensaje "Credenciales inválidas". | EP-01 |
+| **US-03** | Recuperación de Password | **Como** Usuario,<br>**quiero** restablecer mi contraseña con un token al correo,<br>**para** recuperar mi acceso. | **Escenario 1 (Envío de enlace):**<br>- **Dado** un correo válido en el sistema,<br>- **Cuando** solicita recuperación,<br>- **Entonces** recibe un link seguro con vigencia de 15 min.<br><br>**Escenario 2 (Token expirado):**<br>- **Dado** un enlace de recuperación antiguo,<br>- **Cuando** intenta cambiar la clave,<br>- **Entonces** el sistema deniega el cambio por caducidad. | EP-01 |
+| **US-04** | Visualizar Planes | **Como** Visitante,<br>**quiero** ver los planes en el Landing Page,<br>**para** evaluar costos y coberturas. | **Escenario 1 (Vista Desktop):**<br>- **Dado** que navega a la sección de precios,<br>- **Cuando** la pantalla carga,<br>- **Entonces** visualiza 3 tarjetas comparativas en paralelo.<br><br>**Escenario 2 (Interacción):**<br>- **Dado** un plan elegido,<br>- **Cuando** hace clic en "Comenzar",<br>- **Entonces** es redirigido al registro preseleccionando el plan. | EP-02 |
+| **US-05** | Contratar Plan Mensual | **Como** Admin MYPE,<br>**quiero** suscribirme a un plan,<br>**para** iniciar la cobertura de mis equipos. | **Escenario 1 (Pago exitoso):**<br>- **Dado** un método de pago válido,<br>- **Cuando** confirma la suscripción,<br>- **Entonces** su estado cambia a "Activo" y se habilitan sus horas.<br><br>**Escenario 2 (Pago fallido):**<br>- **Dado** una tarjeta sin fondos,<br>- **Cuando** intenta pagar,<br>- **Entonces** la suscripción queda en estado "Pendiente de Pago". | EP-02 |
+| **US-06** | Cancelar Suscripción | **Como** Admin MYPE,<br>**quiero** cancelar la renovación automática,<br>**para** dar de baja el servicio. | **Escenario 1 (Cancelación confirmada):**<br>- **Dado** una suscripción activa,<br>- **Cuando** solicita cancelar y confirma,<br>- **Entonces** el plan no se renueva el siguiente mes.<br><br>**Escenario 2 (Servicio remanente):**<br>- **Dado** una cancelación en curso,<br>- **Cuando** revisa su cuenta,<br>- **Entonces** aún puede usar el saldo de horas hasta el fin del ciclo. | EP-02 |
+| **US-07** | Completar Perfil Empresa | **Como** Admin MYPE,<br>**quiero** registrar el RUC y dirección,<br>**para** formalizar los datos de facturación. | **Escenario 1 (Guardado exitoso):**<br>- **Dado** un RUC válido de 11 dígitos,<br>- **Cuando** actualiza el perfil,<br>- **Entonces** los datos se guardan en el sistema.<br><br>**Escenario 2 (Validación RUC):**<br>- **Dado** un RUC de 10 dígitos,<br>- **Cuando** intenta guardar,<br>- **Entonces** el formulario bloquea la acción indicando error. | EP-03 |
+| **US-08** | Invitar Empleados | **Como** Admin MYPE,<br>**quiero** enviar invitaciones a mis empleados,<br>**para** que puedan crear sus propios tickets. | **Escenario 1 (Envío masivo):**<br>- **Dado** una lista de 3 correos,<br>- **Cuando** presiona invitar,<br>- **Entonces** se envían 3 enlaces de creación de cuenta.<br><br>**Escenario 2 (Límite de plan):**<br>- **Dado** un plan que permite 10 empleados,<br>- **Cuando** intenta invitar al número 11,<br>- **Entonces** el sistema bloquea la invitación sugiriendo un upgrade. | EP-03 |
+| **US-09** | Desactivar Empleado | **Como** Admin MYPE,<br>**quiero** desactivar el acceso de un empleado,<br>**para** mantener la seguridad si es despedido. | **Escenario 1 (Desactivación):**<br>- **Dado** un empleado activo,<br>- **Cuando** el admin cambia su estado a inactivo,<br>- **Entonces** el empleado pierde acceso al portal inmediatamente.<br><br>**Escenario 2 (Historial intacto):**<br>- **Dado** un empleado desactivado,<br>- **Cuando** se revisan los tickets antiguos,<br>- **Entonces** el nombre del empleado sigue asociado a sus reportes. | EP-03 |
+| **US-10** | Registrar Equipo (PC/Laptop) | **Como** Admin MYPE,<br>**quiero** registrar el número de serie de una PC,<br>**para** agregarla a la cobertura. | **Escenario 1 (Registro único):**<br>- **Dado** un número de serie no registrado,<br>- **Cuando** se guarda el equipo,<br>- **Entonces** aparece en el inventario activo de la empresa.<br><br>**Escenario 2 (Serie duplicada):**<br>- **Dado** un número de serie ya existente,<br>- **Cuando** intenta registrarlo,<br>- **Entonces** se muestra un mensaje de error por duplicidad. | EP-04 |
+| **US-11** | Asignar Ubicación de Equipo | **Como** Admin MYPE,<br>**quiero** indicar en qué escritorio está cada PC,<br>**para** que el técnico la encuentre rápido. | **Escenario 1 (Ubicación descriptiva):**<br>- **Dado** el texto "Piso 2, Área Contabilidad",<br>- **Cuando** se actualiza el equipo,<br>- **Entonces** la ubicación se guarda y se muestra en futuros tickets.<br><br>**Escenario 2 (Edición de ubicación):**<br>- **Dado** un equipo reubicado,<br>- **Cuando** el admin edita el campo ubicación,<br>- **Entonces** el cambio se refleja inmediatamente en el inventario. | EP-04 |
+| **US-12** | Ver Historial Clínico de PC | **Como** Admin MYPE,<br>**quiero** ver las reparaciones pasadas de un equipo,<br>**para** decidir si debo comprar uno nuevo. | **Escenario 1 (Lista de servicios):**<br>- **Dado** un equipo con 3 reparaciones previas,<br>- **Cuando** hace clic en "Historial",<br>- **Entonces** ve un listado cronológico de las 3 atenciones.<br><br>**Escenario 2 (Equipo nuevo):**<br>- **Dado** un equipo recién registrado,<br>- **Cuando** consulta el historial,<br>- **Entonces** ve un mensaje de "Sin atenciones previas". | EP-04 |
+| **US-13** | Crear Ticket de Soporte | **Como** Empleado,<br>**quiero** reportar una falla describiendo el problema,<br>**para** solicitar a un técnico. | **Escenario 1 (Ticket creado):**<br>- **Dado** un equipo seleccionado y descripción,<br>- **Cuando** envía el formulario,<br>- **Entonces** el ticket pasa a estado "Pendiente" y recibe un ID.<br><br>**Escenario 2 (Faltan datos):**<br>- **Dado** que omite el campo descripción,<br>- **Cuando** intenta enviar,<br>- **Entonces** el formulario resalta en rojo el campo obligatorio. | EP-05 |
+| **US-14** | Ver Estado del Ticket | **Como** Empleado,<br>**quiero** ver si mi ticket está "Pendiente" o "En curso",<br>**para** saber cuándo seré atendido. | **Escenario 1 (Visualización de pipeline):**<br>- **Dado** un ticket asignado a un técnico,<br>- **Cuando** el empleado entra al detalle,<br>- **Entonces** ve el estado "Técnico Asignado" en una barra de progreso.<br><br>**Escenario 2 (Detalle del técnico):**<br>- **Dado** un estado "En camino",<br>- **Cuando** revisa el ticket,<br>- **Entonces** puede ver el nombre del técnico que lo atenderá. | EP-05 |
+| **US-15** | Cancelar Ticket Propio | **Como** Empleado,<br>**quiero** cancelar un ticket no asignado,<br>**para** evitar la visita si solucioné el problema. | **Escenario 1 (Cancelación permitida):**<br>- **Dado** un ticket en estado "Pendiente",<br>- **Cuando** presiona cancelar,<br>- **Entonces** el ticket cambia a "Cancelado".<br><br>**Escenario 2 (Cancelación bloqueada):**<br>- **Dado** un ticket en estado "Técnico Asignado",<br>- **Cuando** intenta cancelar,<br>- **Entonces** el botón se deshabilita y pide contactar a soporte. | EP-05 |
+| **US-16** | Filtrar Tickets Anteriores | **Como** Empleado,<br>**quiero** ver el historial de mis solicitudes,<br>**para** tener constancia de mis reportes. | **Escenario 1 (Filtro por estado):**<br>- **Dado** el selector de filtro en "Cerrados",<br>- **Cuando** aplica la búsqueda,<br>- **Entonces** solo ve los tickets que ya fueron resueltos.<br><br>**Escenario 2 (Filtro por fecha):**<br>- **Dado** la selección del último mes,<br>- **Cuando** aplica el filtro,<br>- **Entonces** el listado oculta solicitudes antiguas. | EP-05 |
+| **US-17** | Ver Tickets Asignados | **Como** Técnico,<br>**quiero** ver mi lista de visitas programadas,<br>**para** organizar mi ruta del día. | **Escenario 1 (Lista ordenada):**<br>- **Dado** que inicia sesión en su panel,<br>- **Cuando** accede a "Mis asignaciones",<br>- **Entonces** ve una lista ordenada por urgencia y fecha.<br><br>**Escenario 2 (Sin asignaciones):**<br>- **Dado** un día sin tickets,<br>- **Cuando** revisa su lista,<br>- **Entonces** ve el mensaje "No tienes tickets asignados hoy". | EP-06 |
+| **US-18** | Iniciar Diagnóstico | **Como** Técnico,<br>**quiero** cambiar el estado del ticket a "En diagnóstico",<br>**para** informar que inicié el trabajo. | **Escenario 1 (Transición correcta):**<br>- **Dado** un ticket en estado "Asignado",<br>- **Cuando** presiona "Iniciar Trabajo",<br>- **Entonces** el estado cambia a "En Diagnóstico" y notifica al cliente.<br><br>**Escenario 2 (Transición inválida):**<br>- **Dado** un ticket ya cerrado,<br>- **Cuando** intenta reiniciarlo,<br>- **Entonces** el sistema bloquea la acción. | EP-06 |
+| **US-19** | Registrar Falla Encontrada | **Como** Técnico,<br>**quiero** escribir el diagnóstico técnico en el sistema,<br>**para** dejar constancia del problema real. | **Escenario 1 (Diagnóstico guardado):**<br>- **Dado** que terminó de revisar el equipo,<br>- **Cuando** ingresa el texto del diagnóstico y guarda,<br>- **Entonces** el texto se anexa permanentemente al historial del ticket.<br><br>**Escenario 2 (Campo vacío):**<br>- **Dado** que intenta avanzar de estado,<br>- **Cuando** el diagnóstico está vacío,<br>- **Entonces** se exige llenar el campo antes de continuar. | EP-06 |
+| **US-20** | Cerrar Ticket y Registrar Horas | **Como** Técnico,<br>**quiero** finalizar el ticket ingresando las horas invertidas,<br>**para** que se descuenten de la bolsa del cliente. | **Escenario 1 (Cierre normal):**<br>- **Dado** un ingreso de "2 horas",<br>- **Cuando** confirma el cierre,<br>- **Entonces** el ticket pasa a "Resuelto" y deduce 2h del saldo de la MYPE.<br><br>**Escenario 2 (Horas excesivas):**<br>- **Dado** que el cliente solo tiene 1h de saldo,<br>- **Cuando** el técnico intenta registrar 2h,<br>- **Entonces** el sistema alerta que se facturará 1h como "Exceso fuera de plan". | EP-06 |
+| **US-21** | Agendar Mantenimiento Preventivo | **Como** Admin MYPE,<br>**quiero** seleccionar una fecha en el calendario,<br>**para** programar la limpieza de los equipos. | **Escenario 1 (Agendamiento exitoso):**<br>- **Dado** que tiene cupos preventivos disponibles,<br>- **Cuando** selecciona fecha, hora y equipos,<br>- **Entonces** se crea la visita y se descuenta el cupo.<br><br>**Escenario 2 (Sin cupos):**<br>- **Dado** que ya gastó sus preventivos mensuales,<br>- **Cuando** intenta agendar uno nuevo,<br>- **Entonces** el sistema le informa que tendrá un costo adicional. | EP-07 |
+| **US-22** | Finalizar Mantenimiento | **Como** Técnico,<br>**quiero** marcar el mantenimiento como realizado,<br>**para** consumir las unidades preventivas del plan. | **Escenario 1 (Cierre de mantenimiento):**<br>- **Dado** una visita preventiva en curso,<br>- **Cuando** marca los checks de limpieza y finaliza,<br>- **Entonces** la visita se cierra y se genera el reporte.<br><br>**Escenario 2 (Cierre parcial):**<br>- **Dado** que un equipo no estaba disponible,<br>- **Cuando** cierra la visita,<br>- **Entonces** puede desmarcar ese equipo para no cobrarlo. | EP-07 |
+| **US-23** | Generar Cotización de Repuesto | **Como** Técnico,<br>**quiero** enviar un costo extra por cambio de piezas,<br>**para** solicitar la aprobación de la empresa. | **Escenario 1 (Envío de cotización):**<br>- **Dado** un ticket "En Diagnóstico",<br>- **Cuando** el técnico agrega el ítem "Disco SSD 1TB - $50" y envía,<br>- **Entonces** el ticket pasa a "Esperando Aprobación".<br><br>**Escenario 2 (Validación de precio):**<br>- **Dado** que intenta enviar un ítem con precio 0,<br>- **Cuando** presiona enviar,<br>- **Entonces** el sistema exige que el valor sea mayor a 0. | EP-08 |
+| **US-24** | Ver Cotización Pendiente | **Como** Admin MYPE,<br>**quiero** recibir una alerta de cotización,<br>**para** revisar el detalle del repuesto necesario. | **Escenario 1 (Visualización de alerta):**<br>- **Dado** que hay una nueva cotización,<br>- **Cuando** el Admin entra al Dashboard,<br>- **Entonces** ve una alerta roja de "Cotización Pendiente de Aprobación".<br><br>**Escenario 2 (Detalle del monto):**<br>- **Dado** que hace clic en la alerta,<br>- **Cuando** carga la vista,<br>- **Entonces** ve el desglose de piezas, IGV y total a pagar. | EP-08 |
+| **US-25** | Aprobar Cotización | **Como** Admin MYPE,<br>**quiero** hacer clic en "Aprobar",<br>**para** autorizar el gasto y que el técnico proceda. | **Escenario 1 (Aprobación simple):**<br>- **Dado** una cotización en revisión,<br>- **Cuando** hace clic en "Aprobar y Continuar",<br>- **Entonces** el técnico es notificado para reanudar la reparación.<br><br>**Escenario 2 (Firma digital simulada):**<br>- **Dado** la aprobación de un monto alto,<br>- **Cuando** confirma,<br>- **Entonces** el sistema registra el ID del admin y la fecha/hora de la autorización (Auditoría). | EP-08 |
+| **US-26** | Rechazar Cotización | **Como** Admin MYPE,<br>**quiero** rechazar el presupuesto,<br>**para** detener la reparación si excede mis fondos. | **Escenario 1 (Rechazo con motivo):**<br>- **Dado** una cotización inaceptable,<br>- **Cuando** hace clic en rechazar y escribe "Muy caro",<br>- **Entonces** el técnico es notificado para cerrar el ticket sin reparación.<br><br>**Escenario 2 (Cierre automático):**<br>- **Dado** el rechazo,<br>- **Cuando** se procesa la acción,<br>- **Entonces** el ticket pasa al estado "Resuelto sin cambios". | EP-08 |
+| **US-27** | Pagar Cotización | **Como** Admin MYPE,<br>**quiero** simular el pago del repuesto aprobado,<br>**para** liquidar la deuda en la plataforma. | **Escenario 1 (Pago simulado exitoso):**<br>- **Dado** una cotización aprobada,<br>- **Cuando** ingresa una tarjeta de prueba y paga,<br>- **Entonces** la deuda se marca como "Pagada" y se emite recibo.<br><br>**Escenario 2 (Error en pago):**<br>- **Dado** datos de tarjeta erróneos,<br>- **Cuando** procesa el pago,<br>- **Entonces** el sistema muestra "Transacción rechazada". | EP-08 |
+| **US-28** | Dashboard: Saldo de Horas | **Como** Admin MYPE,<br>**quiero** ver un gráfico con mis horas consumidas y restantes,<br>**para** controlar el uso de mi plan. | **Escenario 1 (Gráfico de barras/dona):**<br>- **Dado** que tiene 5h usadas de 10h totales,<br>- **Cuando** carga el dashboard,<br>- **Entonces** ve un gráfico circular marcando el 50% de consumo.<br><br>**Escenario 2 (Alerta de escasez):**<br>- **Dado** que le queda menos del 10% de horas,<br>- **Cuando** ingresa al panel,<br>- **Entonces** aparece un banner amarillo sugiriendo un Upgrade de plan. | EP-09 |
+| **US-29** | Ver Top Problemas Frecuentes | **Como** Admin MYPE,<br>**quiero** ver qué tipo de fallas ocurren más,<br>**para** tomar acciones correctivas con el personal. | **Escenario 1 (Estadísticas por categoría):**<br>- **Dado** que tiene 10 tickets cerrados este mes,<br>- **Cuando** revisa las analíticas,<br>- **Entonces** ve un ranking (ej. 1º Hardware, 2º Software).<br><br>**Escenario 2 (Sin datos suficientes):**<br>- **Dado** una empresa recién registrada,<br>- **Cuando** va a analíticas,<br>- **Entonces** ve un *empty state* indicando "No hay data suficiente". | EP-09 |
+| **US-30** | Calificar Servicio | **Como** Empleado,<br>**quiero** calificar del 1 al 5 al técnico,<br>**para** brindar feedback sobre la atención recibida. | **Escenario 1 (Calificación exitosa):**<br>- **Dado** un ticket en estado "Cerrado",<br>- **Cuando** el empleado marca 5 estrellas y envía,<br>- **Entonces** la calificación se asocia al perfil del técnico.<br><br>**Escenario 2 (Calificación única):**<br>- **Dado** un ticket ya calificado,<br>- **Cuando** intenta volver a calificar,<br>- **Entonces** el panel oculta las estrellas y muestra "Gracias por tu feedback". | EP-09 |
+
+
+### Technical Stories - Engineering Backlog (27 TS)
+
+| ID | Epic | Título de la Tarea Técnica | Descripción & Criterios de Aceptación | SP |
+| :--- | :--- | :--- | :--- | :--- |
+| **TSK-01** | Todos | Setup de Repositorios y GitFlow | **Descripción:** Configurar estructura de control de versiones.<br>**Escenario 1:** Un *push* directo a `main` es rechazado por políticas de protección.<br>**Escenario 2:** Un PR hacia `develop` requiere aprobación de al menos 1 reviewer para hacer merge. | 3 |
+| **TSK-02** | Todos | Configurar CI/CD Pipeline | **Descripción:** Implementar GitHub Actions para automatización.<br>**Escenario 1:** Si el *build* en C# pasa sin errores, se ejecuta el despliegue automático.<br>**Escenario 2:** Si falla una prueba unitaria, la acción se detiene y notifica fallo. | 5 |
+| **TSK-03** | Todos | Init ASP.NET Core Project | **Descripción:** Estructurar capas de DDD (API, Application, Domain, Infrastructure).<br>**Escenario 1:** El proyecto compila y levanta en `localhost`.<br>**Escenario 2:** El compilador arroja error si la capa `Domain` intenta referenciar a `Infrastructure` (Inversión de dependencias). | 5 |
+| **TSK-04** | Todos | Init Vue 3 Project | **Descripción:** Crear andamiaje con Vite y PrimeVue.<br>**Escenario 1:** El comando `npm run dev` carga la aplicación base en el puerto 5173.<br>**Escenario 2:** El linter estricto de ESLint bloquea compilación si hay variables sin usar. | 3 |
+| **TSK-05** | Todos | Configuración Base de Datos | **Descripción:** Conectar Azure SQL mediante Environment Variables.<br>**Escenario 1:** En modo *Development*, la app se conecta a la BD local o de pruebas.<br>**Escenario 2:** En modo *Production*, extrae las credenciales ocultas desde el App Service. | 3 |
+| **TSK-06** | Todos | Setup Entity Framework Core | **Descripción:** Configurar el ORM y generar esquema inicial.<br>**Escenario 1:** El comando `dotnet ef database update` aplica las tablas exitosamente.<br>**Escenario 2:** Si hay un error de sintaxis en el ModelBuilder, la migración aborta y no ensucia la base de datos. | 5 |
+| **TSK-07** | EP-01 | Configurar JWT Bearer | **Descripción:** Generar y validar tokens de sesión.<br>**Escenario 1:** Tras un login válido, el servidor retorna un JWT codificado con el rol del usuario.<br>**Escenario 2:** Peticiones HTTP con tokens expirados reciben un código 401. | 5 |
+| **TSK-08** | EP-01 | Implementar RBAC Authorization | **Descripción:** Proteger endpoints por roles.<br>**Escenario 1:** Un Admin intenta acceder a `/api/reports` y el sistema le da un 200 OK.<br>**Escenario 2:** Un Empleado intenta acceder a `/api/reports` y el sistema le da un 403 Forbidden. | 3 |
+| **TSK-09** | EP-01 | Encriptación de Contraseñas | **Descripción:** Configurar BCrypt.Net para proteger datos sensibles.<br>**Escenario 1:** Al registrar un usuario, la BD guarda un Hash salteado, no la contraseña plana.<br>**Escenario 2:** El método de verificación confirma correctamente la clave plana contra el Hash almacenado. | 2 |
+| **TSK-10** | Todos | Configurar Swagger / OpenAPI | **Descripción:** Generar interfaz de pruebas del API.<br>**Escenario 1:** Navegar a `/swagger` muestra la UI interactiva.<br>**Escenario 2:** Los endpoints exigen inyectar el token JWT en el candado de seguridad superior para probarlos. | 2 |
+| **TSK-11** | Todos | Global Exception Handling | **Descripción:** Middleware para captura de errores.<br>**Escenario 1:** Una entidad no encontrada en BD devuelve 404 estructurado.<br>**Escenario 2:** Un error de sintaxis (NullReference) devuelve un 500 limpio en formato ProblemDetails RFC 7807, ocultando el StackTrace en Producción. | 3 |
+| **TSK-12** | Todos | Implementar Logging | **Descripción:** Integrar Serilog.<br>**Escenario 1:** Eventos HTTP se guardan en la consola indicando método y tiempo de respuesta.<br>**Escenario 2:** Excepciones críticas se guardan en un archivo `.txt` diario para trazabilidad. | 2 |
+| **TSK-13** | EP-01 | Domain BC: Identity & Access | **Descripción:** Mapear clases de autenticación.<br>**Escenario 1:** La entidad `User` instancia correctamente con UUID/Int.<br>**Escenario 2:** Instanciar un correo inválido lanza un `DomainException`. | 5 |
+| **TSK-14** | EP-03 | Domain BC: Companies & Equipment | **Descripción:** Mapear clases de clientes e inventario.<br>**Escenario 1:** Se crea una `Company` validando su RUC.<br>**Escenario 2:** Intentar asignar un equipo sin `CompanyId` válido arroja error. | 5 |
+| **TSK-15** | EP-05 | Domain BC: Service Requests | **Descripción:** Mapear clase `Ticket` y lógica de estado.<br>**Escenario 1:** Un ticket "Nuevo" transita a "Asignado" exitosamente.<br>**Escenario 2:** Un ticket "Cerrado" rechaza el método `.AssignTechnician()`. | 8 |
+| **TSK-16** | EP-02 | Domain BC: Subscriptions | **Descripción:** Lógica matemática de horas.<br>**Escenario 1:** Restar 2 horas de una bolsa de 10h deja el `Saldo` en 8h.<br>**Escenario 2:** Restar 5 horas de una bolsa de 2h lanza excepción de "Límite excedido". | 5 |
+| **TSK-17** | EP-08 | Domain BC: Quotations | **Descripción:** Lógica de presupuestos.<br>**Escenario 1:** Cotización aprobada cambia su estado de enum y setea el `ApprovedDate`.<br>**Escenario 2:** Cotización caducada bloquea cambios. | 5 |
+| **TSK-18** | Todos | Implementar Repository Pattern | **Descripción:** Interfaces e inyección de dependencias.<br>**Escenario 1:** `GetByIdAsync` retorna la entidad correspondiente de la BD.<br>**Escenario 2:** `AddAsync` inserta un nuevo registro usando Entity Framework Core. | 5 |
+| **TSK-19** | EP-08 | Mock Integración de Pagos | **Descripción:** Adaptador para simular tarjeta de crédito.<br>**Escenario 1:** Si se envía tarjeta "4242...", responde "Transacción Exitosa 200".<br>**Escenario 2:** Tarjeta distinta falla con "Fondos Insuficientes 400". | 5 |
+| **TSK-20** | EP-05 | Configurar Pinia Store | **Descripción:** Estado global en Vue.<br>**Escenario 1:** El store almacena el JWT en memoria.<br>**Escenario 2:** Al cerrar pestaña y volver, persiste mediante `localStorage`. | 3 |
+| **TSK-21** | Todos | Configurar Vue Router Guards | **Descripción:** Bloqueo de rutas en Front.<br>**Escenario 1:** Usuario sin token intentando entrar a `/dashboard` es pateado a `/login`.<br>**Escenario 2:** Usuario con token entra a `/dashboard` exitosamente. | 3 |
+| **TSK-22** | Todos | Implementar Interceptores Axios | **Descripción:** Adjuntar token HTTP.<br>**Escenario 1:** Toda petición GET/POST lleva `Authorization: Bearer xyz`.<br>**Escenario 2:** Si el Backend responde 401, Axios dispara función de cierre de sesión local. | 2 |
+| **TSK-23** | Todos | Setup i18n (Internacionalización) | **Descripción:** Implementar `vue-i18n`.<br>**Escenario 1:** Seleccionar "EN" cambia todos los textos clave al inglés.<br>**Escenario 2:** Seleccionar "ES" retorna los textos al español usando los archivos JSON respectivos. | 5 |
+| **TSK-24** | Todos | Layout Base del Sistema | **Descripción:** Crear Wrapper/Sidebar de Vue.<br>**Escenario 1:** Al achicar la pantalla (Mobile), el sidebar colapsa y muestra menú hamburguesa.<br>**Escenario 2:** Al navegar entre secciones, el header no parpadea gracias a `router-view`. | 5 |
+| **TSK-25** | Todos | Configurar CORS | **Descripción:** Permitir tráfico entre Front/Back.<br>**Escenario 1:** Peticiones desde el dominio de Vercel son autorizadas.<br>**Escenario 2:** Peticiones desde dominios desconocidos son bloqueadas por política CORS. | 2 |
+| **TSK-26** | Todos | Unit Testing de Dominio | **Descripción:** Pruebas con xUnit/Jest.<br>**Escenario 1:** Se ejecutan los test y el runner marca "Pass" en verde.<br>**Escenario 2:** El Code Coverage Analysis demuestra un cubrimiento > 70% en la capa de Domain. | 8 |
+| **TSK-27** | EP-09 | Optimización de Consultas LINQ | **Descripción:** Mejorar performance de DB.<br>**Escenario 1:** Las consultas de solo lectura para el Dashboard usan `AsNoTracking()` para no cargar la memoria.<br>**Escenario 2:** La consulta devuelve DTOs en lugar de entidades complejas evitando bucles infinitos. | 3 |
 
 ## 3.2. Impact Mapping
 
@@ -946,17 +1130,67 @@ Para profundizar en la psique de nuestros usuarios, realizamos una sesión de an
 
 ## 3.3. Product Backlog
 
-| # Orden | User Story Id | Título | Descripción | Story Points (1 / 2 / 3 / 5 / 8) |
-| :--- | :--- | :--- | :--- | :--- |
-| 1 | US01 | Inicio de Sesión y Control de Acceso por Rol | Como Usuario registrado, quiero iniciar sesión con mi correo corporativo y contraseña, para ingresar al panel web correspondiente a mis permisos. | 3 |
-| 2 | US03 | Registro y Mapeo de Equipos de la Oficina | Como Administrador de MYPE, quiero registrar los equipos indicando su número de serie y ubicación, para mantener un inventario unificado de hardware bajo cobertura. | 3 |
-| 3 | US05 | Creación Directa de Tickets de Soporte | Como Empleada de Oficina, quiero reportar la falla de mi equipo seleccionando la categoría del problema, para solicitar atención técnica rápida sin intermediarios. | 5 |
-| 4 | US07 | Panel de Control de Bolsa de Horas | Como Administrador de MYPE, quiero visualizar en un Dashboard las horas consumidas y disponibles, para mantener el control de los costos de soporte del mes. | 5 |
-| 5 | US09 | Aprobación/Rechazo Digital de Cotizaciones | Como Administrador de MYPE, quiero revisar y autorizar digitalmente las cotizaciones de repuestos, para validar los sobrecostos antes de cualquier compra. | 3 |
-| 6 | US02 | Registro de Empresa y Selección de Plan | Como Administrador de MYPE, quiero registrar mi empresa y elegir un plan mensual, para acceder a los servicios de soporte de UniLink. | 5 |
-| 7 | US06 | Seguimiento del Estado del Ticket | Como Empleada de Oficina, quiero visualizar el avance de mi ticket, para saber cuándo seré atendida sin hacer llamadas. | 3 |
-| 8 | US08 | Agendamiento de Mantenimientos Preventivos | Como Administrador de MYPE, quiero programar las visitas preventivas de mi suscripción, para prevenir fallas en los equipos antes de que afecten la operación. | 8 |
-| 9 | US04 | Ficha Clínica e Historial Técnico por Equipo | Como Administrador de MYPE, quiero consultar la ficha técnica e historial de cada PC, para evaluar si un equipo requiere reemplazo por fallas recurrentes. | 3 |
+La siguiente tabla consolida el Product Backlog del proyecto CompuCare, priorizado según el valor de negocio y las dependencias técnicas. Las historias técnicas (TSK) se ubican en los primeros niveles de prioridad para asegurar la base arquitectónica y la infraestructura antes de desarrollar las historias de usuario (US).
+
+| # Orden | ID (US/TSK) | Título | Descripción | Story Points |
+| :---: | :---: | :--- | :--- | :---: |
+| 1 | **TSK-01** | Setup de Repositorios y GitFlow | Configurar repositorios en GitHub para Frontend y Backend, estableciendo ramas `main`, `develop` y políticas de protección de ramas. | 3 |
+| 2 | **TSK-02** | Configurar CI/CD Pipeline | Integrar GitHub Actions para automatizar el despliegue del API en Azure/Render y la Web App en Vercel. | 5 |
+| 3 | **TSK-03** | Init ASP.NET Core Project | Inicializar solución Backend aplicando arquitectura en 4 capas (API, Application, Domain, Infrastructure). | 5 |
+| 4 | **TSK-04** | Init Vue 3 Project | Crear andamiaje del Frontend con Vite, Vue 3, Composition API y PrimeVue. | 3 |
+| 5 | **TSK-05** | Configuración Base de Datos | Crear la instancia de Azure SQL / PostgreSQL y enlazarla mediante connection strings seguros (Environment Variables). | 3 |
+| 6 | **TSK-06** | Setup Entity Framework Core | Configurar el ORM, DbContext y generar la primera migración de esquema hacia la base de datos. | 5 |
+| 7 | **TSK-10** | Configurar Swagger / OpenAPI | Configurar la interfaz de documentación interactiva para los endpoints del RESTful API. | 2 |
+| 8 | **TSK-24** | Layout Base del Sistema | Construir los componentes estructurales reutilizables de Vue (Sidebar dinámico, Header, Footer). | 5 |
+| 9 | **US-04** | Visualizar Planes | Como Visitante, quiero ver los planes en el Landing Page, para evaluar costos y coberturas. | 2 |
+| 10 | **US-05** | Contratar Plan Mensual | Como Admin MYPE, quiero suscribirme a un plan, para iniciar la cobertura de mis equipos. | 5 |
+| 11 | **TSK-07** | Configurar JWT Bearer | Implementar la generación y validación de JSON Web Tokens en el pipeline de ASP.NET Core. | 5 |
+| 12 | **TSK-08** | Implementar RBAC Authorization | Configurar políticas de autorización basadas en roles (Admin, Employee, Tech) en los controladores. | 3 |
+| 13 | **TSK-09** | Encriptación de Contraseñas | Implementar BCrypt.Net para el hasheo seguro de contraseñas antes de almacenarlas en DB. | 2 |
+| 14 | **TSK-13** | Domain BC: Identity & Access | Mapear las entidades `User`, `Session` y Value Objects en código de C# según el diagrama de clases. | 5 |
+| 15 | **US-01** | Registro de Admin MYPE | Como Admin MYPE, quiero registrarme con mi correo corporativo, para crear la cuenta de mi empresa. | 3 |
+| 16 | **US-02** | Inicio de Sesión | Como Usuario, quiero iniciar sesión con credenciales, para acceder a mi panel según mi rol. | 3 |
+| 17 | **US-03** | Recuperación de Password | Como Usuario, quiero restablecer mi contraseña con un token al correo, para recuperar mi acceso. | 5 |
+| 18 | **TSK-14** | Domain BC: Companies & Equipment | Mapear entidades `Company`, `Equipment`, `Employee` en la capa de Domain. | 5 |
+| 19 | **US-07** | Completar Perfil Empresa | Como Admin MYPE, quiero registrar el RUC y dirección, para formalizar los datos de facturación. | 2 |
+| 20 | **US-08** | Invitar Empleados | Como Admin MYPE, quiero enviar invitaciones a mis empleados, para que puedan crear sus propios tickets. | 5 |
+| 21 | **US-09** | Desactivar Empleado | Como Admin MYPE, quiero desactivar el acceso de un empleado, para mantener la seguridad si es despedido. | 3 |
+| 22 | **US-10** | Registrar Equipo (PC/Laptop) | Como Admin MYPE, quiero registrar el número de serie de una PC, para agregarla a la cobertura. | 3 |
+| 23 | **US-11** | Asignar Ubicación de Equipo | Como Admin MYPE, quiero indicar en qué escritorio está cada PC, para que el técnico la encuentre rápido. | 2 |
+| 24 | **US-12** | Ver Historial Clínico de PC | Como Admin MYPE, quiero ver las reparaciones pasadas de un equipo, para decidir si debo comprar uno nuevo. | 5 |
+| 25 | **TSK-15** | Domain BC: Service Requests | Mapear el Aggregate Root `Ticket` y la lógica de transición de estados (`TicketStatus`). | 8 |
+| 26 | **TSK-20** | Configurar Pinia Store | Instalar y estructurar stores globales en Vue 3 para manejar el estado de autenticación y carga de tickets. | 3 |
+| 27 | **US-13** | Crear Ticket de Soporte | Como Empleado, quiero reportar una falla describiendo el problema, para solicitar a un técnico. | 5 |
+| 28 | **US-14** | Ver Estado del Ticket | Como Empleado, quiero ver si mi ticket está "Pendiente" o "En curso", para saber cuándo seré atendido. | 3 |
+| 29 | **US-15** | Cancelar Ticket Propio | Como Empleado, quiero cancelar un ticket no asignado, para evitar la visita si solucioné el problema. | 2 |
+| 30 | **US-16** | Filtrar Tickets Anteriores | Como Empleado, quiero ver el historial de mis solicitudes, para tener constancia de mis reportes. | 3 |
+| 31 | **US-17** | Ver Tickets Asignados | Como Técnico, quiero ver mi lista de visitas programadas, para organizar mi ruta del día. | 5 |
+| 32 | **US-18** | Iniciar Diagnóstico | Como Técnico, quiero cambiar el estado del ticket a "En diagnóstico", para informar que inicié el trabajo. | 2 |
+| 33 | **US-19** | Registrar Falla Encontrada | Como Técnico, quiero escribir el diagnóstico técnico en el sistema, para dejar constancia del problema real. | 3 |
+| 34 | **US-20** | Cerrar Ticket y Registrar Horas | Como Técnico, quiero finalizar el ticket ingresando las horas invertidas, para que se descuenten de la bolsa del cliente. | 5 |
+| 35 | **TSK-16** | Domain BC: Subscriptions | Mapear entidades `Subscription`, `Plan`, `Period` y lógica de deducción de horas. | 5 |
+| 36 | **US-06** | Cancelar Suscripción | Como Admin MYPE, quiero cancelar la renovación automática, para dar de baja el servicio. | 3 |
+| 37 | **US-21** | Agendar Mantenimiento Preventivo | Como Admin MYPE, quiero seleccionar una fecha en el calendario, para programar la limpieza de los equipos. | 8 |
+| 38 | **US-22** | Finalizar Mantenimiento | Como Técnico, quiero marcar el mantenimiento como realizado, para consumir las unidades preventivas del plan. | 3 |
+| 39 | **TSK-17** | Domain BC: Quotations | Mapear entidades `Quotation`, `Payment` y estados de facturación. | 5 |
+| 40 | **US-23** | Generar Cotización de Repuesto | Como Técnico, quiero enviar un costo extra por cambio de piezas, para solicitar la aprobación de la empresa. | 5 |
+| 41 | **US-24** | Ver Cotización Pendiente | Como Admin MYPE, quiero recibir una alerta de cotización, para revisar el detalle del repuesto necesario. | 3 |
+| 42 | **US-25** | Aprobar Cotización | Como Admin MYPE, quiero hacer clic en "Aprobar", para autorizar el gasto y que el técnico proceda. | 3 |
+| 43 | **US-26** | Rechazar Cotización | Como Admin MYPE, quiero rechazar el presupuesto, para detener la reparación si excede mis fondos. | 2 |
+| 44 | **TSK-19** | Mock Integración de Pagos | Crear un servicio adaptador simulado (Mock) para procesar pagos con tarjeta sin tocar una pasarela real. | 5 |
+| 45 | **US-27** | Pagar Cotización | Como Admin MYPE, quiero simular el pago del repuesto aprobado, para liquidar la deuda en la plataforma. | 8 |
+| 46 | **TSK-27** | Optimización de Consultas LINQ | Aplicar `AsNoTracking()` y proyecciones explícitas en Entity Framework para agilizar la carga del Dashboard. | 3 |
+| 47 | **US-28** | Dashboard: Saldo de Horas | Como Admin MYPE, quiero ver un gráfico con mis horas consumidas y restantes, para controlar el uso de mi plan. | 5 |
+| 48 | **US-29** | Ver Top Problemas Frecuentes | Como Admin MYPE, quiero ver qué tipo de fallas ocurren más, para tomar acciones correctivas con el personal. | 5 |
+| 49 | **US-30** | Calificar Servicio | Como Empleado, quiero calificar del 1 al 5 al técnico, para brindar feedback sobre la atención recibida. | 3 |
+| 50 | **TSK-11** | Global Exception Handling | Desarrollar un Middleware en C# para atrapar errores no controlados y estandarizar las respuestas HTTP (RFC 7807). | 3 |
+| 51 | **TSK-12** | Implementar Logging | Integrar Serilog para escribir logs estructurados en consola y archivo durante la ejecución del API. | 2 |
+| 52 | **TSK-18** | Implementar Repository Pattern | Programar las interfaces genéricas y sus implementaciones concretas en Entity Framework. | 5 |
+| 53 | **TSK-21** | Configurar Vue Router Guards | Restringir el acceso a rutas del frontend verificando la existencia y validez del token JWT almacenado. | 3 |
+| 54 | **TSK-22** | Implementar Interceptores Axios | Configurar Axios para inyectar automáticamente el header `Authorization: Bearer <token>` en cada petición. | 2 |
+| 55 | **TSK-23** | Setup i18n (Internacionalización) | Configurar `vue-i18n` para soportar cambio de idioma en tiempo real (Español / Inglés) en la Web App. | 5 |
+| 56 | **TSK-25** | Configurar CORS | Habilitar políticas de Cross-Origin Resource Sharing en el Backend para aceptar peticiones desde el dominio de Vercel. | 2 |
+| 57 | **TSK-26** | Unit Testing de Dominio | Escribir pruebas unitarias (xUnit/NUnit) para verificar las validaciones del Aggregate Root de Tickets. | 8 |
 
 # Capítulo IV: Product Design
 
@@ -1627,64 +1861,168 @@ El repositorio del Landing Page fue conectado exitosamente a la plataforma Verce
 *   *(Adjuntar aquí: Captura de pantalla del dashboard de Vercel mostrando el proyecto "compucare-landing" en estado "Ready")*
 
 ##### 5.2.1.8. Team Collaboration Insights during Sprint
-La adopción de GitFlow se evidenció en la red de commits del proyecto. El trabajo paralelo se gestionó aislando el diseño del Frontend de la configuración del Backend.
-*   *(Adjuntar aquí: Captura de pantalla de la pestaña "Insights > Network" o "Contributors" del repositorio en GitHub)*
-*   
-#### 5.2.2. Sprint 2
-El objetivo del Sprint 2 se centró en la Web Application (Frontend en Vue) y el desarrollo de endpoints críticos en ASP.NET Core, específicamente el registro de Tickets de soporte por parte del empleado y el Dashboard de saldo de horas para el administrador.
+*(Placeholder: Insertar captura de los "Insights / Contributors" de GitHub mostrando el gráfico de commits del equipo)*.
 
-##### 5.2.2.1. Sprint Planning 2
-| Sprint # | Sprint 2 |
+---
+
+### 5.2.2. Sprint 2
+
+El Sprint 2 de **CompuCare**, proyecto de la startup **UniLink**, se enfocó en el desarrollo e integración de las funcionalidades principales de la aplicación web. El frontend se implementó con **Vue 3, Vite, JavaScript, Pinia, PrimeVue y Axios**, organizado por *Bounded Contexts*. Durante el periodo se incorporaron mecanismos de autenticación y autorización, vistas para distintos roles, gestión de solicitudes de soporte, asignación de técnicos, registro de intervenciones y conexión con cotizaciones.
+
+El equipo utilizó GitHub para trabajar mediante ramas de funcionalidades, commits y *Pull Requests*, con integración de avances a `dev` y posteriormente a `main`. Las pruebas ejecutadas con una API de demostración permitieron verificar los principales flujos de solicitudes, así como detectar asuntos pendientes de integración y despliegue.
+
+#### 5.2.2.1. Sprint Planning 2
+
+| Campo | Descripción |
 | :--- | :--- |
-| **Sprint Planning Background** | El equipo priorizó las historias de usuario orientadas al Core Domain de la aplicación: el registro de solicitudes y la gestión de horas. |
-| **Date** | **2026-09-05** |
-| **Time** | **09:30 AM** |
-| **Location** | **Reunión presencial Upc Monterrico** |
-| **Prepared By** | Miranda Romero, Sergio Luis (Team Leader) |
-| **Attendees** | Ramos Aguirre, Aldair / Condezo Pacheco, Fernando / Okuhama Diaz, Matthew / Miranda Romero, Sergio / Yauri Barrios, Antony |
-| **Sprint 1 Review Summary** | El Landing Page fue desplegado con éxito y validado comercialmente. El backend base está operativo en Rider. |
-| **Sprint 1 Retrospective Summary** | Se acordó realizar Code Reviews más estrictos antes de hacer merge a `develop`. |
-| **Sprint 2 Goal** | **Our focus is on** delivering the core ticketing and dashboard modules.<br>**We believe it delivers** autonomy for employees to report issues and control for administrators over their subscription balance.<br>**This will be confirmed when** an employee can create a ticket via the Vue App and the API stores it in the database. |
-| **Sprint 2 Velocity** | 18 Story Points |
-| **Sum of Story Points** | 16 Story Points |
+| **Sprint #** | Sprint 2 |
+| **Sprint Planning Background** | Priorización de las historias de usuario para la aplicación web: autenticación, solicitudes de soporte, gestión de horas y coordinación de atenciones. |
+| **Date** | 05/09/2026 (dato consignado en la planificación previa del informe; verificar con el equipo) |
+| **Time** | 09:30 AM (según planificación previa) |
+| **Location** | UPC Monterrico (según planificación previa) |
+| **Prepared By** | Miranda Romero, Sergio Luis |
+| **Attendees** | Ramos Aguirre, Aldair; Condezo Pacheco, Fernando; Okuhama Diaz, Matthew; Miranda Romero, Sergio; Yauri Barrios, Antony |
+| **Sprint 1 Review Summary** | Revisión de la Landing Page, configuración inicial de los repositorios y bases de la arquitectura de la plataforma. |
+| **Sprint 1 Retrospective Summary** | Necesidad de fortalecer las revisiones de código y la coordinación antes de integrar cambios compartidos. |
+| **Sprint 2 Goal** | **Our focus is on** delivering the core ticketing, access control and company dashboard modules. **We believe it delivers** autonomy for employees to report issues and visibility for administrators over support operations. **This will be confirmed when** users can authenticate, submit tickets, assign technicians and register technical interventions. |
+| **Sprint 2 Velocity** | 18 Story Points (planificación inicial, pendiente de conciliación) |
+| **Sum of Story Points** | 16 Story Points (planificación inicial, pendiente de conciliación) |
 
-##### 5.2.2.2. Aspect Leaders and Collaborators
-| Team Member (Last Name, First Name) | GitHub Username | Aspect: Vue Frontend Leader (L) / Collaborator (C) | Aspect: ASP.NET Core API Leader (L) / Collaborator (C) | Aspect: Database Design Leader (L) / Collaborator (C) |
-| :--- | :--- | :--- | :--- | :--- |
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+La asignación de responsabilidades por aspectos de desarrollo, según la matriz de planificación incluida originalmente en el informe, fue la siguiente:
+
+| Team Member (Last Name, First Name) | GitHub Username | Vue Frontend | API / Backend | Database Design |
+| :--- | :--- | :---: | :---: | :---: |
 | Miranda Romero, Sergio Luis | @SergioM1r | C | L | C |
 | Condezo Pacheco, Fernando André | @LEFEROX | C | C | L |
 | Okuhama Diaz, Matthew Shinko | @okudiaz124 | L | C | C |
 | Ramos Aguirre, Aldair Joaquin | @AldairRamos13 | C | C | C |
 | Yauri Barrios, Antony David | @AntonyYauri | C | C | C |
 
-##### 5.2.2.3. Sprint Backlog 2
-| Sprint # | Sprint 2 | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **User Story Id** | **Story Title** | **Task Id** | **Task Title** | **Task Description** | **Estimation (Hours)** | **Assigned To** |
-| US02 | Registro de Solicitud | T02.1 | Implementar Formulario Vue | Crear componente de Ticket con PrimeVue. | 5 | Yauri Barrios, Antony |
-| US05 | Endpoint Creación Ticket | T05.1 | Crear TicketController C# | Lógica de inserción en Base de Datos. | 4 | Condezo Pacheco, Fernando |
-| US03 | Dashboard de Horas | T03.1 | Implementar Vista Admin | Mostrar consumo de bolsa de horas. | 5 | Miranda Romero, Sergio |
+**Leyenda:** L = Leader; C = Collaborator.
 
-##### 5.2.2.4. Development Evidence for Sprint Review
-*(Placeholder: Tabla de Commits de GitHub de la rama Frontend y Backend API)*.
+Como aporte de desarrollo verificable, Matthew Okuhama integró **BC01 — Identity and Access** y **BC04 — Service Requests**, comprendiendo interfaces para diferentes roles, manejo de rutas protegidas, registro de tickets, asignación de técnicos e intervenciones técnicas. Los módulos se integraron mediante Pull Requests al repositorio compartido.
 
-##### 5.2.2.5. Execution Evidence for Sprint Review
-Se logró implementar la lógica de negocio core: los empleados pueden registrar incidencias y los administradores visualizar el estado del servicio en su panel de control.
-*   **Enlace de video de demostración:** [Enlace a Microsoft Stream del Sprint 2]
-*   *(Adjuntar aquí: Dos capturas de pantalla. 1: El formulario de registro de tickets. 2: El dashboard de control de horas)*
+#### 5.2.2.3. Sprint Backlog 2
 
-##### 5.2.2.6. Services Documentation Evidence for Sprint Review
-Los controladores de la capa de aplicación (`TicketController`, `DashboardController`) fueron expuestos y documentados, detallando los códigos de respuesta HTTP (200 OK, 201 Created, 400 Bad Request) y los Data Transfer Objects (DTOs) esperados.
-*   *(Adjuntar aquí: Captura de Swagger UI expandiendo el endpoint POST `/api/v1/tickets`)*
+Se presenta el backlog inicial documentado y las tareas técnicas adicionales necesarias para registrar los avances implementados. Las estimaciones iniciales se mantienen como constan en el informe; las tareas adicionales no tienen una estimación validada en horas.
 
-##### 5.2.2.7. Software Deployment Evidence for Sprint Review
-La Web Application construida en Vue.js fue desplegada exitosamente. Asimismo, se configuraron los servicios en la nube para alojar el Backend y permitir las peticiones CORS desde el Frontend.
-*   *(Adjuntar aquí: Captura de pantalla del servicio de hosting mostrando el despliegue de la Web App)*
+| User Story ID / Área | Task ID | Task Title | Task Description | Estimation (Hours) | Evidencia / Estado |
+| :--- | :--- | :--- | :--- | :---: | :--- |
+| US02 | T02.1 | Formulario Vue de solicitud | Formulario de creación de tickets para empleados con componentes de interfaz. | 5 | Implementado y probado |
+| US05 | T05.1 | Endpoint de creación de ticket | Integración de solicitud de creación con la API. La referencia inicial a `TicketController` de C# debe verificarse contra el backend final. | 4 | Probado con API de demostración |
+| US03 | T03.1 | Dashboard de horas | Vista de administración y visualización de información de suscripciones. | 5 | Vista incorporada; validar flujo completo |
+| BC01 | T-IAM-01 | Autenticación y acceso | Registro, inicio de sesión, recuperación de acceso y gestión de empleados. | Por confirmar | Integrado |
+| BC01 | T-IAM-02 | Control de rutas por roles | Restricción de rutas y navegación según rol de usuario. | Por confirmar | Integrado |
+| BC04 | T-SR-01 | Solicitudes de soporte | Creación, consulta y seguimiento de tickets. | Por confirmar | Implementado y probado |
+| BC04 | T-SR-02 | Asignación de técnicos | Gestión de tickets y asignación por administrador de UniLink. | Por confirmar | Implementado y probado |
+| BC04 | T-SR-03 | Intervenciones | Inicio de diagnóstico, informe técnico y registro de horas. | Por confirmar | Implementado y probado |
+| Integración BC04/BC05 | T-SR-04 | Cotizaciones | Creación de cotizaciones desde la vista técnica y visualización del estado. | Por confirmar | Envío probado; validación de aprobación pendiente |
+| Internacionalización | T-I18N-01 | Selector ES/EN | Configuración de Vue I18n y cambio de idioma persistente. | Por confirmar | Selector y traducciones iniciales integrados; traducción total pendiente |
 
-##### 5.2.2.8. Team Collaboration Insights during Sprint
-La integración entre el Frontend y Backend generó mayor actividad en el repositorio, resolviendo los conflictos de integración mediante revisiones de Pull Requests conjuntas entre los Aspect Leaders.
-*   *(Adjuntar aquí: Captura de pantalla de la gráfica de contribuciones de GitHub del Sprint 2)*
-*   
+*Nota:* Las claves T-IAM, T-SR y T-I18N son identificadores de documentación; deben alinearse con el tablero oficial si este maneja otra nomenclatura.
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+El control de versiones se realizó en GitHub mediante ramas de trabajo, commits descriptivos y solicitudes de incorporación de cambios a las ramas de integración.
+
+| Repository | Branch / Pull Request | Commit ID | Commit Message / Evidence | Estado |
+| :--- | :--- | :--- | :--- | :--- |
+| `compucare-web-app` | Integración BC01 a `dev` | `9dbfca2` | Integración de Identity and Access | Integrado |
+| `compucare-web-app` | `feature/bc01-route-guards` | `7dab54c` | Protección de rutas por roles | Integrado |
+| `compucare-web-app` | `feature/bc04-service-requests` | `4fec95f` | `feat(bc04): implement service requests and ticket management` | Integrado |
+| `compucare-web-app` | PR #3 hacia `dev` | `5ce54b2` | Integración de BC04 al equipo | Fusionado |
+| `compucare-web-app` | PR #5 hacia `main` | `fce459d` | `feat(i18n): add Spanish and English language switcher` | Fusionado |
+
+**Enlaces de evidencia:**
+
+- Repositorio: https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app
+- PR #3 (Service Requests): https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/3
+- PR #5 (internacionalización): https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/5
+
+Se integraron archivos de módulos como `src/iam/`, `src/service-requests/`, `src/equipment/`, `src/quotations/`, `src/router/index.js`, `src/App.vue` y `src/i18n/`.
+
+**Evidencia pendiente:** insertar capturas del historial de commits, PR #3, PR #5 y sus archivos modificados.
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+Las pruebas funcionales del incremento se realizaron en un entorno local con usuarios de demostración y la API bajo `/api/v1`.
+
+| Prueba | Procedimiento | Resultado observado |
+| :--- | :--- | :--- |
+| Autenticación y navegación | Iniciar sesión con distintos roles | Visualización de opciones de navegación según el usuario |
+| Creación de solicitud | Registrar incidencia de **PC Contabilidad** desde una cuenta de empleado | Ticket **#1** creado, inicialmente pendiente de asignación |
+| Asignación técnica | Ingresar como administrador de UniLink y seleccionar un técnico | Asignación realizada correctamente |
+| Gestión del técnico | Acceder a **Mis asignaciones** | Ticket asignado visible en la pantalla técnica |
+| Cotización | Enviar cotización asociada al ticket | Estado **`PENDING`** visible |
+| Informe técnico | Registrar intervención desde el perfil técnico | Ticket mostrado en estado **`Atendido`** |
+| Compilación | Ejecutar `npm run build` | Compilación Vite exitosa |
+| Idiomas | Alternar selector ES/EN | Selector operativo y preferencia conservada; traducciones de vistas aún incompletas |
+
+**Incidencia detectada:** se observó que el ticket podía permanecer en estado `Atendido` a pesar de tener una cotización `PENDING`. Se requiere validar esta regla entre BC04 y BC05 antes de considerar cerrado el flujo de reparación con repuestos.
+
+**Evidencias visuales por insertar:**
+
+1. Captura del inicio de sesión y navegación por roles.
+2. Captura de **Mis solicitudes** con ticket #1.
+3. Captura de **Gestión de tickets** con asignación.
+4. Captura de **Mis asignaciones** y cotización `PENDING`.
+5. Captura del resultado de `npm run build`.
+6. URL del video de ejecución de la aplicación, cuando el equipo lo proporcione.
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+El frontend utiliza **Axios** y clases de infraestructura para comunicarse con una API REST. La lógica de consulta y actualización se encapsula en servicios y stores de **Pinia**.
+
+Los siguientes endpoints se emplearon en las pruebas del módulo BC04:
+
+| Method | Endpoint | Function |
+| :---: | :--- | :--- |
+| GET | `/api/v1/tickets` | Consultar tickets |
+| POST | `/api/v1/tickets` | Registrar ticket |
+| PUT | `/api/v1/tickets/:id/cancel` | Cancelar ticket |
+| PUT | `/api/v1/tickets/:id/assign` | Asignar técnico |
+| PUT | `/api/v1/tickets/:id/start` | Iniciar diagnóstico |
+| PUT | `/api/v1/tickets/:id/diagnosis` | Registrar informe técnico y atención |
+
+Estos endpoints fueron revisados en `src/service-requests/infrastructure/ticket-api.js` y probados con el servidor de demostración. El informe original menciona **ASP.NET Core y OpenAPI/Swagger**; debe confirmarse la disponibilidad de ese backend definitivo antes de afirmar que esos mismos servicios están publicados o documentados en Swagger.
+
+**Evidencia pendiente:** capturas del contrato de servicios, ejemplos de request/response y Swagger UI si el equipo lo tiene implementado.
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+El frontend de CompuCare se construye con **Vue 3 y Vite**, utilizando el comando `npm run build` y generando los archivos de producción en la carpeta `dist`. La publicación prevista parte del código integrado en `main`.
+
+| Deployment Item | Value |
+| :--- | :--- |
+| Framework | Vue 3 |
+| Build tool | Vite |
+| Build command | `npm run build` |
+| Publish directory | `dist` |
+| Source branch | `main` |
+| Frontend hosting revisado | Netlify |
+| Estado del deploy | **Pendiente de validación de URL pública operativa** |
+
+GitHub mostró comentarios automatizados de Netlify relativos a vistas previas de despliegue; no obstante, al abrir uno de esos enlaces apareció **`Site not found`**, de modo que no constituye evidencia de publicación funcional. Igualmente, es necesario verificar la disponibilidad del backend en internet, su dirección pública y la correcta configuración de variables de entorno.
+
+**Evidencia pendiente:** URL definitiva, captura del panel de Netlify con estado publicado, pantalla de CompuCare accesible y pruebas de autenticación y tickets desde el dominio público.
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+El Sprint 2 evidenció la utilidad del trabajo colaborativo mediante **GitHub Flow / ramas de funcionalidad y Pull Requests**. La integración de los Bounded Contexts exigió coordinar servicios, rutas, dependencias e interfaces compartidas, particularmente entre identidad, equipos, solicitudes y cotizaciones.
+
+La revisión e integración de BC01 y BC04 permitieron consolidar una aplicación con navegación condicionada por roles y con procesos fundamentales de soporte técnico. Los avances fueron incorporados mediante Pull Requests y posteriormente compartidos en la rama principal para facilitar el trabajo del resto del equipo.
+
+También se identificó una dificultad de integración derivada de repositorios y ramas con historiales no relacionados. El equipo de desarrollo evitó forzar la fusión: se creó una rama nueva desde el `main` actualizado y se recuperaron los archivos de internacionalización desde un respaldo de Git, sin sobrescribir el código de los compañeros.
+
+Esta experiencia reforzó buenas prácticas de colaboración: mantener ramas actualizadas, preservar respaldos locales, hacer revisiones antes de fusionar, ejecutar pruebas de compilación y separar los cambios de desarrollo de las configuraciones y datos de demostración.
+
+**Evidencia pendiente:** capturas del historial de Pull Requests, contribuciones por integrante y comentarios de revisión.
+
+---
+
+
 ### 5.3. Validation Interviews
 En esta sección se documenta el proceso de validación final con usuarios reales de nuestros dos segmentos objetivos: Responsables de la empresa y Empleados.
 
@@ -1726,22 +2064,47 @@ El video **About-the-Product** es una presentación comercial dirigida a nuestro
 *   *(Placeholder: [Insertar 1 o 2 capturas/screenshots representativas de su video promocional])*
 ---
 
-# Conclusiones
+# Avance de Conclusiones
 
-[Contenido]
+El Sprint 2 permitió integrar las funcionalidades fundamentales de CompuCare para la gestión de soporte técnico empresarial. Las pruebas locales demostraron la viabilidad de registrar solicitudes, asignar técnicos y documentar intervenciones desde vistas adecuadas a cada rol de usuario.
 
-# Conclusiones y recomendaciones
+La arquitectura por Bounded Contexts y el uso de GitHub facilitaron el desarrollo paralelo, aunque también hicieron evidente la necesidad de coordinar las dependencias compartidas y los contratos de API para evitar problemas al integrar módulos.
 
-[Contenido]
+El proceso de validación funcional permitió detectar aspectos aún pendientes, en particular la relación entre cotizaciones sin aprobar y el cierre de tickets. Estas reglas deberán revisarse entre BC04 y BC05 para asegurar la consistencia de la información y de las operaciones.
 
-# Video About-the-Team
+La configuración inicial de internacionalización representa un avance en accesibilidad lingüística, al ofrecer la selección ES/EN. Para finalizarla será necesario conectar los textos de cada vista y verificar el comportamiento completo en ambas versiones.
 
-[Contenido]
+Finalmente, aunque el frontend compila exitosamente, la entrega técnica requiere comprobar una URL pública funcional y la disponibilidad del backend para ejecutar las operaciones desde internet.
 
-# Bibliografía
+# Avance de Bibliografía
 
-[Contenido]
+- GitHub. (s. f.). *GitHub Docs*. https://docs.github.com/
+- Netlify. (s. f.). *Netlify Documentation*. https://docs.netlify.com/
+- Pinia. (s. f.). *Pinia Documentation*. https://pinia.vuejs.org/
+- PrimeVue. (s. f.). *PrimeVue Documentation*. https://primevue.org/
+- Vite. (s. f.). *Vite Documentation*. https://vite.dev/
+- Vue.js. (s. f.). *Vue.js Guide*. https://vuejs.org/
+- Vue I18n. (s. f.). *Vue I18n Documentation*. https://vue-i18n.intlify.dev/
+- Vue Router. (s. f.). *Vue Router Documentation*. https://router.vuejs.org/
+- UniLink. (2026). *CompuCare Web Application* [Repositorio de software]. GitHub. https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app
+- UniLink. (2026). *CompuCare Project Report* [Repositorio de documentación]. GitHub. https://github.com/upc-pre-202620-1asi0730-8093-UniLink/report
 
-# Anexos
+# Avance de Anexos
 
-[Contenido]
+**Anexo A. Repositorio de código**  
+https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app
+
+**Anexo B. Pull Request de Service Requests (BC04)**  
+https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/3
+
+**Anexo C. Pull Request de internacionalización ES/EN**  
+https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/5
+
+**Anexo D. Pruebas funcionales**  
+[Insertar capturas: creación de tickets, asignación, intervención, cotización y compilación]
+
+**Anexo E. Despliegue**  
+[Insertar URL pública verificada y capturas de Netlify y backend operativo]
+
+**Anexo F. Colaboración**  
+[Insertar capturas de commits, Pull Requests y actividad del equipo]
