@@ -1726,60 +1726,163 @@ El Landing Page se configuró para integración continua utilizando Vercel.
 
 ---
 
-#### 5.2.2. Sprint 2
-El objetivo del Sprint 2 se centró en la Web Application (Frontend en Vue) y el desarrollo de endpoints críticos en ASP.NET Core, específicamente el registro de Tickets de soporte por parte del empleado y el Dashboard de saldo de horas para el administrador.
+### 5.2.2. Sprint 2
 
-##### 5.2.2.1. Sprint Planning 2
-| Sprint # | Sprint 2 |
+El Sprint 2 de **CompuCare**, proyecto de la startup **UniLink**, se enfocó en el desarrollo e integración de las funcionalidades principales de la aplicación web. El frontend se implementó con **Vue 3, Vite, JavaScript, Pinia, PrimeVue y Axios**, organizado por *Bounded Contexts*. Durante el periodo se incorporaron mecanismos de autenticación y autorización, vistas para distintos roles, gestión de solicitudes de soporte, asignación de técnicos, registro de intervenciones y conexión con cotizaciones.
+
+El equipo utilizó GitHub para trabajar mediante ramas de funcionalidades, commits y *Pull Requests*, con integración de avances a `dev` y posteriormente a `main`. Las pruebas ejecutadas con una API de demostración permitieron verificar los principales flujos de solicitudes, así como detectar asuntos pendientes de integración y despliegue.
+
+#### 5.2.2.1. Sprint Planning 2
+
+| Campo | Descripción |
 | :--- | :--- |
-| **Sprint Planning Background** | El equipo priorizó las historias de usuario orientadas al Core Domain de la aplicación: el registro de solicitudes y la gestión de horas. |
-| **Date** | **2026-09-05** |
-| **Time** | **09:30 AM** |
-| **Location** | **Reunión presencial Upc Monterrico** |
-| **Prepared By** | Miranda Romero, Sergio Luis (Team Leader) |
-| **Attendees** | Ramos Aguirre, Aldair / Condezo Pacheco, Fernando / Okuhama Diaz, Matthew / Miranda Romero, Sergio / Yauri Barrios, Antony |
-| **Sprint 1 Review Summary** | El Landing Page fue desplegado con éxito y validado comercialmente. El backend base está operativo en Rider. |
-| **Sprint 1 Retrospective Summary** | Se acordó realizar Code Reviews más estrictos antes de hacer merge a `develop`. |
-| **Sprint 2 Goal** | **Our focus is on** delivering the core ticketing and dashboard modules.<br>**We believe it delivers** autonomy for employees to report issues and control for administrators over their subscription balance.<br>**This will be confirmed when** an employee can create a ticket via the Vue App and the API stores it in the database. |
-| **Sprint 2 Velocity** | 18 Story Points |
-| **Sum of Story Points** | 16 Story Points |
+| **Sprint #** | Sprint 2 |
+| **Sprint Planning Background** | Priorización de las historias de usuario para la aplicación web: autenticación, solicitudes de soporte, gestión de horas y coordinación de atenciones. |
+| **Date** | 05/09/2026 (dato consignado en la planificación previa del informe; verificar con el equipo) |
+| **Time** | 09:30 AM (según planificación previa) |
+| **Location** | UPC Monterrico (según planificación previa) |
+| **Prepared By** | Miranda Romero, Sergio Luis |
+| **Attendees** | Ramos Aguirre, Aldair; Condezo Pacheco, Fernando; Okuhama Diaz, Matthew; Miranda Romero, Sergio; Yauri Barrios, Antony |
+| **Sprint 1 Review Summary** | Revisión de la Landing Page, configuración inicial de los repositorios y bases de la arquitectura de la plataforma. |
+| **Sprint 1 Retrospective Summary** | Necesidad de fortalecer las revisiones de código y la coordinación antes de integrar cambios compartidos. |
+| **Sprint 2 Goal** | **Our focus is on** delivering the core ticketing, access control and company dashboard modules. **We believe it delivers** autonomy for employees to report issues and visibility for administrators over support operations. **This will be confirmed when** users can authenticate, submit tickets, assign technicians and register technical interventions. |
+| **Sprint 2 Velocity** | 18 Story Points (planificación inicial, pendiente de conciliación) |
+| **Sum of Story Points** | 16 Story Points (planificación inicial, pendiente de conciliación) |
 
-##### 5.2.2.2. Aspect Leaders and Collaborators
-| Team Member (Last Name, First Name) | GitHub Username | Aspect: Vue Frontend Leader (L) / Collaborator (C) | Aspect: ASP.NET Core API Leader (L) / Collaborator (C) | Aspect: Database Design Leader (L) / Collaborator (C) |
-| :--- | :--- | :--- | :--- | :--- |
+#### 5.2.2.2. Aspect Leaders and Collaborators
+
+La asignación de responsabilidades por aspectos de desarrollo, según la matriz de planificación incluida originalmente en el informe, fue la siguiente:
+
+| Team Member (Last Name, First Name) | GitHub Username | Vue Frontend | API / Backend | Database Design |
+| :--- | :--- | :---: | :---: | :---: |
 | Miranda Romero, Sergio Luis | @SergioM1r | C | L | C |
 | Condezo Pacheco, Fernando André | @LEFEROX | C | C | L |
 | Okuhama Diaz, Matthew Shinko | @okudiaz124 | L | C | C |
 | Ramos Aguirre, Aldair Joaquin | @AldairRamos13 | C | C | C |
 | Yauri Barrios, Antony David | @AntonyYauri | C | C | C |
 
-##### 5.2.2.3. Sprint Backlog 2
-| Sprint # | Sprint 2 | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| **User Story Id** | **Story Title** | **Task Id** | **Task Title** | **Task Description** | **Estimation (Hours)** | **Assigned To** |
-| US02 | Registro de Solicitud | T02.1 | Implementar Formulario Vue | Crear componente de Ticket con PrimeVue. | 5 | Yauri Barrios, Antony |
-| US05 | Endpoint Creación Ticket | T05.1 | Crear TicketController C# | Lógica de inserción en Base de Datos. | 4 | Condezo Pacheco, Fernando |
-| US03 | Dashboard de Horas | T03.1 | Implementar Vista Admin | Mostrar consumo de bolsa de horas. | 5 | Miranda Romero, Sergio |
+**Leyenda:** L = Leader; C = Collaborator.
 
-##### 5.2.2.4. Development Evidence for Sprint Review
-*(Placeholder: Tabla de Commits de GitHub de la rama Frontend y Backend API)*.
+Como aporte de desarrollo verificable, Matthew Okuhama integró **BC01 — Identity and Access** y **BC04 — Service Requests**, comprendiendo interfaces para diferentes roles, manejo de rutas protegidas, registro de tickets, asignación de técnicos e intervenciones técnicas. Los módulos se integraron mediante Pull Requests al repositorio compartido.
 
-##### 5.2.2.5. Execution Evidence for Sprint Review
-*   **Video de la Aplicación Web (Tickets y Dashboard):** `*(Placeholder: [Enlace a Microsoft Stream])*`.
-*   *(Placeholder: [Insertar Capturas de la Web App en Vue mostrando el Dashboard y Formulario de Tickets])*
+#### 5.2.2.3. Sprint Backlog 2
 
-##### 5.2.2.6. Services Documentation Evidence for Sprint Review
-Se documentaron los endpoints de Tickets utilizando **OpenAPI (Swagger)**.
-*   *(Placeholder: [Insertar Captura de Swagger UI mostrando el método POST `/api/v1/tickets` con su request body y response])*
+Se presenta el backlog inicial documentado y las tareas técnicas adicionales necesarias para registrar los avances implementados. Las estimaciones iniciales se mantienen como constan en el informe; las tareas adicionales no tienen una estimación validada en horas.
 
-##### 5.2.2.7. Software Deployment Evidence for Sprint Review
-La Web App se desplegó en la nube y el Backend ASP.NET Core fue configurado para producción.
-*   *(Placeholder: [Captura del panel de control de Azure/Render/Vercel de la App y el API])*
+| User Story ID / Área | Task ID | Task Title | Task Description | Estimation (Hours) | Evidencia / Estado |
+| :--- | :--- | :--- | :--- | :---: | :--- |
+| US02 | T02.1 | Formulario Vue de solicitud | Formulario de creación de tickets para empleados con componentes de interfaz. | 5 | Implementado y probado |
+| US05 | T05.1 | Endpoint de creación de ticket | Integración de solicitud de creación con la API. La referencia inicial a `TicketController` de C# debe verificarse contra el backend final. | 4 | Probado con API de demostración |
+| US03 | T03.1 | Dashboard de horas | Vista de administración y visualización de información de suscripciones. | 5 | Vista incorporada; validar flujo completo |
+| BC01 | T-IAM-01 | Autenticación y acceso | Registro, inicio de sesión, recuperación de acceso y gestión de empleados. | Por confirmar | Integrado |
+| BC01 | T-IAM-02 | Control de rutas por roles | Restricción de rutas y navegación según rol de usuario. | Por confirmar | Integrado |
+| BC04 | T-SR-01 | Solicitudes de soporte | Creación, consulta y seguimiento de tickets. | Por confirmar | Implementado y probado |
+| BC04 | T-SR-02 | Asignación de técnicos | Gestión de tickets y asignación por administrador de UniLink. | Por confirmar | Implementado y probado |
+| BC04 | T-SR-03 | Intervenciones | Inicio de diagnóstico, informe técnico y registro de horas. | Por confirmar | Implementado y probado |
+| Integración BC04/BC05 | T-SR-04 | Cotizaciones | Creación de cotizaciones desde la vista técnica y visualización del estado. | Por confirmar | Envío probado; validación de aprobación pendiente |
+| Internacionalización | T-I18N-01 | Selector ES/EN | Configuración de Vue I18n y cambio de idioma persistente. | Por confirmar | Selector y traducciones iniciales integrados; traducción total pendiente |
 
-##### 5.2.2.8. Team Collaboration Insights during Sprint
-*(Placeholder: Captura de pantalla de GitHub "Insights / Network" o "Contributors" del Sprint 2)*.
+*Nota:* Las claves T-IAM, T-SR y T-I18N son identificadores de documentación; deben alinearse con el tablero oficial si este maneja otra nomenclatura.
+
+#### 5.2.2.4. Development Evidence for Sprint Review
+
+El control de versiones se realizó en GitHub mediante ramas de trabajo, commits descriptivos y solicitudes de incorporación de cambios a las ramas de integración.
+
+| Repository | Branch / Pull Request | Commit ID | Commit Message / Evidence | Estado |
+| :--- | :--- | :--- | :--- | :--- |
+| `compucare-web-app` | Integración BC01 a `dev` | `9dbfca2` | Integración de Identity and Access | Integrado |
+| `compucare-web-app` | `feature/bc01-route-guards` | `7dab54c` | Protección de rutas por roles | Integrado |
+| `compucare-web-app` | `feature/bc04-service-requests` | `4fec95f` | `feat(bc04): implement service requests and ticket management` | Integrado |
+| `compucare-web-app` | PR #3 hacia `dev` | `5ce54b2` | Integración de BC04 al equipo | Fusionado |
+| `compucare-web-app` | PR #5 hacia `main` | `fce459d` | `feat(i18n): add Spanish and English language switcher` | Fusionado |
+
+**Enlaces de evidencia:**
+
+- Repositorio: https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app
+- PR #3 (Service Requests): https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/3
+- PR #5 (internacionalización): https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/5
+
+Se integraron archivos de módulos como `src/iam/`, `src/service-requests/`, `src/equipment/`, `src/quotations/`, `src/router/index.js`, `src/App.vue` y `src/i18n/`.
+
+**Evidencia pendiente:** insertar capturas del historial de commits, PR #3, PR #5 y sus archivos modificados.
+
+#### 5.2.2.5. Execution Evidence for Sprint Review
+
+Las pruebas funcionales del incremento se realizaron en un entorno local con usuarios de demostración y la API bajo `/api/v1`.
+
+| Prueba | Procedimiento | Resultado observado |
+| :--- | :--- | :--- |
+| Autenticación y navegación | Iniciar sesión con distintos roles | Visualización de opciones de navegación según el usuario |
+| Creación de solicitud | Registrar incidencia de **PC Contabilidad** desde una cuenta de empleado | Ticket **#1** creado, inicialmente pendiente de asignación |
+| Asignación técnica | Ingresar como administrador de UniLink y seleccionar un técnico | Asignación realizada correctamente |
+| Gestión del técnico | Acceder a **Mis asignaciones** | Ticket asignado visible en la pantalla técnica |
+| Cotización | Enviar cotización asociada al ticket | Estado **`PENDING`** visible |
+| Informe técnico | Registrar intervención desde el perfil técnico | Ticket mostrado en estado **`Atendido`** |
+| Compilación | Ejecutar `npm run build` | Compilación Vite exitosa |
+| Idiomas | Alternar selector ES/EN | Selector operativo y preferencia conservada; traducciones de vistas aún incompletas |
+
+**Incidencia detectada:** se observó que el ticket podía permanecer en estado `Atendido` a pesar de tener una cotización `PENDING`. Se requiere validar esta regla entre BC04 y BC05 antes de considerar cerrado el flujo de reparación con repuestos.
+
+**Evidencias visuales por insertar:**
+
+1. Captura del inicio de sesión y navegación por roles.
+2. Captura de **Mis solicitudes** con ticket #1.
+3. Captura de **Gestión de tickets** con asignación.
+4. Captura de **Mis asignaciones** y cotización `PENDING`.
+5. Captura del resultado de `npm run build`.
+6. URL del video de ejecución de la aplicación, cuando el equipo lo proporcione.
+
+#### 5.2.2.6. Services Documentation Evidence for Sprint Review
+
+El frontend utiliza **Axios** y clases de infraestructura para comunicarse con una API REST. La lógica de consulta y actualización se encapsula en servicios y stores de **Pinia**.
+
+Los siguientes endpoints se emplearon en las pruebas del módulo BC04:
+
+| Method | Endpoint | Function |
+| :---: | :--- | :--- |
+| GET | `/api/v1/tickets` | Consultar tickets |
+| POST | `/api/v1/tickets` | Registrar ticket |
+| PUT | `/api/v1/tickets/:id/cancel` | Cancelar ticket |
+| PUT | `/api/v1/tickets/:id/assign` | Asignar técnico |
+| PUT | `/api/v1/tickets/:id/start` | Iniciar diagnóstico |
+| PUT | `/api/v1/tickets/:id/diagnosis` | Registrar informe técnico y atención |
+
+Estos endpoints fueron revisados en `src/service-requests/infrastructure/ticket-api.js` y probados con el servidor de demostración. El informe original menciona **ASP.NET Core y OpenAPI/Swagger**; debe confirmarse la disponibilidad de ese backend definitivo antes de afirmar que esos mismos servicios están publicados o documentados en Swagger.
+
+**Evidencia pendiente:** capturas del contrato de servicios, ejemplos de request/response y Swagger UI si el equipo lo tiene implementado.
+
+#### 5.2.2.7. Software Deployment Evidence for Sprint Review
+
+El frontend de CompuCare se construye con **Vue 3 y Vite**, utilizando el comando `npm run build` y generando los archivos de producción en la carpeta `dist`. La publicación prevista parte del código integrado en `main`.
+
+| Deployment Item | Value |
+| :--- | :--- |
+| Framework | Vue 3 |
+| Build tool | Vite |
+| Build command | `npm run build` |
+| Publish directory | `dist` |
+| Source branch | `main` |
+| Frontend hosting revisado | Netlify |
+| Estado del deploy | **Pendiente de validación de URL pública operativa** |
+
+GitHub mostró comentarios automatizados de Netlify relativos a vistas previas de despliegue; no obstante, al abrir uno de esos enlaces apareció **`Site not found`**, de modo que no constituye evidencia de publicación funcional. Igualmente, es necesario verificar la disponibilidad del backend en internet, su dirección pública y la correcta configuración de variables de entorno.
+
+**Evidencia pendiente:** URL definitiva, captura del panel de Netlify con estado publicado, pantalla de CompuCare accesible y pruebas de autenticación y tickets desde el dominio público.
+
+#### 5.2.2.8. Team Collaboration Insights during Sprint
+
+El Sprint 2 evidenció la utilidad del trabajo colaborativo mediante **GitHub Flow / ramas de funcionalidad y Pull Requests**. La integración de los Bounded Contexts exigió coordinar servicios, rutas, dependencias e interfaces compartidas, particularmente entre identidad, equipos, solicitudes y cotizaciones.
+
+La revisión e integración de BC01 y BC04 permitieron consolidar una aplicación con navegación condicionada por roles y con procesos fundamentales de soporte técnico. Los avances fueron incorporados mediante Pull Requests y posteriormente compartidos en la rama principal para facilitar el trabajo del resto del equipo.
+
+También se identificó una dificultad de integración derivada de repositorios y ramas con historiales no relacionados. El equipo de desarrollo evitó forzar la fusión: se creó una rama nueva desde el `main` actualizado y se recuperaron los archivos de internacionalización desde un respaldo de Git, sin sobrescribir el código de los compañeros.
+
+Esta experiencia reforzó buenas prácticas de colaboración: mantener ramas actualizadas, preservar respaldos locales, hacer revisiones antes de fusionar, ejecutar pruebas de compilación y separar los cambios de desarrollo de las configuraciones y datos de demostración.
+
+**Evidencia pendiente:** capturas del historial de Pull Requests, contribuciones por integrante y comentarios de revisión.
 
 ---
+
 
 ### 5.3. Validation Interviews
 En esta sección se documenta el proceso de validación final con usuarios reales de nuestros dos segmentos objetivos: Responsables de la empresa y Empleados.
@@ -1822,22 +1925,47 @@ El video **About-the-Product** es una presentación comercial dirigida a nuestro
 *   *(Placeholder: [Insertar 1 o 2 capturas/screenshots representativas de su video promocional])*
 ---
 
-# Conclusiones
+# Avance de Conclusiones
 
-[Contenido]
+El Sprint 2 permitió integrar las funcionalidades fundamentales de CompuCare para la gestión de soporte técnico empresarial. Las pruebas locales demostraron la viabilidad de registrar solicitudes, asignar técnicos y documentar intervenciones desde vistas adecuadas a cada rol de usuario.
 
-# Conclusiones y recomendaciones
+La arquitectura por Bounded Contexts y el uso de GitHub facilitaron el desarrollo paralelo, aunque también hicieron evidente la necesidad de coordinar las dependencias compartidas y los contratos de API para evitar problemas al integrar módulos.
 
-[Contenido]
+El proceso de validación funcional permitió detectar aspectos aún pendientes, en particular la relación entre cotizaciones sin aprobar y el cierre de tickets. Estas reglas deberán revisarse entre BC04 y BC05 para asegurar la consistencia de la información y de las operaciones.
 
-# Video About-the-Team
+La configuración inicial de internacionalización representa un avance en accesibilidad lingüística, al ofrecer la selección ES/EN. Para finalizarla será necesario conectar los textos de cada vista y verificar el comportamiento completo en ambas versiones.
 
-(https://drive.google.com/file/d/1MWOB4ddN_1YGEaoI-MxCeEaaEbbHgngg/view?usp=sharing)
+Finalmente, aunque el frontend compila exitosamente, la entrega técnica requiere comprobar una URL pública funcional y la disponibilidad del backend para ejecutar las operaciones desde internet.
 
-# Bibliografía
+# Avance de Bibliografía
 
-[Contenido]
+- GitHub. (s. f.). *GitHub Docs*. https://docs.github.com/
+- Netlify. (s. f.). *Netlify Documentation*. https://docs.netlify.com/
+- Pinia. (s. f.). *Pinia Documentation*. https://pinia.vuejs.org/
+- PrimeVue. (s. f.). *PrimeVue Documentation*. https://primevue.org/
+- Vite. (s. f.). *Vite Documentation*. https://vite.dev/
+- Vue.js. (s. f.). *Vue.js Guide*. https://vuejs.org/
+- Vue I18n. (s. f.). *Vue I18n Documentation*. https://vue-i18n.intlify.dev/
+- Vue Router. (s. f.). *Vue Router Documentation*. https://router.vuejs.org/
+- UniLink. (2026). *CompuCare Web Application* [Repositorio de software]. GitHub. https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app
+- UniLink. (2026). *CompuCare Project Report* [Repositorio de documentación]. GitHub. https://github.com/upc-pre-202620-1asi0730-8093-UniLink/report
 
-# Anexos
+# Avance de Anexos
 
-[Contenido]
+**Anexo A. Repositorio de código**  
+https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app
+
+**Anexo B. Pull Request de Service Requests (BC04)**  
+https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/3
+
+**Anexo C. Pull Request de internacionalización ES/EN**  
+https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/5
+
+**Anexo D. Pruebas funcionales**  
+[Insertar capturas: creación de tickets, asignación, intervención, cotización y compilación]
+
+**Anexo E. Despliegue**  
+[Insertar URL pública verificada y capturas de Netlify y backend operativo]
+
+**Anexo F. Colaboración**  
+[Insertar capturas de commits, Pull Requests y actividad del equipo]
