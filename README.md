@@ -375,9 +375,26 @@ Las pequeñas y medianas empresas enfrentan una baja productividad y costos impr
 
 #### 1.2.2.3. Lean UX Hypothesis Statements
 
-* **Hipótesis 1:** Creemos que ofreciendo un panel web dinámico donde el administrador visualice en tiempo real la bolsa de horas consumidas y disponibles, lograremos un nivel de transparencia que aumente la retención de clientes. Sabremos que tuvimos éxito cuando el 80% de las empresas activas renueven su plan al finalizar el periodo mensual.
-* **Hipótesis 2:** Creemos que integrando un flujo digital en la aplicación web para la aprobación de cotizaciones con desglose de diagnóstico y repuestos, aceleraremos los tiempos de reparación. Sabremos que tuvimos éxito cuando el tiempo de espera en estado "Pendiente de aprobación" sea menor a 4 horas en promedio dentro del sistema web.
-
+* **Hypothesis 1 :**
+  * <b> We </b>  believe we will achieve a 25% increase in the monthly subscription renewal rate.   
+  * <b> If </b> company administrators   
+  * <b> Attain</b>  the ability to learn about the support plans and complete their registration and login processes seamlessly
+  * <b>With</b> a Landing Page and Presentation Panel.
+* **Hypothesis 2:**
+  * <b> We </b> believe we will achieve higher customer retention and maintain business profitability through service transparency.
+  * <b>If</b> company administrators   
+  * <b>Attain</b> exact, real-time knowledge of how many support hours and preventive maintenance sessions they have left in their month 
+  * <b>With</b> a Consumption Control Panel (Web Dashboard).
+* **Hypothesis 3:**
+  * <b>We</b> believe we will achieve a 40% reduction in the average time between the issuance of an additional quote and its approval or rejection by the client.   
+  * <b>If</b> company administrators   
+  * <b>Attain</b> the ability to transparently review, approve, or reject spare parts expenses before the technical work is executed   
+  * <b>With</b> an additional quotes web module.
+* **Hypothesis 4:**
+    * <b>We</b> believe we will achieve faster technical support and higher satisfaction to drive monthly renewals.   
+    * <b>If</b> support technicians and company administrators   
+    * <b>Attain</b> the ability to consult past interventions associated with the code or serial number of each computer without having to explain the issues from scratch   
+    * <b>With</b> a Web-based per-equipment history.
 #### 1.2.2.4. Lean UX Canvas
 
 ![Lean UX Canvas](./assets/leanux.jpeg)
