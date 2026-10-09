@@ -985,23 +985,24 @@ En la capa de dominio de este contexto, se han definido las siguientes entidades
   
 #### Identity and Access
 
-![CompuCare Identity and Access Class Diagram](assets/clases_identidad.svg)
+<img width="392" height="406" alt="BC01 Identity and Access" src="https://github.com/user-attachments/assets/cb13e399-9278-4890-8bdc-12553b6ec53f" />
 
 #### Companies and Equipment
 
-![CompuCare Companies and Equipment Class Diagram](assets/clases_empresa.svg)
+<img width="441" height="439" alt="BC02 Companies and Equipment" src="https://github.com/user-attachments/assets/84c6559d-4fed-4aaf-9bfb-80410979054e" />
 
 #### Subscriptions and Coverage
 
-![CompuCare Subscriptions and Coverage Class Diagram](assets/clases_cobertura.svg)
+<img width="627" height="471" alt="BC03 Subscriptions and Coverage" src="https://github.com/user-attachments/assets/d0e3ace9-2be6-48cb-b7e6-cb24eb5d02ca" />
 
 #### Service Requests
 
-![CompuCare Service Requests Class Diagram](assets/clases_soporte.svg)
+<img width="498" height="634" alt="BC04 Service Requests" src="https://github.com/user-attachments/assets/c9f302b5-93b7-490c-bdc4-44933d665eb7" />
 
 #### Quotations and Payments
 
-![CompuCare Quotations and Payments Class Diagram](assets/clases_cotizaciones.svg)
+<img width="434" height="553" alt="BC05 Quotations and Payments" src="https://github.com/user-attachments/assets/5795dcd8-4f2b-41b5-9498-0ef507d0471c" />
+
 ## 4.8. Database Design
 
 El diseño de la base de datos de CompuCare permite almacenar de forma estructurada la información necesaria para el funcionamiento de la plataforma.
