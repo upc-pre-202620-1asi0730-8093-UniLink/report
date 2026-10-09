@@ -398,6 +398,11 @@ Las pequeñas y medianas empresas enfrentan una baja productividad y costos impr
    * **Perfil:** Personal operativo de las empresas suscritas que utiliza diariamente un equipo informático para cumplir con sus funciones.
    * **Necesidad:** Reportar fallas de hardware o software de manera rápida ingresando a la aplicación web de UniLink para retomar sus labores lo antes posible.
 
+3. **Técnicos de soporte independientes:**
+    * **Perfil:** Técnicos informáticos que ofrecen servicios de mantenimiento y reparación de computadoras por cuenta propia o que trabajan en pequeñas organizaciones que no cuentan con una empresa especializada ni con una aplicación para gestionar las solicitudes de soporte técnico.
+    * **Necesidad:** Organizar y gestionar sus solicitudes de servicio, registrar las atenciones realizadas, hacer seguimiento al estado de cada soporte y mantener un historial de los equipos atendidos desde una plataforma web centralizada.
+
+
 # Capítulo II: Requirements Elicitation & Analysis
 
 ## 2.1. Competidores
@@ -589,27 +594,162 @@ Para asegurar la recolección de información cualitativa de alto valor que nos 
 
 15. (Trazabilidad): ¿Sientes que cuando el técnico finalmente llega, tienes que volver a explicarle todo el problema desde cero porque la información se perdió en el camino?
 
+**Para el Segmento 3 (Técnicos de Soporte Independientes)**
+
+16. (Experiencia y especialización): ¿Qué tipo de equipos informáticos sueles reparar y qué tipos de fallas atiendes con mayor frecuencia?
+
+17. (Organización de atenciones): Cuando una empresa te contacta para reportar una falla en uno de sus equipos, ¿cómo organizas la atención y haces seguimiento hasta resolver el problema?
+
+18. (Dificultades operativas): ¿Cuál es la principal dificultad que encuentras al atender solicitudes de soporte técnico de empresas?
+
+19. (Repuestos y costos): Cuando una reparación requiere un repuesto o accesorio adicional, ¿cómo coordinas su aprobación con el cliente y registras el costo?
+
+20. (Registro e historial): ¿Cómo registras actualmente las reparaciones que realizas y la información de los equipos atendidos? ¿Puedes consultar fácilmente el historial de reparaciones anteriores?
+
+21. (Necesidades tecnológicas): Si tuvieras una plataforma web para gestionar tus servicios de soporte técnico, ¿qué funcionalidades necesitarías para organizar tus atenciones y facilitar tu trabajo?
 
 #### 2.2.2. Registro de entrevistas
 
-**Entrevista 1: Hikari (Técnica de Soporte de Computadoras)**
-* **Segmento objetivo:** Proveedor de Servicios / Técnico de Soporte.
-* **Enlace de la entrevista:** (https://drive.google.com/file/d/168aU_BrOYqF49c9xDDXBlJQ7F55Ue7dY/view?usp=drive_link)
-* **Resumen descriptivo:** Hikari se dedica al mantenimiento y reparación de laptops y computadoras de escritorio para pequeñas empresas (realiza diagnósticos de lentitud, fallas de sistema, cambios de componentes y mantenimientos preventivos). 
-* **Principales Dolores (Pain Points) Identificados:**
-    * **Canales de comunicación ineficientes:** Los clientes suelen contactarla por WhatsApp, pero la comunicación es desordenada y, a menudo, no saben explicar bien el problema ("solo me dicen que la computadora no funciona").
-    * **Pérdida de tiempo por intermediarios:** Frecuentemente la contacta un intermediario de la empresa y luego la derivan al usuario final, obligándola a recopilar la información de la falla desde cero varias veces.
-    * **Proceso de cotización manual:** Tiene que realizar el diagnóstico, enviar la cotización de manera informal y esperar la aprobación del responsable antes de poder realizar el trabajo o comprar los repuestos.
-    * **Falta de historial clínico:** Guarda sus registros en anotaciones personales y chats de WhatsApp, pero no están organizados por equipo, lo que dificulta identificar problemas recurrentes en una misma computadora.
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">URL global de las entrevistas</th>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <a href="https://upcedupe-my.sharepoint.com/:v:/g/personal/u202214499_upc_edu_pe/IQB_PpBP_KTJT6zFJaaVAW6ZAXopCF5K6xOX1tb9g9idoN4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=3cxzUN" target="_blank">Link de entrevista</a>
+            </td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th colspan="2">Entrevista N.° 1 - Segmento 3</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>Hikari</td>
+        </tr>
+        <tr>
+            <th>Apellido</th>
+            <td>Yamaguchi</td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td>21 años</td>
+        </tr>
+        <tr>
+            <th>Distrito</th>
+            <td>La Molina</td>
+        </tr>
+        <tr>
+            <th>Screenshot del cuadro de video</th>
+            <td><img src="./assets/Capitulo%20II/entrevistas/entrevista1.png" alt="Screenshot de la entrevista 1" width="300"></td>
+        </tr>
+        <tr>
+            <th>Inicio de la entrevista</th>
+            <td>00:22</td>
+        </tr>
+        <tr>
+            <th>Fin de la entrevista</th>
+            <td>03:05</td>
+        </tr>
+        <tr>
+            <th>Resumen de la entrevista</th>
+            <td>Hikari, de 21 años, reside en el distrito de La Molina y se dedica al mantenimiento y reparación de laptops y computadoras de escritorio. Atiende problemas de lentitud, fallas del sistema y cambios de componentes. Generalmente, recibe solicitudes por WhatsApp, donde consulta sobre las fallas y realiza un diagnóstico. Sin embargo, algunos clientes describen los problemas de manera poco clara o se comunican mediante terceros, lo que dificulta la comprensión y coordinación del servicio. Después, explica el diagnóstico, envía una cotización y espera la aprobación del responsable, pero no cuenta con una herramienta para generar cotizaciones ni organizar sus servicios. Por ello, necesita una plataforma sencilla y accesible desde el celular que le permita registrar los problemas reportados, la ubicación del equipo, los datos de contacto, el diagnóstico, el tiempo trabajado y los repuestos necesarios, además de gestionar las cotizaciones y aprobaciones.</td>
+        </tr>
+        <tr>
+            <th colspan="2">Entrevista N.° 2 - Segmento 2</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>Camila</td>
+        </tr>
+        <tr>
+            <th>Apellido</th>
+            <td>Torres</td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td>28 años</td>
+        </tr>
+        <tr>
+            <th>Distrito</th>
+            <td>Surquillo</td>
+        </tr>
+        <tr>
+            <th>Screenshot del cuadro de video</th>
+            <td><img src="./assets/Capitulo%20II/entrevistas/entrevista2.png" alt="Screenshot de la entrevista 2" width="300"></td>
+        </tr>
+        <tr>
+            <th>Inicio de la entrevista</th>
+            <td>03:22</td>
+        </tr>
+        <tr>
+            <th>Fin de la entrevista</th>
+            <td>09:50</td>
+        </tr>
+        <tr>
+            <th>Resumen de la entrevista</th>
+            <td>Camila Torres, de 28 años, reside en Surquillo y trabaja como diseñadora gráfica en una agencia de publicidad desde hace dos años. Estudió Diseño con especialización en Artes Digitales y utiliza una computadora de escritorio Mac como herramienta principal, además de WhatsApp, Instagram y Google. Admira a Apple por su ecosistema y las herramientas que facilitan su productividad. Su trabajo consiste en diseñar piezas gráficas para clientes y participar en reuniones de seguimiento; por ello, depende completamente de su computadora para cumplir con sus entregas. Cuando presenta fallas, intenta solucionarlas por su cuenta y, si no puede, informa al administrador para que contacte al área de soporte o a un técnico freelance. El principal problema es la lentitud del proceso, la pérdida de información durante la comunicación y la falta de seguimiento, llegando a pasar hasta tres días sin respuesta y recibiendo técnicos que desconocen el historial de la falla. Actualmente, su empresa no cuenta con una suscripción mensual de soporte ni un sistema formal para gestionar solicitudes. Por ello, considera ideal una plataforma web intuitiva y rápida que permita reportar fallas fácilmente, consultar el estado de las solicitudes y mantener organizada la información del soporte técnico. Además, está dispuesta a probar una suscripción si ofrece las funcionalidades que necesita.</td>
+        </tr>
+        <tr>
+            <th colspan="2">Entrevista N.° 3 - Segmento 2</th>
+        </tr>
+        <tr>
+            <th>Nombre</th>
+            <td>Erick</td>
+        </tr>
+        <tr>
+            <th>Apellido</th>
+            <td>Huallullo</td>
+        </tr>
+        <tr>
+            <th>Edad</th>
+            <td>24 años</td>
+        </tr>
+        <tr>
+            <th>Distrito</th>
+            <td>San Isidro</td>
+        </tr>
+        <tr>
+            <th>Screenshot del cuadro de video</th>
+            <td><img src="./assets/Capitulo%20II/entrevistas/entrevista3.png" alt="Screenshot de la entrevista 3" width="300"></td>
+        </tr>
+        <tr>
+            <th>Inicio de la entrevista</th>
+            <td>10:07</td>
+        </tr>
+        <tr>
+            <th>Fin de la entrevista</th>
+            <td>13:15</td>
+        </tr>
+        <tr>
+            <th>Resumen de la entrevista</th>
+            <td>Erick Huallulo, de 24 años, reside en San Isidro y trabaja como QA en una empresa de software desde hace poco más de dos años. Es bachiller en Ingeniería de Software y utiliza principalmente su laptop y celular para trabajar, comunicándose mediante Teams, WhatsApp y correo electrónico. Valora marcas como Apple, Microsoft y Lenovo por su confiabilidad y calidad de soporte técnico. En su día a día, revisa tareas, realiza pruebas de software e identifica errores para reportarlos al equipo de desarrollo, por lo que su laptop es indispensable para cumplir sus funciones. Cuando presenta fallas que no puede resolver por su cuenta, debe comunicar el problema y esperar a que alguien gestione la asistencia técnica, lo que retrasa sus actividades. Además, en ocasiones debe explicar nuevamente la falla al técnico, aunque ya la haya reportado por otros canales. Por ello, considera importante contar con una plataforma que centralice los reportes y registre el historial de cada incidencia, permitiendo al técnico revisar la información previamente y agilizar la atención.</td>
+        </tr>
+    </tbody>
+</table>
 
 #### 2.2.3. Análisis de entrevistas
 
-A partir de la entrevista realizada con nuestro segmento de Técnicos de Soporte, hemos podido validar que la informalidad del soporte técnico actual no solo afecta a las empresas, sino que también genera graves cuellos de botella para quienes proveen el servicio.
+A partir de las entrevistas realizadas a técnicos de soporte y usuarios que dependen de sus equipos informáticos para desarrollar sus actividades laborales, se identificaron dificultades recurrentes en la gestión de incidencias, la comunicación entre las partes involucradas y el seguimiento de las solicitudes de soporte. Los testimonios evidencian que los procesos actuales, basados principalmente en herramientas de comunicación informales y coordinaciones manuales, pueden ocasionar pérdida de información, demoras en la atención y dificultades para organizar los servicios técnicos.
 
 **Hallazgos principales:**
-1. **El uso de WhatsApp no es escalable:** Gestionar incidencias a través de chats genera pérdida de información y retrasos. Esto valida la necesidad principal de **CompuCare**: un sistema de *ticketing* centralizado donde el usuario final describa el problema exacto y el técnico lo reciba sin intermediarios.
-2. **Necesidad de formalizar cotizaciones:** El técnico pierde mucho tiempo esperando aprobaciones informales para comprar repuestos. Esto confirma que el módulo de "Aprobación de Cotizaciones Adicionales" en nuestra plataforma será una función clave para agilizar el trabajo.
-3. **Historial de equipos (Inventario):** La falta de registro de mantenimientos previos complica los diagnósticos. La plataforma aportará gran valor al crear un "historial clínico" automático por cada computadora registrada en el sistema.
+
+1. **Centralización de las solicitudes de soporte:** Los entrevistados señalaron que las incidencias suelen reportarse mediante WhatsApp, correo electrónico o a través de intermediarios, lo que dificulta la comunicación y puede ocasionar que la información se pierda o deba explicarse nuevamente. Frente a esta problemática, CompuCare propone un sistema de gestión de tickets que permita registrar cada incidencia con su descripción, datos de contacto y demás información relevante, facilitando la comunicación directa y organizada entre los usuarios y el personal de soporte.
+
+2. **Gestión y aprobación de cotizaciones:** Desde la perspectiva del técnico de soporte, la elaboración y comunicación de cotizaciones, así como la espera de aprobación para realizar reparaciones o adquirir repuestos, representan dificultades para organizar y completar los servicios. Por ello, CompuCare busca incorporar funcionalidades para generar cotizaciones adicionales y gestionar su aprobación, permitiendo mantener un registro de los costos propuestos y de las decisiones tomadas por los responsables.
+
+3. **Registro del historial de equipos e incidencias:** La ausencia de un registro centralizado dificulta consultar los problemas anteriores, los diagnósticos realizados y las acciones ejecutadas en cada equipo. Esta situación puede obligar a los técnicos a solicitar nuevamente información que ya había sido comunicada. Como respuesta, CompuCare permitirá mantener un historial de incidencias y servicios por equipo, facilitando el acceso a los antecedentes técnicos y contribuyendo a una atención más informada.
+
+4. **Seguimiento y trazabilidad de las solicitudes:** Los usuarios entrevistados manifestaron dificultades para conocer el estado de sus solicitudes y los avances de la atención técnica. La dependencia de coordinaciones manuales con administradores o responsables retrasa la comunicación y genera incertidumbre durante la resolución de las incidencias. En consecuencia, CompuCare contempla el seguimiento del estado de los tickets para que los usuarios puedan consultar el progreso de sus solicitudes y los responsables tengan mayor visibilidad de los servicios pendientes.
+
+5. **Reducción del tiempo improductivo:** Las fallas informáticas afectan directamente las actividades laborales de los usuarios, especialmente cuando dependen de sus computadoras para cumplir tareas y entregas. Las demoras en la coordinación y atención técnica pueden interrumpir su productividad durante periodos prolongados. Por ello, CompuCare busca organizar el flujo de atención desde el registro de la incidencia hasta su resolución, facilitando la coordinación entre usuarios, responsables y técnicos.
+
+6. **Usabilidad y accesibilidad de la plataforma:** Los entrevistados destacaron la importancia de contar con herramientas fáciles de utilizar y accesibles desde sus dispositivos habituales. En particular, el técnico entrevistado manifestó la necesidad de una solución sencilla desde el celular, mientras que los usuarios valoraron la posibilidad de reportar problemas y consultar su estado sin depender de comunicaciones constantes con terceros. Esto respalda la necesidad de diseñar una plataforma web intuitiva, que simplifique el registro de incidencias y el acceso a la información.
+
+En conclusión, las entrevistas permitieron identificar oportunidades de mejora en la gestión del soporte técnico, tanto desde la perspectiva de quienes brindan el servicio como de quienes dependen de los equipos informáticos para trabajar. Los principales problemas identificados se relacionan con la dispersión de la información, la falta de trazabilidad, las demoras en las aprobaciones y la dificultad para conocer el estado de las solicitudes. En respuesta, CompuCare propone centralizar la gestión de incidencias, facilitar el seguimiento de los servicios, registrar el historial de los equipos y organizar las cotizaciones y sus aprobaciones. Estas funcionalidades buscan mejorar la coordinación entre los involucrados y proporcionar una gestión del soporte técnico más ordenada y transparente.
+
 
 ## 2.3. Needfinding
 
