@@ -579,7 +579,7 @@ Para cubrir el ciclo de vida completo del proyecto (ideación, diseño, desarrol
 #### 5.1.2. Source Code Management
 El equipo utiliza **GitHub** como plataforma central de control de versiones. El proyecto se ha modularizado en repositorios independientes para mantener bajo acoplamiento:
 *   **Landing Page:** [https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-landing](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/landing)
-*   **Web Application (Frontend):** [[https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-webapp](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-webapp)]
+*   **Web Application (Frontend):** [https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-webapp](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-webapp)
 *   **RESTful API (Backend):** [https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-api](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-api)
 
 **GitFlow como Workflow de Colaboración:**
