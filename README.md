@@ -1015,7 +1015,17 @@ Para profundizar en la psique de nuestros usuarios, realizamos una sesión de an
 
 ### 2.5. Ubiquitous Language
 
-[contenido]
+### Bounded Context: Companies and Equipment (BC02)
+
+**Descripción del Contexto:**
+Este contexto cerrado se encarga de gestionar la información principal de las organizaciones cliente (PYMEs), el registro de su personal (empleados) y el mapeo de la infraestructura tecnológica (equipos informáticos y sus ubicaciones físicas).
+
+#### 1. Ubiquitous Language (Lenguaje Ubicuo)
+Para este contexto, los desarrolladores y expertos del negocio utilizan los siguientes términos en singular:
+* **Company:** Organización cliente que se registra en la plataforma CompuCare.
+* **Equipment:** Computadora o laptop perteneciente a la empresa, identificada de manera única en el inventario.
+* **Location:** Espacio físico específico dentro de la oficina (ej. "Escritorio 4 - Área de Diseño") donde se encuentra un equipo.
+* **Employee:** Personal operativo de la empresa cliente que utiliza un *Equipment* en su día a día.
 
 # Capítulo III: Requirements Specification
 
