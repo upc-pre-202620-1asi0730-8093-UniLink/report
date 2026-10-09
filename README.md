@@ -900,6 +900,15 @@ Por ejemplo, una solicitud para registrar un nuevo soporte es recibida por un Co
 Esta organización permite mantener separadas las responsabilidades del sistema y reducir el acoplamiento entre sus componentes.
 The following component diagrams show the internal organization of the main CompuCare application components.
 
+**Components Diagram: Companies and Equipment (BC02)**
+
+La arquitectura interna del backend para este Bounded Context se ha alineado estrictamente a los principios de Domain-Driven Design (DDD), dividiendo los componentes en las siguientes 4 capas lógicas:
+
+1. **Interfaces / Presentation Layer:** Contiene los controladores `CompanyController` y `EquipmentController`, encargados de recibir las peticiones HTTP desde la Web App (SPA).
+2. **Application Layer:** Contiene los servicios de orquestación como `CompanyCommandService` y `EquipmentQueryService`, que coordinan los casos de uso sin contener lógica de negocio.
+3. **Domain Layer:** Contiene el núcleo del negocio con las entidades `Company`, `Equipment` y `Employee`, además de las interfaces de los repositorios (`ICompanyRepository`).
+4. **Infrastructure Layer:** Contiene los adaptadores tecnológicos como `CompanyRepository` y `EquipmentRepository`, encargados de la persistencia de datos mediante `DatabaseContext`.
+
 #### Operations Components
 
 ![CompuCare Operations Components Diagram](assets/c4_componentes_operacion.svg)
@@ -941,6 +950,34 @@ Algunas relaciones principales son:
 - Cada atención finalizada puede formar parte del historial del equipo.
 
 El diagrama permite visualizar las relaciones y responsabilidades principales antes de implementar las clases del sistema.
+
+**Software Object-Oriented Design: Companies and Equipment (BC02)**
+
+En la capa de dominio de este contexto, se han definido las siguientes entidades principales en singular y utilizando identificadores numéricos (`int`) por eficiencia en base de datos relacional:
+
+* **Entidad: `Company`**
+  * `Id: int` *(PK Autoincremental)*
+  * `Ruc: string`
+  * `Name: string`
+  * `Address: string`
+
+* **Entidad: `Equipment`**
+  * `Id: int` *(PK Autoincremental)*
+  * `CompanyId: int` *(Foreign Key a Company)*
+  * `SerialNumber: string`
+  * `Location: string`
+
+* **Entidad: `Employee`**
+  * `Id: int` *(PK Autoincremental)*
+  * `CompanyId: int` *(Foreign Key a Company)*
+  * `FullName: string`
+  * `CorporateEmail: string`
+
+**Relaciones Estructurales del Contexto:**
+* Una `Company` puede tener registrados múltiples `Equipment` (Relación 1 a N).
+* Una `Company` puede tener múltiples `Employee` asociados (Relación 1 a N).
+* Tanto `Equipment` como `Employee` tienen una dependencia estricta de existencia hacia una `Company` (Composición).
+  
 #### Identity and Access
 
 ![CompuCare Identity and Access Class Diagram](assets/clases_identidad.svg)
