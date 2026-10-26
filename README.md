@@ -1014,7 +1014,7 @@ Para profundizar en la psique de nuestros usuarios, realizamos una sesión de an
 
 ### 2.4.1. Fase 1: Generación Abierta de Eventos (Open Space)
 
-[contenido]
+En esta fase inicial divergente, los integrantes del equipo registraron de manera abierta y sin restricciones de orden cronológico todos los eventos significativos ocurridos dentro del dominio de negocio (Domain Events), redactados estrictamente en tiempo verbal pasado sobre notas adhesivas de color naranja. El levantamiento abarcó todo el ciclo de vida de la interacción comercial y operativa: desde el registro de cuentas B2B y la activación de planes de suscripción, la importación del inventario de equipos y el onboarding de técnicos independientes, la creación y asignación de tickets de soporte, hasta el diagnóstico de incidencias en sitio, la aprobación de cotizaciones por repuestos, el descuento de la bolsa de horas y la calificación final del servicio.
 
 ### 2.4.2. Fase 2: Exploración y Línea de Tiempo (Explore)
 
