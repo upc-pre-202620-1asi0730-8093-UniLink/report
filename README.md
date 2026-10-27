@@ -1020,6 +1020,11 @@ En esta fase inicial divergente, los integrantes del equipo registraron de maner
 
 ### 2.4.2. Fase 2: Exploración y Línea de Tiempo (Explore)
 
+Durante la fase de exploración y convergencia, el equipo estructuró una línea temporal secuencial orientando los eventos de dominio de izquierda a derecha según el flujo natural de las operaciones. En este análisis se integraron comandos, actores y políticas de sistema, incorporando además notas de color rosado para identificar puntos de dolor, cuellos de botella e incertidumbres críticas del dominio (Hotspots). Entre las fricciones expuestas destacaron la gestión de cotizaciones adicionales por repuestos no cubiertos en el plan, los retrasos en el traslado físico de los técnicos hacia las oficinas que impactan los tiempos de respuesta (SLA), la responsabilidad por daños imprevistos a los equipos durante el mantenimiento, y el riesgo latente de que la empresa y el técnico acuerden el soporte por fuera de la plataforma para evadir la suscripción.
+
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-EXPLORE.png" />
+
+
 
 ### 2.4.3. Fase 3: Consolidación y Definición de Triggers (Close Space)
 
