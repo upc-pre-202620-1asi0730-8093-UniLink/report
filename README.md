@@ -1037,6 +1037,7 @@ En el cierre del espacio de exploración, se refinó la línea temporal eliminan
 
 Finalmente, en la consolidación del paisaje general (Final Landscape), el equipo delimitó las fronteras de los contextos (Bounded Contexts) agrupando semánticamente los eventos, comandos y políticas previamente definidos. Esta demarcación permitió estructurar la arquitectura modular de la plataforma, separando estrictamente las operaciones de soporte técnico y asignación (Core Domain) de los dominios genéricos, tales como la gestión de identidades B2B, el procesamiento de suscripciones y el control de inventario de activos, garantizando así la cohesión y futura escalabilidad del sistema.
 
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-FINAL-LANDSCAPE.png" />
 
 ### 2.5. Ubiquitous Language
 
