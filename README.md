@@ -1016,17 +1016,19 @@ Para profundizar en la psique de nuestros usuarios, realizamos una sesión de an
 
 En esta fase inicial divergente, los integrantes del equipo registraron de manera abierta y sin restricciones de orden cronológico todos los eventos significativos ocurridos dentro del dominio de negocio (Domain Events), redactados estrictamente en tiempo verbal pasado sobre notas adhesivas de color naranja. El levantamiento abarcó todo el ciclo de vida de la interacción comercial y operativa: desde el registro de cuentas B2B y la activación de planes de suscripción, la importación del inventario de equipos y el onboarding de técnicos independientes, la creación y asignación de tickets de soporte, hasta el diagnóstico de incidencias en sitio, la aprobación de cotizaciones por repuestos, el descuento de la bolsa de horas y la calificación final del servicio.
 
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-OPEN.png" />
+
 ### 2.4.2. Fase 2: Exploración y Línea de Tiempo (Explore)
 
-[contenido]
 
 ### 2.4.3. Fase 3: Consolidación y Definición de Triggers (Close Space)
 
-[contenido]
+
 
 ### 2.4.4. Fase 4: Modelo Final del Dominio (Final Landscape)
 
-[contenido]
+Finalmente, en la consolidación del paisaje general (Final Landscape), el equipo delimitó las fronteras de los contextos (Bounded Contexts) agrupando semánticamente los eventos, comandos y políticas previamente definidos. Esta demarcación permitió estructurar la arquitectura modular de la plataforma, separando estrictamente las operaciones de soporte técnico y asignación (Core Domain) de los dominios genéricos, tales como la gestión de identidades B2B, el procesamiento de suscripciones y el control de inventario de activos, garantizando así la cohesión y futura escalabilidad del sistema.
+
 
 ### 2.5. Ubiquitous Language
 
