@@ -1028,6 +1028,9 @@ Durante la fase de exploración y convergencia, el equipo estructuró una línea
 
 ### 2.4.3. Fase 3: Consolidación y Definición de Triggers (Close Space)
 
+En el cierre del espacio de exploración, se refinó la línea temporal eliminando duplicidades y clarificando las transiciones del sistema. Se integraron los comandos desencadenantes (Commands / post-it azules) que representan las intenciones y acciones operadas por los actores primarios (el administrador de la empresa, el empleado y el técnico independiente), así como las políticas y reglas de negocio reactivas (Policies / post-it lilas). Estas políticas modelan la lógica automática del sistema, tales como el descuento automático de la bolsa de horas tras finalizar un servicio, la pausa temporal del reloj de atención (SLA) a la espera de la aprobación de una cotización por repuestos, y la aplicación de reglas de suspensión para técnicos con baja calificación o cuentas B2B con morosidad en su suscripción.
+
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-CLOSE.png" />
 
 
 ### 2.4.4. Fase 4: Modelo Final del Dominio (Final Landscape)
