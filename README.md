@@ -1041,7 +1041,48 @@ Finalmente, en la consolidación del paisaje general (Final Landscape), el equip
 
 ### 2.5. Ubiquitous Language
 
-[contenido]
+En esta sección se define el Ubiquitous Language (Lenguaje Ubicuo) para el dominio de CompuCare, desarrollado por la startup UniLink, siguiendo los principios de modelado estratégico de Domain-Driven Design (DDD) formulados por Eric Evans. Este glosario formal unifica el vocabulario compartido entre los desarrolladores, los expertos del dominio y los usuarios finales (administradores, empleados y técnicos), eliminando ambigüedades operativas. Se enfoca estrictamente en términos de la dinámica de tercerización de soporte técnico B2B, mantenimiento de hardware, manejo de incidencias y modelos de suscripción mensual:
+
+* Additional Quote (Cotización Adicional): Presupuesto emitido en la plataforma web por el técnico para la compra de repuestos no cubiertos por el plan mensual, el cual debe ser aprobado o rechazado con un clic por el administrador de la empresa antes de ejecutar el trabajo.
+
+
+* Bag of Hours (Bolsa de Horas): Saldo de horas de soporte técnico correctivo incluidas en el plan mensual de la empresa, del cual se descuentan dinámicamente los tiempos invertidos por el técnico tras la resolución de cada ticket.
+
+
+* Company Administrator (Administrador de Empresa): Perfil responsable o gerente de la empresa cliente (MYPE) que se encarga de la suscripción, la aprobación de gastos en repuestos y la revisión del consumo de horas mediante el panel web.
+
+
+* Employee (Empleado): Personal operativo y usuario final que utiliza diariamente un equipo informático y que emplea la plataforma para reportar fallas y solicitar soporte técnico de forma directa.
+
+
+* Equipment History (Historial por Equipo / Historial Clínico): Registro unificado y cronológico que detalla todas las intervenciones técnicas pasadas, diagnósticos y reparaciones asociadas al número de serie de una computadora específica.
+
+
+* IT Equipment (Equipo Informático): Estación de trabajo, computadora de escritorio (PC) o laptop registrada en el inventario de la plataforma que cuenta con cobertura de soporte técnico.
+
+
+* Monthly Subscription (Suscripción Mensual): Modelo de pago fijo recurrente que permite a las empresas gestionar el mantenimiento informático, garantizando una bolsa de horas y mantenimientos preventivos a cambio de una tarifa predecible.
+
+
+* Preventive Maintenance (Mantenimiento Preventivo): Intervenciones periódicas programadas dentro del plan mensual de la empresa para limpiar y revisar los equipos, con el fin de mitigar el deterioro del hardware y evitar caídas operativas.
+
+
+* Spare Part (Repuesto): Componente de hardware adicional que el técnico requiere para reparar una computadora, cuyo costo no está incluido en la suscripción y genera una cotización adicional.
+
+
+* Subscribing Company (Empresa Suscriptora / MYPE): Pequeña o mediana empresa cliente, sin departamento de TI interno, que adquiere un plan en CompuCare para garantizar la operatividad de sus equipos.
+
+
+* Support Technician (Técnico de Soporte): Especialista informático independiente que utiliza la plataforma para recibir asignaciones, revisar fallas, registrar sus horas trabajadas y emitir diagnósticos técnicos.
+
+
+* Support Ticket (Ticket de Soporte): Solicitud o reporte digital creado por el empleado afectado, que incluye la descripción del problema y la ubicación del equipo, permitiendo su seguimiento desde el estado "Pendiente" hasta "Resuelto".
+
+
+* Technical Diagnosis (Diagnóstico Técnico): Evaluación técnica ingresada al sistema por el especialista luego de revisar el equipo informático, dejando constancia formal del problema real encontrado antes de la reparación.
+
+
+* Web Dashboard (Panel de Control Web): Interfaz centralizada donde el Administrador de Empresa visualiza métricas en tiempo real, como el saldo de horas de soporte, los mantenimientos preventivos disponibles y el estado de la suscripción.
 
 # Capítulo III: Requirements Specification
 
