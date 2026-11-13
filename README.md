@@ -49,6 +49,7 @@ Proyecto<br>
 | **1.0** | 20/09/2026 | Ramos, Aldair | Elaboración de la sección 1.2.1 (Antecedentes y problemática, 5W2H, Objetivos y Restricciones) enfocada exclusivamente en la aplicación web.  Desarrollo de la sección 1.2.2 (Lean UX Process: Problem Statements, Assumptions, Hypothesis y Canvas v2). Definición de la sección 1.3 (Segmentos objetivo) sintetizando los roles clave del proyecto. Elaboración de la matriz de evaluación del Student Outcome 5 de ABET para el Avance 1 (AV1).|
 | **1.0** | 20/09/2026 | Condezo, Fernando | Elaboración del Capítulo 5 (Product Implementation, Validation & Deployment). Configuración de la Gestión de Configuración de Software (SCM), definición de repositorios en GitHub con GitFlow y Conventional Commits. Documentación técnica del Sprint 1, incluyendo Sprint Planning, configuración inicial del backend en ASP.NET Core mediante JetBrains Rider, y evidencias de despliegue y colaboración de equipo. |
 | **1.0**     | 09/10/2026 | Yauri, Antony | Elaboración del Capítulo II (Requirements Elicitation & Analysis), incluyendo la sección 2.1 (Competidores), con el análisis competitivo y la definición de estrategias y tácticas frente a competidores. Desarrollo de la sección 2.2 (Entrevistas), abarcando el diseño, registro y análisis de entrevistas a los segmentos objetivo. Asimismo, desarrollo de la sección 2.3 (Needfinding), incluyendo User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping. |
+| **1.1** | 13/11/2026 | Equipo UniLink | Correcciones de AV2 basadas en observaciones docentes: carátula compacta sin imágenes, clasificación de Bounded Contexts por dominios, desarrollo de EventStorming y lenguaje ubicuo, revisión del C4 y modelo lógico integrado de base de datos, y Sprint Goals en español. |
 
 ---
 
@@ -1784,17 +1785,67 @@ erDiagram
     QUOTATION ||--|{ QUOTATION_LINE : contains
     QUOTATION ||--o| PAYMENT : simulated_payment
 
-    COMPANY { int id PK string name string ruc UK }
-    USER { int id PK int companyId FK string role string email UK }
-    EQUIPMENT { int id PK int companyId FK int assignedTo FK string serialNumber }
-    PLAN { int id PK string name decimal monthlyPrice }
-    SUBSCRIPTION { int id PK int companyId FK int planId FK decimal hoursUsed }
-    TICKET { int id PK int equipmentId FK int employeeId FK string status }
-    ASSIGNMENT { int id PK int ticketId FK int technicianId FK }
-    MAINTENANCE { int id PK int companyId FK string status }
-    QUOTATION { int id PK int ticketId FK string status decimal total }
-    QUOTATION_LINE { int id PK int quotationId FK decimal cost }
-    PAYMENT { int id PK int quotationId FK decimal amount bool isSimulated }
+    COMPANY {
+        int id PK
+        string name
+        string ruc UK
+    }
+    USER {
+        int id PK
+        int companyId FK
+        string role
+        string email UK
+    }
+    EQUIPMENT {
+        int id PK
+        int companyId FK
+        int assignedTo FK
+        string serialNumber
+    }
+    PLAN {
+        int id PK
+        string name
+        decimal monthlyPrice
+    }
+    SUBSCRIPTION {
+        int id PK
+        int companyId FK
+        int planId FK
+        decimal hoursUsed
+    }
+    TICKET {
+        int id PK
+        int equipmentId FK
+        int employeeId FK
+        string status
+    }
+    ASSIGNMENT {
+        int id PK
+        int ticketId FK
+        int technicianId FK
+    }
+    MAINTENANCE {
+        int id PK
+        int companyId FK
+        string status
+    }
+    QUOTATION {
+        int id PK
+        int ticketId FK
+        string status
+        decimal total
+    }
+    QUOTATION_LINE {
+        int id PK
+        int quotationId FK
+        decimal cost
+    }
+    PAYMENT {
+        int id PK
+        int quotationId FK
+        decimal amount
+        bool isSimulated
+    }
 ```
 
 Las relaciones entre *Bounded Contexts* se muestran para comprender la información compartida; el backend definitivo debe definir cómo evitar acoplamiento indebido entre agregados y cómo mantener la integridad referencial.
