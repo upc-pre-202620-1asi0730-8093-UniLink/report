@@ -1,74 +1,55 @@
 <div align="center">
 
-<img src="/assets/upc-logo.png" alt="UPC Logo" width="150"/>
+<img src="./assets/upc-logo.png" alt="Logo de la Universidad Peruana de Ciencias Aplicadas" width="120" />
 
-Universidad Peruana de Ciencias Aplicadas
+# Universidad Peruana de Ciencias Aplicadas
 
-Carrera de Ingeniería de Software
+**Carrera de Ingeniería de Software**
 
-### **1ASI0730**
+### 1ASI0730
 
-### **Aplicaciones Web**
+### Aplicaciones Web
 
-NRC
+**NRC**
 
-**1ASI0730**
+### 8093
 
-### **Informe del Trabajo Final**
+# Informe del Trabajo Final
 
-Docente
+**Docente**
 
-**Bautista Ubillús, Efrain Ricardo**
+**Bautista Ubillús, Efraín Ricardo**
 
-Equipo
+**Equipo**
 
-### **UniLink**
+### UniLink
 
-Proyecto
+**Proyecto**
 
-### **CompuCare**
-<br>
+### CompuCare
 
-#### **Integrantes**
+**Integrantes**
 
 </div>
 
-<div align="center">
-<table align="center" style="all: unset;">
-<tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;"><strong>Código</strong></td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;"><strong>Apellidos y Nombres</strong></td>
-</tr>
-<tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">[U202419311]</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Matthew Shinko Okuhama Diaz</td>
-</tr>
-<tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U202214499</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Yauri Barrios, Antony David</td>
-</tr>
-<tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U202411324</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Condezo Pacheco, Fernando André</td>
-</tr>
-<tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U20231B331</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Miranda Romero, Sergio Luis</td>
-</tr>
-<tr style="background: none !important; border: none !important;">
-<td align="left" style="border: none !important; padding: 0 40px 0 0 !important; background: none !important;">U20201F051</td>
-<td align="left" style="border: none !important; padding: 0 !important; background: none !important;">Ramos Aguirre, Aldair Joaquin</td>
-</tr>
+<table align="center">
+  <thead>
+    <tr><th>Código</th><th>Apellidos y nombres</th></tr>
+  </thead>
+  <tbody>
+    <tr><td>u202419311</td><td>Okuhama Diaz, Matthew Shinko</td></tr>
+    <tr><td>u202214499</td><td>Yauri Barrios, Antony David</td></tr>
+    <tr><td>u202411324</td><td>Condezo Pacheco, Fernando André</td></tr>
+    <tr><td>u20231B331</td><td>Miranda Romero, Sergio Luis</td></tr>
+    <tr><td>u20201F051</td><td>Ramos Aguirre, Aldair Joaquin</td></tr>
+  </tbody>
 </table>
-</div>
 
 <div align="center">
-
-<br>
 
 **Período 202620**
 
-**Septiembre 2026**
+**Noviembre de 2026**
 
 </div>
 
