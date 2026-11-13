@@ -1,55 +1,8 @@
 <div align="center">
 
-<img src="./assets/upc-logo.png" alt="Logo de la Universidad Peruana de Ciencias Aplicadas" width="120" />
+<img src="./assets/upc-logo.png" alt="Logo de la Universidad Peruana de Ciencias Aplicadas" width="65" />
 
-# Universidad Peruana de Ciencias Aplicadas
-
-**Carrera de Ingeniería de Software**
-
-### 1ASI0730
-
-### Aplicaciones Web
-
-**NRC**
-
-### **1ASI0730**
-
-# Informe del Trabajo Final
-
-**Docente**
-
-**Bautista Ubillús, Efraín Ricardo**
-
-**Equipo**
-
-### UniLink
-
-**Proyecto**
-
-### CompuCare
-
-**Integrantes**
-
-</div>
-
-<table align="center">
-  <thead>
-    <tr><th>Código</th><th>Apellidos y nombres</th></tr>
-  </thead>
-  <tbody>
-    <tr><td>u202419311</td><td>Okuhama Diaz, Matthew Shinko</td></tr>
-    <tr><td>u202214499</td><td>Yauri Barrios, Antony David</td></tr>
-    <tr><td>u202411324</td><td>Condezo Pacheco, Fernando André</td></tr>
-    <tr><td>u20231B331</td><td>Miranda Romero, Sergio Luis</td></tr>
-    <tr><td>u20201F051</td><td>Ramos Aguirre, Aldair Joaquin</td></tr>
-  </tbody>
-</table>
-
-<div align="center">
-
-**Período 202620**
-
-**Noviembre de 2026**
+<img src="./assets/caratula-compucare-av2.svg" alt="Carátula del Informe del Trabajo Final de Aplicaciones Web — UniLink, CompuCare" width="827" />
 
 </div>
 
