@@ -1979,19 +1979,26 @@ Para cubrir el ciclo de vida completo del proyecto (ideación, diseño, desarrol
 | **Swagger UI (OpenAPI)** | *API Documentation:* Documentación automatizada e interactiva de los endpoints del backend. |
 
 #### 5.1.2. Source Code Management
-El equipo utiliza **GitHub** como plataforma central de control de versiones. El proyecto se ha modularizado en repositorios independientes para mantener bajo acoplamiento:
-*   **Landing Page:** [https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-landing](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/landing)
-*   **Web Application (Frontend):** [https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-webapp](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-webapp)
-*   **RESTful API (Backend):** [https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-api](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-api)
 
-**GitFlow como Workflow de Colaboración:**
-Para gestionar el código colaborativo sin sobreescribir el trabajo de otros, el equipo aplica estrictamente **GitFlow**. El repositorio está estructurado en las siguientes ramas:
-*   `main`: Rama principal que contiene únicamente código estable y validado en producción. Todo merge hacia aquí genera una nueva versión (ej. v1.0.0).
-*   `develop`: Rama de integración principal. Contiene el código en desarrollo para el próximo release.
-*   `feature/*` (ej. `feature/ticket-registration`): Ramas creadas a partir de `develop` para desarrollar una única Historia de Usuario. Al terminar, se integran de vuelta a `develop`.
-*   `hotfix/*`: Ramas creadas desde `main` para corregir errores críticos en producción.
+El equipo usa GitHub para el seguimiento de cambios, la revisión de aportes y la documentación de la solución. Se han verificado los siguientes repositorios de la organización UniLink:
 
-**Estrategia de Integración:** Todo código desarrollado en una rama `feature` se integra a `develop` exclusivamente a través de **Pull Requests (PRs)**. Cada PR requiere obligatoriamente un *Code Review* de al menos un miembro distinto del equipo para asegurar que el código compila y cumple las convenciones antes de realizar el merge.
+| Producto | Repositorio | Estado observado |
+| :--- | :--- | :--- |
+| Landing Page | [UniLink/landing](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/landing) | Código público disponible |
+| Frontend Web Application | [UniLink/compucare-web-app](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app) | Repositorio de equipo activo |
+| Project Report | [UniLink/report](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/report) | Documentación del proyecto |
+| RESTful API definitiva | Pendiente de crear o acreditar su repositorio en la organización | No encontrada entre los repositorios públicos |
+| Repositorio anterior del frontend | [UniLink/compucare-webapp](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-webapp) | Referencia histórica, no reemplaza el repositorio de equipo activo |
+
+**GitFlow y convenciones:** el frontend utiliza `main`, `dev` y ramas `feature/*`; el informe también utiliza `main`, `dev` y ramas `docs/*`. La integración debe realizarse mediante Pull Requests y revisiones de compañeros cuando corresponda. La existencia de estas ramas no demuestra por sí sola que se esté aplicando efectivamente una política de aprobación obligatoria.
+
+- **`main`:** versión estable de referencia.
+- **`dev`:** rama de integración del equipo.
+- **`feature/*`:** implementación de una funcionalidad o un Bounded Context.
+- **`docs/*`:** trabajo editorial del informe.
+- **`release/*` y `hotfix/*`:** convenciones propuestas para futuras versiones y correcciones urgentes.
+
+Los commits seguirán [Conventional Commits](https://www.conventionalcommits.org/) y las publicaciones utilizarán [Semantic Versioning](https://semver.org/). Para responder a la observación del profesor, **deben crear y verificar GitHub Releases etiquetados**, por ejemplo `v0.1.0` para una primera versión estable y `v0.2.0` para la siguiente evolución, usando los números que correspondan a la historia real de entregas. No se declara un release como publicado sin comprobar su URL.
 
 #### 5.1.3. Source Code Style Guide & Conventions
 Para mantener un código legible y mantenible, aplicamos convenciones estrictas:
