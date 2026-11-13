@@ -55,7 +55,17 @@ Proyecto<br>
 
 # Project Report Collaboration Insights
 
-[Contenido correspondiente a Project Report Collaboration Insights]
+El trabajo colaborativo se documenta a partir de ramas de desarrollo, Pull Requests, revisiones de integración y contribuciones al informe. Los siguientes registros de GitHub permiten comprobar una parte del historial, pero **no sustituyen la evidencia visual de Insights/Contributors de cada Sprint** ni certifican la participación de todos los integrantes.
+
+| Evidencia | Repositorio | Aporte verificable |
+| :--- | :--- | :--- |
+| [PR #1](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/1) | Web Application | Integración del BC01 Identity and Access |
+| [PR #2](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/2) | Web Application | Protección de rutas por roles |
+| [PR #3](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/3) | Web Application | Funcionalidades del BC04 Service Requests |
+| [PR #5](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/5) | Web Application | Selector y configuración inicial de i18n |
+| [PR #21](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/report/pull/21) | Report | Integración de documentación del Sprint 2 |
+
+**Pendiente de completar con evidencia del equipo:** capturas de las estadísticas por contribuidor y período, identificación de los commits por integrante en landing/frontend/backend, registros de reuniones y matriz de roles LACX correspondiente al Sprint 3. No se asignan cantidades de commits ni horas de trabajo sin contrastar el historial y los registros del equipo.
 
 ---
 
