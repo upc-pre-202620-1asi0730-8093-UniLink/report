@@ -1,39 +1,29 @@
 <div align="center">
 
-### Universidad Peruana de Ciencias Aplicadas
+<p><strong>Universidad Peruana de Ciencias Aplicadas</strong><br>
+<strong>Carrera de Ingeniería de Software</strong></p>
 
-### Carrera de Ingeniería de Software
+<p><strong>1ASI0730</strong><br>
+<strong>Aplicaciones Web</strong><br>
+NRC<br>
+<strong>1ASI0730</strong></p>
 
-### **1ASI0730**
+<h2>Informe del Trabajo Final</h2>
 
-### **Aplicaciones Web**
+<p>Docente<br>
+<strong>Bautista Ubillús, Efrain Ricardo</strong></p>
 
-**NRC**
+<p>Equipo<br>
+<strong>UniLink</strong><br>
+Proyecto<br>
+<strong>CompuCare</strong></p>
 
-### **1ASI0730**
-
-## **Informe del Trabajo Final**
-
-**Docente**
-
-### **Bautista Ubillús, Efrain Ricardo**
-
-**Equipo**
-
-### **UniLink**
-
-**Proyecto**
-
-### **CompuCare**
-
-**Integrantes**
+<p><strong>Integrantes</strong></p>
 
 </div>
 
 <table align="center">
-<thead>
-<tr><th>Código</th><th>Apellidos y Nombres</th></tr>
-</thead>
+<thead><tr><th>Código</th><th>Apellidos y Nombres</th></tr></thead>
 <tbody>
 <tr><td>u202419311</td><td>Okuhama Diaz, Matthew Shinko</td></tr>
 <tr><td>u202214499</td><td>Yauri Barrios, Antony David</td></tr>
@@ -45,9 +35,8 @@
 
 <div align="center">
 
-**Período 202620**
-
-**Noviembre de 2026**
+<p><strong>Período 202620</strong><br>
+<strong>Noviembre de 2026</strong></p>
 
 </div>
 
@@ -989,27 +978,82 @@ Para profundizar en la psique de nuestros usuarios, realizamos una sesión de an
 
 ## 2.4. Big Picture Event Storming
 
-[contenido]
+El *Big Picture EventStorming* permite identificar los eventos del negocio de CompuCare, su secuencia y los puntos de coordinación entre los participantes. El siguiente modelo de análisis se reconstruye a partir de las historias de usuario y los flujos de soporte documentados en este informe. **Queda pendiente adjuntar la evidencia del taller colaborativo (capturas, participantes y enlace al tablero), cuando el equipo la proporcione.** No debe confundirse este análisis con una sesión grupal ya acreditada.
 
 ### 2.4.1. Fase 1: Generación Abierta de Eventos (Open Space)
 
-[contenido]
+Los eventos se expresan en pasado para describir hechos del dominio. La identificación preliminar se agrupó por proceso:
+
+| Flujo de negocio | Eventos del dominio identificados |
+| :--- | :--- |
+| Alta empresarial | Empresa registrada; responsable registrado; suscripción activada |
+| Inventario | Equipo registrado; equipo asignado a empleado; ubicación actualizada |
+| Mesa de ayuda | Solicitud de soporte registrada; técnico asignado; diagnóstico registrado; atención finalizada |
+| Cobertura | Horas de soporte consumidas; umbral de cobertura alcanzado; mantenimiento preventivo agendado |
+| Cotizaciones | Cotización generada; cotización aprobada o rechazada; pago de prueba registrado |
 
 ### 2.4.2. Fase 2: Exploración y Línea de Tiempo (Explore)
 
-[contenido]
+Se ordenaron los eventos siguiendo tres escenarios representativos. En el **flujo principal**, un empleado registra una incidencia de un equipo asignado; el administrador de UniLink asigna un técnico; el técnico inicia el diagnóstico y documenta la atención. Si se requieren repuestos, se genera una cotización que el responsable de la empresa debe evaluar antes de continuar con el trabajo adicional.
+
+| Escenario | Secuencia de referencia |
+| :--- | :--- |
+| Atención correctiva | Falla reportada → Ticket registrado → Técnico asignado → Diagnóstico iniciado → Atención registrada |
+| Suscripción | Empresa registrada → Plan seleccionado → Suscripción activada → Cobertura consultada → Horas consumidas |
+| Servicio adicional | Diagnóstico realizado → Cotización generada → Aprobación o rechazo → Pago simulado cuando corresponda |
+
+La espera de aprobación de cotizaciones y los límites de cobertura son puntos de decisión del proceso, no simples elementos de interfaz.
 
 ### 2.4.3. Fase 3: Consolidación y Definición de Triggers (Close Space)
 
-[contenido]
+En esta fase se distinguen actores, comandos y reglas que desencadenan los eventos:
+
+| Actor o iniciador | Comando | Regla o condición relevante | Evento esperado |
+| :--- | :--- | :--- | :--- |
+| Empleado | Registrar incidencia | El equipo debe estar asignado al usuario | Solicitud registrada |
+| Administrador UniLink | Asignar técnico | El ticket debe estar pendiente y el usuario seleccionado debe ser técnico | Técnico asignado |
+| Técnico | Iniciar diagnóstico | La solicitud debe estar asignada al técnico | Diagnóstico iniciado |
+| Técnico | Registrar intervención | Requiere diagnóstico, trabajo realizado y horas positivas | Atención registrada |
+| Técnico | Generar cotización | Debe estar asignado al ticket | Cotización generada |
+| Administrador empresarial | Aprobar/rechazar cotización | Debe pertenecer a su empresa y estar pendiente | Cotización resuelta |
+
+**Punto de mejora identificado:** el servidor de demostración no impide cerrar una solicitud solo por existir una cotización todavía pendiente; esa validación de negocio debe definirse y probarse antes del backend definitivo.
 
 ### 2.4.4. Fase 4: Modelo Final del Dominio (Final Landscape)
 
-[contenido]
+El resultado conceptual se organiza de acuerdo con los *Bounded Contexts* y sus dependencias. Primero se presentan los **Core Domains**, luego los **Supporting Domains** y finalmente el **Generic Domain**.
+
+| Clasificación DDD | Bounded Context | Responsabilidad |
+| :--- | :--- | :--- |
+| **Core** | **BC04 — Service Requests** | Gestión de incidencias, asignación, diagnóstico e intervención |
+| **Core** | **BC03 — Subscriptions and Coverage** | Planes, bolsa mensual de horas y consumo de cobertura |
+| **Supporting** | **BC02 — Companies and Equipment** | Empresas, empleados vinculados, equipos y ubicaciones |
+| **Supporting** | **BC05 — Quotations and Payments** | Cotizaciones de servicios adicionales y pagos simulados |
+| **Generic** | **BC01 — Identity and Access** | Identidad, autenticación, autorización y recuperación de acceso |
+
+Esta clasificación expresa la diferenciación de negocio: la atención técnica y su cobertura por suscripción constituyen el núcleo del servicio. No modifica los códigos BC ni los identificadores de historias.
 
 ### 2.5. Ubiquitous Language
 
-[contenido]
+El *Ubiquitous Language* reúne los términos que el equipo debe utilizar consistentemente en los modelos, conversaciones, historias de usuario y código.
+
+| Término | Significado dentro de CompuCare | Contexto |
+| :--- | :--- | :--- |
+| Empresa suscriptora (*Company*) | Organización que contrata soporte y registra sus equipos | BC02 |
+| Responsable empresarial (*Company Manager*) | Usuario autorizado para gestionar la empresa y aprobar gastos adicionales | BC01 / BC02 |
+| Empleado (*Employee*) | Persona de la empresa que utiliza un equipo y registra incidencias | BC01 / BC02 |
+| Equipo (*Equipment*) | Activo informático identificado, registrado y asociado con una empresa | BC02 |
+| Ubicación (*Location*) | Sede o escritorio donde está instalado un equipo | BC02 |
+| Plan (*Plan*) | Oferta de cobertura, horas y mantenimientos preventivos | BC03 |
+| Suscripción (*Subscription*) | Contratación de un plan por una empresa durante un período | BC03 |
+| Bolsa de horas (*Support Hours*) | Cantidad mensual de horas de soporte incluidas en el plan | BC03 |
+| Ticket (*Service Request*) | Solicitud de atención relacionada con una incidencia o equipo | BC04 |
+| Asignación (*Assignment*) | Vínculo entre un ticket y el técnico responsable | BC04 |
+| Diagnóstico (*Diagnosis*) | Resultado técnico de la evaluación de la falla | BC04 |
+| Intervención (*Work Log*) | Registro del trabajo realizado y tiempo empleado | BC04 |
+| Cotización (*Quotation*) | Propuesta de cobro por repuestos o servicios adicionales | BC05 |
+| Aprobación (*Approval*) | Decisión del responsable empresarial sobre una cotización | BC05 |
+| Pago simulado (*Simulated Payment*) | Registro académico de una operación sin transacción bancaria real | BC05 |
 
 # Capítulo III: Requirements Specification
 
@@ -1532,39 +1576,72 @@ Los principales dominios identificados son:
 - Gestión del historial de atenciones.
 
 Cada dominio agrupa las entidades, reglas y operaciones relacionadas con una responsabilidad específica del sistema.
+
+### Clasificación estratégica de los Bounded Contexts
+
+Siguiendo las observaciones de la revisión docente, el diseño se presenta en este orden: **Core → Supporting → Generic**. La clasificación se basa en el valor diferencial del servicio de soporte por suscripción, no en la numeración de los BC.
+
+| Tipo | Bounded Context | Fundamentación |
+| :--- | :--- | :--- |
+| **Core Domain** | **BC04 — Service Requests** | Resuelve la atención de fallas, desde el ticket hasta la intervención técnica. |
+| **Core Domain** | **BC03 — Subscriptions and Coverage** | Relaciona la atención con horas, coberturas y beneficios contratados. |
+| **Supporting Domain** | **BC02 — Companies and Equipment** | Aporta el inventario de activos y el contexto empresarial necesario. |
+| **Supporting Domain** | **BC05 — Quotations and Payments** | Gestiona excepciones comerciales y pagos académicos simulados. |
+| **Generic Domain** | **BC01 — Identity and Access** | Proporciona los mecanismos transversales de acceso y roles. |
+
 ### 4.6.1. Design-Level Event Storming
 
-El Design-Level Event Storming permite representar los principales eventos, comandos y actores que intervienen en los procesos de CompuCare.
+El **Design-Level EventStorming** profundiza en el comportamiento de los procesos clave. Se identifican actores, comandos, agregados responsables de las invariantes de negocio, eventos de dominio, políticas y modelos de consulta. Para respetar el orden DDD se presenta primero el proceso central de atención, después el ciclo de suscripción y finalmente las cotizaciones de soporte.
 
-A partir de los flujos principales de la plataforma se identificaron los siguientes comandos y eventos:
+**Convención del modelo:** un *comando* solicita una acción; un *agregado* aplica las reglas; un *evento* registra el hecho ocurrido; una *política* determina una consecuencia; un *read model* permite consultar el estado sin modificarlo.
 
-| Comando | Evento |
-|---|---|
-| Registrar empresa | Empresa registrada |
-| Registrar usuario | Usuario registrado |
-| Registrar equipo | Equipo registrado |
-| Crear solicitud | Solicitud registrada |
-| Asignar técnico | Técnico asignado |
-| Registrar diagnóstico | Diagnóstico registrado |
-| Generar cotización | Cotización generada |
-| Aprobar cotización | Cotización aprobada |
-| Actualizar estado | Estado de solicitud actualizado |
-| Finalizar atención | Atención finalizada |
+| Contexto | Actor | Comando | Agregado | Evento resultante | Restricción o consecuencia |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| **BC04 Core** | Empleado | Registrar falla | Ticket | Ticket registrado | Equipo asignado al empleado |
+| **BC04 Core** | Administrador UniLink | Asignar técnico | Ticket | Técnico asignado | Ticket pendiente y técnico válido |
+| **BC04 Core** | Técnico | Iniciar diagnóstico | Ticket | Diagnóstico iniciado | Técnico asignado al ticket |
+| **BC04 Core** | Técnico | Registrar atención | Ticket | Ticket atendido | Diagnóstico, trabajo y horas positivas |
+| **BC03 Core** | Responsable empresarial | Contratar plan | Suscripción | Suscripción activada | Plan existente |
+| **BC03 Core** | Servicio de soporte | Registrar horas | Suscripción | Horas de cobertura consumidas | Cálculo de consumo y alerta al 80 % |
+| **BC05 Supporting** | Técnico | Generar cotización | Cotización | Cotización emitida | Técnico vinculado al ticket |
+| **BC05 Supporting** | Responsable empresarial | Aprobar o rechazar | Cotización | Cotización resuelta | Debe pertenecer a su empresa |
 
-Por ejemplo, cuando un usuario registra una solicitud de soporte, el sistema genera el evento **Solicitud registrada**. Posteriormente, la asignación de un técnico genera el evento **Técnico asignado**.
+#### Core — Flujo de solicitudes de soporte (BC04)
 
-Este modelado permite comprender la secuencia de acciones del sistema y las responsabilidades asociadas a cada proceso.
-#### Company Registration Event Storming
+```mermaid
+flowchart LR
+    E["Empleado"] --> C1["Comando: reportar falla"]
+    C1 --> A1["Agregado: Ticket"]
+    A1 --> V1(["Ticket registrado"])
+    V1 --> C2["Comando: asignar técnico"]
+    C2 --> A1
+    A1 --> V2(["Técnico asignado"])
+    V2 --> C3["Comando: iniciar diagnóstico"]
+    C3 --> A1
+    A1 --> V3(["Diagnóstico iniciado"])
+    V3 --> C4["Comando: registrar atención"]
+    C4 --> A1
+    A1 --> V4(["Atención registrada"])
+    V4 --> R["Modelo de lectura: estado e historial"]
+```
 
-![CompuCare Company Registration Event Storming](assets/eventstorm_alta.svg)
-
-#### Support Attention Event Storming
+**Reglas y excepciones a revisar:** un ticket cancelado no debe recibir nuevas asignaciones; el empleado solo puede reportar un equipo propio; el técnico solo actúa sobre sus asignaciones; una cotización pendiente de aprobación no debería permitir completar trabajos adicionales que dependan de dicha aprobación. Esta última regla es una mejora pendiente, no una funcionalidad verificada en la API de demostración.
 
 ![CompuCare Support Attention Event Storming](assets/eventstorm_atencion.svg)
 
-#### Additional Service Event Storming
+#### Core — Alta y renovación de suscripción (BC03)
+
+La empresa selecciona un plan, se activa la suscripción y se asigna la cobertura mensual. El consumo de horas y la reserva de mantenimientos deben reflejarse en el panel de administración. En el alcance académico los pagos son simulados.
+
+![CompuCare Company Registration Event Storming](assets/eventstorm_alta.svg)
+
+#### Supporting — Cotización de servicio adicional (BC05)
+
+El técnico registra una cotización vinculada al ticket. El responsable empresarial puede aprobarla o rechazarla. El registro del pago es simulado; antes de cerrar una atención deben comprobarse las autorizaciones necesarias.
 
 ![CompuCare Additional Service Event Storming](assets/eventstorm_adicional.svg)
+
+**Evidencia pendiente de incorporar:** enlace al tablero colaborativo original del EventStorming, participantes y capturas del proceso de refinamiento. Los diagramas del informe representan el modelo documentado, no prueban por sí solos la realización del taller.
 
 ### 4.6.2. Software Architecture Context Diagram
 El Software Architecture Context Diagram representa a CompuCare como el sistema central y muestra su interacción con los principales actores externos.
@@ -1582,19 +1659,18 @@ The following context diagram represents the main external actors and systems th
 ![CompuCare System Context Diagram](assets/c4_contexto.svg)
 ### 4.6.3. Software Architecture Container Diagrams
 
-El Container Diagram divide la solución CompuCare en sus principales componentes tecnológicos.
+El diagrama C4 de nivel 2 diferencia los **contenedores ejecutables** y los sistemas externos. En particular, la Landing Page **no** se agrupa con la aplicación Vue; se despliega de manera independiente y su llamado a la acción conduce al inicio de sesión de la Web Application.
 
-Los contenedores considerados son:
+| Elemento | Tecnología | Responsabilidad | Estado |
+| :--- | :--- | :--- | :--- |
+| Landing Page | HTML5, CSS3, JavaScript | Información del servicio, precios y enlaces de acceso | Implementada en repositorio `landing` |
+| Frontend Web Application | Vue 3, Vite, JavaScript, Pinia, PrimeVue | Interfaz de los distintos roles y flujos de los BC | Implementada en `compucare-web-app` |
+| RESTful Web Services | ASP.NET Core, C# | Controladores, casos de uso y reglas de dominio | Arquitectura objetivo; **no verificada como desplegada** |
+| Base de datos relacional | PostgreSQL o MySQL mediante EF Core | Almacenamiento persistente de empresas, equipos, tickets, coberturas y pagos simulados | Objetivo del backend |
+| Servicio externo de notificaciones | Servicio de correo o API de terceros | Entrega de notificaciones y recuperación de acceso | Integración propuesta; no verificada |
+| Servidor de demostración | Node.js, JSON Server y `db.json` | Pruebas locales del frontend durante el desarrollo | Implementado como apoyo temporal |
 
-- **Landing Page:** presenta la propuesta de valor, beneficios, funcionamiento y planes de CompuCare.
-- **Web Application:** interfaz principal utilizada por clientes, empleados, técnicos y administradores.
-- **Backend / REST API:** procesa las reglas de negocio y las solicitudes enviadas desde la aplicación web.
-- **Database:** almacena la información persistente relacionada con usuarios, empresas, equipos, solicitudes, técnicos y suscripciones.
-
-La Web Application se comunica con el Backend mediante solicitudes HTTP. El Backend procesa la lógica de negocio y consulta o modifica la información almacenada en la base de datos.
-
-Esta separación facilita el mantenimiento, escalabilidad y evolución de la plataforma.
-The following container diagram shows the main software containers that compose the CompuCare solution and how they interact with each other.
+La comunicación entre la SPA y la API se realiza por HTTPS y JSON. El navegador no debe conectarse directamente a la base de datos. El sistema de correo es externo a CompuCare. **La arquitectura objetivo se distingue del estado implementado** para no presentar un backend C# todavía inexistente como desplegado.
 
 ![CompuCare Container Diagram](assets/c4_contenedores.svg)
 
@@ -1657,25 +1733,29 @@ Algunas relaciones principales son:
 - Cada atención finalizada puede formar parte del historial del equipo.
 
 El diagrama permite visualizar las relaciones y responsabilidades principales antes de implementar las clases del sistema.
-#### Identity and Access
 
-![CompuCare Identity and Access Class Diagram](assets/clases_identidad.svg)
-
-#### Companies and Equipment
-
-![CompuCare Companies and Equipment Class Diagram](assets/clases_empresa.svg)
-
-#### Subscriptions and Coverage
-
-![CompuCare Subscriptions and Coverage Class Diagram](assets/clases_cobertura.svg)
+**Presentación estratégica DDD: Core → Supporting → Generic.**
 
 #### Service Requests
 
 ![CompuCare Service Requests Class Diagram](assets/clases_soporte.svg)
 
+#### Subscriptions and Coverage
+
+![CompuCare Subscriptions and Coverage Class Diagram](assets/clases_cobertura.svg)
+
+#### Companies and Equipment
+
+![CompuCare Companies and Equipment Class Diagram](assets/clases_empresa.svg)
+
 #### Quotations and Payments
 
 ![CompuCare Quotations and Payments Class Diagram](assets/clases_cotizaciones.svg)
+
+#### Identity and Access
+
+![CompuCare Identity and Access Class Diagram](assets/clases_identidad.svg)
+
 ## 4.8. Database Design
 
 El diseño de la base de datos de CompuCare permite almacenar de forma estructurada la información necesaria para el funcionamiento de la plataforma.
@@ -1683,6 +1763,42 @@ El diseño de la base de datos de CompuCare permite almacenar de forma estructur
 Se utiliza un modelo relacional en el que las entidades principales se representan mediante tablas vinculadas por claves primarias y claves foráneas.
 
 El diseño busca evitar duplicidad de información, mantener la integridad de los datos y facilitar las consultas relacionadas con empresas, equipos, solicitudes y servicios.
+### Diagrama integrado del modelo relacional propuesto
+
+El siguiente ERD permite comprobar las cardinalidades y la relación entre los cinco contextos. Es un **modelo lógico de referencia**; las tablas físicas, tipos y restricciones definitivos deberán contrastarse con las migraciones de Entity Framework Core cuando se implemente el backend C#.
+
+```mermaid
+erDiagram
+    COMPANY ||--o{ USER : employs
+    COMPANY ||--o{ EQUIPMENT : owns
+    COMPANY ||--o{ SUBSCRIPTION : contracts
+    PLAN ||--o{ SUBSCRIPTION : defines
+    USER o|--o{ EQUIPMENT : assigned_to
+    USER ||--o{ TICKET : reports
+    EQUIPMENT ||--o{ TICKET : affected_by
+    TICKET ||--o{ ASSIGNMENT : assigned
+    USER ||--o{ ASSIGNMENT : technician
+    SUBSCRIPTION ||--o{ MAINTENANCE : covers
+    EQUIPMENT ||--o{ MAINTENANCE : serviced
+    TICKET ||--o{ QUOTATION : has
+    QUOTATION ||--|{ QUOTATION_LINE : contains
+    QUOTATION ||--o| PAYMENT : simulated_payment
+
+    COMPANY { int id PK string name string ruc UK }
+    USER { int id PK int companyId FK string role string email UK }
+    EQUIPMENT { int id PK int companyId FK int assignedTo FK string serialNumber }
+    PLAN { int id PK string name decimal monthlyPrice }
+    SUBSCRIPTION { int id PK int companyId FK int planId FK decimal hoursUsed }
+    TICKET { int id PK int equipmentId FK int employeeId FK string status }
+    ASSIGNMENT { int id PK int ticketId FK int technicianId FK }
+    MAINTENANCE { int id PK int companyId FK string status }
+    QUOTATION { int id PK int ticketId FK string status decimal total }
+    QUOTATION_LINE { int id PK int quotationId FK decimal cost }
+    PAYMENT { int id PK int quotationId FK decimal amount bool isSimulated }
+```
+
+Las relaciones entre *Bounded Contexts* se muestran para comprender la información compartida; el backend definitivo debe definir cómo evitar acoplamiento indebido entre agregados y cómo mantener la integridad referencial.
+
 ### 4.8.1. Database Diagrams
 
 El Database Diagram representa las principales tablas y relaciones de la plataforma CompuCare.
@@ -1713,25 +1829,28 @@ Entre las relaciones principales se consideran:
 - Las atenciones realizadas forman parte del historial de servicio de cada equipo.
 
 El uso de claves foráneas permite mantener la relación entre las tablas y asegurar la consistencia de la información almacenada.
-#### Identity and Access Database
 
-![CompuCare Identity Database Diagram](assets/bd_identidad.svg)
-
-#### Companies and Equipment Database
-
-![CompuCare Company Database Diagram](assets/bd_empresa.svg)
-
-#### Subscriptions and Coverage Database
-
-![CompuCare Coverage Database Diagram](assets/bd_cobertura.svg)
+**Presentación estratégica DDD: Core → Supporting → Generic.**
 
 #### Service Requests Database
 
 ![CompuCare Support Database Diagram](assets/bd_soporte.svg)
 
+#### Subscriptions and Coverage Database
+
+![CompuCare Coverage Database Diagram](assets/bd_cobertura.svg)
+
+#### Companies and Equipment Database
+
+![CompuCare Company Database Diagram](assets/bd_empresa.svg)
+
 #### Quotations and Payments Database
 
 ![CompuCare Quotations Database Diagram](assets/bd_cotizaciones.svg)
+
+#### Identity and Access Database
+
+![CompuCare Identity Database Diagram](assets/bd_identidad.svg)
 
 # Capítulo V: Product Implementation, Validation & Deployment
 
@@ -1799,7 +1918,7 @@ El objetivo del Sprint 1 fue la construcción y despliegue del Landing Page para
 | **Attendees (to planning meeting)** | Ramos Aguirre, Aldair / Condezo Pacheco, Fernando / Okuhama Diaz, Matthew / Miranda Romero, Sergio / Yauri Barrios, Antony |
 | **Sprint 0 Review Summary** | N/A (Primer sprint). Se definieron los lineamientos iniciales de arquitectura en JetBrains Rider y configuración de repositorios. |
 | **Sprint 0 Retrospective Summary** | N/A. Se establecieron acuerdos de comunicación interna y revisión de código (Pull Requests). |
-| **Sprint 1 Goal** | **Our focus is on** launching the CompuCare Landing Page. <br>**We believe it delivers** a clear understanding of our B2B value proposition to SME administrators.<br>**This will be confirmed when** visitors can see our subscription plans and interact with the contact forms. |
+| **Sprint 1 Goal** | **Nuestro enfoque** es publicar la Landing Page de CompuCare. **Creemos que aporta** una comprensión clara de nuestra propuesta de valor B2B a los administradores de pequeñas empresas. **Lo confirmaremos cuando** los visitantes puedan consultar los planes de suscripción y utilizar los formularios de contacto. |
 | **Sprint 1 Velocity** | 15 Story Points |
 | **Sum of Story Points** | 12 Story Points |
 
@@ -1863,7 +1982,7 @@ El equipo utilizó GitHub para trabajar mediante ramas de funcionalidades, commi
 | **Attendees** | Ramos Aguirre, Aldair; Condezo Pacheco, Fernando; Okuhama Diaz, Matthew; Miranda Romero, Sergio; Yauri Barrios, Antony |
 | **Sprint 1 Review Summary** | Revisión de la Landing Page, configuración inicial de los repositorios y bases de la arquitectura de la plataforma. |
 | **Sprint 1 Retrospective Summary** | Necesidad de fortalecer las revisiones de código y la coordinación antes de integrar cambios compartidos. |
-| **Sprint 2 Goal** | **Our focus is on** delivering the core ticketing, access control and company dashboard modules. **We believe it delivers** autonomy for employees to report issues and visibility for administrators over support operations. **This will be confirmed when** users can authenticate, submit tickets, assign technicians and register technical interventions. |
+| **Sprint 2 Goal** | **Nuestro enfoque** es entregar los módulos principales de tickets, control de acceso y panel empresarial. **Creemos que aporta** autonomía a los empleados para reportar fallas y visibilidad a los administradores sobre las atenciones. **Lo confirmaremos cuando** los usuarios puedan iniciar sesión, crear tickets, asignar técnicos y registrar intervenciones técnicas. |
 | **Sprint 2 Velocity** | 18 Story Points (planificación inicial, pendiente de conciliación) |
 | **Sum of Story Points** | 16 Story Points (planificación inicial, pendiente de conciliación) |
 
