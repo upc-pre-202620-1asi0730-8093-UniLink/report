@@ -1774,6 +1774,166 @@ Las principales entidades identificadas están relacionadas con usuarios, empres
 
 ### 4.7.1. Class Diagrams
 
+Además de los diagramas entregados durante las etapas anteriores, se propone el siguiente refinamiento de clases y agregados para aplicar DDD. Los diagramas separan **raíces de agregado, entidades internas, operaciones e identificadores de otros contextos**. Las operaciones representan el **modelo de dominio previsto** y deberán contrastarse con las clases C# cuando se implemente la API final.
+
+#### Modelo DDD propuesto — BC04 Service Requests (Core)
+
+```mermaid
+classDiagram
+direction LR
+class ServiceRequest {
+  +Guid Id
+  +Guid CompanyId
+  +Guid EquipmentId
+  +Guid RequesterId
+  -RequestStatus status
+  -Guid assignedTechnicianId
+  +AssignTechnician(Guid technicianId)
+  +StartDiagnosis()
+  +RecordIntervention(decimal hours, string report)
+  +Cancel()
+}
+class WorkLog {
+  +Guid Id
+  +Guid TechnicianId
+  +decimal Hours
+  +string WorkDone
+}
+class RequestStatus {
+  <<enumeration>>
+  PendingAssignment
+  Assigned
+  InDiagnosis
+  Resolved
+  Cancelled
+}
+ServiceRequest "1" *-- "0..*" WorkLog : records
+ServiceRequest --> RequestStatus : state
+```
+
+El agregado `ServiceRequest` protege las transiciones de estado. `EquipmentId` y `RequesterId` son identificadores externos a BC04, no asociaciones directas con agregados de BC01 o BC02.
+
+#### Modelo DDD propuesto — BC03 Subscriptions and Coverage (Core)
+
+```mermaid
+classDiagram
+direction LR
+class Plan {
+  +Guid Id
+  +string Name
+  +int MonthlySupportMinutes
+  +int PreventiveVisits
+}
+class Subscription {
+  +Guid Id
+  +Guid CompanyId
+  +Guid PlanId
+  +Activate()
+  +Renew()
+  +ConsumeHours(decimal hours, Guid operationId)
+}
+class CoveragePeriod {
+  +DateTime StartsAt
+  +DateTime EndsAt
+  +decimal IncludedHours
+  +decimal UsedHours
+  +decimal AvailableHours()
+}
+Subscription "1" *-- "0..*" CoveragePeriod : governs
+Subscription "0..*" --> "1" Plan : selects
+```
+
+La aplicación debe asegurar que el descuento de cobertura sea idempotente y corresponda a un registro único de trabajo.
+
+#### Modelo DDD propuesto — BC02 Companies and Equipment (Supporting)
+
+```mermaid
+classDiagram
+direction LR
+class Company {
+  +Guid Id
+  +string LegalName
+  +string TaxId
+  +RegisterEquipment()
+}
+class Equipment {
+  +Guid Id
+  +Guid CompanyId
+  +Guid AssignedEmployeeId
+  +string SerialNumber
+  +AssignTo(Guid employeeId)
+  +ChangeLocation(Guid locationId)
+}
+class Location {
+  +Guid Id
+  +Guid CompanyId
+  +string Name
+}
+Company "1" --> "0..*" Equipment : owns
+Company "1" --> "0..*" Location : maintains
+Equipment "0..*" --> "0..1" Location : located at
+```
+
+Toda asignación de equipo debe comprobar la pertenencia empresarial de la persona y del activo.
+
+#### Modelo DDD propuesto — BC05 Quotations and Payments (Supporting)
+
+```mermaid
+classDiagram
+direction LR
+class Quotation {
+  +Guid Id
+  +Guid RequestId
+  +Guid CompanyId
+  -string status
+  +AddItem(string description, decimal cost)
+  +Approve(Guid managerId)
+  +Reject(Guid managerId)
+}
+class QuotationItem {
+  +Guid Id
+  +string Description
+  +decimal UnitPrice
+  +decimal Quantity
+}
+class SimulatedPayment {
+  +Guid Id
+  +Guid QuotationId
+  +decimal Amount
+  +DateTime RecordedAt
+}
+Quotation "1" *-- "1..*" QuotationItem : contains
+Quotation "1" --> "0..1" SimulatedPayment : records
+```
+
+No se deben registrar pagos académicos como transacciones bancarias reales.
+
+#### Modelo DDD propuesto — BC01 Identity and Access (Generic)
+
+```mermaid
+classDiagram
+direction LR
+class UserAccount {
+  +Guid Id
+  +string Email
+  -string PasswordHash
+  +string Role
+  +ChangePassword(string newPassword)
+  +Deactivate()
+}
+class PasswordResetRequest {
+  +Guid Id
+  +Guid UserId
+  +DateTime ExpiresAt
+  +bool Used
+  +Consume()
+}
+UserAccount "1" --> "0..*" PasswordResetRequest : requests
+```
+
+En el modelo definitivo las operaciones de hashing y generación/verificación de tokens corresponden a servicios o adaptadores seguros, no a funciones manuales de la entidad que revelen credenciales.
+
+
 El Class Diagram representa la estructura principal del dominio de CompuCare.
 
 Entre las clases consideradas se encuentran:
