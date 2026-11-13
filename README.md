@@ -1561,6 +1561,9 @@ La validación del prototipo permite detectar problemas de navegación o usabili
 https://upc-pre-202620-1asi0730-8093-unilink.github.io/landing/
 
 ## 4.6. Domain-Driven Software Architecture
+
+**Documento de referencia DDD:** [Mapa de contextos, agregados, capas y pruebas de aceptación](docs/ddd-architecture.md). Este documento distingue la arquitectura planeada del código actualmente implementado.
+
 La arquitectura de CompuCare se organiza tomando como referencia los principios de Domain-Driven Design (DDD).
 
 Este enfoque permite separar las responsabilidades del sistema según los principales procesos de negocio y facilita la organización de las funcionalidades de la plataforma.
@@ -1677,29 +1680,81 @@ La comunicación entre la SPA y la API se realiza por HTTPS y JSON. El navegador
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-El Components Diagram representa con mayor detalle la organización interna del Backend de CompuCare.
+Un C4 de nivel 3 descompone **un contenedor específico** en componentes y explica sus responsabilidades. Se distinguen los componentes presentes en el frontend Vue de los componentes propuestos para la API ASP.NET Core, porque el backend de demostración todavía no implementa esa estructura.
 
-Entre los principales componentes se consideran:
+#### Frontend Web Application — contenedor implementado
 
-- **Controllers:** reciben las solicitudes provenientes de la aplicación web.
-- **Application Services:** coordinan los casos de uso del sistema.
-- **Domain Services:** contienen reglas relacionadas con el negocio.
-- **Repositories:** gestionan el acceso a la información almacenada.
-- **Entities:** representan los principales objetos del dominio.
-- **Persistence:** permite almacenar y recuperar información de la base de datos.
+El frontend está organizado por los cinco *Bounded Contexts* como módulos de interfaz. Las vistas solicitan operaciones mediante clases API propias de cada módulo y un cliente HTTP compartido. La autorización efectiva deberá ser verificada siempre por el backend.
 
-Por ejemplo, una solicitud para registrar un nuevo soporte es recibida por un Controller, procesada por el servicio correspondiente y almacenada mediante un Repository.
+```mermaid
+flowchart LR
+    Router["Vue Router · role guards"]
+    IAM["IAM · views y store"]
+    EQ["Equipment · views"]
+    SUB["Subscriptions · views"]
+    TKT["Service Requests · views"]
+    QTE["Quotations · views"]
+    Gateway["API clients de cada BC"]
+    Axios["BaseApi · Axios"]
+    Backend["REST API"]
+    Router --> IAM
+    Router --> EQ
+    Router --> SUB
+    Router --> TKT
+    Router --> QTE
+    IAM --> Gateway
+    EQ --> Gateway
+    SUB --> Gateway
+    TKT --> Gateway
+    QTE --> Gateway
+    Gateway --> Axios
+    Axios --> Backend
+```
 
-Esta organización permite mantener separadas las responsabilidades del sistema y reducir el acoplamiento entre sus componentes.
-The following component diagrams show the internal organization of the main CompuCare application components.
+#### Landing Page — contenedor implementado
 
-#### Operations Components
+El contenedor público usa HTML, CSS y JavaScript para mostrar el servicio, las coberturas y los planes, alternar ES/EN y dirigir al usuario al login de la aplicación. Sus vistas de demostración no deben confundirse con una API de producción.
+
+#### Backend ASP.NET Core — contenedor propuesto
+
+La API definitiva aplicará DDD por BC, separando la exposición HTTP de la orquestación de casos de uso, las reglas de negocio y la persistencia. Los diagramas siguientes son **diseño objetivo, no prueba de implementación**.
+
+**Core: BC04 Service Requests y BC03 Subscriptions and Coverage**
 
 ![CompuCare Operations Components Diagram](assets/c4_componentes_operacion.svg)
 
-#### Subscription Components
-
 ![CompuCare Subscription Components Diagram](assets/c4_componentes_suscripcion.svg)
+
+**Supporting: BC02 Companies and Equipment y BC05 Quotations and Payments**
+
+```mermaid
+flowchart TB
+    CA["Company & Equipment Controllers"] --> AH["Company/Equipment Application Handlers"]
+    AH --> AA["Company and Equipment Aggregates"]
+    AH --> AR["Company/Equipment Repository Ports"]
+    AR -. "implementa" .-> EF["EF Core Repositories"]
+
+    CQ["Quotation Controllers"] --> QH["Quotation Application Handlers"]
+    QH --> QA["Quotation Aggregate"]
+    QH --> QR["Quotation Repository Port"]
+    QR -. "implementa" .-> QEF["EF Core Repositories"]
+    QH --> TicketPort["ServiceRequest validation port"]
+```
+
+**Generic: BC01 Identity and Access**
+
+```mermaid
+flowchart TB
+    AuthC["Auth Controller"] --> AuthA["IAM Application Handlers"]
+    AuthA --> AuthD["UserAccount aggregate / access policies"]
+    AuthA --> AuthR["IUserRepository / password verification ports"]
+    AuthR -. "implementa" .-> AuthI["EF Core and secure identity adapters"]
+    AuthA --> MailPort["Notification port"]
+    MailPort -. "implementa" .-> Mail["External notification adapter"]
+```
+
+**Regla transversal de dependencia:** `Domain` no referencia `Infrastructure` ni `Interfaces`; `Application` depende de `Domain` y puertos abstractos; `Infrastructure` implementa esos puertos; `Interfaces` expone los casos de uso. Las integraciones entre BC pasan por contratos, no por acceso indiscriminado a los agregados de otro contexto.
+
 ## 4.7. Software Object-Oriented Design
 El diseño orientado a objetos de CompuCare representa las principales entidades del dominio y las relaciones existentes entre ellas.
 
