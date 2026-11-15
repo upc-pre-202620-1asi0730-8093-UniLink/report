@@ -55,6 +55,7 @@ Proyecto<br>
 | **1.1.1** | 15/11/2026 | Yauri, Antony | Incorporación del Design-Level Event Storming de BC02 Companies and Equipment (sección 4.6.1) y de las fotos del Big Picture Event Storming en el Capítulo II. |
 | **1.1.2** | 15/11/2026 | Yauri, Antony | Restitución del logo de la UPC en la carátula. |
 | **1.1.3** | 15/11/2026 | Yauri, Antony | Corrección del NRC en la carátula (8093). |
+| **1.1.4** | 15/11/2026 | Yauri, Antony | Actualización de repositorios, releases y despliegues: frontend en Azure Static Web Apps, API en Azure App Service y Landing Page en GitHub Pages (secciones 4.6.3, 4.6.4, 5.1.2, 5.1.4, 5.2.1.7, 5.2.2.7 y anexos). |
 
 ---
 
@@ -1716,20 +1717,20 @@ El diagrama C4 de nivel 2 diferencia los **contenedores ejecutables** y los sist
 
 | Elemento | Tecnología | Responsabilidad | Estado |
 | :--- | :--- | :--- | :--- |
-| Landing Page | HTML5, CSS3, JavaScript | Información del servicio, precios y enlaces de acceso | Implementada en repositorio `landing` |
-| Frontend Web Application | Vue 3, Vite, JavaScript, Pinia, PrimeVue | Interfaz de los distintos roles y flujos de los BC | Implementada en `compucare-web-app` |
-| RESTful Web Services | ASP.NET Core, C# | Controladores, casos de uso y reglas de dominio | Arquitectura objetivo; **no verificada como desplegada** |
-| Base de datos relacional | PostgreSQL o MySQL mediante EF Core | Almacenamiento persistente de empresas, equipos, tickets, coberturas y pagos simulados | Objetivo del backend |
-| Servicio externo de notificaciones | Servicio de correo o API de terceros | Entrega de notificaciones y recuperación de acceso | Integración propuesta; no verificada |
-| Servidor de demostración | Node.js, JSON Server y `db.json` | Pruebas locales del frontend durante el desarrollo | Implementado como apoyo temporal |
+| Landing Page | HTML5, CSS3, JavaScript | Información del servicio, precios y enlaces de acceso | Implementada en `landing` y publicada en [GitHub Pages](https://upc-pre-202620-1asi0730-8093-unilink.github.io/landing/) |
+| Frontend Web Application | Vue 3, Vite, JavaScript, Pinia, PrimeVue | Interfaz de los distintos roles y flujos de los BC | Implementada en `compucare-web-app` y publicada en [Azure Static Web Apps](https://white-hill-0d2509f1e.6.azurestaticapps.net) |
+| RESTful Web Services | ASP.NET Core 10, C# 14 | Controladores, casos de uso y reglas de dominio de los siete *Bounded Contexts* | Implementada en `compucare-platform` y publicada en [Azure App Service](https://compucare-platform-f0brhkh5eff7b5d4.westus-01.azurewebsites.net/scalar/v1) |
+| Base de datos relacional | MySQL mediante EF Core | Almacenamiento persistente de empresas, equipos, tickets, coberturas y pagos simulados | Implementada; la cadena de conexión se inyecta por variable de entorno |
+| Servicio externo de notificaciones | Servicio de correo o API de terceros | Entrega de notificaciones y recuperación de acceso | Integración propuesta; hoy las notificaciones son internas (BC Notifications) |
+| Servidor de demostración | Node.js, JSON Server y `db.json` | Pruebas locales del frontend durante el desarrollo | Apoyo local; la versión publicada consume la API ASP.NET Core |
 
-La comunicación entre la SPA y la API se realiza por HTTPS y JSON. El navegador no debe conectarse directamente a la base de datos. El sistema de correo es externo a CompuCare. **La arquitectura objetivo se distingue del estado implementado** para no presentar un backend C# todavía inexistente como desplegado.
+La comunicación entre la SPA y la API se realiza por HTTPS y JSON. El navegador no debe conectarse directamente a la base de datos. El sistema de correo es externo a CompuCare. La API ASP.NET Core ya está implementada y publicada en Azure, por lo que la tabla refleja el estado desplegado de cada contenedor.
 
 ![CompuCare Container Diagram](assets/c4_contenedores.svg)
 
 ### 4.6.4. Software Architecture Components Diagrams
 
-Un C4 de nivel 3 descompone **un contenedor específico** en componentes y explica sus responsabilidades. Se distinguen los componentes presentes en el frontend Vue de los componentes propuestos para la API ASP.NET Core, porque el backend de demostración todavía no implementa esa estructura.
+Un C4 de nivel 3 descompone **un contenedor específico** en componentes y explica sus responsabilidades. Se describen los componentes del frontend Vue y los de la API ASP.NET Core, que implementa esta estructura por *Bounded Context* en el repositorio `compucare-platform`.
 
 #### Frontend Web Application — contenedor implementado
 
@@ -1764,9 +1765,9 @@ flowchart LR
 
 El contenedor público usa HTML, CSS y JavaScript para mostrar el servicio, las coberturas y los planes, alternar ES/EN y dirigir al usuario al login de la aplicación. Sus vistas de demostración no deben confundirse con una API de producción.
 
-#### Backend ASP.NET Core — contenedor propuesto
+#### Backend ASP.NET Core — contenedor implementado
 
-La API definitiva aplicará DDD por BC, separando la exposición HTTP de la orquestación de casos de uso, las reglas de negocio y la persistencia. Los diagramas siguientes son **diseño objetivo, no prueba de implementación**.
+La API aplica DDD por BC con las capas *Interfaces*, *Application*, *Domain* e *Infrastructure*, separando la exposición HTTP de la orquestación de casos de uso, las reglas de negocio y la persistencia. Está implementada en `compucare-platform` y publicada en Azure App Service.
 
 **Core: BC04 Service Requests y BC03 Subscriptions and Coverage**
 
@@ -2194,20 +2195,21 @@ El equipo usa GitHub para el seguimiento de cambios, la revisión de aportes y l
 | Producto | Repositorio | Estado observado |
 | :--- | :--- | :--- |
 | Landing Page | [UniLink/landing](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/landing) | Código público disponible |
-| Frontend Web Application | [UniLink/compucare-web-app](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app) | Repositorio de equipo activo |
+| Frontend Web Application | [UniLink/compucare-web-app](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app) | Repositorio de equipo activo; release `v1.0.2` |
 | Project Report | [UniLink/report](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/report) | Documentación del proyecto |
-| RESTful API definitiva | Pendiente de crear o acreditar su repositorio en la organización | No encontrada entre los repositorios públicos |
-| Repositorio anterior del frontend | [UniLink/compucare-webapp](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-webapp) | Referencia histórica, no reemplaza el repositorio de equipo activo |
+| RESTful API | [UniLink/compucare-platform](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-platform) | Repositorio de equipo activo; release `v1.0.0` |
+| Curso de desarrollo web | [UniLink/webdev-course-unilink](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/webdev-course-unilink) | Lecciones 1 a 6; release `v1.0.0` |
 
-**GitFlow y convenciones:** el frontend utiliza `main`, `dev` y ramas `feature/*`; el informe también utiliza `main`, `dev` y ramas `docs/*`. La integración debe realizarse mediante Pull Requests y revisiones de compañeros cuando corresponda. La existencia de estas ramas no demuestra por sí sola que se esté aplicando efectivamente una política de aprobación obligatoria.
+**GitFlow y convenciones:** el frontend utiliza `main`, `dev` y ramas `feature/*`; la API utiliza `main`, `develop` y una rama `feature/*` por *Bounded Context*; el informe utiliza `main`, `dev` y ramas `docs/*`. La integración debe realizarse mediante Pull Requests y revisiones de compañeros cuando corresponda. La existencia de estas ramas no demuestra por sí sola que se esté aplicando efectivamente una política de aprobación obligatoria.
 
 - **`main`:** versión estable de referencia.
 - **`dev`:** rama de integración del equipo.
 - **`feature/*`:** implementación de una funcionalidad o un Bounded Context.
 - **`docs/*`:** trabajo editorial del informe.
-- **`release/*` y `hotfix/*`:** convenciones propuestas para futuras versiones y correcciones urgentes.
+- **`release/*`:** preparación de cada versión antes de integrarla en `main` y etiquetarla.
+- **`hotfix/*`:** convención reservada para correcciones urgentes sobre `main`.
 
-Los commits seguirán [Conventional Commits](https://www.conventionalcommits.org/) y las publicaciones utilizarán [Semantic Versioning](https://semver.org/). Para responder a la observación del profesor, **deben crear y verificar GitHub Releases etiquetados**, por ejemplo `v0.1.0` para una primera versión estable y `v0.2.0` para la siguiente evolución, usando los números que correspondan a la historia real de entregas. No se declara un release como publicado sin comprobar su URL.
+Los commits seguirán [Conventional Commits](https://www.conventionalcommits.org/) y las publicaciones utilizarán [Semantic Versioning](https://semver.org/). En respuesta a la observación del profesor, cada repositorio publica GitHub Releases etiquetados: [compucare-platform v1.0.0](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-platform/releases/tag/v1.0.0), [compucare-web-app v1.0.2](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/releases/tag/v1.0.2), [webdev-course-unilink v1.0.0](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/webdev-course-unilink/releases/tag/v1.0.0) y los releases `v1.1.x` de este [informe](https://github.com/upc-pre-202620-1asi0730-8093-UniLink/report/releases).
 
 #### 5.1.3. Source Code Style Guide & Conventions
 Para mantener un código legible y mantenible, aplicamos convenciones estrictas:
@@ -2216,9 +2218,16 @@ Para mantener un código legible y mantenible, aplicamos convenciones estrictas:
 *   **HTML & CSS:** Se aplican los estándares de W3C, nombres de clases descriptivos y semántica web enfocada en accesibilidad (*a11y*).
 
 #### 5.1.4. Software Deployment Configuration
-El despliegue de CompuCare está automatizado de la siguiente manera:
-1.  **Landing Page & Frontend Web App:** Desplegados en **Vercel** o **Netlify**. Conectado directamente a la rama `main` de GitHub para habilitar Integración Continua (CI/CD).
-2.  **RESTful API & Base de Datos:** Backend publicado en **Azure** (o Render) utilizando contenedores. La base de datos relacional (MySQL/PostgreSQL) está alojada en la nube y conectada mediante variables de entorno seguras.
+El despliegue de CompuCare se distribuye de la siguiente manera:
+
+| Producto | Plataforma | URL pública | Publicación |
+| :--- | :--- | :--- | :--- |
+| Landing Page | GitHub Pages | [https://upc-pre-202620-1asi0730-8093-unilink.github.io/landing/](https://upc-pre-202620-1asi0730-8093-unilink.github.io/landing/) | Se publica desde el repositorio `landing`. |
+| Frontend Web Application | Azure Static Web Apps | [https://white-hill-0d2509f1e.6.azurestaticapps.net](https://white-hill-0d2509f1e.6.azurestaticapps.net) | GitHub Actions compila con `npm run build` y publica la carpeta `dist` en cada actualización de la rama configurada. |
+| RESTful API | Azure App Service | `https://compucare-platform-f0brhkh5eff7b5d4.westus-01.azurewebsites.net/api/v1` | API ASP.NET Core 10 de `compucare-platform`, con documentación interactiva en [Scalar](https://compucare-platform-f0brhkh5eff7b5d4.westus-01.azurewebsites.net/scalar/v1). |
+| Base de datos | MySQL | No pública | La API se conecta mediante una cadena de conexión definida como variable de entorno (`DATABASE_URL`), sin credenciales en el repositorio. |
+
+El frontend toma la dirección de la API desde `VITE_UNILINK_API_URL` en `.env.production`, valor que Vite inserta durante la compilación.
 
 ---
 
@@ -2277,8 +2286,8 @@ Se integró Swagger (OpenAPI) en el entorno de desarrollo de ASP.NET Core median
 *   *(Adjuntar aquí: Captura de pantalla de la interfaz de Swagger UI en fondo oscuro)*
 
 ##### 5.2.1.7. Software Deployment Evidence for Sprint Review
-El repositorio del Landing Page fue conectado exitosamente a la plataforma Vercel. Se configuró un pipeline de CI/CD básico que detecta los commits en la rama `main` y realiza el despliegue automático del sitio estático.
-*   *(Adjuntar aquí: Captura de pantalla del dashboard de Vercel mostrando el proyecto "compucare-landing" en estado "Ready")*
+El repositorio del Landing Page se publicó en **GitHub Pages** a partir de la rama `main`: cada commit integrado en esa rama vuelve a desplegar automáticamente el sitio estático.
+*   URL pública: [https://upc-pre-202620-1asi0730-8093-unilink.github.io/landing/](https://upc-pre-202620-1asi0730-8093-unilink.github.io/landing/)
 
 ##### 5.2.1.8. Team Collaboration Insights during Sprint
 *(Placeholder: Insertar captura de los "Insights / Contributors" de GitHub mostrando el gráfico de commits del equipo)*.
@@ -2412,7 +2421,7 @@ Estos endpoints fueron revisados en `src/service-requests/infrastructure/ticket-
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
-El frontend de CompuCare se construye con **Vue 3 y Vite**, utilizando el comando `npm run build` y generando los archivos de producción en la carpeta `dist`. La publicación prevista parte del código integrado en `main`.
+El frontend de CompuCare se construye con **Vue 3 y Vite**, utilizando el comando `npm run build` y generando los archivos de producción en la carpeta `dist`. La publicación parte del código integrado en `main`.
 
 | Deployment Item | Value |
 | :--- | :--- |
@@ -2421,12 +2430,12 @@ El frontend de CompuCare se construye con **Vue 3 y Vite**, utilizando el comand
 | Build command | `npm run build` |
 | Publish directory | `dist` |
 | Source branch | `main` |
-| Frontend hosting revisado | Netlify |
-| Estado del deploy | **Pendiente de validación de URL pública operativa** |
+| Frontend hosting | Azure Static Web Apps |
+| URL pública | [https://white-hill-0d2509f1e.6.azurestaticapps.net](https://white-hill-0d2509f1e.6.azurestaticapps.net) |
+| API consumida | `https://compucare-platform-f0brhkh5eff7b5d4.westus-01.azurewebsites.net/api/v1` |
+| Estado del deploy | **Publicado y operativo** (verificado el 15/11/2026) |
 
-GitHub mostró comentarios automatizados de Netlify relativos a vistas previas de despliegue; no obstante, al abrir uno de esos enlaces apareció **`Site not found`**, de modo que no constituye evidencia de publicación funcional. Igualmente, es necesario verificar la disponibilidad del backend en internet, su dirección pública y la correcta configuración de variables de entorno.
-
-**Evidencia pendiente:** URL definitiva, captura del panel de Netlify con estado publicado, pantalla de CompuCare accesible y pruebas de autenticación y tickets desde el dominio público.
+Las vistas previas de Netlify que aparecían en los Pull Requests quedaron sin uso, ya que el frontend se publicó finalmente en Azure Static Web Apps. La aplicación pública consume la API ASP.NET Core desplegada en Azure App Service; ambas direcciones responden correctamente y la API expone su documentación en [Scalar](https://compucare-platform-f0brhkh5eff7b5d4.westus-01.azurewebsites.net/scalar/v1).
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
@@ -2514,8 +2523,10 @@ Finalmente, aunque el frontend compila exitosamente, la entrega técnica requier
 
 # Avance de Anexos
 
-**Anexo A. Repositorio de código**  
-https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app
+**Anexo A. Repositorios de código**  
+Frontend: https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app  
+RESTful API: https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-platform  
+Landing Page: https://github.com/upc-pre-202620-1asi0730-8093-UniLink/landing
 
 **Anexo B. Pull Request de Service Requests (BC04)**  
 https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/3
@@ -2527,7 +2538,10 @@ https://github.com/upc-pre-202620-1asi0730-8093-UniLink/compucare-web-app/pull/5
 [Insertar capturas: creación de tickets, asignación, intervención, cotización y compilación]
 
 **Anexo E. Despliegue**  
-[Insertar URL pública verificada y capturas de Netlify y backend operativo]
+Landing Page: https://upc-pre-202620-1asi0730-8093-unilink.github.io/landing/  
+Frontend Web Application: https://white-hill-0d2509f1e.6.azurestaticapps.net  
+RESTful API (URL base): `https://compucare-platform-f0brhkh5eff7b5d4.westus-01.azurewebsites.net/api/v1`  
+Documentación de la API (Scalar): https://compucare-platform-f0brhkh5eff7b5d4.westus-01.azurewebsites.net/scalar/v1
 
 **Anexo F. Colaboración**  
 [Insertar capturas de commits, Pull Requests y actividad del equipo]
