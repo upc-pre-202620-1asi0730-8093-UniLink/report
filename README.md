@@ -2416,7 +2416,10 @@ El objetivo fue que los usuarios interactuaran con el Landing Page y la Web Appl
 
 1. **Entrevista 1 (Técnica de Soporte - Hikari):** (https://drive.google.com/file/d/168aU_BrOYqF49c9xDDXBlJQ7F55Ue7dY/view?usp=drive_link)
    * **Resumen de Validación:** La usuaria validó positivamente la necesidad de CompuCare. Afirmó que una plataforma donde los clientes reporten la falla exacta y donde ella pueda registrar el diagnóstico, el tiempo trabajado y los repuestos, le ahorraría mucho tiempo. Destacó como crucial que la plataforma permita al cliente (Responsable de la empresa) aprobar las cotizaciones adicionales de manera formal, evitando malentendidos sobre los precios y agilizando la compra de componentes.
-     
+
+2. **Entrevista de validación — Segmento 1: Responsable de empresa.** [Ver entrevista en YouTube](https://www.youtube.com/watch?v=3KDO8l-1qXE)
+   * **Guion:** Se utilizó un perfil ficticio de administrador de una pequeña empresa. Las preguntas abarcan la comprensión del servicio y los planes, el acceso al panel, las horas de soporte disponibles, la aprobación de cotizaciones y el historial de equipos.
+
 #### 5.3.3. Evaluaciones según heurísticas
 
 Para evaluar la usabilidad de la plataforma Web de CompuCare durante las entrevistas de validación, hemos aplicado las 10 Heurísticas de Jakob Nielsen. Los problemas encontrados fueron clasificados según la siguiente escala de severidad:
