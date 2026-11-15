@@ -8,7 +8,7 @@
 <p><strong>1ASI0730</strong><br>
 <strong>Aplicaciones Web</strong><br>
 NRC<br>
-<strong>1ASI0730</strong></p>
+<strong>8093</strong></p>
 
 <h2>Informe del Trabajo Final</h2>
 
@@ -54,6 +54,7 @@ Proyecto<br>
 | **1.1** | 13/11/2026 | Equipo UniLink | Correcciones de AV2 basadas en observaciones docentes: carátula compacta sin imágenes, clasificación de Bounded Contexts por dominios, desarrollo de EventStorming y lenguaje ubicuo, revisión del C4 y modelo lógico integrado de base de datos, y Sprint Goals en español. |
 | **1.1.1** | 15/11/2026 | Yauri, Antony | Incorporación del Design-Level Event Storming de BC02 Companies and Equipment (sección 4.6.1) y de las fotos del Big Picture Event Storming en el Capítulo II. |
 | **1.1.2** | 15/11/2026 | Yauri, Antony | Restitución del logo de la UPC en la carátula. |
+| **1.1.3** | 15/11/2026 | Yauri, Antony | Corrección del NRC en la carátula (8093). |
 
 ---
 
