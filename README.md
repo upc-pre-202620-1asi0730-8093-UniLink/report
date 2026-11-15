@@ -1003,7 +1003,7 @@ Los eventos se expresan en pasado para describir hechos del dominio. La identifi
 | Cobertura | Horas de soporte consumidas; umbral de cobertura alcanzado; mantenimiento preventivo agendado |
 | Cotizaciones | Cotización generada; cotización aprobada o rechazada; pago de prueba registrado |
 
-<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-OPEN.png" />
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-OPEN.PNG" />
 
 ### 2.4.2. Fase 2: Exploración y Línea de Tiempo (Explore)
 
@@ -1017,7 +1017,7 @@ Se ordenaron los eventos siguiendo tres escenarios representativos. En el **fluj
 
 La espera de aprobación de cotizaciones y los límites de cobertura son puntos de decisión del proceso, no simples elementos de interfaz.
 
-<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-EXPLORE.png" />
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-EXPLORE.PNG" />
 
 ### 2.4.3. Fase 3: Consolidación y Definición de Triggers (Close Space)
 
@@ -1034,7 +1034,7 @@ En esta fase se distinguen actores, comandos y reglas que desencadenan los event
 
 **Punto de mejora identificado:** el servidor de demostración no impide cerrar una solicitud solo por existir una cotización todavía pendiente; esa validación de negocio debe definirse y probarse antes del backend definitivo.
 
-<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-CLOSE.png" />
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-CLOSE.PNG" />
 
 ### 2.4.4. Fase 4: Modelo Final del Dominio (Final Landscape)
 
@@ -1050,7 +1050,7 @@ El resultado conceptual se organiza de acuerdo con los *Bounded Contexts* y sus 
 
 Esta clasificación expresa la diferenciación de negocio: la atención técnica y su cobertura por suscripción constituyen el núcleo del servicio. No modifica los códigos BC ni los identificadores de historias.
 
-<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-FINAL-LANDSCAPE.png" />
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-FINAL-LANDSCAPE.PNG" />
 
 ### 2.5. Ubiquitous Language
 
