@@ -2443,9 +2443,9 @@ Para evaluar la usabilidad de la plataforma Web de CompuCare durante las entrevi
 ### 5.4. Video About-the-Product
 El video **About-the-Product** es una presentación comercial dirigida a nuestros clientes objetivo. Explicamos de manera dinámica la propuesta de valor de CompuCare, mostrando escenarios reales donde las computadoras fallan y cómo nuestra plataforma soluciona el problema.
 
-*   **Enlace YouTube/Stream:** `*(Placeholder: [Insertar URL del video promocional final])*`.
-*   **Duración:** `*(Placeholder: 02:00 min)*`
-*   *(Placeholder: [Insertar 1 o 2 capturas/screenshots representativas de su video promocional])*
+* **YouTube:** [Ver video About-the-Product](https://www.youtube.com/watch?v=J7qtlBXiPPU).
+* **Microsoft Stream:** pendiente de incorporar.
+* **Duración y captura representativa:** pendientes de incorporar.
 ---
 
 # Avance de Conclusiones
