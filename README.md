@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="./assets/upc-logo.png" alt="Logo de la Universidad Peruana de Ciencias Aplicadas" width="65" />
+
 <p><strong>Universidad Peruana de Ciencias Aplicadas</strong><br>
 <strong>Carrera de Ingeniería de Software</strong></p>
 
@@ -51,6 +53,7 @@ Proyecto<br>
 | **1.0**     | 09/10/2026 | Yauri, Antony | Elaboración del Capítulo II (Requirements Elicitation & Analysis), incluyendo la sección 2.1 (Competidores), con el análisis competitivo y la definición de estrategias y tácticas frente a competidores. Desarrollo de la sección 2.2 (Entrevistas), abarcando el diseño, registro y análisis de entrevistas a los segmentos objetivo. Asimismo, desarrollo de la sección 2.3 (Needfinding), incluyendo User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping. |
 | **1.1** | 13/11/2026 | Equipo UniLink | Correcciones de AV2 basadas en observaciones docentes: carátula compacta sin imágenes, clasificación de Bounded Contexts por dominios, desarrollo de EventStorming y lenguaje ubicuo, revisión del C4 y modelo lógico integrado de base de datos, y Sprint Goals en español. |
 | **1.1.1** | 15/11/2026 | Yauri, Antony | Incorporación del Design-Level Event Storming de BC02 Companies and Equipment (sección 4.6.1) y de las fotos del Big Picture Event Storming en el Capítulo II. |
+| **1.1.2** | 15/11/2026 | Yauri, Antony | Restitución del logo de la UPC en la carátula. |
 
 ---
 
