@@ -2444,7 +2444,7 @@ Para evaluar la usabilidad de la plataforma Web de CompuCare durante las entrevi
 El video **About-the-Product** es una presentación comercial dirigida a nuestros clientes objetivo. Explicamos de manera dinámica la propuesta de valor de CompuCare, mostrando escenarios reales donde las computadoras fallan y cómo nuestra plataforma soluciona el problema.
 
 * **YouTube:** [Ver video About-the-Product](https://www.youtube.com/watch?v=J7qtlBXiPPU).
-* **Microsoft Stream:** pendiente de incorporar.
+* **Microsoft Stream:** [Ver video About-the-Product en Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20231b331_upc_edu_pe/IQDaVwYXppZTSJHClPgwihfPAX5ZongrVbw9te94JkRtYW4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=bpdTsJ).
 * **Duración y captura representativa:** pendientes de incorporar.
 ---
 
