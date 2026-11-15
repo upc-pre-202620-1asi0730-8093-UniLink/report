@@ -1003,6 +1003,8 @@ Los eventos se expresan en pasado para describir hechos del dominio. La identifi
 | Cobertura | Horas de soporte consumidas; umbral de cobertura alcanzado; mantenimiento preventivo agendado |
 | Cotizaciones | Cotización generada; cotización aprobada o rechazada; pago de prueba registrado |
 
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-OPEN.PNG" />
+
 ### 2.4.2. Fase 2: Exploración y Línea de Tiempo (Explore)
 
 Se ordenaron los eventos siguiendo tres escenarios representativos. En el **flujo principal**, un empleado registra una incidencia de un equipo asignado; el administrador de UniLink asigna un técnico; el técnico inicia el diagnóstico y documenta la atención. Si se requieren repuestos, se genera una cotización que el responsable de la empresa debe evaluar antes de continuar con el trabajo adicional.
@@ -1014,6 +1016,8 @@ Se ordenaron los eventos siguiendo tres escenarios representativos. En el **fluj
 | Servicio adicional | Diagnóstico realizado → Cotización generada → Aprobación o rechazo → Pago simulado cuando corresponda |
 
 La espera de aprobación de cotizaciones y los límites de cobertura son puntos de decisión del proceso, no simples elementos de interfaz.
+
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-EXPLORE.PNG" />
 
 ### 2.4.3. Fase 3: Consolidación y Definición de Triggers (Close Space)
 
@@ -1030,6 +1034,8 @@ En esta fase se distinguen actores, comandos y reglas que desencadenan los event
 
 **Punto de mejora identificado:** el servidor de demostración no impide cerrar una solicitud solo por existir una cotización todavía pendiente; esa validación de negocio debe definirse y probarse antes del backend definitivo.
 
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-CLOSE.PNG" />
+
 ### 2.4.4. Fase 4: Modelo Final del Dominio (Final Landscape)
 
 El resultado conceptual se organiza de acuerdo con los *Bounded Contexts* y sus dependencias. Primero se presentan los **Core Domains**, luego los **Supporting Domains** y finalmente el **Generic Domain**.
@@ -1043,6 +1049,8 @@ El resultado conceptual se organiza de acuerdo con los *Bounded Contexts* y sus 
 | **Generic** | **BC01 — Identity and Access** | Identidad, autenticación, autorización y recuperación de acceso |
 
 Esta clasificación expresa la diferenciación de negocio: la atención técnica y su cobertura por suscripción constituyen el núcleo del servicio. No modifica los códigos BC ni los identificadores de historias.
+
+<img src="assets/Capitulo II/big-picture-assets/big-picture-event-storming-FINAL-LANDSCAPE.PNG" />
 
 ### 2.5. Ubiquitous Language
 
