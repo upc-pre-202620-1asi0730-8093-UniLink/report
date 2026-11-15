@@ -50,6 +50,7 @@ Proyecto<br>
 | **1.0** | 20/09/2026 | Condezo, Fernando | Elaboración del Capítulo 5 (Product Implementation, Validation & Deployment). Configuración de la Gestión de Configuración de Software (SCM), definición de repositorios en GitHub con GitFlow y Conventional Commits. Documentación técnica del Sprint 1, incluyendo Sprint Planning, configuración inicial del backend en ASP.NET Core mediante JetBrains Rider, y evidencias de despliegue y colaboración de equipo. |
 | **1.0**     | 09/10/2026 | Yauri, Antony | Elaboración del Capítulo II (Requirements Elicitation & Analysis), incluyendo la sección 2.1 (Competidores), con el análisis competitivo y la definición de estrategias y tácticas frente a competidores. Desarrollo de la sección 2.2 (Entrevistas), abarcando el diseño, registro y análisis de entrevistas a los segmentos objetivo. Asimismo, desarrollo de la sección 2.3 (Needfinding), incluyendo User Personas, User Task Matrix, User Journey Mapping y Empathy Mapping. |
 | **1.1** | 13/11/2026 | Equipo UniLink | Correcciones de AV2 basadas en observaciones docentes: carátula compacta sin imágenes, clasificación de Bounded Contexts por dominios, desarrollo de EventStorming y lenguaje ubicuo, revisión del C4 y modelo lógico integrado de base de datos, y Sprint Goals en español. |
+| **1.1.1** | 15/11/2026 | Yauri, Antony | Incorporación del Design-Level Event Storming de BC02 Companies and Equipment (sección 4.6.1) y de las fotos del Big Picture Event Storming en el Capítulo II. |
 
 ---
 
@@ -1625,6 +1626,10 @@ El **Design-Level EventStorming** profundiza en el comportamiento de los proceso
 | **BC04 Core** | Técnico | Registrar atención | Ticket | Ticket atendido | Diagnóstico, trabajo y horas positivas |
 | **BC03 Core** | Responsable empresarial | Contratar plan | Suscripción | Suscripción activada | Plan existente |
 | **BC03 Core** | Servicio de soporte | Registrar horas | Suscripción | Horas de cobertura consumidas | Cálculo de consumo y alerta al 80 % |
+| **BC02 Supporting** | Responsable empresarial | Registrar ubicación | Empresa | Ubicación registrada | Nombre de sede único dentro de la empresa |
+| **BC02 Supporting** | Responsable empresarial | Registrar equipo | Equipo | Equipo registrado | Número de serie único y ubicación de la misma empresa |
+| **BC02 Supporting** | Responsable empresarial | Asignar equipo a empleado | Equipo | Equipo asignado | Empleado y equipo de la misma empresa; se guarda en el historial |
+| **BC02 Supporting** | Responsable empresarial | Cambiar ubicación | Equipo | Ubicación del equipo actualizada | La nueva ubicación pertenece a la empresa |
 | **BC05 Supporting** | Técnico | Generar cotización | Cotización | Cotización emitida | Técnico vinculado al ticket |
 | **BC05 Supporting** | Responsable empresarial | Aprobar o rechazar | Cotización | Cotización resuelta | Debe pertenecer a su empresa |
 
@@ -1656,6 +1661,28 @@ flowchart LR
 La empresa selecciona un plan, se activa la suscripción y se asigna la cobertura mensual. El consumo de horas y la reserva de mantenimientos deben reflejarse en el panel de administración. En el alcance académico los pagos son simulados.
 
 ![CompuCare Company Registration Event Storming](assets/eventstorm_alta.svg)
+
+#### Supporting — Inventario de equipos y ubicaciones (BC02)
+
+El responsable empresarial registra las sedes de la empresa y los equipos que tendrán cobertura, y asigna cada equipo al empleado que lo utiliza. Cada asignación queda en el historial del equipo, y su estado (operativo o en atención) se deriva de los tickets abiertos en BC04, por lo que BC02 no modifica tickets: solo los consulta.
+
+```mermaid
+flowchart LR
+    R["Responsable empresarial"] --> C1["Comando: registrar ubicación"]
+    C1 --> A1["Agregado: Empresa"]
+    A1 --> V1(["Ubicación registrada"])
+    V1 --> C2["Comando: registrar equipo"]
+    C2 --> A2["Agregado: Equipo"]
+    A2 --> V2(["Equipo registrado"])
+    V2 --> C3["Comando: asignar equipo a empleado"]
+    C3 --> A2
+    A2 --> V3(["Equipo asignado"])
+    V3 --> P1["Política: registrar la asignación en el historial"]
+    V3 --> E["Empleado puede reportar fallas del equipo (BC04)"]
+    A2 --> RM["Modelo de lectura: inventario, historial y estado por tickets abiertos"]
+```
+
+**Reglas y excepciones a revisar:** no se puede asignar un equipo a un empleado de otra empresa; un equipo no puede registrarse con un número de serie ya existente; la ubicación de un equipo debe pertenecer a la misma empresa; el estado del equipo no se edita a mano, se obtiene de sus tickets abiertos.
 
 #### Supporting — Cotización de servicio adicional (BC05)
 
